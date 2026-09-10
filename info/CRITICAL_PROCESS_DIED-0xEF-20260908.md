@@ -4,7 +4,11 @@
 **Status:** Unresolved  
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 **Evidence date:** 2026-09-09
+=======
+**Evidence date:** 2026-09-08
+>>>>>>> theirs
 =======
 **Evidence date:** 2026-09-08
 >>>>>>> theirs
@@ -25,7 +29,11 @@ This file records the decision boundary for future work. It intentionally does n
 - The same `0xEF` signature recurred after SoftRAID, AOMEI backup filters, MacDrive, and Paragon APFS were removed.
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 - NBA 2K27 can reproduce the failure at its menu before gameplay. GPU utilization at that moment was not measured.
+=======
+- NBA 2K27 can reproduce the failure at its menu, so maximum gameplay load is not required.
+>>>>>>> theirs
 =======
 - NBA 2K27 can reproduce the failure at its menu, so maximum gameplay load is not required.
 >>>>>>> theirs
@@ -52,6 +60,7 @@ This file records the decision boundary for future work. It intentionally does n
 - MacDrive `MDDISK` and `MDMOUNT` filters.
 - Paragon APFS in combination with the removed MacDrive installation.
 
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 ## Current test: combined BIOS changes including M.2_2 Gen3 (2026-09-09)
@@ -96,6 +105,9 @@ Screenshot sources: `C:\Users\PIZZAOVEN\.codex\attachments\7b83fcfe-8e9b-4f67-98
 - **Confirmed fact (case state):** No post-change NBA result is supplied with these benchmarks. The next useful result remains the short NBA run already described; no additional benchmark, BIOS change or repair is requested. A successful storage benchmark does not establish game stability.
 
 ## Existing artifact-analysis plan
+=======
+## Next evidence step
+>>>>>>> theirs
 =======
 ## Next evidence step
 >>>>>>> theirs
