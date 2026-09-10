@@ -1,6 +1,6 @@
 # System Prompts
 
-# New System Prompt Leaks & Internal Discoveries 
+# New System Prompt Leaks & Internal Discoveries
 
 Welcome to the **New** System Prompt Leaks section of UltraBr3aks.
 
