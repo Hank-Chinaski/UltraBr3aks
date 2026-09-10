@@ -9,6 +9,8 @@
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
 This file records the decision boundary for future work. It does not assign a root cause.
 
 ## Current result and next evidence step (2026-09-10)
@@ -55,6 +57,10 @@ This file records the decision boundary for future work. It does not assign a ro
 >>>>>>> theirs
 =======
 >>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 This file records the decision boundary for future work. It intentionally does not assign a root cause.
 
 ## Bryan: what to do now
@@ -63,6 +69,8 @@ NBA 2K27 has now crashed again while the C: M.2 link was limited to Gen 3.
 
 1. **Stop launching NBA 2K27 for now.** Another reproduction is not needed.
 2. **Do not change the M.2 setting or anything else yet.** Keeping the crash condition unchanged protects the comparison.
+<<<<<<< ours
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -79,6 +87,10 @@ That is the entire next step. Do not run the broad evidence collector, start ano
 
 The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove that Gen 4 caused the crashes, that the SSD is defective, or that the M.2 slot is defective. The next decision depends on whether this crash produced a dump and whether it has the same signature as the earlier crashes.
 =======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 =======
@@ -120,6 +132,12 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
@@ -150,6 +168,12 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
@@ -164,6 +188,8 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 
 - A game, anti-cheat, input, overlay, graphics, virtualization, or Windows-build interaction.
 - Memory, CPU/IMC settings, GPU, power, storage controller/link, physical media, paging, or image-section behavior.
+<<<<<<< ours
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -191,6 +217,14 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
 - A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
 >>>>>>> theirs
+=======
+- A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
+- A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
+>>>>>>> theirs
+=======
+- A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
+- A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
+>>>>>>> theirs
 
 ### Falsified as sufficient causes
 
@@ -198,6 +232,8 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - AOMEI backup filter drivers.
 - MacDrive `MDDISK` and `MDMOUNT` filters.
 - Paragon APFS in combination with the removed MacDrive installation.
+<<<<<<< ours
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -273,6 +309,10 @@ Its documented output location is `C:\Users\PIZZAOVEN\Documents\CrashDiagnostics
 >>>>>>> theirs
 =======
 >>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 - Limiting the C: M.2 link to PCIe Gen 3.
 - PCIe Gen 4 operation being required for the crash to occur.
 
@@ -290,7 +330,13 @@ The planned multi-session validation ended when NBA 2K27 crashed at Gen 3. Do no
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
 
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
