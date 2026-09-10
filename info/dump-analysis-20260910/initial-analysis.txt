@@ -1,0 +1,34 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260910\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260910\initial-analysis.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.187 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [E:\CrashDumps\MEMORY.DMP]
+Could not open dump file [E:\CrashDumps\MEMORY.DMP], Win32 error 0n5
+    "Access is denied."

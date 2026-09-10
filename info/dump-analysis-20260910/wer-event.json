@@ -1,0 +1,6 @@
+﻿{
+    "TimeCreated":  "2026-09-10T00:42:04.8199658-07:00",
+    "Id":  1001,
+    "ProviderName":  "Microsoft-Windows-WER-SystemErrorReporting",
+    "Message":  "The computer has rebooted from a bugcheck.  The bugcheck was: 0x0000001e (0xffffffffc0000006, 0xfffff80490e51c55, 0xfffffe8276a5eca8, 0xfffffe8276a5e4c0). A dump was saved in: E:\\CrashDumps\\MEMORY.DMP. Report Id: e6e32e2c-3956-476b-968a-5f06ec2663f7."
+}
