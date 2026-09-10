@@ -6,6 +6,7 @@
 
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 This file records the decision boundary for future work. It does not assign a root cause.
 
 ## Current result and next evidence step (2026-09-10)
@@ -45,6 +46,8 @@ This file records the decision boundary for future work. It does not assign a ro
 =======
 =======
 >>>>>>> theirs
+=======
+>>>>>>> theirs
 This file records the decision boundary for future work. It intentionally does not assign a root cause.
 
 ## Bryan: what to do now
@@ -53,6 +56,7 @@ NBA 2K27 has now crashed again while the C: M.2 link was limited to Gen 3.
 
 1. **Stop launching NBA 2K27 for now.** Another reproduction is not needed.
 2. **Do not change the M.2 setting or anything else yet.** Keeping the crash condition unchanged protects the comparison.
+<<<<<<< ours
 <<<<<<< ours
 3. Open PowerShell and run this read-only command:
 
@@ -66,6 +70,8 @@ That is the entire next step. Do not run the broad evidence collector, start ano
 
 The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove that Gen 4 caused the crashes, that the SSD is defective, or that the M.2 slot is defective. The next decision depends on whether this crash produced a dump and whether it has the same signature as the earlier crashes.
 =======
+=======
+>>>>>>> theirs
 3. The dump has now been confirmed. Preserve it before any other game launch by running this PowerShell block:
 
 ```powershell
@@ -98,6 +104,9 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - **Supported inference:** this is another occurrence of the established `STATUS_IN_PAGE_ERROR` mechanism, now while the link was at Gen 3.
 - **Open hypothesis:** whether the new dump has the same immediate path, lower I/O status, and failure bucket as Dump A. Event metadata alone cannot answer this.
 - **Unrelated unless new evidence connects them:** DeviceAssociationService 3502, CamoService 7000, and SNMP 1500 were logged during post-crash boot service activity. Their timing does not establish that they initiated the bugcheck.
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 
 ## Evidence classification
@@ -119,6 +128,9 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - A kernel bitmap dump may omit user pages needed to recover the first `csrss.exe` exception; any dump conclusion must state that limitation.
 - The first Gen 3 session lasted longer than several earlier reproductions, but the later crash shows that the short success was not evidence of a sufficient workaround.
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
@@ -129,8 +141,13 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - Memory, CPU/IMC settings, GPU, power, storage controller/link, physical media, paging, or image-section behavior.
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 - A repeatable failure to retrieve `winsrvext.dll + 0x23840` in the older `0xEF` dumps; this is not equivalent to proven on-disk corruption.
 - A link-speed-dependent contribution involving the drive, M.2 slot, CPU path, firmware, signal integrity, power, or software timing. The current observations neither identify such a component nor establish Gen3 as adequate prevention.
+=======
+- A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
+- A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
+>>>>>>> theirs
 =======
 - A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
 - A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
@@ -146,6 +163,7 @@ The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove 
 - AOMEI backup filter drivers.
 - MacDrive `MDDISK` and `MDMOUNT` filters.
 - Paragon APFS in combination with the removed MacDrive installation.
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 
@@ -212,6 +230,8 @@ Its documented output location is `C:\Users\PIZZAOVEN\Documents\CrashDiagnostics
 =======
 =======
 >>>>>>> theirs
+=======
+>>>>>>> theirs
 - Limiting the C: M.2 link to PCIe Gen 3.
 - PCIe Gen 4 operation being required for the crash to occur.
 
@@ -226,6 +246,9 @@ The planned multi-session validation ended when NBA 2K27 crashed at Gen 3. Do no
 - **Rollback:** after the new dump is identified and preserved, restoring the firmware setting from Gen 3 to its prior Auto/Gen 4 value is reasonable because Gen 3 supplied no sufficient stability benefit. Do not combine that rollback with another diagnostic change.
 - **Evidence gap:** the new dump's bugcheck, critical process, lower I/O status, and failure bucket are not known yet.
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
