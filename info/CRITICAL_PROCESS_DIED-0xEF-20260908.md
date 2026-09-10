@@ -5,7 +5,11 @@
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 **Evidence date:** 2026-09-09
+=======
+**Evidence date:** 2026-09-08
+>>>>>>> theirs
 =======
 **Evidence date:** 2026-09-08
 >>>>>>> theirs
@@ -30,7 +34,11 @@ This file records the decision boundary for future work. It intentionally does n
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 - NBA 2K27 can reproduce the failure at its menu before gameplay. GPU utilization at that moment was not measured.
+=======
+- NBA 2K27 can reproduce the failure at its menu, so maximum gameplay load is not required.
+>>>>>>> theirs
 =======
 - NBA 2K27 can reproduce the failure at its menu, so maximum gameplay load is not required.
 >>>>>>> theirs
@@ -60,6 +68,7 @@ This file records the decision boundary for future work. It intentionally does n
 - MacDrive `MDDISK` and `MDMOUNT` filters.
 - Paragon APFS in combination with the removed MacDrive installation.
 
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -105,6 +114,9 @@ Screenshot sources: `C:\Users\PIZZAOVEN\.codex\attachments\7b83fcfe-8e9b-4f67-98
 - **Confirmed fact (case state):** No post-change NBA result is supplied with these benchmarks. The next useful result remains the short NBA run already described; no additional benchmark, BIOS change or repair is requested. A successful storage benchmark does not establish game stability.
 
 ## Existing artifact-analysis plan
+=======
+## Next evidence step
+>>>>>>> theirs
 =======
 ## Next evidence step
 >>>>>>> theirs
