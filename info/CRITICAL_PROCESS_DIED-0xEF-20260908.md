@@ -4,6 +4,7 @@
 **Status:** Unresolved  
 **Evidence date:** 2026-09-10
 
+<<<<<<< ours
 This file records the decision boundary for future work. It does not assign a root cause.
 
 ## Current result and next evidence step (2026-09-10)
@@ -40,13 +41,79 @@ This file records the decision boundary for future work. It does not assign a ro
 - Game-specific or shared game-runtime paths deserve comparison because the workstation is reported stable under other demanding workloads.
 - A kernel bitmap dump may omit user pages needed to recover the first `csrss.exe` exception; any dump conclusion must state that limitation.
 - The first short post-change session did not establish a reproducible link-speed benefit. The later idle crash supersedes any suggestion that this session established a workaround.
+=======
+This file records the decision boundary for future work. It intentionally does not assign a root cause.
+
+## Bryan: what to do now
+
+NBA 2K27 has now crashed again while the C: M.2 link was limited to Gen 3.
+
+1. **Stop launching NBA 2K27 for now.** Another reproduction is not needed.
+2. **Do not change the M.2 setting or anything else yet.** Keeping the crash condition unchanged protects the comparison.
+3. The dump has now been confirmed. Preserve it before any other game launch by running this PowerShell block:
+
+```powershell
+$source = "E:\CrashDumps\MEMORY.DMP"
+$destination = "E:\CrashDumps\NBA2K27-Gen3-20260909-225947-0x1E-C0000006.dmp"
+
+if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
+    throw "Source dump not found: $source"
+}
+if (Test-Path -LiteralPath $destination) {
+    throw "Archive already exists; nothing was changed: $destination"
+}
+
+Move-Item -LiteralPath $source -Destination $destination
+Get-Item -LiteralPath $destination -Force | Select-Object FullName,Length,LastWriteTime
+```
+
+4. Send back the final output. Do not launch NBA 2K27 again before the dump is preserved.
+
+That is the entire next step. Do not run the broad evidence collector, start another game test, uninstall anything, or move hardware.
+
+The new crash **falsifies Gen 3 as a sufficient workaround**. It does not prove that Gen 4 caused the crashes, that the SSD is defective, or that the M.2 slot is defective. The dump was produced successfully; the next decision depends on its WinDbg signature and lower I/O status.
+
+### Latest crash evidence received
+
+- **Confirmed fact:** WER Event 1001 records bugcheck `0x1E` with first parameter `0xC0000006` and confirms that a dump was saved to `E:\CrashDumps\MEMORY.DMP` under report ID `e6e32e2c-3956-476b-968a-5f06ec2663f7`.
+- **Confirmed fact:** the dump is 5,294,552,496 bytes and has `LastWriteTime` 2026-09-10 12:41:54 AM.
+- **Confirmed fact:** volmgr Event 162 says dump generation succeeded.
+- **Confirmed fact:** EventLog Event 6008 records the unexpected shutdown at 2026-09-09 10:59:47 PM. The reason for the gap between that time and the dump/reboot timestamps is not established.
+- **Supported inference:** this is another occurrence of the established `STATUS_IN_PAGE_ERROR` mechanism, now while the link was at Gen 3.
+- **Open hypothesis:** whether the new dump has the same immediate path, lower I/O status, and failure bucket as Dump A. Event metadata alone cannot answer this.
+- **Unrelated unless new evidence connects them:** DeviceAssociationService 3502, CamoService 7000, and SNMP 1500 were logged during post-crash boot service activity. Their timing does not establish that they initiated the bugcheck.
+
+## Evidence classification
+
+### Confirmed facts
+
+- Three analyzed system crashes involve `0xC0000006 STATUS_IN_PAGE_ERROR`.
+- The 2026-09-06 `0x1E` dump has lower I/O status `0xC000000E STATUS_NO_SUCH_DEVICE` in `nt!HvpGetCellPaged` while the `Registry` process was active.
+- The two later `0xEF` dumps terminate `csrss.exe` with exit status `0xC0000006` and share bucket `0xEF_csrss.exe_ntdll!RtlLookupFunctionEntry`.
+- Both `0xEF` dumps reference the image-backed `winsrvext.dll` page at relative offset `0x23840` despite different ASLR bases.
+- The same `0xEF` signature recurred after SoftRAID, AOMEI backup filters, MacDrive, and Paragon APFS were removed.
+- NBA 2K27 can reproduce the failure at its menu, so maximum gameplay load is not required.
+- With the C: M.2 link limited to PCIe Gen 3, NBA 2K27 completed one approximately 15-minute session and exited normally, then crashed during a later test.
+
+### Supported inferences
+
+- A failed in-page operation is the repeatable failure mechanism, but the component initiating it is not identified.
+- Game-specific or shared game-runtime paths deserve comparison because the workstation is reported stable under other demanding workloads.
+- A kernel bitmap dump may omit user pages needed to recover the first `csrss.exe` exception; any dump conclusion must state that limitation.
+- The first Gen 3 session lasted longer than several earlier reproductions, but the later crash shows that the short success was not evidence of a sufficient workaround.
+>>>>>>> theirs
 
 ### Open hypotheses
 
 - A game, anti-cheat, input, overlay, graphics, virtualization, or Windows-build interaction.
 - Memory, CPU/IMC settings, GPU, power, storage controller/link, physical media, paging, or image-section behavior.
+<<<<<<< ours
 - A repeatable failure to retrieve `winsrvext.dll + 0x23840` in the older `0xEF` dumps; this is not equivalent to proven on-disk corruption.
 - A link-speed-dependent contribution involving the drive, M.2 slot, CPU path, firmware, signal integrity, power, or software timing. The current observations neither identify such a component nor establish Gen3 as adequate prevention.
+=======
+- A repeatable failure to retrieve `winsrvext.dll + 0x23840`; this is not equivalent to proven on-disk corruption.
+- A storage, controller, M.2 slot, CPU/chipset path, firmware, power, or software-timing failure that can occur at both Gen 3 and Gen 4.
+>>>>>>> theirs
 
 ### Falsified as sufficient causes
 
@@ -54,6 +121,7 @@ This file records the decision boundary for future work. It does not assign a ro
 - AOMEI backup filter drivers.
 - MacDrive `MDDISK` and `MDMOUNT` filters.
 - Paragon APFS in combination with the removed MacDrive installation.
+<<<<<<< ours
 
 Their removal did not prevent recurrence. This does not prove they never contributed to earlier incidents.
 
@@ -115,6 +183,21 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\PIZZAOVEN\Docu
 ```
 
 Its documented output location is `C:\Users\PIZZAOVEN\Documents\CrashDiagnostics\GameComparison`; `-Phase GameRunning` identifies the comparison phase. The collector records processes, modules, drivers, services and targeted events without changing drivers, services, pagefile, dump settings or applications. Missing game processes and inaccessible queries must remain explicit limitations, not negative evidence. The prior script path has not been revalidated during the 2026-09-10 dump-access work.
+=======
+- Limiting the C: M.2 link to PCIe Gen 3.
+- PCIe Gen 4 operation being required for the crash to occur.
+
+## Closed controlled test: Gen 3
+
+The planned multi-session validation ended when NBA 2K27 crashed at Gen 3. Do not perform the remaining sessions. Gen 3 did not prevent the failure, so there is no evidence-based reason to adopt it permanently as the fix.
+
+- **Hypothesis:** reducing the C: M.2 link from Gen 4/Auto to Gen 3 prevents the repeating in-page failure.
+- **Observed result:** the freeze or bugcheck recurred at Gen 3.
+- **Conclusion:** Gen 3 is falsified as a sufficient workaround. The result does not distinguish the remaining hardware and software hypotheses.
+- **Risk:** ordinary exposure to the already-known crash and possible loss of unsaved work. Close unrelated work first. No full-drive backup or hardware move is required for this test.
+- **Rollback:** after the new dump is identified and preserved, restoring the firmware setting from Gen 3 to its prior Auto/Gen 4 value is reasonable because Gen 3 supplied no sufficient stability benefit. Do not combine that rollback with another diagnostic change.
+- **Evidence gap:** the new dump's bugcheck, critical process, lower I/O status, and failure bucket are not known yet.
+>>>>>>> theirs
 
 ## Change-test template
 
