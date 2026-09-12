@@ -1,0 +1,14 @@
+﻿[
+    {
+        "TimeCreated":  "2026-09-11T19:06:25.5811363-07:00",
+        "Id":  1001,
+        "ProviderName":  "Microsoft-Windows-WER-SystemErrorReporting",
+        "Message":  "The computer has rebooted from a bugcheck.  The bugcheck was: 0x000000ef (0xffff880de19a7080, 0x0000000000000000, 0xffff880de19a7080, 0x0000000000000000). A dump was saved in: E:\\CrashDumps\\MEMORY.DMP. Report Id: 6e022215-301a-40c1-935d-816bde4160dc."
+    },
+    {
+        "TimeCreated":  "2026-09-11T19:02:18.5420796-07:00",
+        "Id":  1001,
+        "ProviderName":  "Microsoft-Windows-WER-SystemErrorReporting",
+        "Message":  "The computer has rebooted from a bugcheck.  The bugcheck was: 0x00000154 (0xffff9c869ecee000, 0xfffff8881f0f5d70, 0x0000000000000002, 0x0000000000000000). A dump was saved in: E:\\CrashDumps\\MEMORY.DMP. Report Id: 7b4c1c2e-937d-481d-91a5-f4a17b5f5d73."
+    }
+]

@@ -1,0 +1,699 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260910-copy\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260910-copy\initial-analysis.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.250 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Post-Gen3-20260910-004154.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260910-copy\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260910-copy\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`90600000 PsLoadedModuleList = 0xfffff804`914f53d0
+Debug session time: Wed Sep  9 23:00:26.071 2026 (UTC - 7:00)
+System Uptime: 0 days 1:50:52.503
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+...............................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+20: kd> !analyze -v; .exr fffffe8276a5eca8; .cxr fffffe8276a5e4c0; kv; !process -1 1; !reg hivelist; q
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+...............................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+KMODE_EXCEPTION_NOT_HANDLED (1e)
+This is a very common BugCheck.  Usually the exception address pinpoints
+the driver/function that caused the problem.  Always note this address
+as well as the link date of the driver/image that contains this address.
+Arguments:
+Arg1: ffffffffc0000006, The exception code that was not handled
+Arg2: fffff80490e51c55, The address that the exception occurred at
+Arg3: fffffe8276a5eca8, Parameter 0 of the exception
+Arg4: fffffe8276a5e4c0, Parameter 1 of the exception
+
+Debugging Details:
+------------------
+
+*************************************************************************
+***                                                                   ***
+***                                                                   ***
+***    Either you specified an unqualified symbol, or your debugger   ***
+***    doesn't have full symbol information.  Unqualified symbol      ***
+***    resolution is turned off by default. Please either specify a   ***
+***    fully qualified symbol module!symbolname, or enable resolution ***
+***    of unqualified symbols by typing ".symopt- 100". Note that     ***
+***    enabling unqualified symbol resolution with network symbol     ***
+***    server shares in the symbol path may cause the debugger to     ***
+***    appear to hang for long periods of time when an incorrect      ***
+***    symbol name is typed or the network symbol server is down.     ***
+***                                                                   ***
+***    For some commands to work properly, your symbol path           ***
+***    must point to .pdb files that have full type information.      ***
+***                                                                   ***
+***    Certain .pdb files (such as the public OS symbols) do not      ***
+***    contain the required information.  Contact the group that      ***
+***    provided you with these symbols if you need this command to    ***
+***    work.                                                          ***
+***                                                                   ***
+***    Type referenced: ExceptionRecord                               ***
+***                                                                   ***
+*************************************************************************
+*************************************************************************
+***                                                                   ***
+***                                                                   ***
+***    Either you specified an unqualified symbol, or your debugger   ***
+***    doesn't have full symbol information.  Unqualified symbol      ***
+***    resolution is turned off by default. Please either specify a   ***
+***    fully qualified symbol module!symbolname, or enable resolution ***
+***    of unqualified symbols by typing ".symopt- 100". Note that     ***
+***    enabling unqualified symbol resolution with network symbol     ***
+***    server shares in the symbol path may cause the debugger to     ***
+***    appear to hang for long periods of time when an incorrect      ***
+***    symbol name is typed or the network symbol server is down.     ***
+***                                                                   ***
+***    For some commands to work properly, your symbol path           ***
+***    must point to .pdb files that have full type information.      ***
+***                                                                   ***
+***    Certain .pdb files (such as the public OS symbols) do not      ***
+***    contain the required information.  Contact the group that      ***
+***    provided you with these symbols if you need this command to    ***
+***    work.                                                          ***
+***                                                                   ***
+***    Type referenced: ContextRecord                                 ***
+***                                                                   ***
+*************************************************************************
+*************************************************************************
+***                                                                   ***
+***                                                                   ***
+***    Either you specified an unqualified symbol, or your debugger   ***
+***    doesn't have full symbol information.  Unqualified symbol      ***
+***    resolution is turned off by default. Please either specify a   ***
+***    fully qualified symbol module!symbolname, or enable resolution ***
+***    of unqualified symbols by typing ".symopt- 100". Note that     ***
+***    enabling unqualified symbol resolution with network symbol     ***
+***    server shares in the symbol path may cause the debugger to     ***
+***    appear to hang for long periods of time when an incorrect      ***
+***    symbol name is typed or the network symbol server is down.     ***
+***                                                                   ***
+***    For some commands to work properly, your symbol path           ***
+***    must point to .pdb files that have full type information.      ***
+***                                                                   ***
+***    Certain .pdb files (such as the public OS symbols) do not      ***
+***    contain the required information.  Contact the group that      ***
+***    provided you with these symbols if you need this command to    ***
+***    work.                                                          ***
+***                                                                   ***
+***    Type referenced: ExceptionRecord                               ***
+***                                                                   ***
+*************************************************************************
+*************************************************************************
+***                                                                   ***
+***                                                                   ***
+***    Either you specified an unqualified symbol, or your debugger   ***
+***    doesn't have full symbol information.  Unqualified symbol      ***
+***    resolution is turned off by default. Please either specify a   ***
+***    fully qualified symbol module!symbolname, or enable resolution ***
+***    of unqualified symbols by typing ".symopt- 100". Note that     ***
+***    enabling unqualified symbol resolution with network symbol     ***
+***    server shares in the symbol path may cause the debugger to     ***
+***    appear to hang for long periods of time when an incorrect      ***
+***    symbol name is typed or the network symbol server is down.     ***
+***                                                                   ***
+***    For some commands to work properly, your symbol path           ***
+***    must point to .pdb files that have full type information.      ***
+***                                                                   ***
+***    Certain .pdb files (such as the public OS symbols) do not      ***
+***    contain the required information.  Contact the group that      ***
+***    provided you with these symbols if you need this command to    ***
+***    work.                                                          ***
+***                                                                   ***
+***    Type referenced: ContextRecord                                 ***
+***                                                                   ***
+*************************************************************************
+
+KEY_VALUES_STRING: 1
+
+    Key  : Analysis.CPU.mSec
+    Value: 3531
+
+    Key  : Analysis.Elapsed.mSec
+    Value: 3731
+
+    Key  : Analysis.IO.Other.Mb
+    Value: 0
+
+    Key  : Analysis.IO.Read.Mb
+    Value: 1
+
+    Key  : Analysis.IO.Write.Mb
+    Value: 0
+
+    Key  : Analysis.Init.CPU.mSec
+    Value: 546
+
+    Key  : Analysis.Init.Elapsed.mSec
+    Value: 1299
+
+    Key  : Analysis.Memory.CommitPeak.Mb
+    Value: 95
+
+    Key  : Analysis.Version.DbgEng
+    Value: 10.0.29617.1000
+
+    Key  : Analysis.Version.Description
+    Value: 10.2604.29.1 amd64fre
+
+    Key  : Analysis.Version.Ext
+    Value: 1.2604.29.1
+
+    Key  : Bugcheck.Code.KiBugCheckData
+    Value: 0x1e
+
+    Key  : Bugcheck.Code.LegacyAPI
+    Value: 0x1e
+
+    Key  : Bugcheck.Code.TargetModel
+    Value: 0x1e
+
+    Key  : Dump.Attributes.AsUlong
+    Value: 0x21800
+
+    Key  : Dump.Attributes.DiagDataWrittenToHeader
+    Value: 1
+
+    Key  : Dump.Attributes.ErrorCode
+    Value: 0x0
+
+    Key  : Dump.Attributes.LastLine
+    Value: Dump completed successfully.
+
+    Key  : Dump.Attributes.ProgressPercentage
+    Value: 100
+
+    Key  : Failure.Bucket
+    Value: 0x1E_C0000006_nt!HvpGetCellPaged
+
+    Key  : Failure.Exception.IP.Address
+    Value: 0xfffff80490e51c55
+
+    Key  : Failure.Exception.IP.Module
+    Value: nt
+
+    Key  : Failure.Exception.IP.Offset
+    Value: 0x851c55
+
+    Key  : Failure.Hash
+    Value: {4a484c8f-b27f-a196-02b8-d62b4b7090ff}
+
+    Key  : Faulting.IP.Type
+    Value: Paged
+
+    Key  : Hypervisor.Enlightenments.ValueHex
+    Value: 0x7417df84
+
+    Key  : Hypervisor.Flags.AnyHypervisorPresent
+    Value: 1
+
+    Key  : Hypervisor.Flags.ApicEnlightened
+    Value: 0
+
+    Key  : Hypervisor.Flags.ApicVirtualizationAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.AsyncMemoryHint
+    Value: 0
+
+    Key  : Hypervisor.Flags.CoreSchedulerRequested
+    Value: 0
+
+    Key  : Hypervisor.Flags.CpuManager
+    Value: 1
+
+    Key  : Hypervisor.Flags.DeprecateAutoEoi
+    Value: 1
+
+    Key  : Hypervisor.Flags.DynamicCpuDisabled
+    Value: 1
+
+    Key  : Hypervisor.Flags.Epf
+    Value: 0
+
+    Key  : Hypervisor.Flags.ExtendedProcessorMasks
+    Value: 1
+
+    Key  : Hypervisor.Flags.HardwareMbecAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.MaxBankNumber
+    Value: 0
+
+    Key  : Hypervisor.Flags.MemoryZeroingControl
+    Value: 0
+
+    Key  : Hypervisor.Flags.NoExtendedRangeFlush
+    Value: 0
+
+    Key  : Hypervisor.Flags.NoNonArchCoreSharing
+    Value: 1
+
+    Key  : Hypervisor.Flags.Phase0InitDone
+    Value: 1
+
+    Key  : Hypervisor.Flags.PowerSchedulerQos
+    Value: 0
+
+    Key  : Hypervisor.Flags.RootScheduler
+    Value: 0
+
+    Key  : Hypervisor.Flags.SynicAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.UseQpcBias
+    Value: 0
+
+    Key  : Hypervisor.Flags.Value
+    Value: 55185662
+
+    Key  : Hypervisor.Flags.ValueHex
+    Value: 0x34a10fe
+
+    Key  : Hypervisor.Flags.VpAssistPage
+    Value: 1
+
+    Key  : Hypervisor.Flags.VsmAvailable
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.AccessStats
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.CrashdumpEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.CreateVirtualProcessor
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.DisableHyperthreading
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.HostTimelineSync
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.HypervisorDebuggingEnabled
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.IsHyperV
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.LivedumpEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.MapDeviceInterrupt
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.MceEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.Nested
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.StartLogicalProcessor
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.Value
+    Value: 1015
+
+    Key  : Hypervisor.RootFlags.ValueHex
+    Value: 0x3f7
+
+    Key  : SecureKernel.HalpHvciEnabled
+    Value: 0
+
+    Key  : WER.OS.Branch
+    Value: ge_release
+
+    Key  : WER.OS.Version
+    Value: 10.0.26100.1
+
+    Key  : WER.System.BIOSRevision
+    Value: 22.2.0.0
+
+
+BUGCHECK_CODE:  1e
+
+BUGCHECK_P1: ffffffffc0000006
+
+BUGCHECK_P2: fffff80490e51c55
+
+BUGCHECK_P3: fffffe8276a5eca8
+
+BUGCHECK_P4: fffffe8276a5e4c0
+
+FILE_IN_CAB:  Post-Gen3-20260910-004154.dmp
+
+DUMP_FILE_ATTRIBUTES: 0x21800
+
+FAULTING_THREAD:  ffff8409ab5d50c0
+
+EXCEPTION_PARAMETER1:  fffffe8276a5eca8
+
+EXCEPTION_PARAMETER2:  fffffe8276a5e4c0
+
+BLACKBOXBSD: 1 (!blackboxbsd)
+
+
+BLACKBOXNTFS: 1 (!blackboxntfs)
+
+
+BLACKBOXPNP: 1 (!blackboxpnp)
+
+
+BLACKBOXWINLOGON: 1 (!blackboxwinlogon) (!blackboxwinlogonnotify)
+
+
+PROCESS_NAME:  Registry
+
+TRAP_FRAME:  fffffe8276a5ed50 -- (.trap 0xfffffe8276a5ed50)
+.trap 0xfffffe8276a5ed50
+NOTE: The trap frame does not contain all registers.
+Some register values may be zeroed or incorrect.
+rax=000001e257af8000 rbx=0000000000000000 rcx=000001e257af8060
+rdx=ffffc5893100eca8 rsi=0000000000000000 rdi=0000000000000000
+rip=fffff80490e51c55 rsp=fffffe8276a5eee0 rbp=fffffe8276a5f011
+ r8=fffffe8276a5efac  r9=0000000010287060 r10=0000000000000087
+r11=0000000000000060 r12=0000000000000000 r13=0000000000000000
+r14=0000000000000000 r15=0000000000000000
+iopl=0         nv up ei pl nz na pe nc
+nt!HvpGetCellPaged+0xa5:
+fffff804`90e51c55 8b01            mov     eax,dword ptr [rcx] ds:000001e2`57af8060=????????
+.trap
+Resetting default scope
+
+IP_IN_PAGED_CODE: 
+nt!HvpGetCellPaged+a5
+fffff804`90e51c55 8b01            mov     eax,dword ptr [rcx]
+
+STACK_TEXT:  
+fffffe82`76a5dbf8 fffff804`90bb15cf     : 00000000`0000001e ffffffff`c0000006 fffff804`90e51c55 fffffe82`76a5eca8 : nt!KeBugCheckEx
+fffffe82`76a5dc00 fffff804`90ccef86     : fffffe82`76a5e4c0 fffff804`90a42788 fffffe82`76a5e280 fffff804`9093839a : nt!KiFatalFilter+0x1f
+fffffe82`76a5dc40 fffff804`90afceec     : fffffe82`00000002 fffffe82`76a5eca8 fffffe82`76a59000 fffffe82`76a60000 : nt!KeExpandKernelStackAndCalloutInternal$filt$0+0x16
+fffffe82`76a5dc80 fffff804`90cb782f     : fffffe82`76a5eca8 fffffe82`76a5e280 fffffe82`76a5dd80 fffffe82`76a5dd80 : nt!_C_specific_handler+0x9c
+fffffe82`76a5dcf0 fffff804`90932467     : fffff804`90600000 fffff804`90600000 fffff804`9093839a fffff804`906eb58c : nt!RtlpExecuteHandlerForException+0xf
+fffffe82`76a5dd20 fffff804`909e7892     : ffffffff`ffffffff fffffe82`76a5e4c0 fffffe82`76a5e4c0 00000000`00000000 : nt!RtlDispatchException+0x347
+fffffe82`76a5e490 fffff804`90cc2345     : 00000000`00000000 00000000`00000000 fffffe82`76a5ed50 00000000`00000000 : nt!KiDispatchException+0x372
+fffffe82`76a5eb70 fffff804`90cbd482     : fffffe82`76a5ef88 00000000`00000000 fffffe82`76a5efa8 ffffc589`447dd101 : nt!KiExceptionDispatch+0x145
+fffffe82`76a5ed50 fffff804`90e51c55     : 00000000`415917d5 fffff804`90e5bffc ffffc589`a5837900 00000000`00000001 : nt!KiPageFault+0x442
+fffffe82`76a5eee0 fffff804`90e50512     : 00000000`415917d5 00000000`415917d5 00000000`00000000 00000000`00000000 : nt!HvpGetCellPaged+0xa5
+fffffe82`76a5ef20 fffff804`90e5cf2d     : ffffc589`a5837900 fffffe82`76a5f1a0 fffffe82`76a5f178 fffffe82`76a5f1c0 : nt!CmpWalkOneLevel+0xa72
+fffffe82`76a5f060 fffff804`90ea0fc9     : 00000000`0000001c fffffe82`76a5f3a0 fffffe82`76a5f330 00000000`00000000 : nt!CmpDoParseKey+0x8dd
+fffffe82`76a5f2b0 fffff804`90e9f683     : 00000000`00000901 00000000`00000000 ffff8409`e0ee7ad0 00000000`00000001 : nt!CmpParseKey+0x2e9
+fffffe82`76a5f4b0 fffff804`90e9d9e4     : ffff8409`e0ee7a01 fffffe82`76a5f6e8 00000000`00000040 ffff8409`8d99e390 : nt!ObpLookupObjectName+0x8d3
+fffffe82`76a5f660 fffff804`90fa10d9     : ffff8409`00000000 ffff8409`8d99e390 00000000`00020019 ffff8409`b12307a0 : nt!ObOpenObjectByNameEx+0x224
+fffffe82`76a5f790 fffff804`90fa0e7d     : 00000000`00000000 00000000`00000000 00000000`00020019 fffffe82`00000000 : nt!CmOpenKey+0x249
+fffffe82`76a5f8b0 fffff804`9093839a     : 00000000`00000000 fffff804`90fa0e50 00000000`00000000 00000000`00000000 : nt!CmOpenKeyCallout+0x2d
+fffffe82`76a5f8f0 fffff804`90a6a3b5     : fffff804`90fa0e50 fffffe82`76a5f9d8 000000a1`a5dfcd68 000000a1`a5dfd018 : nt!KeExpandKernelStackAndCalloutInternal+0xca
+fffffe82`76a5f960 fffff804`91051a60     : 000000a1`a5dfccd8 fffff804`90cc1926 00000000`00000000 00000000`00000000 : nt!KeExpandKernelStackAndCallout+0x15
+fffffe82`76a5f9a0 fffff804`90cc1855     : ffff8409`ab5d50c0 00000000`00000000 ffff8409`ab5d50c0 ffffffff`80000002 : nt!NtOpenKeyEx+0x80
+fffffe82`76a5fa20 00007fff`5e463314     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : nt!KiSystemServiceCopyEnd+0x25
+000000a1`a5dfcc68 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : 0x00007fff`5e463314
+
+
+SYMBOL_NAME:  nt!HvpGetCellPaged+a5
+
+MODULE_NAME: nt
+
+IMAGE_NAME:  ntkrnlmp.exe
+
+STACK_COMMAND: .process /r /p 0xffff8409aa70d080; .thread /r /p 0xffff8409ab5d50c0 ; kb
+
+BUCKET_ID_FUNC_OFFSET:  a5
+
+FAILURE_BUCKET_ID:  0x1E_C0000006_nt!HvpGetCellPaged
+
+OS_VERSION:  10.0.26100.1
+
+BUILDLAB_STR:  ge_release
+
+OSPLATFORM_TYPE:  x64
+
+OSNAME:  Windows 10
+
+FAILURE_ID_HASH:  {4a484c8f-b27f-a196-02b8-d62b4b7090ff}
+
+Followup:     MachineOwner
+---------
+
+ExceptionAddress: fffff80490e51c55 (nt!HvpGetCellPaged+0x00000000000000a5)
+   ExceptionCode: c0000006 (In-page I/O error)
+  ExceptionFlags: 00000000
+NumberParameters: 3
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 000001e257af8060
+   Parameter[2]: 00000000c000000e
+Inpage operation failed at 000001e257af8060, due to I/O error 00000000c000000e
+rax=000001e257af8000 rbx=ffffc5892cdab000 rcx=000001e257af8060
+rdx=ffffc5893100eca8 rsi=00000000000001d5 rdi=fffffe8276a5efa8
+rip=fffff80490e51c55 rsp=fffffe8276a5eee0 rbp=fffffe8276a5f011
+ r8=fffffe8276a5efac  r9=0000000010287060 r10=0000000000000087
+r11=0000000000000060 r12=ffff8409b1230898 r13=ffffc5892cdab000
+r14=000001e25bcc774c r15=00000000909196b9
+iopl=0         nv up ei pl nz na pe nc
+cs=0010  ss=0018  ds=002b  es=002b  fs=0053  gs=002b             efl=00050206
+nt!HvpGetCellPaged+0xa5:
+fffff804`90e51c55 8b01            mov     eax,dword ptr [rcx] ds:002b:000001e2`57af8060=????????
+  *** Stack trace for last set context - .thread/.cxr resets it
+ # Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00 fffffe82`76a5eee0 fffff804`90e50512     : 00000000`415917d5 00000000`415917d5 00000000`00000000 00000000`00000000 : nt!HvpGetCellPaged+0xa5
+01 fffffe82`76a5ef20 fffff804`90e5cf2d     : ffffc589`a5837900 fffffe82`76a5f1a0 fffffe82`76a5f178 fffffe82`76a5f1c0 : nt!CmpWalkOneLevel+0xa72
+02 fffffe82`76a5f060 fffff804`90ea0fc9     : 00000000`0000001c fffffe82`76a5f3a0 fffffe82`76a5f330 00000000`00000000 : nt!CmpDoParseKey+0x8dd
+03 fffffe82`76a5f2b0 fffff804`90e9f683     : 00000000`00000901 00000000`00000000 ffff8409`e0ee7ad0 00000000`00000001 : nt!CmpParseKey+0x2e9
+04 fffffe82`76a5f4b0 fffff804`90e9d9e4     : ffff8409`e0ee7a01 fffffe82`76a5f6e8 00000000`00000040 ffff8409`8d99e390 : nt!ObpLookupObjectName+0x8d3
+05 fffffe82`76a5f660 fffff804`90fa10d9     : ffff8409`00000000 ffff8409`8d99e390 00000000`00020019 ffff8409`b12307a0 : nt!ObOpenObjectByNameEx+0x224
+06 fffffe82`76a5f790 fffff804`90fa0e7d     : 00000000`00000000 00000000`00000000 00000000`00020019 fffffe82`00000000 : nt!CmOpenKey+0x249
+07 fffffe82`76a5f8b0 fffff804`9093839a     : 00000000`00000000 fffff804`90fa0e50 00000000`00000000 00000000`00000000 : nt!CmOpenKeyCallout+0x2d
+08 fffffe82`76a5f8f0 fffff804`90a6a3b5     : fffff804`90fa0e50 fffffe82`76a5f9d8 000000a1`a5dfcd68 000000a1`a5dfd018 : nt!KeExpandKernelStackAndCalloutInternal+0xca
+09 fffffe82`76a5f960 fffff804`91051a60     : 000000a1`a5dfccd8 fffff804`90cc1926 00000000`00000000 00000000`00000000 : nt!KeExpandKernelStackAndCallout+0x15
+0a fffffe82`76a5f9a0 fffff804`90cc1855     : ffff8409`ab5d50c0 00000000`00000000 ffff8409`ab5d50c0 ffffffff`80000002 : nt!NtOpenKeyEx+0x80
+0b fffffe82`76a5fa20 00007fff`5e463314     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : nt!KiSystemServiceCopyEnd+0x25 (TrapFrame @ fffffe82`76a5fa20)
+0c 000000a1`a5dfcc68 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : 0x00007fff`5e463314
+PROCESS ffff84098daf4040
+    SessionId: none  Cid: 01a8    Peb: 00000000  ParentCid: 0004
+    DirBase: 161e0f000  ObjectTable: ffffc5892c2af040  HandleCount:   0.
+    Image: Registry
+    VadRoot ffff840999cec1b0 Vads 373 Clone 0 Private 1800. Modified 261040. Locked 0.
+    DeviceMap 0000000000000000
+    Token                             ffffc5892c2ae040
+    ElapsedTime                       01:50:52.349
+    UserTime                          00:00:00.000
+    KernelTime                        00:00:01.062
+    QuotaPoolUsage[PagedPool]         1120464
+    QuotaPoolUsage[NonPagedPool]      50728
+    Working Set Sizes (now,min,max)  (9159, 50, 16384) (36636KB, 200KB, 65536KB)
+    PeakWorkingSetSize                83503
+    VirtualSize                       545 Mb
+    PeakVirtualSize                   575 Mb
+    PageFaultCount                    35908465
+    MemoryPriority                    BACKGROUND
+    BasePriority                      8
+    CommitCharge                      1807
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+|     HiveAddr     |Stable Length|    Stable Map    |Volatile Length|    Volatile Map    |MappedViews|PinnedViews|U(Cnt)|     BaseBlock     | FileName 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| ffffc5892c2b0000 |       6000  | ffffc5892c2b0128 |       1000    |  ffffc5892c2b03a0  | ffffc5892c30d000  | <NONAME>
+| ffffc5892c2e6000 |    235d000  | ffffc5892c333000 |     101000    |  ffffc5892c2e63a0  | ffffc5892c321000  | SYSTEM
+| ffffc5892c37a000 |     137000  | ffffc5892c37a128 |      16000    |  ffffc5892c37a3a0  | ffffc5892c399000  | <NONAME>
+| ffffc5892cdab000 |   144b7000  | ffffc5892ce80000 |     aea000    |  ffffc58941332000  | ffffc5892ce49000  | emRoot\System32\Config\SOFTWARE
+| ffffc58936810000 |       d000  | ffffc58936810128 |          0    |  0000000000000000  | ffffc58936c73000  | kVolume1\EFI\Microsoft\Boot\BCD
+| ffffc5892cda9000 |     15d000  | ffffc5892cda9128 |       1000    |  ffffc5892cda93a0  | ffffc5892ce48000  | temRoot\System32\Config\DEFAULT
+| ffffc5892cd9e000 |       a000  | ffffc5892cd9e128 |       1000    |  ffffc5892cd9e3a0  | ffffc5892cdeb000  | emRoot\System32\Config\SECURITY
+| ffffc5892cdad000 |      16000  | ffffc5892cdad128 |          0    |  0000000000000000  | ffffc5892ce52000  | \SystemRoot\System32\Config\SAM
+| ffffc5893ee17000 |      32000  | ffffc5893ee17128 |       1000    |  ffffc5893ee173a0  | ffffc5893982e000  | files\NetworkService\NTUSER.DAT
+| ffffc5893f57f000 |      26000  | ffffc5893f57f128 |          0    |  0000000000000000  | ffffc5893f3fc000  | \SystemRoot\System32\Config\BBI
+| ffffc5893f58e000 |      32000  | ffffc5893f58e128 |       1000    |  ffffc5893f58e3a0  | ffffc5893f5ff000  | rofiles\LocalService\NTUSER.DAT
+| ffffc589404bb000 |     117000  | ffffc589404bb128 |          0    |  0000000000000000  | ffffc5893dcf1000  | timization\State\dosvcState.dat
+| ffffc589409f3000 |    b235000  | ffffc5893bcfb000 |       9000    |  ffffc589409f33a0  | ffffc5893bef0000  | ?\C:\Users\PIZZAOVEN\ntuser.dat
+| ffffc58940e58000 |    1722000  | ffffc58940dfb000 |       1000    |  ffffc58940e583a0  | ffffc58940cfe000  | \Microsoft\Windows\UsrClass.dat
+| ffffc58940bf0000 |      11000  | ffffc58940bf0128 |          0    |  0000000000000000  | ffffc5893f2bb000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc58941e6b000 |      2a000  | ffffc58941e6b128 |          0    |  0000000000000000  | ffffc58941e1d000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941f6a000 |       6000  | ffffc58941f6a128 |          0    |  0000000000000000  | ffffc58941e92000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941f6c000 |       7000  | ffffc58941f6c128 |          0    |  0000000000000000  | ffffc58941e9b000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941e7c000 |       b000  | ffffc58941e7c128 |          0    |  0000000000000000  | ffffc58941647000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941e76000 |      10000  | ffffc58941e76128 |          0    |  0000000000000000  | ffffc58941f70000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941e78000 |       e000  | ffffc58941e78128 |          0    |  0000000000000000  | ffffc589314fe000  | <UNKNOWN>
+| ffffc58941e7e000 |      10000  | ffffc58941e7e128 |          0    |  0000000000000000  | ffffc58941f7a000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc5893fe8a000 |       a000  | ffffc5893fe8a128 |          0    |  0000000000000000  | ffffc58941fee000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941f1c000 |      5b000  | ffffc58941f1c128 |          0    |  0000000000000000  | ffffc58941f44000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58941f19000 |      a9000  | ffffc58941f19128 |          0    |  0000000000000000  | ffffc58941646000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc589429c1000 |       1000  | ffffc589429c1128 |          0    |  0000000000000000  | ffffc589422fe000  | bbwe\Cache\8e5f590b2d731ff4.dat
+| ffffc58942d2e000 |       1000  | ffffc58942d2e128 |          0    |  0000000000000000  | ffffc58942ce5000  | ache\8e5f590b2d731ff4_COM15.dat
+| ffffc58942f9e000 |       1000  | ffffc58942f9e128 |          0    |  0000000000000000  | ffffc589426e3000  | bbwe\Cache\8e5f590b2d731ff4.dat
+| ffffc58942ea3000 |       1000  | ffffc58942ea3128 |          0    |  0000000000000000  | ffffc58942edb000  | lium\Cache\e43e2e75a119a14a.dat
+| ffffc58942bd2000 |       1000  | ffffc58942bd2128 |          0    |  0000000000000000  | ffffc58942dfe000  | ache\e43e2e75a119a14a_COM15.dat
+| ffffc58943224000 |       1000  | ffffc58943224128 |          0    |  0000000000000000  | ffffc58942771000  | lium\Cache\e43e2e75a119a14a.dat
+| ffffc589441db000 |       6000  | ffffc589441db128 |          0    |  0000000000000000  | ffffc58944238000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc58944616000 |      6a000  | ffffc58944616128 |          0    |  0000000000000000  | ffffc5894409a000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc58946703000 |       1000  | ffffc58946703128 |          0    |  0000000000000000  | ffffc58943614000  | lium\Cache\9baaf642db24d0b7.dat
+| ffffc58946705000 |       1000  | ffffc58946705128 |          0    |  0000000000000000  | ffffc589466f4000  | y\SystemAppData\Helium\User.dat
+| ffffc58946707000 |       1000  | ffffc58946707128 |          0    |  0000000000000000  | ffffc589433f8000  | mAppData\Helium\UserClasses.dat
+| ffffc58946709000 |       1000  | ffffc58946709128 |          0    |  0000000000000000  | ffffc58943665000  | ache\9baaf642db24d0b7_COM15.dat
+| ffffc5894670b000 |       1000  | ffffc5894670b128 |          0    |  0000000000000000  | ffffc58946756000  | lium\Cache\9baaf642db24d0b7.dat
+| ffffc58946d9c000 |      13000  | ffffc58946d9c128 |          0    |  0000000000000000  | ffffc589467ff000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58947178000 |      67000  | ffffc58947178128 |          0    |  0000000000000000  | ffffc589470ff000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc589479a7000 |       6000  | ffffc589479a7128 |          0    |  0000000000000000  | ffffc589475a6000  | 1h2txyewy\Settings\settings.dat
+| ffffc58947bd9000 |       9000  | ffffc58947bd9128 |          0    |  0000000000000000  | ffffc5894797a000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc58947bee000 |      16000  | ffffc58947bee128 |          0    |  0000000000000000  | ffffc58947979000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc5893ebf7000 |       1000  | ffffc5893ebf7128 |          0    |  0000000000000000  | ffffc58947cff000  | lium\Cache\ca55c9f6a1d6dbb2.dat
+| ffffc5893eeb9000 |      1b000  | ffffc5893eeb9128 |          0    |  0000000000000000  | ffffc58947dff000  | y\SystemAppData\Helium\User.dat
+| ffffc5893eeb3000 |      15000  | ffffc5893eeb3128 |          0    |  0000000000000000  | ffffc58947582000  | mAppData\Helium\UserClasses.dat
+| ffffc5893eead000 |       1000  | ffffc5893eead128 |          0    |  0000000000000000  | ffffc589479fd000  | ache\ca55c9f6a1d6dbb2_COM15.dat
+| ffffc5893eea8000 |       1000  | ffffc5893eea8128 |          0    |  0000000000000000  | ffffc58946ed6000  | lium\Cache\ca55c9f6a1d6dbb2.dat
+| ffffc58947bf2000 |      25000  | ffffc58947bf2128 |          0    |  0000000000000000  | ffffc589495ff000  | 1h2txyewy\Settings\settings.dat
+| ffffc5894c125000 |       1000  | ffffc5894c125128 |          0    |  0000000000000000  | ffffc5894bcfc000  | 1h2txyewy\Settings\settings.dat
+| ffffc5894bd0d000 |       1000  | ffffc5894bd0d128 |          0    |  0000000000000000  | ffffc5894c6f6000  | lium\Cache\2885a5535f1228d9.dat
+| ffffc5894baa0000 |       1000  | ffffc5894baa0128 |          0    |  0000000000000000  | ffffc58944383000  | e\SystemAppData\Helium\User.dat
+| ffffc5894b13b000 |      93000  | ffffc5894b13b128 |          0    |  0000000000000000  | ffffc5894c755000  | mAppData\Helium\UserClasses.dat
+| ffffc5894b104000 |       1000  | ffffc5894b104128 |          0    |  0000000000000000  | ffffc5894c756000  | ache\2885a5535f1228d9_COM15.dat
+| ffffc5894b866000 |       1000  | ffffc5894b866128 |          0    |  0000000000000000  | ffffc5894c9d8000  | lium\Cache\2885a5535f1228d9.dat
+| ffffc5894c5d6000 |       7000  | ffffc5894c5d6128 |          0    |  0000000000000000  | ffffc589402aa000  | <UNKNOWN>
+| ffffc5894f0aa000 |       1000  | ffffc5894f0aa128 |          0    |  0000000000000000  | ffffc589434d4000  | lium\Cache\20acaec5c2eda88a.dat
+| ffffc589503e1000 |       b000  | ffffc589503e1128 |          0    |  0000000000000000  | ffffc58943615000  | e\SystemAppData\Helium\User.dat
+| ffffc5894f0ad000 |       1000  | ffffc5894f0ad128 |          0    |  0000000000000000  | ffffc589430c6000  | mAppData\Helium\UserClasses.dat
+| ffffc5894c2be000 |       1000  | ffffc5894c2be128 |          0    |  0000000000000000  | ffffc5895015e000  | ache\20acaec5c2eda88a_COM15.dat
+| ffffc5894be29000 |       1000  | ffffc5894be29128 |          0    |  0000000000000000  | ffffc58943983000  | lium\Cache\20acaec5c2eda88a.dat
+| ffffc5894c545000 |       3000  | ffffc5894c545128 |          0    |  0000000000000000  | ffffc58944382000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc589502d0000 |       1000  | ffffc589502d0128 |          0    |  0000000000000000  | ffffc58957efe000  | lium\Cache\baf4b24fc89de444.dat
+| ffffc5894f5aa000 |       1000  | ffffc5894f5aa128 |          0    |  0000000000000000  | ffffc589590fe000  | ache\baf4b24fc89de444_COM15.dat
+| ffffc58949fde000 |       1000  | ffffc58949fde128 |          0    |  0000000000000000  | ffffc589590ff000  | lium\Cache\baf4b24fc89de444.dat
+| ffffc5895bbe6000 |       1000  | ffffc5895bbe6128 |          0    |  0000000000000000  | ffffc589524f4000  | <UNKNOWN>
+| ffffc58962d68000 |       1000  | ffffc58962d68128 |          0    |  0000000000000000  | ffffc589524f5000  | <UNKNOWN>
+| ffffc589629c3000 |       1000  | ffffc589629c3128 |          0    |  0000000000000000  | ffffc5894e254000  | lium\Cache\481fc28512a3eb60.dat
+| ffffc58960fb5000 |       d000  | ffffc58960fb5128 |          0    |  0000000000000000  | ffffc58958c88000  | <UNKNOWN>
+| ffffc5896282c000 |      63000  | ffffc5896282c128 |          0    |  0000000000000000  | ffffc5895b3fe000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc589635ee000 |       1000  | ffffc589635ee128 |          0    |  0000000000000000  | ffffc58962b92000  | yb3d8bbwe\Settings\settings.dat
+| ffffc5893ee0f000 |       1000  | ffffc5893ee0f128 |          0    |  0000000000000000  | ffffc5895bbff000  | <UNKNOWN>
+| ffffc5893edc4000 |       1000  | ffffc5893edc4128 |          0    |  0000000000000000  | ffffc589621a8000  | 6\SystemAppData\Helium\User.dat
+| ffffc5893ede6000 |       1000  | ffffc5893ede6128 |          0    |  0000000000000000  | ffffc58950547000  | mAppData\Helium\UserClasses.dat
+| ffffc5893ede3000 |       1000  | ffffc5893ede3128 |          0    |  0000000000000000  | ffffc58962b91000  | ache\6febff65b4c1b19a_COM15.dat
+| ffffc5893ece4000 |       1000  | ffffc5893ece4128 |          0    |  0000000000000000  | ffffc58963dff000  | lium\Cache\6febff65b4c1b19a.dat
+| ffffc5895d13f000 |       1000  | ffffc5895d13f128 |          0    |  0000000000000000  | ffffc589659ff000  | lium\Cache\5899098581244e30.dat
+| ffffc5895bc8b000 |       1000  | ffffc5895bc8b128 |          0    |  0000000000000000  | ffffc5895c8ff000  | e\SystemAppData\Helium\User.dat
+| ffffc5894bf2e000 |       1000  | ffffc5894bf2e128 |          0    |  0000000000000000  | ffffc5895d1ff000  | lium\Cache\99ef76c68f785ff1.dat
+| ffffc5895cb83000 |       1000  | ffffc5895cb83128 |          0    |  0000000000000000  | ffffc5895d6fe000  | <UNKNOWN>
+| ffffc5894bf31000 |       1000  | ffffc5894bf31128 |          0    |  0000000000000000  | ffffc5895dcfe000  | w\SystemAppData\Helium\User.dat
+| ffffc58950388000 |       1000  | ffffc58950388128 |          0    |  0000000000000000  | ffffc5895d6ff000  | <UNKNOWN>
+| ffffc58962c1e000 |       1000  | ffffc58962c1e128 |          0    |  0000000000000000  | ffffc5895dcff000  | lium\Cache\5899098581244e30.dat
+| ffffc5896735d000 |       1000  | ffffc5896735d128 |          0    |  0000000000000000  | ffffc5895a6fe000  | mAppData\Helium\UserClasses.dat
+| ffffc5894c1fa000 |       1000  | ffffc5894c1fa128 |          0    |  0000000000000000  | ffffc5895a6ff000  | ache\99ef76c68f785ff1_COM15.dat
+| ffffc5896315b000 |       1000  | ffffc5896315b128 |          0    |  0000000000000000  | ffffc5895edfe000  | lium\Cache\99ef76c68f785ff1.dat
+| ffffc58962b68000 |       1000  | ffffc58962b68128 |          0    |  0000000000000000  | ffffc5895edff000  | b57y56r5xww\ActivationStore.dat
+| ffffc5895b9e3000 |       1000  | ffffc5895b9e3128 |          0    |  0000000000000000  | ffffc5895c6ff000  | 7y56r5xww\Settings\settings.dat
+| ffffc5895bcf4000 |       6000  | ffffc5895bcf4128 |          0    |  0000000000000000  | ffffc5895f8fe000  | ekyb3d8bbwe\ActivationStore.dat
+| ffffc5895c01b000 |      61000  | ffffc5895c01b128 |          0    |  0000000000000000  | ffffc589602ff000  | <UNKNOWN>
+| ffffc5896b2fd000 |      1f000  | ffffc5896b2fd128 |          0    |  0000000000000000  | ffffc589582fe000  | 5n1h2txyewy\ActivationStore.dat
+| ffffc5895b23d000 |       1000  | ffffc5895b23d128 |          0    |  0000000000000000  | ffffc5896bc66000  | lium\Cache\e162283c0c9183ad.dat
+| ffffc58967855000 |       1000  | ffffc58967855128 |          0    |  0000000000000000  | ffffc5896bd17000  | e\SystemAppData\Helium\User.dat
+| ffffc58967857000 |       1000  | ffffc58967857128 |          0    |  0000000000000000  | ffffc5895e2fa000  | mAppData\Helium\UserClasses.dat
+| ffffc5895b148000 |       1000  | ffffc5895b148128 |          0    |  0000000000000000  | ffffc58960afa000  | ache\e162283c0c9183ad_COM15.dat
+| ffffc5895b14c000 |       1000  | ffffc5895b14c128 |          0    |  0000000000000000  | ffffc5896bd18000  | lium\Cache\e162283c0c9183ad.dat
+| ffffc5896f7f0000 |       2000  | ffffc5896f7f0128 |          0    |  0000000000000000  | ffffc5896f835000  | yb3d8bbwe\Settings\settings.dat
+| ffffc589708c9000 |       1000  | ffffc589708c9128 |          0    |  0000000000000000  | ffffc5896fffe000  | lium\Cache\3234bd85176d7ee4.dat
+| ffffc589708cb000 |       1000  | ffffc589708cb128 |          0    |  0000000000000000  | ffffc589693fa000  | ache\3234bd85176d7ee4_COM15.dat
+| ffffc589708cd000 |       1000  | ffffc589708cd128 |          0    |  0000000000000000  | ffffc58959c9e000  | lium\Cache\3234bd85176d7ee4.dat
+| ffffc58974cf5000 |       4000  | ffffc58974cf5128 |          0    |  0000000000000000  | ffffc58969794000  | rzdqpraam7r\ActivationStore.dat
+| ffffc589749e1000 |       1000  | ffffc589749e1128 |          0    |  0000000000000000  | ffffc58973b8a000  | <UNKNOWN>
+| ffffc58946048000 |       1000  | ffffc58946048128 |          0    |  0000000000000000  | ffffc5893fef7000  | lium\Cache\c48fc71d76b46371.dat
+| ffffc589465df000 |      24000  | ffffc589465df128 |          0    |  0000000000000000  | ffffc58978bff000  | 0\SystemAppData\Helium\User.dat
+| ffffc58946244000 |      1c000  | ffffc58946244128 |          0    |  0000000000000000  | ffffc589799d2000  | mAppData\Helium\UserClasses.dat
+| ffffc589464ce000 |       1000  | ffffc589464ce128 |          0    |  0000000000000000  | ffffc589799d5000  | ache\c48fc71d76b46371_COM15.dat
+| ffffc589464b8000 |       1000  | ffffc589464b8128 |          0    |  0000000000000000  | ffffc589473fc000  | lium\Cache\c48fc71d76b46371.dat
+| ffffc58969df2000 |      15000  | ffffc58969df2128 |          0    |  0000000000000000  | ffffc58970ddd000  | lium\Cache\225cce69f706eff0.dat
+| ffffc5895b455000 |      7f000  | ffffc5895b455128 |          0    |  0000000000000000  | ffffc58943ffb000  | a\SystemAppData\Helium\User.dat
+| ffffc5897209d000 |      39000  | ffffc5897209d128 |          0    |  0000000000000000  | ffffc58943ffc000  | mAppData\Helium\UserClasses.dat
+| ffffc5896901d000 |       1000  | ffffc5896901d128 |          0    |  0000000000000000  | ffffc589577e2000  | ache\225cce69f706eff0_COM15.dat
+| ffffc58962c0e000 |      15000  | ffffc58962c0e128 |          0    |  0000000000000000  | ffffc589529ff000  | lium\Cache\225cce69f706eff0.dat
+| ffffc5894e17f000 |       d000  | ffffc5894e17f128 |          0    |  0000000000000000  | ffffc58978659000  | yj5cx40ttqa\ActivationStore.dat
+| ffffc58957f6b000 |       1000  | ffffc58957f6b128 |          0    |  0000000000000000  | ffffc5896bf1c000  | 5cx40ttqa\Settings\settings.dat
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
