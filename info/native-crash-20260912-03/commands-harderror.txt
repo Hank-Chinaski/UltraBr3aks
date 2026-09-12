@@ -1,0 +1,7 @@
+.thread /r /p ffff9585be2ee040
+kn
+.frame /r a
+dd @rbx+10 L2
+dt nt!_UNICODE_STRING @rbx+18
+du poi(@rbx+20)
+q

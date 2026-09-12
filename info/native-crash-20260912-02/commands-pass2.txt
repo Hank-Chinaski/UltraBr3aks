@@ -1,0 +1,7 @@
+.exr ffff82064296ed68
+!process 0 0 MemCompression
+!pte 000001f3b45df770
+!vad 000001f3b45df770 1
+!thread ffffa90da1eb0040 1f
+!process 0 0 NBA2K27.exe
+q

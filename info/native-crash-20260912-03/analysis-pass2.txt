@@ -1,0 +1,170 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\analysis-pass2.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> .exr fffff3014007ed68
+ExceptionAddress: fffff804dbfb1ba0 (nt!RtlDecompressBufferLz4+0x00000000000000b0)
+   ExceptionCode: c0000006 (In-page I/O error)
+  ExceptionFlags: 00000000
+NumberParameters: 3
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 00000187f8077d10
+   Parameter[2]: 00000000c000000e
+Inpage operation failed at 00000187f8077d10, due to I/O error 00000000c000000e
+19: kd> !process 0 0 MemCompression
+PROCESS ffff9585a2be5040
+    SessionId: none  Cid: 113c    Peb: 00000000  ParentCid: 0004
+    DirBase: a45ed5000  ObjectTable: ffffbf05bb1ef800  HandleCount:   0.
+    Image: MemCompression
+
+19: kd> !pte 00000187f8077d10
+                                           VA 00000187f8077d10
+PXE at FFFFD46A351A8018    PPE at FFFFD46A350030F8    PDE at FFFFD46A0061FE00    PTE at FFFFD400C3FC03B8
+Page 6a92df not present in the dump file. Type ".hh dbgerr004" for details
+Unable to get PXE FFFFD46A350030F8
+19: kd> !vad 00000187f8077d10 1
+
+VAD @ ffff9585c7bcbf10
+  Start VPN             187f8060  End VPN         187f807f  Control Area  0000000000000000
+  FirstProtoPte 0000000000000000  LastPte 0000000000000000  Commit Charge        7fffffffe (0n34359738366)
+  Extend                0
+
+      ViewUnmap NoChange MemCommit PrivateMemory READONLY          
+
+19: kd> !thread ffff9585c63e4080 1f
+Setting context for owner process....process /p /r ffff9585a2be5040
+                                     THREAD ffff9585c63e4080  Cid 65b0.8598  Teb: 000000f12f3ae000 Win32Thread: 0000000000000000 RUNNING on processor 19
+Not impersonating
+Owning Process            ffff9585ac5c3080       Image:         CastSrv.exe
+Attached Process          ffff9585a2be5040       Image:         MemCompression
+Wait Start TickCount      1203222        Ticks: 0
+Context Switch Count      107            IdealProcessor: 21             
+UserTime                  00:00:00.000
+KernelTime                00:00:00.000
+Win32 Start Address 0x00007ffa0e53a2e0
+Stack Init fffff3014007fbb0 Current fffff3014007df10
+Base fffff30140080000 Limit fffff30140079000 Call 0000000000000000
+Priority 10  BasePriority 8  Decay Boost 1  Unusual Boost 10  IoPriority 2  PagePriority 5
+Child-SP          RetAddr               Call Site
+fffff301`4007dcb8 fffff804`dc20ad96     nt!KeBugCheckEx
+fffff301`4007dcc0 fffff804`dc2cfb92     nt!SMKM_STORE<SM_TRAITS>::SmStUnhandledExceptionFilter+0x7e
+fffff301`4007dd10 fffff804`dc0fcf7c     nt!`SMKM_STORE<SM_TRAITS>::SmStDirectReadIssue'::`1'::filt$0+0x22
+fffff301`4007dd40 fffff804`dc2b7ccf     nt!_C_specific_handler+0x9c
+fffff301`4007ddb0 fffff804`dbeb4e67     nt!RtlpExecuteHandlerForException+0xf
+fffff301`4007dde0 fffff804`dbfeb132     nt!RtlDispatchException+0x347
+fffff301`4007e550 fffff804`dc2c2845     nt!KiDispatchException+0x372
+fffff301`4007ec30 fffff804`dc2bd982     nt!KiExceptionDispatch+0x145
+fffff301`4007ee10 fffff804`dbfb1ba0     nt!KiPageFault+0x442 (TrapFrame @ fffff301`4007ee10)
+fffff301`4007efa0 fffff804`dbfb19d5     nt!RtlDecompressBufferLz4+0xb0
+fffff301`4007eff0 fffff804`dbe3416a     nt!SmStoreDecompressBuffer+0x99
+fffff301`4007f0f0 fffff804`dbe33fa3     nt!ST_STORE<SM_TRAITS>::StDmSinglePageCopy+0x156
+fffff301`4007f180 fffff804`dc0308cd     nt!ST_STORE<SM_TRAITS>::StDmSinglePageTransfer+0x83
+fffff301`4007f1c0 fffff804`dc0300aa     nt!ST_STORE<SM_TRAITS>::StDmpSinglePageRetrieve+0x60d
+fffff301`4007f270 fffff804`dbfd50bf     nt!ST_STORE<SM_TRAITS>::StDmPageRetrieve+0x13a
+fffff301`4007f330 fffff804`dbfd4fbb     nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadIssue+0x7b
+fffff301`4007f3b0 fffff804`dbebad87     nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadCallout+0x2b
+fffff301`4007f3e0 fffff804`dbebae4d     nt!KeExpandKernelStackAndCalloutInternal+0xb7
+fffff301`4007f450 fffff804`dbfd376f     nt!KeExpandKernelStackAndCalloutEx+0x1d
+fffff301`4007f490 fffff804`dbe33cb8     nt!SMKM_STORE<SM_TRAITS>::SmStDirectRead+0xcf
+fffff301`4007f560 fffff804`dbe33a75     nt!SMKM_STORE<SM_TRAITS>::SmStWorkItemQueue+0x1b4
+fffff301`4007f5b0 fffff804`dbe336f4     nt!SmWorkItemQueue+0x9
+fffff301`4007f5e0 fffff804`dbfcda93     nt!SMKM_STORE_MGR<SM_TRAITS>::SmIoCtxQueueWork+0x1e4
+fffff301`4007f6a0 fffff804`dbfcd952     nt!SMKM_STORE_MGR<SM_TRAITS>::SmPageRead+0x133
+fffff301`4007f720 fffff804`dbf709be     nt!SmPageRead+0x22
+fffff301`4007f760 fffff804`dbf6f905     nt!MiIssueHardFaultIo+0x92
+fffff301`4007f7b0 fffff804`dbe96014     nt!MiIssueHardFault+0x251
+fffff301`4007f8b0 fffff804`dc2bd8cb     nt!MmAccessFault+0x474
+fffff301`4007fa20 00007ffa`0e686863     nt!KiPageFault+0x38b (TrapFrame @ fffff301`4007fa20)
+000000f1`2f1bf828 00000000`00000000     0x00007ffa`0e686863
+
+.process /p /r 0
+19: kd> !process 0 0 System
+PROCESS ffff9585826d2040
+    SessionId: none  Cid: 0004    Peb: 00000000  ParentCid: 0000
+    DirBase: 001ae000  ObjectTable: ffffbf05a62c3600  HandleCount: 9419.
+    Image: System
+
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

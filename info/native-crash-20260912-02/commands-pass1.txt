@@ -1,0 +1,6 @@
+!analyze -v
+.bugcheck
+!blackboxntfs
+!blackboxpnp
+!vm 1
+q

@@ -1,0 +1,6 @@
+uf stornvme!NVMeIsDeviceGone
+dd ffff958587f88028 L2
+dd ffff958587f94028 L2
+dd ffff958587f82030 L0n12
+dd ffff938eaccf8000 L0n16
+q

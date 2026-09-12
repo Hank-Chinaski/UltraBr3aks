@@ -1,0 +1,9 @@
+.load storagekd
+!storagekd.storunit
+!storagekd.storclass
+!storagekd.storpagingdevice
+!storagekd.storwheaerror
+!storagekd.storhelp storloglist
+!storagekd.storhelp storadapter
+!object \GLOBAL??\C:
+q

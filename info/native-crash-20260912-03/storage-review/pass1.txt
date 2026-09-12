@@ -1,0 +1,2151 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\storage-review\pass1.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> .load storagekd
+19: kd> !storagekd.storhelp
+Storage Debugger Extension
+===============================================
+General Commands
+----------------
+!storhelp    - Displays complete help of the commands provided in this KD extension
+!storclass   - Dumps all class devices managed by classpnp
+!storadapter - Dumps all adapters managed by Storport
+!storunit    - Dumps all disks managed by Storport
+
+STORPORT specific commands
+--------------------------
+!storlogirp <args>     - displays internal log entries that reference the specified IRP.
+                         See '!storhelp storlogirp' for details.
+!storloglist <args>    - displays internal log entries. See '!storhelp storloglist' for details.
+!storlogsrb <args>     - displays internal log entries that reference the specified SRB.
+                         See '!storhelp storlogsrb' for details.
+!storsrb <address>     - display details for the specified SCSI or STORAGE request block
+!storpagingdevice      - displays paging device identity data from crash dump data
+
+STORPORT commands for NVMeoF functionality
+------------------------------------------
+!nvmeofhg <host gateway address> - displays information about a NVMeoF Initiator Host Gateway
+!nvmeofsp <subsystem port address> - displays information about a NVMeoF Initiator Subsystem Port
+!nvmeofct <nvme controller address> - displays information about a NVMe Controllers
+
+STORPORT commands for NVMe functionality
+----------------------------------------
+!stornamespace <nvme namespace address> - displays information about a NVMe Namespace
+!stornvmequeueslots <nvme queue address> - displays information about non-empty slots in a NVMe queue
+!stornvmequeuerequests <nvme queue address> - displays information about outstanding requests in a NVMe queue
+!storwheaerror - displays Storport WHEA error information
+
+19: kd> !storagekd.storport
+storagekd has no storport export
+19: kd> !storagekd.storadapter
+STORPORT adapters:
+==================
+Driver                 Object            Extension          State
+-----------------------------------------------------------------
+\Driver\Xvdd           ffff9585a5725050  ffff9585a57251a0   Working
+\Driver\vhdmp          ffff9585a4799050  ffff9585a47991a0   Working
+\Driver\stornvme       ffff958587f8f050  ffff958587f8f1a0   Working
+\Driver\stornvme       ffff958587f83050  ffff958587f831a0   Working
+\Driver\stornvme       ffff958587f7c050  ffff958587f7c1a0   Working
+\Driver\secnvme        ffff958586d4f050  ffff958586d4f1a0   Working
+\Driver\storahci       ffff958586d47050  ffff958586d471a0   Working
+
+19: kd> !blackboxntfs
+
+NTFS Blackbox Data
+
+0 Slow I/O Timeout Records Found
+0 Oplock Break Timeout Records Found
+19: kd> !blackboxpnp
+    PnpActivityId      : {00000000-0000-0000-0000-000000000000}
+    PnpActivityTime    : 134337073459405049
+    PnpEventInformation: 2
+    PnpEventInProgress : 0
+    PnpProblemCode     : 24
+    PnpVetoType        : 0
+    DeviceId           : USB\VID_0781&PID_55AE\MSFT30323334334744343030383438
+    VetoString         : 
+
+19: kd> !devnode 0 1
+Dumping IopRootDeviceNode (= 0xffff958582bd0010)
+DevNode 0xffff958582bd0010 for PDO 0xffff958582bcfe10
+  InstancePath is "HTREE\ROOT\0"
+  State = DeviceNodeStarted (0x30a)
+  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd1010 for PDO 0xffff958582bd0a80
+    InstancePath is "ROOT\volmgr\0000"
+    ServiceName is "volmgr"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585899853c0 for PDO 0xffff95858d218c10
+      InstancePath is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#0000000000100000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a6787890  b 0xffffbf05b3fef910
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958589985010 for PDO 0xffff95858cf9c8f0
+      InstancePath is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#0000000006500000"
+      ServiceName is "volume"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958589984b20 for PDO 0xffff95858cfa18f0
+      InstancePath is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#0000000007500000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a6787810  b 0xffffbf05b3fee510
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585a5ea1a80 for PDO 0xffff9585c2885060
+        InstancePath is "STORAGE\VolumeSnapshot\HarddiskVolumeSnapshot1"
+        TargetDeviceNotify List - f 0xffffbf0621e1a590  b 0xffffbf0621e1a590
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958589984770 for PDO 0xffff95858cfa28f0
+      InstancePath is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#000001D142100000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a6786e90  b 0xffffbf05b3feeb90
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585899843c0 for PDO 0xffff95858cfb78f0
+      InstancePath is "STORAGE\Volume\{2e170c47-31bd-11ef-9fa9-806e6f6e6963}#0000000000100000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a6788790  b 0xffffbf05b3fee810
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958589984010 for PDO 0xffff95858cfb88f0
+      InstancePath is "STORAGE\Volume\{2e170c47-31bd-11ef-9fa9-806e6f6e6963}#0000000006500000"
+      ServiceName is "volume"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958586d46050 for PDO 0xffff95858cfb98f0
+      InstancePath is "STORAGE\Volume\{2e170c47-31bd-11ef-9fa9-806e6f6e6963}#0000000007500000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a6789810  b 0xffffbf05b3fef490
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958587f95910 for PDO 0xffff95858cfbd8f0
+      InstancePath is "STORAGE\Volume\{2e170c47-31bd-11ef-9fa9-806e6f6e6963}#000001D16C500000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a678ab10  b 0xffffbf05b3fe1d90
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958589983920 for PDO 0xffff95858cfca8f0
+      InstancePath is "STORAGE\Volume\{2e170c48-31bd-11ef-9fa9-806e6f6e6963}#0000000000004400"
+      ServiceName is "volume"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958587f9b010 for PDO 0xffff95858cfce8f0
+      InstancePath is "STORAGE\Volume\{2e170c48-31bd-11ef-9fa9-806e6f6e6963}#0000000001000000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a678b210  b 0xffffbf05b3fee490
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff958586c7a760 for PDO 0xffff95858d2f5c40
+      InstancePath is "STORAGE\Volume\{5398440c-fb91-11ee-9f3f-806e6f6e6963}#0000000000100000"
+      ServiceName is "volume"
+      TargetDeviceNotify List - f 0xffffbf05a678ac90  b 0xffffbf05b3fee210
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff958582bd18d0 for PDO 0xffff958582bd0cc0
+    InstancePath is "ROOT\*AKAIPROMPCMIDI1\0000"
+    ServiceName is "AkaiPrompcMidi1"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a9bd0bf0 for PDO 0xffff9585a9bd0a00
+      InstancePath is "SWD\MIDISRV\MIDIU_KSA_12046147772709092920"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a707c7a0 for PDO 0xffff9585a78f65c0
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_12046147772709092920_0_0"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a9bcc010 for PDO 0xffff9585a9bce7c0
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_12046147772709092920_1_0"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff958582bd2010 for PDO 0xffff958582bd1cd0
+    InstancePath is "ROOT\VMBus\0000"
+    ServiceName is "vmbusr"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd2600 for PDO 0xffff958582bd2410
+    InstancePath is "ROOT\BasicDisplay\0000"
+    ServiceName is "BasicDisplay"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd2bf0 for PDO 0xffff958582bd2a00
+    InstancePath is "ROOT\hvservice\0000"
+    ServiceName is "hvservice"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd4010 for PDO 0xffff958582bd3c40
+    InstancePath is "ROOT\NET\0000"
+    ServiceName is "ovpn-dco"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd4600 for PDO 0xffff958582bd4410
+    InstancePath is "ROOT\NET\0001"
+    ServiceName is "tapnordvpn"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd4bf0 for PDO 0xffff958582bd4a00
+    InstancePath is "ROOT\CAMERA\0000"
+    ServiceName is "camodriver"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd5250 for PDO 0xffff958582bd5060
+    InstancePath is "ROOT\VID\0000"
+    ServiceName is "Vid"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582bd5840 for PDO 0xffff958582bd5650
+    InstancePath is "ROOT\{E070661C-AC3F-4AAE-AA3F-7D4E8DED5142}\0000"
+    ServiceName is "Camo_e070661c-ac3f-4aae-aa3f-7d4e8ded5142"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc5050 for PDO 0xffff958582bd5c40
+    InstancePath is "ROOT\CompositeBus\0000"
+    ServiceName is "CompositeBus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc5640 for PDO 0xffff958582dc5450
+    InstancePath is "ROOT\vdrvroot\0000"
+    ServiceName is "vdrvroot"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a41c1c20 for PDO 0xffff9585a41e1c70
+      InstancePath is "{8e7bd593-6e6c-4c52-86a6-77175494dd8e}\MsVhdHba\1&3030e83&0&01"
+      ServiceName is "vhdmp"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc5c30 for PDO 0xffff958582dc5a40
+    InstancePath is "ROOT\spaceport\0000"
+    ServiceName is "spaceport"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc6250 for PDO 0xffff958582dc6060
+    InstancePath is "ROOT\KDNIC\0000"
+    ServiceName is "kdnic"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc6840 for PDO 0xffff958582dc6650
+    InstancePath is "ROOT\VKRNLINTVSP\0000"
+    ServiceName is "vkrnlintvsp"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc7010 for PDO 0xffff958582dc6c40
+    InstancePath is "ROOT\UMBUS\0000"
+    ServiceName is "umbus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d8ae9a0 for PDO 0xffff95859d6aa7c0
+      InstancePath is "UMB\UMB\1&841921d&0&TERMINPUT_BUS"
+      ServiceName is "umbus"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0aa9a0 for PDO 0xffff95859ebdfda0
+      InstancePath is "UMB\UMB\1&841921d&0&TSBUS"
+      ServiceName is "umbus"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0ab9a0 for PDO 0xffff95859d0a6c50
+      InstancePath is "UMB\UMB\1&841921d&0&TS_USB_HUB_Enumerator"
+      ServiceName is "umbus"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff95859eb30990 for PDO 0xffff95859d07f9f0
+        InstancePath is "TS_USB_HUB_Enumerator\UMB\2&30d3618&0&TS_USB_HUB"
+        ServiceName is "tsusbhub"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0ac9a0 for PDO 0xffff95859d0a2c50
+      InstancePath is "UMB\UMB\1&841921d&0&RDCAMERA_BUS"
+      ServiceName is "umbus"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc7600 for PDO 0xffff958582dc7410
+    InstancePath is "ROOT\ACPI_HAL\0000"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958582ecb2e0 for PDO 0xffff958582ac7c90
+      InstancePath is "ACPI_HAL\PNP0C08\0"
+      ServiceName is "ACPI"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d24be0 for PDO 0xffff9585869fbe10
+        InstancePath is "ACPI\PNP0C14\AWW"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bbbbe0 for PDO 0xffff9585869fce10
+        InstancePath is "ACPI\PNP0C14\ATW"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586beebe0 for PDO 0xffff9585869fde10
+        InstancePath is "ACPI\PNP0A08\0"
+        ServiceName is "pci"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586b93ba0 for PDO 0xffff958586d09360
+          InstancePath is "PCI\VEN_8086&DEV_A740&SUBSYS_88821043&REV_01\3&11583659&0&00"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586d05ba0 for PDO 0xffff958586d0c360
+          InstancePath is "PCI\VEN_8086&DEV_A70D&SUBSYS_88821043&REV_01\3&11583659&0&08"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586c23be0 for PDO 0xffff958586c230a0
+            InstancePath is "PCI\VEN_10DE&DEV_2204&SUBSYS_39983842&REV_A1\4&256a0aa8&0&0008"
+            ServiceName is "nvlddmkm"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff9585c1ec6c40 for PDO 0xffff9585d12e19c0
+              InstancePath is "DISPLAY\DEL40BE\5&15cfe938&1&UID4613"
+              ServiceName is "monitor"
+              TargetDeviceNotify List - f 0xffffbf05e3dbfe10  b 0xffffbf05e26dc290
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586ba8ba0 for PDO 0xffff958586ba8060
+            InstancePath is "PCI\VEN_10DE&DEV_1AEF&SUBSYS_39983842&REV_A1\4&256a0aa8&0&0108"
+            ServiceName is "HDAudBus"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958593a26c20 for PDO 0xffff9585939edc00
+              InstancePath is "HDAUDIO\FUNC_01&VEN_10DE&DEV_009A&SUBSYS_38423998&REV_1001\5&352e9a5e&0&0001"
+              ServiceName is "NVHDA"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586d06ba0 for PDO 0xffff958586d10360
+          InstancePath is "PCI\VEN_8086&DEV_A74D&SUBSYS_88821043&REV_01\3&11583659&0&30"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586c55ba0 for PDO 0xffff958586c55060
+            InstancePath is "PCI\VEN_144D&DEV_A80C&SUBSYS_A801144D&REV_00\4&e45fc2a&0&0030"
+            ServiceName is "stornvme"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958589986770 for PDO 0xffff958587fb9050
+              InstancePath is "SCSI\Disk&Ven_NVMe&Prod_Samsung_SSD_990\5&39dab19&0&000000"
+              ServiceName is "disk"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586b928a0 for PDO 0xffff958586bae360
+          InstancePath is "PCI\VEN_8086&DEV_A77D&SUBSYS_88821043&REV_01\3&11583659&0&50"
+          ServiceName is "IntelPMT"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586b8e010 for PDO 0xffff958586bb2360
+          InstancePath is "PCI\VEN_8086&DEV_7A60&SUBSYS_88821043&REV_11\3&11583659&0&A0"
+          ServiceName is "USBXHCI"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958593a259b0 for PDO 0xffff95858fad3c70
+            InstancePath is "USB\ROOT_HUB30\4&2fd48294&0&0"
+            ServiceName is "USBHUB3"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff9585938dfc20 for PDO 0xffff95859914e500
+              InstancePath is "USB\VID_174C&PID_3074\5&cc3f949&1&23"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95859394ebb0 for PDO 0xffff95859399cc00
+              InstancePath is "USB\VID_174C&PID_3074\5&cc3f949&1&24"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858fe6dc20 for PDO 0xffff9585939e7c00
+              InstancePath is "USB\VID_058F&PID_6254\5&cc3f949&1&10"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff95859b1f2b60 for PDO 0xffff95859b124dc0
+                InstancePath is "USB\VID_1B1C&PID_0C32\208631A55630"
+                ServiceName is "usbccgp"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01a0b30 for PDO 0xffff9585a01952d0
+                  InstancePath is "USB\VID_1B1C&PID_0C32&MI_00\7&92a6db&0&0000"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a036fc20 for PDO 0xffff9585a036f060
+                    InstancePath is "HID\VID_1B1C&PID_0C32&MI_00\8&fab92e3&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bb284c90  b 0xffffbf05bb284c90
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859b0e6b20 for PDO 0xffff9585a02d4060
+                  InstancePath is "USB\VID_1B1C&PID_0C32&MI_01\7&92a6db&0&0001"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a0387c20 for PDO 0xffff9585a0387060
+                    InstancePath is "HID\VID_1B1C&PID_0C32&MI_01\8&2f3f2d20&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bb289590  b 0xffffbf05bb289590
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a02a6a30 for PDO 0xffff9585a0111df0
+                InstancePath is "USB\VID_1B1C&PID_0C39\0236232680013"
+                ServiceName is "HidUsb"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a047fc20 for PDO 0xffff9585a01c6060
+                  InstancePath is "HID\VID_1B1C&PID_0C39\7&b3af36c&0&0000"
+                  ServiceName is "steamxbox"
+                  TargetDeviceNotify List - f 0xffffbf05bb285510  b 0xffffbf05bb285510
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858fe6bc20 for PDO 0xffff9585939e6c00
+              InstancePath is "USB\VID_058F&PID_6254\5&cc3f949&1&5"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858fe69c20 for PDO 0xffff9585939e5c00
+              InstancePath is "USB\VID_174C&PID_2074\5&cc3f949&1&7"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff95858d306bf0 for PDO 0xffff95859b1ec940
+                InstancePath is "USB\VID_046D&PID_C52B\6&ae7a593&0&1"
+                ServiceName is "usbccgp"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859b1077e0 for PDO 0xffff95859b10c6b0
+                  InstancePath is "USB\VID_046D&PID_C52B&MI_00\7&10bbd3f4&0&0000"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a01e67e0 for PDO 0xffff9585a084b0a0
+                    InstancePath is "HID\VID_046D&PID_C52B&MI_00\8&fa2c25b&0&0000"
+                    ServiceName is "kbdhid"
+                    TargetDeviceNotify List - f 0xffffbf05b5fe7f10  b 0xffffbf05b5fe7f10
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02b99d0 for PDO 0xffff95859b10d6b0
+                  InstancePath is "USB\VID_046D&PID_C52B&MI_01\7&10bbd3f4&0&0001"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a1551c20 for PDO 0xffff9585a0b652c0
+                    InstancePath is "HID\VID_046D&PID_C52B&MI_01&Col01\8&337a001d&0&0000"
+                    ServiceName is "mouhid"
+                    TargetDeviceNotify List - f 0xffffbf05b95dee90  b 0xffffbf05b95dee90
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a1552c20 for PDO 0xffff9585a1551060
+                    InstancePath is "HID\VID_046D&PID_C52B&MI_01&Col02\8&337a001d&0&0001"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bb27fe10  b 0xffffbf05bb27fe10
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a1553c20 for PDO 0xffff9585a1552060
+                    InstancePath is "HID\VID_046D&PID_C52B&MI_01&Col03\8&337a001d&0&0002"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05b5ff8610  b 0xffffbf05bb27f890
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a05614e0 for PDO 0xffff9585a1553060
+                    InstancePath is "HID\VID_046D&PID_C52B&MI_01&Col04\8&337a001d&0&0003"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bb280c90  b 0xffffbf05bb280c90
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a055f010 for PDO 0xffff9585a05626e0
+                    InstancePath is "SWD\DRIVERENUM\{cbfe3ef1-4946-11f1-aa97-0ed72144c585}#logi_download_assistant_component&8&337a001d&0"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859b10f010 for PDO 0xffff95859b10e6b0
+                  InstancePath is "USB\VID_046D&PID_C52B&MI_02\7&10bbd3f4&0&0002"
+                  ServiceName is "libusbK"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a1167bf0 for PDO 0xffff95859b0b4570
+                InstancePath is "USB\VID_0B05&PID_1AB3\6&ae7a593&0&2"
+                ServiceName is "usbccgp"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a5cc10 for PDO 0xffff9585a14ee060
+                  InstancePath is "USB\VID_0B05&PID_1AB3&MI_00\7&31f69be9&2&0000"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3ca5c20 for PDO 0xffff9585a3ca5060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_00\8&35d6daf1&0&0000"
+                    ServiceName is "kbdhid"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd1c90  b 0xffffbf05bbcd1c90
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95858d48b2e0 for PDO 0xffff9585a1499830
+                  InstancePath is "USB\VID_0B05&PID_1AB3&MI_01\7&31f69be9&2&0001"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3ca7c20 for PDO 0xffff9585a3ca7060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_01\8&11ff9d2f&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd3c90  b 0xffffbf05bbcd3c90
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a65420 for PDO 0xffff9585a1499060
+                  InstancePath is "USB\VID_0B05&PID_1AB3&MI_02\7&31f69be9&2&0002"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95858d2bfc20 for PDO 0xffff9585a3ca6060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_02&Col01\8&11d7a093&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd4d10  b 0xffffbf05bbcd4d10
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3ca6c20 for PDO 0xffff9585a3ca8060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_02&Col02\8&11d7a093&0&0001"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd0a10  b 0xffffbf05bbcd4910
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3ca8c20 for PDO 0xffff9585a3ca9060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_02&Col03\8&11d7a093&0&0002"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd4210  b 0xffffbf05bbcd4210
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3ca9c20 for PDO 0xffff9585a3caa060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_02&Col04\8&11d7a093&0&0003"
+                    ServiceName is "mouhid"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd3810  b 0xffffbf05bbcd3810
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                    DevNode 0xffff9585a3c9dc20 for PDO 0xffff9585a3d38060
+                      InstancePath is "{dd0188d0-4609-4f6d-bcd7-d1c3547a0293}\MouseFilter\9&2aaaa81&0&01"
+                      State = DeviceNodeStarted (0x30a)
+                      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a657d0 for PDO 0xffff9585a1444830
+                  InstancePath is "USB\VID_0B05&PID_1AB3&MI_03\7&31f69be9&2&0003"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3c8ec40 for PDO 0xffff9585a3dcf060
+                    InstancePath is "HID\VID_0B05&PID_1AB3&MI_03\8&35aede55&0&0000"
+                    ServiceName is "kbdhid"
+                    TargetDeviceNotify List - f 0xffffbf05bbcd5390  b 0xffffbf05bbcd5390
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a19dcbb0 for PDO 0xffff958593db5380
+                InstancePath is "USB\VID_17A0&PID_0310\6&ae7a593&0&3"
+                ServiceName is "usbccgp"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a96c20 for PDO 0xffff9585a1444060
+                  InstancePath is "USB\VID_17A0&PID_0310&MI_00\7&1ad136e8&0&0000"
+                  ServiceName is "usbaudio"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585ac72e6f0 for PDO 0xffff9585a4702330
+                    InstancePath is "SWD\MMDEVAPI\{0.0.0.00000000}.{256a72f5-4c1c-44b7-b89c-7b0b689f3d7d}"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585abdd6c00 for PDO 0xffff95859eaf9b80
+                    InstancePath is "SWD\MMDEVAPI\{0.0.1.00000000}.{d2d74da6-5c11-4a2a-a08c-67f368712bf8}"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a94c20 for PDO 0xffff9585a13ec830
+                  InstancePath is "USB\VID_17A0&PID_0310&MI_03\7&1ad136e8&0&0003"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3dd1c20 for PDO 0xffff9585a3dd1060
+                    InstancePath is "HID\VID_17A0&PID_0310&MI_03&Col01\8&382250cf&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcb8410  b 0xffffbf05bbcb8410
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a3dd2c20 for PDO 0xffff9585a3dd2060
+                    InstancePath is "HID\VID_17A0&PID_0310&MI_03&Col02\8&382250cf&0&0001"
+                    ServiceName is "WUDFRd"
+                    TargetDeviceNotify List - f 0xffffbf05bbcb8210  b 0xffffbf05bbcb8210
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858ff3fc20 for PDO 0xffff95859a764780
+              InstancePath is "USB\VID_0B05&PID_18F3\9876543210"
+              ServiceName is "usbccgp"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff958593d955e0 for PDO 0xffff958593db9530
+                InstancePath is "USB\VID_0B05&PID_18F3&MI_00\6&2efc6b98&1&0000"
+                ServiceName is "WINUSB"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff95858ff39c20 for PDO 0xffff95859b08a060
+                InstancePath is "USB\VID_0B05&PID_18F3&MI_02\6&2efc6b98&1&0002"
+                ServiceName is "HidUsb"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859b104c30 for PDO 0xffff95859b106060
+                  InstancePath is "HID\VID_0B05&PID_18F3&MI_02\7&25b1ae6&0&0000"
+                  ServiceName is "steamxbox"
+                  TargetDeviceNotify List - f 0xffffbf05bb283410  b 0xffffbf05bb283410
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858ff3dc20 for PDO 0xffff95859a764520
+              InstancePath is "USB\VID_174C&PID_2074\5&cc3f949&1&8"
+              ServiceName is "USBHUB3"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a19e5c30 for PDO 0xffff95859b086d40
+                InstancePath is "USB\VID_C251&PID_2005\00000001"
+                ServiceName is "usbser"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a19e6c30 for PDO 0xffff9585a0dc67c0
+                InstancePath is "USB\VID_20D6&PID_200D\0000010D39FF9142"
+                ServiceName is "dc1-controller"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a2e358e0 for PDO 0xffff9585a331da70
+                  InstancePath is "USB\VID_045E&PID_02FF&IG_00\00&00&000074D9A92C4413"
+                  ServiceName is "HidUsb"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859de50c20 for PDO 0xffff95859de50060
+                    InstancePath is "HID\VID_045E&PID_02FF&IG_00\7&3130d4f3&0&0000"
+                    ServiceName is "steamxbox"
+                    TargetDeviceNotify List - f 0xffffbf05bbcc4f90  b 0xffffbf05bbccee10
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858ff3bc20 for PDO 0xffff95859a7642c0
+              InstancePath is "USB\VID_8087&PID_0036\5&cc3f949&1&14"
+              ServiceName is "BTHUSB"
+              TargetDeviceNotify List - f 0xffffbf05b3fef510  b 0xffffbf05bbcbcf90
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a018e920 for PDO 0xffff95859a8b9d70
+                InstancePath is "BTH\MS_RFCOMM\6&2b310fe8&0&0"
+                ServiceName is "RFCOMM"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a018f010 for PDO 0xffff95859a9c5d70
+                InstancePath is "BTH\MS_BTHBRB\6&2b310fe8&0&1"
+                ServiceName is "BthEnum"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01cc5e0 for PDO 0xffff9585a01bb060
+                  InstancePath is "BTHENUM\{00000000-deca-fade-deca-deafdecacafe}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0207720 for PDO 0xffff9585a01b2060
+                  InstancePath is "BTHENUM\{00000000-deca-fade-deca-deafdecacafe}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0207ad0 for PDO 0xffff9585a019f0a0
+                  InstancePath is "BTHENUM\{00001000-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2007\7&e4e8840&0&7820A5CA1DD9_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0208010 for PDO 0xffff95859b0be060
+                  InstancePath is "BTHENUM\{00001000-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2006\7&e4e8840&0&7820A5CD1AB7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02083c0 for PDO 0xffff95859b0bc060
+                  InstancePath is "BTHENUM\{00001000-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0208770 for PDO 0xffff9585a01b5060
+                  InstancePath is "BTHENUM\{00001000-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0208b20 for PDO 0xffff9585a01cf060
+                  InstancePath is "BTHENUM\{00001105-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0209010 for PDO 0xffff9585a01c0060
+                  InstancePath is "BTHENUM\{00001105-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02093c0 for PDO 0xffff9585a01ca060
+                  InstancePath is "BTHENUM\{00001105-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0209770 for PDO 0xffff9585a01dc060
+                  InstancePath is "BTHENUM\{0000110a-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0209b20 for PDO 0xffff95859b0bf060
+                  InstancePath is "BTHENUM\{0000110a-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020a010 for PDO 0xffff9585a01cd060
+                  InstancePath is "BTHENUM\{0000110a-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020a3c0 for PDO 0xffff9585a01be060
+                  InstancePath is "BTHENUM\{0000110a-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020a770 for PDO 0xffff95859b0c5060
+                  InstancePath is "BTHENUM\{0000110a-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020ab20 for PDO 0xffff9585a01df060
+                  InstancePath is "BTHENUM\{00001112-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020b010 for PDO 0xffff9585a01d4060
+                  InstancePath is "BTHENUM\{00001112-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020b3c0 for PDO 0xffff9585a01b7060
+                  InstancePath is "BTHENUM\{00001112-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020b770 for PDO 0xffff9585a01d7060
+                  InstancePath is "BTHENUM\{00001115-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020bb20 for PDO 0xffff95859b0bd060
+                  InstancePath is "BTHENUM\{00001115-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020c010 for PDO 0xffff9585a01da060
+                  InstancePath is "BTHENUM\{00001116-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020c3c0 for PDO 0xffff9585a01cb060
+                  InstancePath is "BTHENUM\{00001116-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020c770 for PDO 0xffff9585a01c20a0
+                  InstancePath is "BTHENUM\{00001116-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020cb20 for PDO 0xffff9585a01d30a0
+                  InstancePath is "BTHENUM\{0000111f-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  ServiceName is "BthHFEnum"
+                  TargetDeviceNotify List - f 0xffffbf05b3feee10  b 0xffffbf05b3feee10
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a030e710 for PDO 0xffff9585a018e0a0
+                    InstancePath is "BTHHFENUM\BthHFPAudio\8&ba4c248&0&97"
+                    ServiceName is "BthHFAud"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020d010 for PDO 0xffff95859b0c0060
+                  InstancePath is "BTHENUM\{0000111f-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  ServiceName is "BthHFEnum"
+                  TargetDeviceNotify List - f 0xffffbf05b3fe1510  b 0xffffbf05b3fe1510
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a030b010 for PDO 0xffff9585a013dc40
+                    InstancePath is "BTHHFENUM\BthHFPAudio\8&2e0379ae&1&97"
+                    ServiceName is "BthHFAud"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020d3c0 for PDO 0xffff9585a01c9060
+                  InstancePath is "BTHENUM\{0000111f-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  ServiceName is "BthHFEnum"
+                  TargetDeviceNotify List - f 0xffffbf05b3fe0e90  b 0xffffbf05b3fe0e90
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a0316390 for PDO 0xffff9585a013d9e0
+                    InstancePath is "BTHHFENUM\BthHFPAudio\8&93cdc0d&1&97"
+                    ServiceName is "BthHFAud"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020d770 for PDO 0xffff9585a01c5060
+                  InstancePath is "BTHENUM\{0000111f-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  ServiceName is "BthHFEnum"
+                  TargetDeviceNotify List - f 0xffffbf05b3fe0210  b 0xffffbf05b3fe0210
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a0319390 for PDO 0xffff9585a013d780
+                    InstancePath is "BTHHFENUM\BthHFPAudio\8&18a3af4b&3&97"
+                    ServiceName is "BthHFAud"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020db20 for PDO 0xffff9585a01b3060
+                  InstancePath is "BTHENUM\{0000111f-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  ServiceName is "BthHFEnum"
+                  TargetDeviceNotify List - f 0xffffbf05b3fe2310  b 0xffffbf05b3fe2310
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff9585a030b740 for PDO 0xffff9585a013d520
+                    InstancePath is "BTHHFENUM\BthHFPAudio\8&2bf58dc&0&97"
+                    ServiceName is "BthHFAud"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020e010 for PDO 0xffff9585a01b10a0
+                  InstancePath is "BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0002054c_PID&09cc\7&e4e8840&0&401B5FE7DA3C_C00000000"
+                  ServiceName is "HidBth"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020e3c0 for PDO 0xffff9585a01a1060
+                  InstancePath is "BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2007\7&e4e8840&0&7820A5CA1DD9_C00000000"
+                  ServiceName is "HidBth"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020e770 for PDO 0xffff95859b0c1060
+                  InstancePath is "BTHENUM\{00001124-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2006\7&e4e8840&0&7820A5CD1AB7_C00000000"
+                  ServiceName is "HidBth"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020eb20 for PDO 0xffff9585a01bd060
+                  InstancePath is "BTHENUM\{0000112f-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020f010 for PDO 0xffff9585a01c3060
+                  InstancePath is "BTHENUM\{00001132-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020f3c0 for PDO 0xffff95859b0c3060
+                  InstancePath is "BTHENUM\{00001132-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020f770 for PDO 0xffff9585a01ba060
+                  InstancePath is "BTHENUM\{00001200-0000-1000-8000-00805f9b34fb}_VID&0002054c_PID&09cc\7&e4e8840&0&401B5FE7DA3C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a020fb20 for PDO 0xffff9585a019c060
+                  InstancePath is "BTHENUM\{00001200-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2007\7&e4e8840&0&7820A5CA1DD9_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0210010 for PDO 0xffff95859b0c4060
+                  InstancePath is "BTHENUM\{00001200-0000-1000-8000-00805f9b34fb}_VID&0002057e_PID&2006\7&e4e8840&0&7820A5CD1AB7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02103c0 for PDO 0xffff9585a01d8060
+                  InstancePath is "BTHENUM\{00001800-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0210770 for PDO 0xffff9585a01c8060
+                  InstancePath is "BTHENUM\{00001800-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0210b20 for PDO 0xffff9585a01ce060
+                  InstancePath is "BTHENUM\{00001800-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0211010 for PDO 0xffff9585a01bc060
+                  InstancePath is "BTHENUM\{00001800-0000-1000-8000-00805f9b34fb}_VID&00021d6b_PID&0246\7&e4e8840&0&C0F535551005_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02113c0 for PDO 0xffff9585a01c4060
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0211770 for PDO 0xffff9585a01d9060
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0211b20 for PDO 0xffff9585a01d1060
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0213050 for PDO 0xffff9585a01b8060
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0213400 for PDO 0xffff95859b0b60a0
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&00021d6b_PID&0246\7&e4e8840&0&C0F535551005_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02137b0 for PDO 0xffff9585a01b6060
+                  InstancePath is "BTHENUM\{00001801-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0213b60 for PDO 0xffff9585a01b4060
+                  InstancePath is "BTHENUM\{0000180a-0000-1000-8000-00805f9b34fb}_VID&00021d6b_PID&0246\7&e4e8840&0&C0F535551005_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0214010 for PDO 0xffff9585a01bf060
+                  InstancePath is "BTHENUM\{02030302-1d19-415f-86f2-22a2106a0a77}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02143c0 for PDO 0xffff9585a01b9060
+                  InstancePath is "BTHENUM\{02030302-1d19-415f-86f2-22a2106a0a77}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0214770 for PDO 0xffff9585a01c7060
+                  InstancePath is "BTHENUM\{1ff31936-572e-4b36-a2bf-b2409b1aa6f4}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0214b20 for PDO 0xffff9585a0205060
+                  InstancePath is "BTHENUM\Dev_00C5BFF7D2C7\7&e4e8840&0&BluetoothDevice_00C5BFF7D2C7"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0215010 for PDO 0xffff9585a0204060
+                  InstancePath is "BTHENUM\Dev_1B17890DC42C\7&e4e8840&0&BluetoothDevice_1B17890DC42C"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02153c0 for PDO 0xffff9585a0203060
+                  InstancePath is "BTHENUM\Dev_3481F4731D79\7&e4e8840&0&BluetoothDevice_3481F4731D79"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0215770 for PDO 0xffff9585a02020a0
+                  InstancePath is "BTHENUM\Dev_401B5FE7DA3C\7&e4e8840&0&BluetoothDevice_401B5FE7DA3C"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0215b20 for PDO 0xffff9585a01e2060
+                  InstancePath is "BTHENUM\Dev_682648997A49\7&e4e8840&0&BluetoothDevice_682648997A49"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0216010 for PDO 0xffff9585a01dd060
+                  InstancePath is "BTHENUM\Dev_7820A5CA1DD9\7&e4e8840&0&BluetoothDevice_7820A5CA1DD9"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02163c0 for PDO 0xffff9585a01de060
+                  InstancePath is "BTHENUM\Dev_7820A5CD1AB7\7&e4e8840&0&BluetoothDevice_7820A5CD1AB7"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0216770 for PDO 0xffff9585a01e1060
+                  InstancePath is "BTHENUM\Dev_7855E54C650A\7&e4e8840&0&BluetoothDevice_7855E54C650A"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0216b20 for PDO 0xffff9585a01e0060
+                  InstancePath is "BTHENUM\Dev_A0FBC55109C1\7&e4e8840&0&BluetoothDevice_A0FBC55109C1"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0217010 for PDO 0xffff9585a01d6060
+                  InstancePath is "BTHENUM\Dev_C0F535551005\7&e4e8840&0&BluetoothDevice_C0F535551005"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a02173c0 for PDO 0xffff9585a01d5060
+                  InstancePath is "BTHENUM\Dev_E0B55F5E787C\7&e4e8840&0&BluetoothDevice_E0B55F5E787C"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859d16fc20 for PDO 0xffff9585a27f0080
+                  InstancePath is "BTHENUM\{0000110b-0000-1000-8000-00805f9b34fb}_VID&000100cd_PID&1582\7&e4e8840&0&3481F4731D79_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3ca1ba0 for PDO 0xffff9585a27680c0
+                  InstancePath is "BTHENUM\{0000110b-0000-1000-8000-00805f9b34fb}_LOCALMFG&0002\7&e4e8840&0&7855E54C650A_C00000000"
+                  ServiceName is "BthA2dp"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a1a5f010 for PDO 0xffff9585a29600d0
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95858d0368a0 for PDO 0xffff9585a28ad0d0
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3dcda60 for PDO 0xffff9585a2795080
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859d170a20 for PDO 0xffff9585a294e080
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859d185a20 for PDO 0xffff9585a27e9080
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&00021d6b_PID&0246\7&e4e8840&0&C0F535551005_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859d16ea20 for PDO 0xffff9585a29c7080
+                  InstancePath is "BTHENUM\{0000110c-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c0e8a0 for PDO 0xffff9585a29620d0
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&00C5BFF7D2C7_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c9b8a0 for PDO 0xffff9585a28ae080
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&1B17890DC42C_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c9c8a0 for PDO 0xffff9585a2797080
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&000100e0_PID&1200\7&e4e8840&0&682648997A49_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c9e8a0 for PDO 0xffff9585a2764080
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_LOCALMFG&0002\7&e4e8840&0&7855E54C650A_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c118a0 for PDO 0xffff9585a294f080
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7410\7&e4e8840&0&A0FBC55109C1_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c11c50 for PDO 0xffff9585a27eb0c0
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&00021d6b_PID&0246\7&e4e8840&0&C0F535551005_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3dd9870 for PDO 0xffff9585a29c9080
+                  InstancePath is "BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&0001004c_PID&7247\7&e4e8840&0&E0B55F5E787C_C00000000"
+                  ServiceName is "Microsoft_Bluetooth_AvrcpTransport"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a018f3c0 for PDO 0xffff95859a970d70
+                InstancePath is "BTH\MS_BTHPAN\6&2b310fe8&0&2"
+                ServiceName is "BthPan"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585a018f770 for PDO 0xffff9585a018e300
+                InstancePath is "BTH\MS_BTHLE\6&2b310fe8&0&3"
+                ServiceName is "BthLEEnum"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01947e0 for PDO 0xffff9585a013d2c0
+                  InstancePath is "BTHLE\Dev_00c5bff7d2c7\7&333408df&0&00c5bff7d2c7"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a0194b90 for PDO 0xffff9585a013d060
+                  InstancePath is "BTHLE\Dev_20a171e61d87\7&333408df&0&20a171e61d87"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1a4c20 for PDO 0xffff9585a3e360b0
+                    InstancePath is "BTHLEDevice\{00001801-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&0001"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1a1c20 for PDO 0xffff9585a3d94c50
+                    InstancePath is "BTHLEDevice\{00001800-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&0005"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1a9c20 for PDO 0xffff9585a3d949f0
+                    InstancePath is "BTHLEDevice\{0000180a-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&000a"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1acc20 for PDO 0xffff9585a3d94790
+                    InstancePath is "BTHLEDevice\{0000180f-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&001b"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1b2c20 for PDO 0xffff9585a3d94530
+                    InstancePath is "BTHLEDevice\{00001813-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&0020"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d1bfc20 for PDO 0xffff9585a3de2d80
+                    InstancePath is "BTHLEDevice\{00001812-0000-1000-8000-00805f9b34fb}_Dev_VID&010171_PID&0419_REV&0100_20a171e61d87\8&3887408a&0&0023"
+                    ServiceName is "mshidumdf"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01a4010 for PDO 0xffff95859b0e7350
+                  InstancePath is "BTHLE\Dev_47566ab500e5\7&333408df&0&47566ab500e5"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d379830 for PDO 0xffff95859d2d79e0
+                    InstancePath is "BTHLEDevice\{00001800-0000-1000-8000-00805f9b34fb}_47566ab500e5\8&1f2fe56e&0&0001"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d379be0 for PDO 0xffff95859d2d7780
+                    InstancePath is "BTHLEDevice\{00001801-0000-1000-8000-00805f9b34fb}_47566ab500e5\8&1f2fe56e&0&0006"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37a010 for PDO 0xffff95859d2d7520
+                    InstancePath is "BTHLEDevice\{0000180a-0000-1000-8000-00805f9b34fb}_47566ab500e5\8&1f2fe56e&0&000a"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37a3c0 for PDO 0xffff95859d2d72c0
+                    InstancePath is "BTHLEDevice\{8b0611fe-4784-4d80-9744-72199d5975da}_47566ab500e5\8&1f2fe56e&0&000f"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37a770 for PDO 0xffff95859d2d7060
+                    InstancePath is "BTHLEDevice\{d0611e78-bbb4-4591-a5f8-487910ae4366}_47566ab500e5\8&1f2fe56e&0&0018"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37ab20 for PDO 0xffff95859d2d6c40
+                    InstancePath is "BTHLEDevice\{9fa480e0-4967-4542-9390-d343dc5d04ae}_47566ab500e5\8&1f2fe56e&0&001d"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37b010 for PDO 0xffff95859d2d69e0
+                    InstancePath is "BTHLEDevice\{0000180f-0000-1000-8000-00805f9b34fb}_47566ab500e5\8&1f2fe56e&0&0022"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37b3c0 for PDO 0xffff95859d2d6780
+                    InstancePath is "BTHLEDevice\{00001805-0000-1000-8000-00805f9b34fb}_47566ab500e5\8&1f2fe56e&0&0026"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37b770 for PDO 0xffff95859d2d6520
+                    InstancePath is "BTHLEDevice\{7905f431-b5ce-4e99-a40f-4b1e122d00d0}_47566ab500e5\8&1f2fe56e&0&002c"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37bb20 for PDO 0xffff95859d2d62c0
+                    InstancePath is "BTHLEDevice\{89d3502b-0f36-433a-8ef4-c502ad55f8dc}_47566ab500e5\8&1f2fe56e&0&0036"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01a43c0 for PDO 0xffff95859b126dc0
+                  InstancePath is "BTHLE\Dev_736b8a7c9868\7&333408df&0&736b8a7c9868"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bb010 for PDO 0xffff95859d2d6060
+                    InstancePath is "BTHLEDevice\{00001800-0000-1000-8000-00805f9b34fb}_736b8a7c9868\8&13af9c70&0&0001"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bb3c0 for PDO 0xffff95859d2d5bf0
+                    InstancePath is "BTHLEDevice\{00001801-0000-1000-8000-00805f9b34fb}_736b8a7c9868\8&13af9c70&0&0006"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bb770 for PDO 0xffff95859d2d5990
+                    InstancePath is "BTHLEDevice\{0000180a-0000-1000-8000-00805f9b34fb}_736b8a7c9868\8&13af9c70&0&000a"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bbb20 for PDO 0xffff95859d2cbdd0
+                    InstancePath is "BTHLEDevice\{0000180f-0000-1000-8000-00805f9b34fb}_736b8a7c9868\8&13af9c70&0&000f"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bc010 for PDO 0xffff95859d2cadd0
+                    InstancePath is "BTHLEDevice\{d0611e78-bbb4-4591-a5f8-487910ae4366}_736b8a7c9868\8&13af9c70&0&0013"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bc3c0 for PDO 0xffff95859d3b6520
+                    InstancePath is "BTHLEDevice\{9fa480e0-4967-4542-9390-d343dc5d04ae}_736b8a7c9868\8&13af9c70&0&0018"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bc770 for PDO 0xffff95859d3b62c0
+                    InstancePath is "BTHLEDevice\{00001805-0000-1000-8000-00805f9b34fb}_736b8a7c9868\8&13af9c70&0&001d"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bcb20 for PDO 0xffff95859d3b6060
+                    InstancePath is "BTHLEDevice\{7905f431-b5ce-4e99-a40f-4b1e122d00d0}_736b8a7c9868\8&13af9c70&0&0023"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bd010 for PDO 0xffff95859d3b5c40
+                    InstancePath is "BTHLEDevice\{89d3502b-0f36-433a-8ef4-c502ad55f8dc}_736b8a7c9868\8&13af9c70&0&002d"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3bd3c0 for PDO 0xffff95859d3b59e0
+                    InstancePath is "BTHLEDevice\{a3fa5111-88de-41ca-a899-289431d2c8e9}_736b8a7c9868\8&13af9c70&0&0039"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01a4770 for PDO 0xffff95859b11fdc0
+                  InstancePath is "BTHLE\Dev_e0c062ca987f\7&333408df&0&e0c062ca987f"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37d330 for PDO 0xffff95859d3b5780
+                    InstancePath is "BTHLEDevice\{00001800-0000-1000-8000-00805f9b34fb}_Dev_VID&02047d_PID&80d4_REV&6701_e0c062ca987f\8&336b33a4&0&0001"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37d6e0 for PDO 0xffff95859d3b5520
+                    InstancePath is "BTHLEDevice\{0000180a-0000-1000-8000-00805f9b34fb}_Dev_VID&02047d_PID&80d4_REV&6701_e0c062ca987f\8&336b33a4&0&000a"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d37da90 for PDO 0xffff95859d3b52c0
+                    InstancePath is "BTHLEDevice\{0000180f-0000-1000-8000-00805f9b34fb}_Dev_VID&02047d_PID&80d4_REV&6701_e0c062ca987f\8&336b33a4&0&0011"
+                    ServiceName is "UmPass"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                  DevNode 0xffff95859d3a3010 for PDO 0xffff95859d3b5060
+                    InstancePath is "BTHLEDevice\{00001812-0000-1000-8000-00805f9b34fb}_Dev_VID&02047d_PID&80d4_REV&6701_e0c062ca987f\8&336b33a4&0&0015"
+                    ServiceName is "mshidumdf"
+                    State = DeviceNodeStarted (0x30a)
+                    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a01a4b20 for PDO 0xffff95859b11ddc0
+                  InstancePath is "BTHLE\Dev_1097bdc817c6\7&333408df&0&1097bdc817c6"
+                  ServiceName is "BthLEEnum"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff9585a19dbbb0 for PDO 0xffff9585a0dbddd0
+              InstancePath is "USB\VID_0B05&PID_1A98\5&cc3f949&1&6"
+              ServiceName is "usbccgp"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff9585826d81b0 for PDO 0xffff9585a273d830
+                InstancePath is "USB\VID_0B05&PID_1A98&MI_00\6&413e5e5&0&0000"
+                ServiceName is "usbaudio2"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c938a0 for PDO 0xffff958582705cb0
+                  InstancePath is "SWD\DRIVERENUM\{c3a63edd-2d27-4b66-b155-5e94b43d926a}#RealtekAPO&7&382efe88&1"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c0f8a0 for PDO 0xffff9585826e3600
+                  InstancePath is "SWD\DRIVERENUM\{c3a63edd-2d27-4b66-b155-5e94b43d926a}#RealtekASIO&7&382efe88&1"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c968a0 for PDO 0xffff9585a3ca29f0
+                  InstancePath is "SWD\DRIVERENUM\{c3a63edd-2d27-4b66-b155-5e94b43d926a}#RealtekHSA&7&382efe88&1"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3c978a0 for PDO 0xffff9585a3c96ca0
+                  InstancePath is "SWD\DRIVERENUM\{c3a63edd-2d27-4b66-b155-5e94b43d926a}#RealtekSRV&7&382efe88&1"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859dceac30 for PDO 0xffff9585cfc08b50
+                  InstancePath is "SWD\MMDEVAPI\{0.0.0.00000000}.{ebe2d501-1b8a-4c27-a784-ab83580729c1}"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff95858d41fc20 for PDO 0xffff9585a2743830
+                InstancePath is "USB\VID_0B05&PID_1A98&MI_07\6&413e5e5&0&0007"
+                ServiceName is "HidUsb"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a3dd0c20 for PDO 0xffff9585a3dd0060
+                  InstancePath is "HID\VID_0B05&PID_1A98&MI_07\7&5e571bf&0&0000"
+                  ServiceName is "steamxbox"
+                  TargetDeviceNotify List - f 0xffffbf05bbcc0610  b 0xffffbf05bbcc0610
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586b8e3c0 for PDO 0xffff958586bb4360
+          InstancePath is "PCI\VEN_8086&DEV_7A27&SUBSYS_88821043&REV_11\3&11583659&0&A2"
+          State = DeviceNodeInitialized (0x304)
+          Previous State = DeviceNodeUninitialized (0x301)
+        DevNode 0xffff958586bb7010 for PDO 0xffff958586bb6360
+          InstancePath is "PCI\VEN_8086&DEV_7A4C&SUBSYS_88821043&REV_11\3&11583659&0&A8"
+          ServiceName is "iaLPSS2_I2C_ADL"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586bb73c0 for PDO 0xffff958586b7a360
+          InstancePath is "PCI\VEN_8086&DEV_7A4D&SUBSYS_88821043&REV_11\3&11583659&0&A9"
+          ServiceName is "iaLPSS2_I2C_ADL"
+          TargetDeviceNotify List - f 0xffffbf05b3fed990  b 0xffffbf05b3fe2f90
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a77e940 for PDO 0xffff958597019dc0
+            InstancePath is "ACPI\MSFT8000\1"
+            ServiceName is "rhproxy"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a785940 for PDO 0xffff958597019b90
+            InstancePath is "ACPI\ITE8853\1"
+            ServiceName is "ITEUcmCxClient"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce5310 for PDO 0xffff958586b7c360
+          InstancePath is "PCI\VEN_8086&DEV_7A4E&SUBSYS_88821043&REV_11\3&11583659&0&AA"
+          ServiceName is "iaLPSS2_I2C_ADL"
+          TargetDeviceNotify List - f 0xffffbf05b3fef790  b 0xffffbf05b3fe3790
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a863870 for PDO 0xffff958597019730
+            InstancePath is "ACPI\INT3515\4&15b0a2f4&0"
+            ServiceName is "TPS659xx"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce56c0 for PDO 0xffff958586b7e360
+          InstancePath is "PCI\VEN_8086&DEV_7A68&SUBSYS_88821043&REV_11\3&11583659&0&B0"
+          ServiceName is "MEIx64"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a9dd5b0 for PDO 0xffff95859a9bcdd0
+            InstancePath is "SWD\DRIVERENUM\OEM_DAL_component&4&39730e8b&0"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a8e9050 for PDO 0xffff95859a9dd9b0
+            InstancePath is "SWD\DRIVERENUM\OEM_ES_component&4&39730e8b&0"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff95859a955050 for PDO 0xffff95859a8e9700
+            InstancePath is "SWD\DRIVERENUM\OEM_WMI_component&4&39730e8b&0"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce5a70 for PDO 0xffff958586b80360
+          InstancePath is "PCI\VEN_8086&DEV_7A62&SUBSYS_88821043&REV_11\3&11583659&0&B8"
+          ServiceName is "storahci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce7310 for PDO 0xffff958586b82360
+          InstancePath is "PCI\VEN_8086&DEV_7A48&SUBSYS_88821043&REV_11\3&11583659&0&D0"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586bb84e0 for PDO 0xffff958586bfd060
+            InstancePath is "PCI\VEN_144D&DEV_A80C&SUBSYS_A801144D&REV_00\4&6d0681d&0&00D0"
+            ServiceName is "stornvme"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff9585899863c0 for PDO 0xffff958589996050
+              InstancePath is "SCSI\Disk&Ven_NVMe&Prod_Samsung_SSD_990\5&30998f3&0&000000"
+              ServiceName is "disk"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce76c0 for PDO 0xffff958586bbd360
+          InstancePath is "PCI\VEN_8086&DEV_7A40&SUBSYS_88821043&REV_11\3&11583659&0&D8"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce7a70 for PDO 0xffff958586bc1360
+          InstancePath is "PCI\VEN_8086&DEV_7A38&SUBSYS_88821043&REV_11\3&11583659&0&E0"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586d1aba0 for PDO 0xffff958586d1a060
+            InstancePath is "PCI\VEN_8086&DEV_272B&SUBSYS_00F48086&REV_1A\4&26f22371&0&00E0"
+            ServiceName is "Netwaw18"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff95858fe89c20 for PDO 0xffff958593da3dd0
+              InstancePath is "SWD\DRIVERENUM\{4d3c822d-417d-4b03-b562-cd33f5fda354}#PieSoftwareComponent&5&d959eec&1"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce9310 for PDO 0xffff958586bc5360
+          InstancePath is "PCI\VEN_8086&DEV_7A3B&SUBSYS_88821043&REV_11\3&11583659&0&E3"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586d1dba0 for PDO 0xffff958586d1d060
+            InstancePath is "PCI\VEN_8086&DEV_125C&SUBSYS_88671043&REV_06\107C61FFFF22572A00"
+            ServiceName is "e2fnexpress"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce96c0 for PDO 0xffff958586bc9360
+          InstancePath is "PCI\VEN_8086&DEV_7A3C&SUBSYS_88821043&REV_11\3&11583659&0&E4"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586c30ba0 for PDO 0xffff958586c30060
+            InstancePath is "PCI\VEN_8086&DEV_1136&SUBSYS_104387F6&REV_02\UABD971388BB7D00000"
+            ServiceName is "pci"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958586c40ba0 for PDO 0xffff958586c40060
+              InstancePath is "PCI\VEN_8086&DEV_1136&SUBSYS_104387F6&REV_02\ABD971388BB7D00000"
+              ServiceName is "pci"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff958586c73ba0 for PDO 0xffff958586c73060
+                InstancePath is "PCI\VEN_8086&DEV_1137&SUBSYS_104387F6&REV_00\ABD971388BB7D00000"
+                ServiceName is "nhi"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff9585a19c9ba0 for PDO 0xffff95859d046e00
+                  InstancePath is "SWD\DRIVERENUM\ThunderboltHostControllerHSA&7&f23fe03&0"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff95859d04f9a0 for PDO 0xffff95859d048e00
+                  InstancePath is "SWD\DRIVERENUM\{b4daa161-39a4-49ea-bc66-7b05a9ddbb16}#TbtToastComponent&7&f23fe03&0"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958586c58ba0 for PDO 0xffff958586c42060
+              InstancePath is "PCI\VEN_8086&DEV_1136&SUBSYS_104387F6&REV_02\ABD971388BB7D00008"
+              ServiceName is "pci"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958586c5aba0 for PDO 0xffff958586c58060
+              InstancePath is "PCI\VEN_8086&DEV_1136&SUBSYS_104387F6&REV_02\ABD971388BB7D00010"
+              ServiceName is "pci"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+              DevNode 0xffff958586c72ba0 for PDO 0xffff958586c72060
+                InstancePath is "PCI\VEN_8086&DEV_1138&SUBSYS_00000000&REV_00\6&47608f3&0&001000E4"
+                ServiceName is "USBXHCI"
+                State = DeviceNodeStarted (0x30a)
+                Previous State = DeviceNodeEnumerateCompletion (0x30f)
+                DevNode 0xffff958593d40be0 for PDO 0xffff95858fd97310
+                  InstancePath is "USB\ROOT_HUB30\7&89f19e9&0&0"
+                  ServiceName is "USBHUB3"
+                  State = DeviceNodeStarted (0x30a)
+                  Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958586bfdba0 for PDO 0xffff958586c5a060
+              InstancePath is "PCI\VEN_8086&DEV_1136&SUBSYS_104387F6&REV_02\ABD971388BB7D00018"
+              ServiceName is "pci"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ce9a70 for PDO 0xffff958586bf2360
+          InstancePath is "PCI\VEN_8086&DEV_7A30&SUBSYS_88821043&REV_11\3&11583659&0&E8"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586c38ba0 for PDO 0xffff958586c38060
+            InstancePath is "PCI\VEN_1E4B&DEV_1602&SUBSYS_16021E4B&REV_01\4&25223e6f&0&00E8"
+            ServiceName is "stornvme"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958589986010 for PDO 0xffff95858b3b3050
+              InstancePath is "SCSI\Disk&Ven_NVMe&Prod_SPCC_M.2_PCIe_SS\5&237394fd&0&000000"
+              ServiceName is "disk"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ceb310 for PDO 0xffff958586bf6360
+          InstancePath is "PCI\VEN_8086&DEV_7A34&SUBSYS_88821043&REV_11\3&11583659&0&EC"
+          ServiceName is "pci"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586c3bba0 for PDO 0xffff958586c3b060
+            InstancePath is "PCI\VEN_144D&DEV_A804&SUBSYS_A801144D&REV_00\4&19c94c2c&0&00EC"
+            ServiceName is "secnvme"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+            DevNode 0xffff958586d8f920 for PDO 0xffff958586d87050
+              InstancePath is "SCSI\Disk&Ven_NVMe&Prod_Samsung_SSD_960\5&250a530f&0&000000"
+              ServiceName is "disk"
+              State = DeviceNodeStarted (0x30a)
+              Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ceb6c0 for PDO 0xffff958586bfa360
+          InstancePath is "PCI\VEN_8086&DEV_7A04&SUBSYS_88821043&REV_11\3&11583659&0&F8"
+          ServiceName is "msisadrv"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+          DevNode 0xffff958586d175e0 for PDO 0xffff958586b52e10
+            InstancePath is "ACPI\PNP0C02\0"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586d17990 for PDO 0xffff958586b67e10
+            InstancePath is "ACPI\PNP0103\0"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586c02050 for PDO 0xffff958586b68e10
+            InstancePath is "ACPI\PNP0000\4&6ec0d58&0"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586c02400 for PDO 0xffff958586b69e10
+            InstancePath is "ACPI\PNP0C02\2"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586c027b0 for PDO 0xffff958586b6ae10
+            InstancePath is "ACPI\PNP0100\4&6ec0d58&0"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586c02b60 for PDO 0xffff958586b6be10
+            InstancePath is "ACPI\INTC109C\4&6ec0d58&0"
+            State = DeviceNodeInitialized (0x304)
+            Previous State = DeviceNodeUninitialized (0x301)
+          DevNode 0xffff958586b99050 for PDO 0xffff958586b6ce10
+            InstancePath is "ACPI\PNP0C09\4&6ec0d58&0"
+            State = DeviceNodeStarted (0x30a)
+            Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586ceba70 for PDO 0xffff958586bfc360
+          InstancePath is "PCI\VEN_8086&DEV_7A50&SUBSYS_86941043&REV_11\3&11583659&0&FB"
+          ServiceName is "HDAudBus"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff958586b86310 for PDO 0xffff958586ce1360
+          InstancePath is "PCI\VEN_8086&DEV_7A23&SUBSYS_88821043&REV_11\3&11583659&0&FC"
+          State = DeviceNodeInitialized (0x304)
+          Previous State = DeviceNodeUninitialized (0x301)
+        DevNode 0xffff958586b866c0 for PDO 0xffff958586ce3360
+          InstancePath is "PCI\VEN_8086&DEV_7A24&SUBSYS_88821043&REV_11\3&11583659&0&FD"
+          State = DeviceNodeInitialized (0x304)
+          Previous State = DeviceNodeUninitialized (0x301)
+        DevNode 0xffff958586b86a70 for PDO 0xffff958586b3fe10
+          InstancePath is "ACPI\PNP0C02\1"
+          State = DeviceNodeInitialized (0x304)
+          Previous State = DeviceNodeUninitialized (0x301)
+      DevNode 0xffff958586cdfbe0 for PDO 0xffff958586ae8e10
+        InstancePath is "ACPI\ACPI000E\2&daba3ff&0"
+        ServiceName is "acpitime"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586cacbe0 for PDO 0xffff958586ae9e10
+        InstancePath is "ACPI\PNP0C02\IoTraps"
+        State = DeviceNodeInitialized (0x304)
+        Previous State = DeviceNodeUninitialized (0x301)
+      DevNode 0xffff958586cbdbe0 for PDO 0xffff958586aeae10
+        InstancePath is "ACPI\PNP0C02\5"
+        State = DeviceNodeInitialized (0x304)
+        Previous State = DeviceNodeUninitialized (0x301)
+      DevNode 0xffff958586ccebe0 for PDO 0xffff958586aebe10
+        InstancePath is "ACPI\INTC1085\2&daba3ff&0"
+        ServiceName is "iaLPSS2_GPIO2_ADL"
+        TargetDeviceNotify List - f 0xffffbf05b3fedb10  b 0xffffbf05b3fedb10
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586c468e0 for PDO 0xffff958586aece10
+        InstancePath is "ACPI\PNP0C02\ISCLK"
+        State = DeviceNodeInitialized (0x304)
+        Previous State = DeviceNodeUninitialized (0x301)
+      DevNode 0xffff958586b8e8a0 for PDO 0xffff958586aede10
+        InstancePath is "ACPI\PNP0C0E\2&daba3ff&0"
+        TargetDeviceNotify List - f 0xffffbf05a6707710  b 0xffffbf05a6707710
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb78a0 for PDO 0xffff958586aeee10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\0"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b8f8a0 for PDO 0xffff958586aefe10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\1"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d0a8a0 for PDO 0xffff958586af0e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\2"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b948a0 for PDO 0xffff958586af1e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\3"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb88a0 for PDO 0xffff958586af2e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\4"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958582735760 for PDO 0xffff958586af3e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\5"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958582735b10 for PDO 0xffff958586af4e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\6"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585869f0010 for PDO 0xffff958586af5e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\7"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585869f03c0 for PDO 0xffff958582773e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\8"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585865f8010 for PDO 0xffff958582774e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\9"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585865f83c0 for PDO 0xffff958582775e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\a"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585869e34a0 for PDO 0xffff958582776e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\b"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585869e3850 for PDO 0xffff958582777e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\c"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585869e3c00 for PDO 0xffff958582778e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\d"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586baa050 for PDO 0xffff958582779e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\e"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586baa400 for PDO 0xffff95858277ae10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\f"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586baa7b0 for PDO 0xffff95858277be10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\10"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586baab60 for PDO 0xffff95858277ce10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\11"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b88050 for PDO 0xffff95858277de10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\12"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b88400 for PDO 0xffff95858277ee10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\13"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b887b0 for PDO 0xffff95858277fe10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\14"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b88b60 for PDO 0xffff958582780e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\15"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d02050 for PDO 0xffff958586b23e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\16"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d02400 for PDO 0xffff958586b24e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\17"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d027b0 for PDO 0xffff958586b25e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\18"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586d02b60 for PDO 0xffff958586b26e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\19"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb9010 for PDO 0xffff958586b27e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\1a"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb93c0 for PDO 0xffff958586b28e10
+        InstancePath is "ACPI\GenuineIntel_-_Intel64_Family_6_Model_183_-_Intel(R)_Core(TM)_i7-14700KF\1b"
+        ServiceName is "intelppm"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb9770 for PDO 0xffff958586b29e10
+        InstancePath is "ACPI\ACPI000C\2&daba3ff&0"
+        ServiceName is "acpipagr"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586bb9b20 for PDO 0xffff958586b2ae10
+        InstancePath is "ACPI\PNP0C14\DSarDev"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b95010 for PDO 0xffff958586b2be10
+        InstancePath is "ACPI\PNP0C14\TestDev"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b953c0 for PDO 0xffff958586b2ce10
+        InstancePath is "ACPI\INT33A1\1"
+        ServiceName is "intelpep"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b95770 for PDO 0xffff958586b2de10
+        InstancePath is "ACPI\PNP0C0C\2&daba3ff&0"
+        TargetDeviceNotify List - f 0xffffbf05a6706e10  b 0xffffbf05a6706e10
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b95b20 for PDO 0xffff958586b2ee10
+        InstancePath is "ACPI\MSFT0101\1"
+        ServiceName is "TPM"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b96010 for PDO 0xffff958586b2fe10
+        InstancePath is "ACPI\PNP0C14\AsusMbSwInterface"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b963c0 for PDO 0xffff958586b30e10
+        InstancePath is "ACPI\PNP0C14\AsusLedControlWmi"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b96770 for PDO 0xffff958586b34e10
+        InstancePath is "ACPI\PNP0C14\ATK"
+        ServiceName is "WmiAcpi"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b96b20 for PDO 0xffff958586b35e10
+        InstancePath is "ACPI\PNP0C0B\0"
+        TargetDeviceNotify List - f 0xffffbf05a6788210  b 0xffffbf05a6788210
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b97010 for PDO 0xffff958586b36e10
+        InstancePath is "ACPI\PNP0C0B\1"
+        TargetDeviceNotify List - f 0xffffbf05a6789f90  b 0xffffbf05a6789f90
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b973c0 for PDO 0xffff958586b37e10
+        InstancePath is "ACPI\PNP0C0B\2"
+        TargetDeviceNotify List - f 0xffffbf05a6789e90  b 0xffffbf05a6789e90
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b97770 for PDO 0xffff958586b38e10
+        InstancePath is "ACPI\PNP0C0B\3"
+        TargetDeviceNotify List - f 0xffffbf05a6789a10  b 0xffffbf05a6789a10
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b97b20 for PDO 0xffff958586b39e10
+        InstancePath is "ACPI\PNP0C0B\4"
+        TargetDeviceNotify List - f 0xffffbf05a6789910  b 0xffffbf05a6789910
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b90010 for PDO 0xffff958586b3ae10
+        InstancePath is "ACPI\ThermalZone\TZ00"
+        TargetDeviceNotify List - f 0xffffbf05a6788910  b 0xffffbf05a6788910
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958586b903c0 for PDO 0xffff958586b3be10
+        InstancePath is "ACPI\INT340E\2&daba3ff&0"
+        State = DeviceNodeInitialized (0x304)
+        Previous State = DeviceNodeUninitialized (0x301)
+      DevNode 0xffff958586b90770 for PDO 0xffff958586b3ce10
+        InstancePath is "ACPI\FixedButton\2&daba3ff&0"
+        TargetDeviceNotify List - f 0xffffbf05a6707790  b 0xffffbf05a6707790
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958582ecc010 for PDO 0xffff958582af6d70
+      InstancePath is "ACPI_HAL\UEFI\0"
+      ServiceName is "UEFI"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958593979050 for PDO 0xffff95859914f2c0
+        InstancePath is "UEFI\RES_{00000000-0000-0000-0000-000000000000}\0"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958593979400 for PDO 0xffff95859914f060
+        InstancePath is "UEFI\RES_{2fe2cbfc-b9aa-4a93-ab5b-40173b581c42}\0"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958593ace050 for PDO 0xffff95859914ec20
+        InstancePath is "UEFI\RES_{7aa69739-8f78-41cb-bf44-854e2cb516bd}\0"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958593ace400 for PDO 0xffff95859914e9c0
+        InstancePath is "UEFI\RES_{86a885ee-d71e-2ed6-0fc1-9d6ccc9677eb}\0"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff958593ac4010 for PDO 0xffff95859914e760
+        InstancePath is "UEFI\RES_{ba2828f3-eda9-5867-a1bd-4e23ae8efb89}\0"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc7bf0 for PDO 0xffff958582dc7a00
+    InstancePath is "ROOT\VPCIVSP\0000"
+    ServiceName is "vpcivsp"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc8250 for PDO 0xffff958582dc8060
+    InstancePath is "ROOT\BasicRender\0000"
+    ServiceName is "BasicRender"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc8840 for PDO 0xffff958582dc8650
+    InstancePath is "ROOT\SteamStreamingMicrophone\0000"
+    ServiceName is "SteamStreamingMicrophone"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc9010 for PDO 0xffff958582dc8c40
+    InstancePath is "ROOT\ELGATO_ROOT_DEVICE\0000"
+    ServiceName is "ElgatoVirtUsbAudioEmu"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc9600 for PDO 0xffff958582dc9410
+    InstancePath is "ROOT\SteamStreamingSpeakers\0000"
+    ServiceName is "SteamStreamingSpeakers"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dc9bf0 for PDO 0xffff958582dc9a00
+    InstancePath is "ROOT\storvsp\0000"
+    ServiceName is "storvsp"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dca250 for PDO 0xffff958582dca060
+    InstancePath is "ROOT\AkaiProfessionalNetworkMIDI&VID_09E8&PID_4D53\0000"
+    ServiceName is "NETWORKMIDI"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a5846a60 for PDO 0xffff9585a5846870
+      InstancePath is "SWD\MIDISRV\MIDIU_KSA_7453142951375780033"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a48745e0 for PDO 0xffff9585a28ce350
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_7453142951375780033_0_0"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a48cbbc0 for PDO 0xffff9585a434adf0
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_7453142951375780033_0_1"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a97f0c20 for PDO 0xffff9585a8007810
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_7453142951375780033_1_0"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a9ae7050 for PDO 0xffff9585a7ed7df0
+      InstancePath is "SWD\MMDEVAPI\MIDIU_KSA_7453142951375780033_1_1"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff958582dca840 for PDO 0xffff958582dca650
+    InstancePath is "ROOT\UNNAMED_DEVICE\0000"
+    ServiceName is "nvvad_WaveExtensible"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcb010 for PDO 0xffff958582dcac40
+    InstancePath is "ROOT\USB\0000"
+    ServiceName is "busenum"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcb600 for PDO 0xffff958582dcb410
+    InstancePath is "ROOT\NdisVirtualBus\0000"
+    ServiceName is "NdisVirtualBus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcbbf0 for PDO 0xffff958582dcba00
+    InstancePath is "ROOT\mssmbios\0000"
+    ServiceName is "mssmbios"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcc250 for PDO 0xffff958582dcc060
+    InstancePath is "ROOT\SYSTEM\0000"
+    ServiceName is "swenum"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d459a20 for PDO 0xffff9585a2462c60
+      InstancePath is "SW\{96E080C7-143C-11D1-B40F-00A0C9223196}\{3C0D501A-140B-11D1-B40F-00A0C9223196}"
+      ServiceName is "MSKSSRV"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcc840 for PDO 0xffff958582dcc650
+    InstancePath is "ROOT\SYSTEM\0001"
+    ServiceName is "ViGEmBus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcd010 for PDO 0xffff958582dccc40
+    InstancePath is "ROOT\SYSTEM\0002"
+    ServiceName is "HidHide"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcd600 for PDO 0xffff958582dcd410
+    InstancePath is "ROOT\SYSTEM\0003"
+    ServiceName is "mshidumdf"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a2247bf0 for PDO 0xffff95859d195120
+      InstancePath is "HID\SYSTEM&Col01\1&2d12bed1&1&0000"
+      ServiceName is "kbdhid"
+      TargetDeviceNotify List - f 0xffffbf05bbcca490  b 0xffffbf05bbcca490
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a2e2fba0 for PDO 0xffff95859d162120
+      InstancePath is "HID\SYSTEM&Col02\1&2d12bed1&1&0001"
+      ServiceName is "steamxbox"
+      TargetDeviceNotify List - f 0xffffbf05bbcbf090  b 0xffffbf05bbcbf090
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d163ba0 for PDO 0xffff9585a22470b0
+      InstancePath is "HID\SYSTEM&Col03\1&2d12bed1&1&0002"
+      ServiceName is "mouhid"
+      TargetDeviceNotify List - f 0xffffbf05bbcb6790  b 0xffffbf05bbcb6790
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d164ba0 for PDO 0xffff9585a2e2f060
+      InstancePath is "HID\SYSTEM&Col04\1&2d12bed1&1&0003"
+      ServiceName is "mouhid"
+      TargetDeviceNotify List - f 0xffffbf05bbcbff90  b 0xffffbf05bbcbff90
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0739a0 for PDO 0xffff95859d163060
+      InstancePath is "HID\SYSTEM&Col05\1&2d12bed1&1&0004"
+      ServiceName is "steamxbox"
+      TargetDeviceNotify List - f 0xffffbf05bbcc0c90  b 0xffffbf05bbcc0c90
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0749a0 for PDO 0xffff95859d164060
+      InstancePath is "HID\SYSTEM&Col06\1&2d12bed1&1&0005"
+      ServiceName is "steamxbox"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcdbf0 for PDO 0xffff958582dcda00
+    InstancePath is "ROOT\SYSTEM\0004"
+    ServiceName is "HidHide"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dce250 for PDO 0xffff958582dce060
+    InstancePath is "ROOT\SYSTEM\0005"
+    ServiceName is "steamxbox"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dce840 for PDO 0xffff958582dce650
+    InstancePath is "ROOT\SYSTEM\0006"
+    ServiceName is "bomebus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcf010 for PDO 0xffff958582dcec40
+    InstancePath is "ROOT\SYSTEM\0007"
+    ServiceName is "HidGuardian"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcf600 for PDO 0xffff958582dcf410
+    InstancePath is "ROOT\SYSTEM\0008"
+    ServiceName is "ScpVBus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dcfbf0 for PDO 0xffff958582dcfa00
+    InstancePath is "ROOT\SYSTEM\0009"
+    ServiceName is "JumpUsbUde"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958593ad89a0 for PDO 0xffff95859914f9e0
+      InstancePath is "USB\ROOT_HUB30\1&26f8534a&0&0"
+      ServiceName is "USBHUB3"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd0250 for PDO 0xffff958582dd0060
+    InstancePath is "ROOT\HIDCLASS\0000"
+    ServiceName is "mshidkmdf"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958593976710 for PDO 0xffff95858fef4060
+      InstancePath is "HID\HIDCLASS\1&2d595ca7&0&0000"
+      ServiceName is "mouhid"
+      TargetDeviceNotify List - f 0xffffbf05b95ded90  b 0xffffbf05b95ded90
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd0840 for PDO 0xffff958582dd0650
+    InstancePath is "ROOT\RDPBUS\0000"
+    ServiceName is "rdpbus"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd1010 for PDO 0xffff958582dd0c40
+    InstancePath is "ROOT\MEDIA\0000"
+    ServiceName is "VOICEMOD_Driver"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd1600 for PDO 0xffff958582dd1410
+    InstancePath is "ROOT\MEDIA\0001"
+    ServiceName is "teVirtualMIDI64"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd1bf0 for PDO 0xffff958582dd1a00
+    InstancePath is "ROOT\MEDIA\0002"
+    ServiceName is "jumpaudio"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d8dfc40 for PDO 0xffff95859d8aee00
+      InstancePath is "SWD\MMDEVAPI\{0.0.0.00000000}.{4008cd2d-2c6e-461f-9cde-3bd2cf0e6a2c}"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff958582dd2250 for PDO 0xffff958582dd2060
+    InstancePath is "ROOT\MEDIA\0003"
+    ServiceName is "htMidiDriver"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff958582dd2840 for PDO 0xffff958582dd2650
+    InstancePath is "ROOT\MEDIA\0004"
+    ServiceName is "voicemodvad"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff9585826e2010 for PDO 0xffff958582de84f0
+    InstancePath is "SWD\COMPUTER\MFG_ASUS&FAM_To_be_filled_by_O.E.M.&PROD_System_Product_Name&SKU_SKU"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff958582718400 for PDO 0xffff958582de94f0
+      InstancePath is "SWD\DRIVERENUM\{96bedf2c-18cb-4a15-b821-5e95ed0fea61}#VocaEffectPack&1&38cf50d&0"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a1fdf520 for PDO 0xffff95859d65d520
+    InstancePath is "SWD\RADIO\{3DB5895D-CC28-44B3-AD3D-6F01A782B8D2}"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff95859d0509a0 for PDO 0xffff95859d04ce00
+      InstancePath is "SWD\RADIO\Bluetooth_9009df7354cd"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff95859e6ea560 for PDO 0xffff9585a4150530
+      InstancePath is "SWD\RADIO\{DCF90ABF-A308-41A7-B522-C66425A882B6}"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a2e822e0 for PDO 0xffff95859d5e0e00
+    InstancePath is "SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a}"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a48715e0 for PDO 0xffff9585a419de00
+      InstancePath is "SWD\IPP\dfc20288-ba1a-5c00-5602-54a7b673ae4a"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585a5a0c9c0 for PDO 0xffff9585a4f02da0
+        InstancePath is "SWD\PRINTENUM\WSD-fda3a9f6-121e-4c46-ae1d-ef33fc8cee92"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff9585a55bd3a0 for PDO 0xffff9585a5824d90
+          InstancePath is "SWD\PRINTENUM\{06DF7953-269D-491E-9874-554E457F30F8}"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff95859dae12a0 for PDO 0xffff95859d2a2350
+      InstancePath is "SWD\IPP\e3248000-80ce-11db-8000-b42200cd8919"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeEnumerateCompletion (0x30f)
+      DevNode 0xffff9585a5079960 for PDO 0xffff9585a5a0cdc0
+        InstancePath is "SWD\PRINTENUM\WSD-b4617eb3-5de5-4568-ae38-fae038605b5a"
+        State = DeviceNodeStarted (0x30a)
+        Previous State = DeviceNodeEnumerateCompletion (0x30f)
+        DevNode 0xffff9585a558a050 for PDO 0xffff9585a5868d90
+          InstancePath is "SWD\PRINTENUM\{6BF2B498-4BBA-482A-9DF8-F62294F0487B}"
+          State = DeviceNodeStarted (0x30a)
+          Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585ae5ebc00 for PDO 0xffff9585ae220e00
+      InstancePath is "SWD\DAFUPnPProvider\uuid:ff654bed-128b-40da-a814-ba2ee3de0c9f"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a295c850 for PDO 0xffff9585a3ced820
+    InstancePath is "SWD\MMDEVAPI\MicrosoftGSWavetableSynth"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff95859b08cc40 for PDO 0xffff95859e398df0
+    InstancePath is "SWD\PRINTENUM\PrintQueues"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a55ce720 for PDO 0xffff9585a5971c70
+      InstancePath is "SWD\PRINTENUM\{8C9D4593-F251-4A2E-B457-9EE5D802576E}"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a572cbf0 for PDO 0xffff9585a574fe00
+      InstancePath is "SWD\PRINTENUM\{88A55614-B714-4594-9006-27E9399951D1}"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a4708c20 for PDO 0xffff9585a46f1cb0
+    InstancePath is "SWD\XvddEnum\XvddRootDevice_Instance"
+    ServiceName is "Xvdd"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a7d2a010 for PDO 0xffff9585a59a9e00
+    InstancePath is "SWD\MIDISRV\MIDIU_DIAG_TRANSPORT"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+    DevNode 0xffff9585a7d2c4a0 for PDO 0xffff9585a59ade00
+      InstancePath is "SWD\MIDISRV\MIDIU_DIAG_LOOPBACK_A"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff95859eb17bb0 for PDO 0xffff9585a59c8e00
+      InstancePath is "SWD\MIDISRV\MIDIU_DIAG_LOOPBACK_B"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+    DevNode 0xffff9585a7d2e010 for PDO 0xffff9585a59c9e00
+      InstancePath is "SWD\MIDISRV\MIDIU_DIAG_PING"
+      State = DeviceNodeStarted (0x30a)
+      Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a4f6a780 for PDO 0xffff9585a4f6a590
+    InstancePath is "SWD\MIDISRV\MIDIU_LOOP_TRANSPORT"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585a96c7530 for PDO 0xffff9585a5d0dc50
+    InstancePath is "SWD\MIDISRV\MIDIU_APP_TRANSPORT"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeStartPostWork (0x309)
+  DevNode 0xffff9585ac48c1c0 for PDO 0xffff9585a5b9d7a0
+    InstancePath is "ROOT\VMS_VSMP\0000"
+    ServiceName is "VMSMP"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff9585a9adec20 for PDO 0xffff9585a225e780
+    InstancePath is "SWD\WireGuard\{FC01FCD5-2B9D-2FD8-78D8-CB78B313E2B2}"
+    ServiceName is "WireGuard"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+  DevNode 0xffff9585af2d1c20 for PDO 0xffff9585a4f70c70
+    InstancePath is "ROOT\VMS_VSMP\0001"
+    ServiceName is "VMSMP"
+    State = DeviceNodeStarted (0x30a)
+    Previous State = DeviceNodeEnumerateCompletion (0x30f)
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

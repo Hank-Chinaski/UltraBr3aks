@@ -1,0 +1,1237 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\storage-review\pass4.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> .load storagekd
+19: kd> !storagekd.storloglist ffff958587f7c050 L 0n1000
+Storport RaidLogList
+    Circular buffer location:  0xffff958587f7da20
+    Total logs written: 39841946
+
+    Displaying entries 39840946 through 39841945
+    ---------------------------------------------------------------------
+    [39840946]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39840947]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840948]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39840949]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840950]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840951]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840952]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840953]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840954]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39840955]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39840956]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840957]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840958]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840959]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840960]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39840961]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39840962]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840963]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840964]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840965]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840966]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39840967]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39840968]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840969]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840970]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840971]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840972]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840973]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840974]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840975]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840976]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840977]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840978]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840979]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840980]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840981]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840982]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840983]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840984]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840985]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840986]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840987]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840988]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840989]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840990]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840991]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840992]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840993]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840994]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840995]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39840996]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840997]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39840998]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39840999]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841000]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841001]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841002]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841003]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841004]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841005]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841006]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841007]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841008]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841009]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841010]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841011]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841012]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841013]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841014]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841015]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841016]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841017]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841018]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841019]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841020]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841021]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841022]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841023]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841024]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841025]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841026]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841027]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841028]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841029]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841030]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841031]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841032]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841033]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841034]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841035]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841036]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841037]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841038]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841039]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841040]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841041]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841042]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841043]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841044]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841045]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841046]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841047]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841048]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841049]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841050]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841051]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841052]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841053]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841054]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841055]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841056]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841057]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841058]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841059]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841060]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841061]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841062]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841063]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841064]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841065]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841066]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841067]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841068]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841069]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841070]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841071]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841072]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841073]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841074]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841075]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841076]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841077]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841078]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841079]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841080]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841081]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841082]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841083]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841084]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841085]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841086]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841087]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841088]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841089]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841090]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841091]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841092]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841093]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841094]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841095]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841096]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841097]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841098]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841099]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841100]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841101]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841102]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841103]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841104]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841105]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841106]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841107]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841108]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841109]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841110]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841111]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841112]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841113]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841114]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841115]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841116]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841117]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841118]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841119]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841120]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841121]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841122]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841123]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841124]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841125]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841126]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841127]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841128]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841129]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841130]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841131]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841132]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841133]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841134]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841135]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841136]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841137]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841138]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841139]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841140]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841141]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841142]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841143]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841144]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841145]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841146]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841147]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841148]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841149]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841150]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841151]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841152]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841153]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841154]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841155]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841156]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841157]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841158]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841159]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841160]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841161]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841162]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841163]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841164]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841165]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841166]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841167]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841168]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841169]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841170]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841171]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841172]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841173]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841174]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841175]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841176]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841177]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841178]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841179]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841180]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841181]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841182]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841183]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841184]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841185]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841186]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841187]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841188]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841189]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841190]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841191]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841192]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841193]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841194]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841195]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841196]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841197]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841198]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841199]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841200]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841201]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841202]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841203]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841204]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841205]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841206]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841207]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841208]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841209]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841210]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841211]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841212]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841213]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841214]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841215]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841216]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841217]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841218]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841219]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841220]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841221]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841222]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841223]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841224]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841225]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841226]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841227]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841228]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841229]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841230]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841231]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841232]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841233]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841234]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841235]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841236]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841237]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841238]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841239]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841240]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841241]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841242]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841243]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841244]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841245]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841246]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841247]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841248]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841249]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841250]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841251]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841252]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841253]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841254]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841255]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841256]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841257]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841258]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841259]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841260]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841261]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841262]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841263]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841264]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841265]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841266]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841267]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841268]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841269]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841270]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841271]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841272]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841273]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841274]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841275]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841276]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841277]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841278]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841279]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841280]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841281]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841282]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841283]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841284]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841285]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841286]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841287]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841288]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841289]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841290]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841291]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841292]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841293]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841294]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841295]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841296]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841297]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841298]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841299]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841300]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841301]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841302]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841303]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841304]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841305]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841306]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841307]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841308]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841309]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841310]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841311]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841312]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841313]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841314]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841315]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841316]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841317]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841318]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841319]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841320]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841321]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841322]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841323]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841324]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841325]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841326]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841327]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841328]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841329]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841330]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841331]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841332]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841333]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841334]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841335]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841336]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841337]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841338]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841339]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841340]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841341]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841342]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841343]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841344]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841345]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841346]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841347]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841348]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841349]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841350]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841351]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841352]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841353]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841354]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841355]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841356]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841357]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841358]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841359]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841360]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841361]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841362]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841363]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841364]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841365]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841366]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841367]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841368]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841369]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841370]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841371]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841372]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841373]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841374]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841375]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841376]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841377]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841378]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841379]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841380]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841381]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841382]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841383]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841384]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841385]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841386]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841387]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841388]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841389]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841390]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841391]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841392]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841393]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841394]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841395]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841396]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841397]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841398]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841399]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841400]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841401]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841402]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841403]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841404]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841405]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841406]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841407]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841408]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841409]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841410]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841411]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841412]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841413]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841414]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841415]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841416]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841417]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841418]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841419]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841420]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841421]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841422]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841423]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841424]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841425]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841426]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841427]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841428]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841429]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841430]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841431]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841432]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841433]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841434]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841435]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841436]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841437]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841438]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841439]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841440]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841441]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841442]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841443]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841444]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841445]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841446]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841447]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841448]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841449]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841450]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841451]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841452]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841453]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841454]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841455]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841456]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841457]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841458]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841459]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841460]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841461]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841462]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841463]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841464]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841465]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841466]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841467]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841468]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841469]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841470]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841471]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841472]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841473]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841474]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841475]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841476]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841477]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841478]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841479]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841480]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841481]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841482]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841483]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841484]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841485]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841486]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841487]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841488]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841489]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841490]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841491]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841492]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841493]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841494]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841495]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841496]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841497]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841498]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841499]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841500]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841501]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841502]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841503]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841504]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841505]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841506]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841507]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841508]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841509]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841510]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841511]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841512]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841513]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841514]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841515]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841516]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841517]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841518]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841519]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841520]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841521]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841522]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841523]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841524]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841525]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841526]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841527]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841528]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841529]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841530]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841531]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841532]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841533]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841534]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841535]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841536]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841537]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841538]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841539]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841540]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841541]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841542]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841543]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841544]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841545]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841546]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841547]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841548]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841549]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841550]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841551]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841552]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841553]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841554]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841555]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841556]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841557]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841558]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841559]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841560]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841561]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841562]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841563]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841564]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841565]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841566]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841567]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841568]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841569]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841570]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841571]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841572]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841573]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841574]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841575]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841576]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841577]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841578]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841579]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841580]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841581]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841582]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841583]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841584]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841585]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841586]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841587]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841588]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841589]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841590]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841591]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841592]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841593]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841594]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841595]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841596]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841597]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841598]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841599]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841600]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841601]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841602]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841603]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841604]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841605]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841606]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841607]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841608]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841609]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841610]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841611]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841612]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841613]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841614]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841615]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841616]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841617]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841618]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841619]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841620]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841621]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841622]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841623]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841624]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841625]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841626]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841627]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841628]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841629]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841630]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841631]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841632]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841633]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841634]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841635]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841636]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841637]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841638]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841639]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841640]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841641]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841642]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841643]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841644]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841645]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841646]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841647]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841648]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841649]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841650]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841651]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841652]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841653]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841654]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841655]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841656]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841657]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841658]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841659]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841660]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841661]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841662]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841663]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841664]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841665]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841666]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841667]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841668]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841669]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841670]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841671]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841672]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841673]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841674]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841675]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841676]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841677]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841678]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841679]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841680]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841681]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841682]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841683]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841684]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841685]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841686]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841687]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841688]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841689]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841690]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841691]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841692]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841693]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841694]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841695]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841696]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841697]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841698]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841699]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841700]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841701]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841702]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841703]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841704]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841705]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841706]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841707]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841708]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841709]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841710]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841711]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841712]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841713]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841714]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841715]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841716]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841717]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841718]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841719]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841720]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841721]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841722]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841723]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841724]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841725]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841726]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841727]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841728]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841729]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841730]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841731]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841732]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841733]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841734]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841735]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb08a0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c93ea910
+    [39841736]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841737]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841738]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841739]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841740]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841741]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841742]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841743]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841744]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841745]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841746]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841747]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841748]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841749]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841750]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841751]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841752]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841753]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841754]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841755]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841756]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841757]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841758]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841759]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841760]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841761]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841762]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841763]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841764]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841765]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841766]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841767]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841768]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841769]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841770]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841771]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda8d0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ac2cfde0
+    [39841772]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841773]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841774]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841775]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cae410 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ea07f9a0
+    [39841776]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841777]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841778]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841779]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841780]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841781]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841782]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841783]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac340 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585e2313ad0
+    [39841784]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841785]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841786]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841787]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841788]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841789]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841790]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841791]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841792]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841793]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841794]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841795]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ad06c740 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585b71a2dc0
+    [39841796]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841797]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841798]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841799]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841800]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841801]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841802]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841803]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841804]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841805]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841806]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841807]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841808]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841809]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841810]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841811]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841812]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841813]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841814]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841815]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841816]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841817]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841818]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841819]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841820]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841821]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841822]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841823]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cceb70 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ceea6ad0
+    [39841824]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841825]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841826]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841827]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841828]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841829]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841830]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841831]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841832]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841833]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841834]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841835]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841836]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841837]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb3a50 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585bd39cde0
+    [39841838]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841839]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841840]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841841]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841842]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841843]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841844]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841845]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841846]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841847]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841848]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841849]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841850]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841851]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841852]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841853]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841854]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841855]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841856]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841857]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841858]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841859]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841860]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841861]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841862]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841863]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841864]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841865]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841866]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841867]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841868]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841869]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841870]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841871]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841872]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841873]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841874]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841875]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841876]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841877]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841878]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cac8e0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585ce28c9a0
+    [39841879]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841880]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841881]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841882]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841883]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841884]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841885]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841886]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841887]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841888]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841889]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cb60c0 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a52a98b0
+    [39841890]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841891]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cea500 [EXECUTE SCSI][SCSI/READ (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585cb722e00
+    [39841892]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841893]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxIdleWorkerTail+0x1c6 (fffff804`dc04064a), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841894]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841895]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841896]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841897]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841898]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841899]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841900]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841901]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841902]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841903]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841904]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841905]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841906]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841907]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841908]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841909]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841910]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841911]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841912]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841913]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841914]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841915]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841916]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841917]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841918]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841919]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841920]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841921]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841922]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841923]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841924]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841925]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cd24a0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a4a2edc0
+    [39841926]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841927]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585ae728950 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c3b65050
+    [39841928]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841929]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841930]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841931]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841932]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841933]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841934]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841935]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccdd60 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d1e6f9a0
+    [39841936]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841937]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1ccfd40 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585a40c4dc0
+    [39841938]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841939]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1caeaa0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c46a2ce0
+    [39841940]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841941]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cda150 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585d76f5dc0
+    [39841942]_[10:26:17.507] PauseAdapter.......... Caller: nt!PopFxIdleWorker+0x82 (fffff804`dbf31a12), Pause count: 1, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841943]_[10:26:17.507] ResumeAdapter......... Caller: nt!PopFxProcessWork+0x294 (fffff804`dbf275a4), Pause count: 0, Adapter: 0xffff958587f7c1a0, Port: 2
+    [39841944]_[10:26:17.507] HwStorBuildIo......... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][QueueAction: 0x00][QueueTag: 0x00] (0/0/0), IRP: 0xffff9585c18279a0
+    [39841945]_[10:26:17.507] SpNotifyReqComplete... SRBEX: 0xffff9585c1cdb9b0 [EXECUTE SCSI][SCSI/WRITE (10)][No device][SCSISTAT 0x02] (0/0/0), IRP: 0xffff9585c18279a0
+19: kd> !irp ffff9585c4a2a010 1
+Irp is active with 13 stacks 6 is current (= 0xffff9585c4a2a248)
+ Mdl=ffff9585ccf96d40: No System Buffer: Thread ffff9585a1bcb080:  Irp stack trace.  
+Flags = 00060043
+ThreadListEntry.Flink = ffff9585a1bcb5c0
+ThreadListEntry.Blink = ffff9585a1bcb5c0
+IoStatus.Status = 00000000
+IoStatus.Information = 00000000
+RequestorMode = 00000000
+Cancel = 00
+CancelIrql = 0
+ApcEnvironment = 00
+UserIosb = ffff9585ccf96c80
+UserEvent = ffff9585ccf96c50
+Overlay.AsynchronousParameters.UserApcRoutine = 00000000
+Overlay.AsynchronousParameters.UserApcContext = 00000000
+Overlay.AllocationSize = 00000000 - 00000000
+CancelRoutine = 00000000   
+UserBuffer = 00000000
+&Tail.Overlay.DeviceQueueEntry = ffff9585c4a2a088
+Tail.Overlay.Thread = ffff9585a1bcb080
+Tail.Overlay.AuxiliaryBuffer = 00000000
+Tail.Overlay.ListEntry.Flink = ffff9585c4a2a0b8
+Tail.Overlay.ListEntry.Blink = ffff9585c4a2a0b8
+Tail.Overlay.CurrentStackLocation = ffff9585c4a2a248
+Tail.Overlay.OriginalFileObject = ffff958599267610
+Tail.Apc = 00000001
+Tail.CompletionKey = 00000001
+     cmd  flg cl Device   File     Completion-Context
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+>[IRP_MJ_READ(3), N/A(34)]
+           10 e0 ffff95858d2dc050 00000000 fffff8046ebe2340-00000000 Success Error Cancel 
+	       \Driver\disk	partmgr!PmIoCompletion
+			Args: 00001000 00000000 26bbec0000 00000000
+ [IRP_MJ_READ(3), N/A(3)]
+           10 e0 ffff95858cf6e8d0 00000000 fffff8046ebe4730-00000000 Success Error Cancel 
+	       \Driver\partmgr	partmgr!PartitionIoCompletion
+			Args: 2bc5e1e7b7 00000000 26bbec0000 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+           10 e0 ffff95858d2df090 00000000 fffff8046ed22940-ffff95858cfa1a40 Success Error Cancel 
+	       \Driver\partmgr	volmgr!VmpReadWriteCompletionRoutine
+			Args: 00001000 00000000 26b49c0000 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+            0 e0 ffff95858cfa18f0 00000000 fffff8046fe36a90-ffff95858d338180 Success Error Cancel 
+	       \Driver\volmgr	fvevol!FvePassThroughCompletionRdpLevel2
+			Args: 00001000 00000000 2bc5e1e7b4 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+            0 e0 ffff95858d338030 00000000 fffff80470073120-00000000 Success Error Cancel 
+	       \Driver\fvevol	iorate!IoRateReadWriteCompletion
+			Args: 00001000 00000000 26b49c0000 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+            0 e0 ffff95858d322600 00000000 fffff8046f2d4ed0-fffff3012f23f4a0 Success Error Cancel 
+	       \Driver\iorate	Ntfs!NtfsMasterIrpSyncCompletionRoutine
+			Args: 00001000 00000000 26b49c0000 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+            0 e0 ffff95858d371030 ffff958599267610 fffff8046d7d41a0-ffff9585c5271010 Success Error Cancel 
+	       \FileSystem\Ntfs	FLTMGR!FltpPassThroughCompletion
+			Args: 00001000 00000000 0001f000 00000000
+ [IRP_MJ_READ(3), N/A(0)]
+            0  1 ffff958587fb72b0 ffff958599267610 00000000-00000000    pending
+	       \FileSystem\FltMgr
+			Args: 00001000 00000000 0001f000 00000000
+
+Irp Extension present at 0xffff9585c4a2a488:
+
+	Activity ID: {00000000-0000-0000-0000-000000000000}
+19: kd> !irp ffff9585afc1fde0 1
+Irp is active with 4 stacks 4 is current (= 0xffff9585afc1ff88)
+ Mdl=ffff9585ccf96d40: No System Buffer: Thread 00000000:  Irp stack trace.  
+Flags = 00000000
+ThreadListEntry.Flink = ffff9585afc1fe00
+ThreadListEntry.Blink = ffff9585afc1fe00
+IoStatus.Status = c00000bb
+IoStatus.Information = 00000000
+RequestorMode = 00000000
+Cancel = 00
+CancelIrql = 0
+ApcEnvironment = 00
+UserIosb = 00000000
+UserEvent = 00000000
+Overlay.AsynchronousParameters.UserApcRoutine = 00000000
+Overlay.AsynchronousParameters.UserApcContext = 00000000
+Overlay.AllocationSize = 00000000 - 00000000
+CancelRoutine = 00000000   
+UserBuffer = 00000000
+&Tail.Overlay.DeviceQueueEntry = ffff9585afc1fe58
+Tail.Overlay.Thread = 00000000
+Tail.Overlay.AuxiliaryBuffer = 00000000
+Tail.Overlay.ListEntry.Flink = 00000000
+Tail.Overlay.ListEntry.Blink = 00000000
+Tail.Overlay.CurrentStackLocation = ffff9585afc1ff88
+Tail.Overlay.OriginalFileObject = 00000000
+Tail.Apc = 00000000
+Tail.CompletionKey = 00000000
+     cmd  flg cl Device   File     Completion-Context
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+>[IRP_MJ_INTERNAL_DEVICE_CONTROL(f), N/A(0)]
+           10 e1 ffff958587fb9050 00000000 fffff804700e1aa0-ffff9585bc44e8c0 Success Error Cancel pending
+	       \Driver\stornvme	CLASSPNP!TransferPktComplete
+			Args: ffff9585a8628860 00000000 0x0 00000000
+
+Irp Extension present at 0xffff9585aa848ea0:
+
+	Activity ID: {00000000-0000-0000-0000-000000000000}
+19: kd> dt stornvme!*EXTENSION*
+19: kd> dt stornvme!*NAMESPACE*
+19: kd> x stornvme!*BuildIo*
+fffff804`6f0f12d0 stornvme!NVMeHwBuildIo (void)
+19: kd> !storagekd.storhelp stornamespace
+
+ERROR: INVALID COMMAND stornamespace or Extended Help not available
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

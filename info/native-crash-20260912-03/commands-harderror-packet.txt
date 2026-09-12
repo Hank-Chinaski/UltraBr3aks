@@ -1,0 +1,4 @@
+dd ffff9585c48cac20 L2
+dt nt!_UNICODE_STRING ffff9585c48cac28
+dq ffff9585c48cac30 L1
+q

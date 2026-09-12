@@ -1,0 +1,273 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-02\game-irps.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-0x154_02.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff805`c9a00000 PsLoadedModuleList = 0xfffff805`ca8f5410
+Debug session time: Sat Sep 12 05:12:02.675 2026 (UTC - 7:00)
+System Uptime: 0 days 0:46:56.346
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+................................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+25: kd> !irp ffffa90d8328e010 1
+Irp is active with 7 stacks 7 is current (= 0xffffa90d8328e290)
+ Mdl=ffffa90d97b55380: No System Buffer: Thread ffffa90dbe258080:  Irp stack trace.  
+Flags = 00060900
+ThreadListEntry.Flink = ffffa90dbe2585c0
+ThreadListEntry.Blink = ffffa90dbe2585c0
+IoStatus.Status = 00000000
+IoStatus.Information = 00000000
+RequestorMode = 00000001
+Cancel = 00
+CancelIrql = 0
+ApcEnvironment = 00
+UserIosb = 14b06f6b968
+UserEvent = 00000000
+Overlay.AsynchronousParameters.UserApcRoutine = 7ffcae91e2d0
+Overlay.AsynchronousParameters.UserApcContext = 7ffc9142f210
+Overlay.AllocationSize = 00000000 - 00000000
+CancelRoutine = fffff8055c007e00   Wdf01000!FxIrpQueue::_WdmCancelRoutineInternal
+UserBuffer = 00000000
+&Tail.Overlay.DeviceQueueEntry = ffffa90d8328e088
+Tail.Overlay.Thread = ffffa90dbe258080
+Tail.Overlay.AuxiliaryBuffer = 00000000
+Tail.Overlay.ListEntry.Flink = ffffa90dbd3650b8
+Tail.Overlay.ListEntry.Blink = ffffa90d8dfb7900
+Tail.Overlay.CurrentStackLocation = ffffa90d8328e290
+Tail.Overlay.OriginalFileObject = ffffa90da1f24ac0
+Tail.Apc = 00000000
+Tail.CompletionKey = 00000000
+     cmd  flg cl Device   File     Completion-Context
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+>[IRP_MJ_READ(3), N/A(0)]
+            0  1 ffffa90d8dfb66c0 ffffa90da1f24ac0 00000000-00000000    pending
+	       \Driver\xinputhid
+			Args: 00000010 00000000 00000000 00000000
+25: kd> !irp ffffa90dbeb0e2a0 1
+Irp is active with 4 stacks 4 is current (= 0xffffa90dbeb0e448)
+ No Mdl: System buffer=ffffa90dbde878c0: Thread ffffa90dbb883080:  Irp stack trace.  
+Flags = 00060070
+ThreadListEntry.Flink = ffffa90dbb8835c0
+ThreadListEntry.Blink = ffffa90dbb8835c0
+IoStatus.Status = 00000000
+IoStatus.Information = 00000010
+RequestorMode = 00000001
+Cancel = 00
+CancelIrql = 0
+ApcEnvironment = 00
+UserIosb = 474e50f018
+UserEvent = ffffa90db3fd89e0
+Overlay.AsynchronousParameters.UserApcRoutine = 00000000
+Overlay.AsynchronousParameters.UserApcContext = 00000000
+Overlay.AllocationSize = 00000000 - 00000000
+CancelRoutine = fffff80575a3fb80   afd!AfdCancelPoll
+UserBuffer = 474e50f030
+&Tail.Overlay.DeviceQueueEntry = ffffa90dbeb0e318
+Tail.Overlay.Thread = ffffa90dbb883080
+Tail.Overlay.AuxiliaryBuffer = 00000000
+Tail.Overlay.ListEntry.Flink = 00000000
+Tail.Overlay.ListEntry.Blink = 00000000
+Tail.Overlay.CurrentStackLocation = ffffa90dbeb0e448
+Tail.Overlay.OriginalFileObject = ffffa90da0c32ee0
+Tail.Apc = be73f510
+Tail.CompletionKey = ffffa90dbe73f510
+     cmd  flg cl Device   File     Completion-Context
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+>[IRP_MJ_DEVICE_CONTROL(e), N/A(9)]
+            5  1 ffffa90d75afa980 ffffa90da0c32ee0 00000000-00000000    pending
+	       \Driver\AFD
+			Args: 00000030 00000030 0x12024 00000000
+25: kd> !irp ffffa90da4d932a0 1
+Irp is active with 13 stacks 12 is current (= 0xffffa90da4d93688)
+ No Mdl: No System Buffer: Thread ffffa90dbc371080:  Irp stack trace.  
+Flags = 00060000
+ThreadListEntry.Flink = ffffa90dbc3715c0
+ThreadListEntry.Blink = ffffa90dbc3715c0
+IoStatus.Status = 00000000
+IoStatus.Information = ffffca0f0288cdf0
+RequestorMode = 00000001
+Cancel = 00
+CancelIrql = 0
+ApcEnvironment = 00
+UserIosb = 7ffcaebdf010
+UserEvent = 00000000
+Overlay.AsynchronousParameters.UserApcRoutine = 00000000
+Overlay.AsynchronousParameters.UserApcContext = 00000000
+Overlay.AllocationSize = 00000000 - 00000000
+CancelRoutine = fffff805c9ee9940   nt!FsRtlCancelNotify
+UserBuffer = 7ffcaebdf020
+&Tail.Overlay.DeviceQueueEntry = ffffa90da4d93318
+Tail.Overlay.Thread = ffffa90dbc371080
+Tail.Overlay.AuxiliaryBuffer = 00000000
+Tail.Overlay.ListEntry.Flink = ffffca0f0288ce20
+Tail.Overlay.ListEntry.Blink = ffffca0f0288ce20
+Tail.Overlay.CurrentStackLocation = ffffa90da4d93688
+Tail.Overlay.OriginalFileObject = ffffa90d967dbac0
+Tail.Apc = 00000000
+Tail.CompletionKey = 00000000
+     cmd  flg cl Device   File     Completion-Context
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+ [N/A(0), N/A(0)]
+            0  0 00000000 00000000 00000000-00000000    
+
+			Args: 00000000 00000000 00000000 00000000
+>[IRP_MJ_DIRECTORY_CONTROL(c), N/A(2)]
+            1 e1 ffffa90d80360030 ffffa90d967dbac0 fffff8055b6641a0-ffffa90dbe4c9050 Success Error Cancel pending
+	       \FileSystem\Ntfs	FLTMGR!FltpPassThroughCompletion
+			Args: 00000020 00000003 00000000 00000000
+ [IRP_MJ_DIRECTORY_CONTROL(c), N/A(2)]
+            1  0 ffffa90d7af8ca00 ffffa90d967dbac0 00000000-00000000    
+	       \FileSystem\FltMgr
+			Args: 00000020 00000003 00000000 00000000
+
+Irp Extension present at 0xffffa90da4d93718:
+25: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

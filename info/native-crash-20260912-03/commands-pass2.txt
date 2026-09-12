@@ -1,0 +1,7 @@
+.exr fffff3014007ed68
+!process 0 0 MemCompression
+!pte 00000187f8077d10
+!vad 00000187f8077d10 1
+!thread ffff9585c63e4080 1f
+!process 0 0 System
+q

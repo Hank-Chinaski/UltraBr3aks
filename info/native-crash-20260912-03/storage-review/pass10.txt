@@ -1,0 +1,175 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\storage-review\pass10.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.016 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.000 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> u fffff8046f0f7520 fffff8046f0f75b0
+stornvme!WaitForCommandCompleteWithCustomTimeout+0x760:
+fffff804`6f0f7520 00498b          add     byte ptr [rcx-75h],cl
+fffff804`6f0f7523 004803          add     byte ptr [rax+3],cl
+fffff804`6f0f7526 c9              leave
+fffff804`6f0f7527 0fb74cc80e      movzx   ecx,word ptr [rax+rcx*8+0Eh]
+fffff804`6f0f752c 6683e101        and     cx,1
+fffff804`6f0f7530 66413b88ac000000 cmp     cx,word ptr [r8+0ACh]
+fffff804`6f0f7538 7521            jne     stornvme!WaitForCommandCompleteWithCustomTimeout+0x79b (fffff804`6f0f755b)
+fffff804`6f0f753a 488b8ab0030000  mov     rcx,qword ptr [rdx+3B0h]
+fffff804`6f0f7541 41ffc4          inc     r12d
+fffff804`6f0f7544 4885c9          test    rcx,rcx
+fffff804`6f0f7547 75b7            jne     stornvme!WaitForCommandCompleteWithCustomTimeout+0x740 (fffff804`6f0f7500)
+fffff804`6f0f7549 8bbc24ec000000  mov     edi,dword ptr [rsp+0ECh]
+fffff804`6f0f7550 41bcffffffff    mov     r12d,0FFFFFFFFh
+fffff804`6f0f7556 e97df9ffff      jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0x118 (fffff804`6f0f6ed8)
+fffff804`6f0f755b 410fb790b0000000 movzx   edx,word ptr [r8+0B0h]
+fffff804`6f0f7563 488b8c24d8000000 mov     rcx,qword ptr [rsp+0D8h]
+fffff804`6f0f756b e8e02d0000      call    stornvme!NVMeMaskInterrupt (fffff804`6f0fa350)
+fffff804`6f0f7570 488b9424d8000000 mov     rdx,qword ptr [rsp+0D8h]
+fffff804`6f0f7578 498d4818        lea     rcx,[r8+18h]
+fffff804`6f0f757c 4533c9          xor     r9d,r9d
+fffff804`6f0f757f e80c2e0000      call    stornvme!NVMeCompletionDpcRoutine (fffff804`6f0fa390)
+fffff804`6f0f7584 488b9424d8000000 mov     rdx,qword ptr [rsp+0D8h]
+fffff804`6f0f758c ebac            jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0x77a (fffff804`6f0f753a)
+fffff804`6f0f758e 41814b1800000001 or      dword ptr [r11+18h],1000000h
+fffff804`6f0f7596 450fb6e8        movzx   r13d,r8b
+fffff804`6f0f759a c6460308        mov     byte ptr [rsi+3],8
+fffff804`6f0f759e e921faffff      jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0x204 (fffff804`6f0f6fc4)
+fffff804`6f0f75a3 b832000000      mov     eax,32h
+fffff804`6f0f75a8 e9eef8ffff      jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0xdb (fffff804`6f0f6e9b)
+fffff804`6f0f75ad 410fb790b0000000 movzx   edx,word ptr [r8+0B0h]
+19: kd> u fffff8046f0f7630 fffff8046f0f76b0
+stornvme!WaitForCommandCompleteWithCustomTimeout+0x870:
+fffff804`6f0f7630 0f845af9ffff    je      stornvme!WaitForCommandCompleteWithCustomTimeout+0x1d0 (fffff804`6f0f6f90)
+fffff804`6f0f7636 0f109300100000  movups  xmm2,xmmword ptr [rbx+1000h]
+fffff804`6f0f763d 488b9424d8000000 mov     rdx,qword ptr [rsp+0D8h]
+fffff804`6f0f7645 66480f7ed0      movq    rax,xmm2
+fffff804`6f0f764a 0f299424f0000000 movaps  xmmword ptr [rsp+0F0h],xmm2
+fffff804`6f0f7652 48c1e820        shr     rax,20h
+fffff804`6f0f7656 413bc4          cmp     eax,r12d
+fffff804`6f0f7659 0f8499d20200    je      stornvme!WaitForCommandCompleteWithCustomTimeout+0x2db38 (fffff804`6f1248f8)
+fffff804`6f0f765f 448b8ae0000000  mov     r9d,dword ptr [rdx+0E0h]
+fffff804`6f0f7666 33c0            xor     eax,eax
+fffff804`6f0f7668 448b9424f4000000 mov     r10d,dword ptr [rsp+0F4h]
+fffff804`6f0f7670 8bc8            mov     ecx,eax
+fffff804`6f0f7672 e95ed20200      jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0x2db15 (fffff804`6f1248d5)
+fffff804`6f0f7677 488b8424d8000000 mov     rax,qword ptr [rsp+0D8h]
+fffff804`6f0f767f 81481800000001  or      dword ptr [rax+18h],1000000h
+fffff804`6f0f7686 c6460308        mov     byte ptr [rsi+3],8
+fffff804`6f0f768a e932f9ffff      jmp     stornvme!WaitForCommandCompleteWithCustomTimeout+0x201 (fffff804`6f0f6fc1)
+fffff804`6f0f768f 4885c9          test    rcx,rcx
+fffff804`6f0f7692 0f84a5d30200    je      stornvme!WaitForCommandCompleteWithCustomTimeout+0x2dc7d (fffff804`6f124a3d)
+fffff804`6f0f7698 440fb68981100000 movzx   r9d,byte ptr [rcx+1081h]
+fffff804`6f0f76a0 8b8100100000    mov     eax,dword ptr [rcx+1000h]
+fffff804`6f0f76a6 440fb6c0        movzx   r8d,al
+fffff804`6f0f76aa 4180e101        and     r9b,1
+fffff804`6f0f76ae 0f840cd30200    je      stornvme!WaitForCommandCompleteWithCustomTimeout+0x2dc00 (fffff804`6f1249c0)
+19: kd> uf stornvme!NVMeControllerStartFailureEventLog
+stornvme!NVMeControllerStartFailureEventLog:
+fffff804`6f0ff670 4c8bdc          mov     r11,rsp
+fffff804`6f0ff673 4883ec78        sub     rsp,78h
+fffff804`6f0ff677 33c0            xor     eax,eax
+fffff804`6f0ff679 41c7430848000000 mov     dword ptr [r11+8],48h
+fffff804`6f0ff681 498943b0        mov     qword ptr [r11-50h],rax
+fffff804`6f0ff685 4d8d4b08        lea     r9,[r11+8]
+fffff804`6f0ff689 498943b8        mov     qword ptr [r11-48h],rax
+fffff804`6f0ff68d 4d8d43a8        lea     r8,[r11-58h]
+fffff804`6f0ff691 89442438        mov     dword ptr [rsp+38h],eax
+fffff804`6f0ff695 488bd1          mov     rdx,rcx
+fffff804`6f0ff698 668944243d      mov     word ptr [rsp+3Dh],ax
+fffff804`6f0ff69d 8844243f        mov     byte ptr [rsp+3Fh],al
+fffff804`6f0ff6a1 498943e0        mov     qword ptr [r11-20h],rax
+fffff804`6f0ff6a5 498943e8        mov     qword ptr [r11-18h],rax
+fffff804`6f0ff6a9 488d411c        lea     rax,[rcx+1Ch]
+fffff804`6f0ff6ad 49c743d004000000 mov     qword ptr [r11-30h],4
+fffff804`6f0ff6b5 b910000000      mov     ecx,10h
+fffff804`6f0ff6ba c744242000010000 mov     dword ptr [rsp+20h],100h
+fffff804`6f0ff6c2 c644243c01      mov     byte ptr [rsp+3Ch],1
+fffff804`6f0ff6c7 c744244006000000 mov     dword ptr [rsp+40h],6
+fffff804`6f0ff6cf c744244402000000 mov     dword ptr [rsp+44h],2
+fffff804`6f0ff6d7 498943d8        mov     qword ptr [r11-28h],rax
+fffff804`6f0ff6db c744242448000000 mov     dword ptr [rsp+24h],48h
+fffff804`6f0ff6e3 4c8b15ae790300  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f0ff6ea e8e1fad4ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+fffff804`6f0ff6ef 4883c478        add     rsp,78h
+fffff804`6f0ff6f3 c3              ret
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

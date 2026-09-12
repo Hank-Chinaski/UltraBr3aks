@@ -1,0 +1,10 @@
+x stornvme!*Remove*
+x stornvme!*Stop*
+x stornvme!*Reset*
+x stornvme!*Ready*
+x stornvme!*Power*
+dd ffff958587f81028 L1
+dd ffff958587f81ff0 L1
+uf stornvme!NVMeHwAdapterControl
+uf stornvme!NVMeControllerReset
+q

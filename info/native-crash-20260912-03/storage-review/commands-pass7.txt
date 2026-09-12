@@ -1,0 +1,6 @@
+uf stornvme!NVMeControllerRemove
+uf stornvme!NVMeControllerStop
+uf stornvme!NVMeControllerPowerDown
+uf stornvme!NVMeControllerPowerUp
+uf stornvme!FillControllerRuntimeLog
+q

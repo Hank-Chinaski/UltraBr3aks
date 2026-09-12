@@ -1,0 +1,541 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\analysis-pass1.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.234 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> !analyze -v
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+UNEXPECTED_STORE_EXCEPTION (154)
+The store component caught an unexpected exception.
+Arguments:
+Arg1: ffff9585a2be3000, Pointer to the store context or data manager
+Arg2: fffff3014007dd70, Exception information
+Arg3: 0000000000000002, Reserved
+Arg4: 0000000000000000, Reserved
+
+Debugging Details:
+------------------
+
+
+KEY_VALUES_STRING: 1
+
+    Key  : Analysis.CPU.mSec
+    Value: 1875
+
+    Key  : Analysis.Elapsed.mSec
+    Value: 1982
+
+    Key  : Analysis.IO.Other.Mb
+    Value: 0
+
+    Key  : Analysis.IO.Read.Mb
+    Value: 1
+
+    Key  : Analysis.IO.Write.Mb
+    Value: 0
+
+    Key  : Analysis.Init.CPU.mSec
+    Value: 218
+
+    Key  : Analysis.Init.Elapsed.mSec
+    Value: 808
+
+    Key  : Analysis.Memory.CommitPeak.Mb
+    Value: 96
+
+    Key  : Analysis.Version.DbgEng
+    Value: 10.0.29617.1000
+
+    Key  : Analysis.Version.Description
+    Value: 10.2604.29.1 amd64fre
+
+    Key  : Analysis.Version.Ext
+    Value: 1.2604.29.1
+
+    Key  : Bugcheck.Code.KiBugCheckData
+    Value: 0x154
+
+    Key  : Bugcheck.Code.LegacyAPI
+    Value: 0x154
+
+    Key  : Bugcheck.Code.TargetModel
+    Value: 0x154
+
+    Key  : Dump.Attributes.AsUlong
+    Value: 0x21800
+
+    Key  : Dump.Attributes.DiagDataWrittenToHeader
+    Value: 1
+
+    Key  : Dump.Attributes.ErrorCode
+    Value: 0x0
+
+    Key  : Dump.Attributes.LastLine
+    Value: Dump completed successfully.
+
+    Key  : Dump.Attributes.ProgressPercentage
+    Value: 100
+
+    Key  : Failure.Bucket
+    Value: 0x154_c0000006_c000000e_nt!RtlDecompressBufferLz4
+
+    Key  : Failure.Exception.Code
+    Value: 0xc0000006
+
+    Key  : Failure.Exception.IP.Address
+    Value: 0xfffff804dbfb1ba0
+
+    Key  : Failure.Exception.IP.Module
+    Value: nt
+
+    Key  : Failure.Exception.IP.Offset
+    Value: 0x3b1ba0
+
+    Key  : Failure.Exception.Record
+    Value: 0xfffff3014007ed68
+
+    Key  : Failure.Hash
+    Value: {f80368d8-3bea-7666-f736-c39e396bd15b}
+
+    Key  : Faulting.IP.Type
+    Value: Paged
+
+    Key  : Hypervisor.Enlightenments.ValueHex
+    Value: 0x7417df84
+
+    Key  : Hypervisor.Flags.AnyHypervisorPresent
+    Value: 1
+
+    Key  : Hypervisor.Flags.ApicEnlightened
+    Value: 0
+
+    Key  : Hypervisor.Flags.ApicVirtualizationAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.AsyncMemoryHint
+    Value: 0
+
+    Key  : Hypervisor.Flags.CoreSchedulerRequested
+    Value: 0
+
+    Key  : Hypervisor.Flags.CpuManager
+    Value: 1
+
+    Key  : Hypervisor.Flags.DeprecateAutoEoi
+    Value: 1
+
+    Key  : Hypervisor.Flags.DynamicCpuDisabled
+    Value: 1
+
+    Key  : Hypervisor.Flags.Epf
+    Value: 0
+
+    Key  : Hypervisor.Flags.ExtendedProcessorMasks
+    Value: 1
+
+    Key  : Hypervisor.Flags.HardwareMbecAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.MaxBankNumber
+    Value: 0
+
+    Key  : Hypervisor.Flags.MemoryZeroingControl
+    Value: 0
+
+    Key  : Hypervisor.Flags.NoExtendedRangeFlush
+    Value: 0
+
+    Key  : Hypervisor.Flags.NoNonArchCoreSharing
+    Value: 1
+
+    Key  : Hypervisor.Flags.Phase0InitDone
+    Value: 1
+
+    Key  : Hypervisor.Flags.PowerSchedulerQos
+    Value: 0
+
+    Key  : Hypervisor.Flags.RootScheduler
+    Value: 0
+
+    Key  : Hypervisor.Flags.SynicAvailable
+    Value: 1
+
+    Key  : Hypervisor.Flags.UseQpcBias
+    Value: 0
+
+    Key  : Hypervisor.Flags.Value
+    Value: 55185662
+
+    Key  : Hypervisor.Flags.ValueHex
+    Value: 0x34a10fe
+
+    Key  : Hypervisor.Flags.VpAssistPage
+    Value: 1
+
+    Key  : Hypervisor.Flags.VsmAvailable
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.AccessStats
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.CrashdumpEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.CreateVirtualProcessor
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.DisableHyperthreading
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.HostTimelineSync
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.HypervisorDebuggingEnabled
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.IsHyperV
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.LivedumpEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.MapDeviceInterrupt
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.MceEnlightened
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.Nested
+    Value: 0
+
+    Key  : Hypervisor.RootFlags.StartLogicalProcessor
+    Value: 1
+
+    Key  : Hypervisor.RootFlags.Value
+    Value: 1015
+
+    Key  : Hypervisor.RootFlags.ValueHex
+    Value: 0x3f7
+
+    Key  : SecureKernel.HalpHvciEnabled
+    Value: 0
+
+    Key  : WER.OS.Branch
+    Value: ge_release
+
+    Key  : WER.OS.Version
+    Value: 10.0.26100.1
+
+    Key  : WER.System.BIOSRevision
+    Value: 22.2.0.0
+
+
+BUGCHECK_CODE:  154
+
+BUGCHECK_P1: ffff9585a2be3000
+
+BUGCHECK_P2: fffff3014007dd70
+
+BUGCHECK_P3: 2
+
+BUGCHECK_P4: 0
+
+FILE_IN_CAB:  Native-20260912-03.dmp
+
+DUMP_FILE_ATTRIBUTES: 0x21800
+
+FAULTING_THREAD:  ffff9585c63e4080
+
+EXCEPTION_RECORD:  fffff3014007ed68 -- (.exr 0xfffff3014007ed68)
+.exr 0xfffff3014007ed68
+ExceptionAddress: fffff804dbfb1ba0 (nt!RtlDecompressBufferLz4+0x00000000000000b0)
+   ExceptionCode: c0000006 (In-page I/O error)
+  ExceptionFlags: 00000000
+NumberParameters: 3
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 00000187f8077d10
+   Parameter[2]: 00000000c000000e
+Inpage operation failed at 00000187f8077d10, due to I/O error 00000000c000000e
+
+EXCEPTION_PARAMETER1:  0000000000000000
+
+EXCEPTION_PARAMETER2:  00000187f8077d10
+
+CONTEXT:  fffff3014007e580 -- (.cxr 0xfffff3014007e580)
+.cxr 0xfffff3014007e580
+rax=0000000000001000 rbx=00000187f8077d10 rcx=ffffa9024b5b8000
+rdx=00000187f8077d10 rsi=00000187f8078088 rdi=ffffa9024b5b8000
+rip=fffff804dbfb1ba0 rsp=fffff3014007efa0 rbp=ffffa9024b5b9000
+ r8=00000187f8077d10  r9=0000000000000378 r10=00000187f8077d10
+r11=fffff3014007f0e8 r12=ffffa9024b5b8fe0 r13=00000187f8078078
+r14=ffffa9024b5b8000 r15=0000000000000000
+iopl=0         nv up ei pl nz na pe nc
+cs=0010  ss=0000  ds=002b  es=002b  fs=0053  gs=002b             efl=00050206
+nt!RtlDecompressBufferLz4+0xb0:
+fffff804`dbfb1ba0 440fb612        movzx   r10d,byte ptr [rdx] ds:002b:00000187`f8077d10=??
+.cxr
+Resetting default scope
+
+BLACKBOXBSD: 1 (!blackboxbsd)
+
+
+BLACKBOXNTFS: 1 (!blackboxntfs)
+
+
+BLACKBOXPNP: 1 (!blackboxpnp)
+
+
+BLACKBOXWINLOGON: 1 (!blackboxwinlogon) (!blackboxwinlogonnotify)
+
+
+PROCESS_NAME:  MemCompression
+
+ERROR_CODE: (NTSTATUS) 0xc0000006 - The instruction at 0x%p referenced memory at 0x%p. The required data was not placed into memory because of an I/O error status of 0x%x.
+
+EXCEPTION_CODE_STR:  c0000006
+
+EXCEPTION_PARAMETER3:  00000000c000000e
+
+EXCEPTION_STR:  0xc0000006
+
+IP_IN_PAGED_CODE: 
+nt!RtlDecompressBufferLz4+b0
+fffff804`dbfb1ba0 440fb612        movzx   r10d,byte ptr [rdx]
+
+STACK_TEXT:  
+fffff301`4007efa0 fffff804`dbfb19d5     : 00000000`00000000 ffff9585`a2be3050 00000000`00000000 00000187`f8077d10 : nt!RtlDecompressBufferLz4+0xb0
+fffff301`4007eff0 fffff804`dbe3416a     : 00000000`00020000 fffff804`dbfd579f 00000000`00000000 00000187`f8077d10 : nt!SmStoreDecompressBuffer+0x99
+fffff301`4007f0f0 fffff804`dbe33fa3     : ffff9585`a2be3050 00000000`00000000 00000187`f8077d10 7fffffff`fffffffc : nt!ST_STORE<SM_TRAITS>::StDmSinglePageCopy+0x156
+fffff301`4007f180 fffff804`dc0308cd     : 00000000`00000001 ffff9585`a2be3050 00000187`f8077d10 ffff9585`00000000 : nt!ST_STORE<SM_TRAITS>::StDmSinglePageTransfer+0x83
+fffff301`4007f1c0 fffff804`dc0300aa     : ffff9585`a2be3050 ffff9585`d7c8b000 ffff9585`caaf2c90 ffff9585`d7c8b018 : nt!ST_STORE<SM_TRAITS>::StDmpSinglePageRetrieve+0x60d
+fffff301`4007f270 fffff804`dbfd50bf     : 00000000`00000000 00000000`00000001 ffff9585`ffffffff fffff804`00000000 : nt!ST_STORE<SM_TRAITS>::StDmPageRetrieve+0x13a
+fffff301`4007f330 fffff804`dbfd4fbb     : ffff9585`a2be3000 fffff301`4007f4ff ffff9585`d7c8b000 ffff9585`a2be4d08 : nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadIssue+0x7b
+fffff301`4007f3b0 fffff804`dbebad87     : ffff9585`c63e40fd ffff9585`caaf2c90 00000000`00000000 00000000`00000002 : nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadCallout+0x2b
+fffff301`4007f3e0 fffff804`dbebae4d     : fffff804`dbfd4f90 fffff301`4007f4c0 00000000`00000002 ffff9585`82aca6b8 : nt!KeExpandKernelStackAndCalloutInternal+0xb7
+fffff301`4007f450 fffff804`dbfd376f     : 00000000`00000002 00000000`00000000 00000000`00000000 ffff9585`ccf88e80 : nt!KeExpandKernelStackAndCalloutEx+0x1d
+fffff301`4007f490 fffff804`dbe33cb8     : 00000000`00000001 ffff9585`c41f0000 ffff9585`a2be3000 ffff9585`ccf88d90 : nt!SMKM_STORE<SM_TRAITS>::SmStDirectRead+0xcf
+fffff301`4007f560 fffff804`dbe33a75     : 00000000`00000000 fffff301`4007f639 00000000`00000000 ffff9585`40000010 : nt!SMKM_STORE<SM_TRAITS>::SmStWorkItemQueue+0x1b4
+fffff301`4007f5b0 fffff804`dbe336f4     : 00000000`00000000 00000000`00000000 fffff301`4007f639 ffff9585`caaf2c90 : nt!SmWorkItemQueue+0x9
+fffff301`4007f5e0 fffff804`dbfcda93     : ffff9585`ccf88d90 00000000`0000000c ffff9585`00000000 ffff9585`caaf2c90 : nt!SMKM_STORE_MGR<SM_TRAITS>::SmIoCtxQueueWork+0x1e4
+fffff301`4007f6a0 fffff804`dbfcd952     : 00000000`00000002 fffff301`4007f760 fffff301`00000001 fffff804`00000000 : nt!SMKM_STORE_MGR<SM_TRAITS>::SmPageRead+0x133
+fffff301`4007f720 fffff804`dbf709be     : ffff9585`00039b6e ffff9585`ac5c3540 00000000`00000001 fffff804`dbe94491 : nt!SmPageRead+0x22
+fffff301`4007f760 fffff804`dbf6f905     : 00000000`00000002 00000000`00000001 00000000`00000000 00000000`00000004 : nt!MiIssueHardFaultIo+0x92
+fffff301`4007f7b0 fffff804`dbe96014     : ffff8000`00000000 000002c7`c9b260e0 00000000`c0033333 ffff9585`e8777190 : nt!MiIssueHardFault+0x251
+fffff301`4007f8b0 fffff804`dc2bd8cb     : 000002c7`c9a51a00 000002c7`c9a9b430 000000f1`2f1bf9b8 00000000`00000000 : nt!MmAccessFault+0x474
+fffff301`4007fa20 00007ffa`0e686863     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : nt!KiPageFault+0x38b
+000000f1`2f1bf828 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : 0x00007ffa`0e686863
+
+
+SYMBOL_NAME:  nt!RtlDecompressBufferLz4+b0
+
+MODULE_NAME: nt
+
+IMAGE_NAME:  ntkrnlmp.exe
+
+STACK_COMMAND: .cxr 0xfffff3014007e580 ; kb
+
+BUCKET_ID_FUNC_OFFSET:  b0
+
+FAILURE_BUCKET_ID:  0x154_c0000006_c000000e_nt!RtlDecompressBufferLz4
+
+OS_VERSION:  10.0.26100.1
+
+BUILDLAB_STR:  ge_release
+
+OSPLATFORM_TYPE:  x64
+
+OSNAME:  Windows 10
+
+FAILURE_ID_HASH:  {f80368d8-3bea-7666-f736-c39e396bd15b}
+
+Followup:     MachineOwner
+---------
+
+19: kd> .bugcheck
+Bugcheck code 00000154
+Arguments ffff9585`a2be3000 fffff301`4007dd70 00000000`00000002 00000000`00000000
+19: kd> !blackboxntfs
+
+NTFS Blackbox Data
+
+0 Slow I/O Timeout Records Found
+0 Oplock Break Timeout Records Found
+19: kd> !blackboxpnp
+    PnpActivityId      : {00000000-0000-0000-0000-000000000000}
+    PnpActivityTime    : 134337073459405049
+    PnpEventInformation: 2
+    PnpEventInProgress : 0
+    PnpProblemCode     : 24
+    PnpVetoType        : 0
+    DeviceId           : USB\VID_0781&PID_55AE\MSFT30323334334744343030383438
+    VetoString         : 
+
+19: kd> !process 0 1 NBA2K27.exe
+PROCESS ffff9585ce54a080
+    SessionId: none  Cid: ad94    Peb: f044cf000  ParentCid: 79a0
+    DirBase: 1a5683000  ObjectTable: ffffbf0622c15840  HandleCount: 2053.
+    Image: NBA2K27.exe
+    VadRoot ffff9585e16789f0 Vads 2922 Clone 0 Private 1485823. Modified 134411. Locked 0.
+    DeviceMap ffffbf05c322a140
+    Token                             ffffbf061f5760a0
+    ElapsedTime                       00:04:06.920
+    UserTime                          00:00:01.828
+    KernelTime                        00:00:00.281
+    QuotaPoolUsage[PagedPool]         7265904
+    QuotaPoolUsage[NonPagedPool]      417312
+    Working Set Sizes (now,min,max)  (1855285, 50, 345) (7421140KB, 200KB, 1380KB)
+    PeakWorkingSetSize                1860492
+    VirtualSize                       123679 Mb
+    PeakVirtualSize                   123783 Mb
+    PageFaultCount                    8342141
+    MemoryPriority                    FOREGROUND
+    BasePriority                      10
+    CommitCharge                      3708926
+    Job                               ffff9585c4815060
+
+19: kd> !vm 1
+Page File: \??\C:\pagefile.sys
+  Current:  66858912 Kb  Free Space:  66362308 Kb
+  Minimum:  66858912 Kb  Maximum:    201326592 Kb
+Page File: \??\C:\swapfile.sys
+  Current:     16384 Kb  Free Space:     16376 Kb
+  Minimum:     16384 Kb  Maximum:    100288368 Kb
+Virtual Store Paging File
+  Current:  36896768 Kb  Free Space:  32628600 Kb
+  Minimum:   1048576 Kb  Maximum:     37748736 Kb
+
+Physical Memory:         16714728 (   66858912 Kb)
+Available Pages:         11076107 (   44304428 Kb)
+ResAvail Pages:          15557502 (   62230008 Kb)
+Locked IO Pages:                0 (          0 Kb)
+Free System PTEs:         2093669 (    8374676 Kb)
+Modified Pages:            134811 (     539244 Kb)
+Modified PF Pages:         134034 (     536136 Kb)
+Modified No Write Pages:        1 (          4 Kb)
+NonPagedPool Usage:          5512 (      22048 Kb)
+NonPagedPoolNx Usage:      244969 (     979876 Kb)
+NonPagedPool Max:      4294967296 (17179869184 Kb)
+PagedPool Usage:           327626 (    1310504 Kb)
+PagedPool Maximum:     4294967296 (17179869184 Kb)
+Processor Commit:            5523 (      22092 Kb)
+Shared Commit:             505096 (    2020384 Kb)
+Kernel Stacks:              47641 (     190564 Kb)
+Pages For MDLs:            123646 (     494584 Kb)
+ContigMem Pages:            46419 (     185676 Kb)
+Partition Pages:                0 (          0 Kb)
+Pages For AWE:                  0 (          0 Kb)
+NonPagedPool Commit:       327749 (    1310996 Kb)
+PagedPool Commit:          327636 (    1310544 Kb)
+Driver Commit:              53268 (     213072 Kb)
+Boot Commit:                 3799 (      15196 Kb)
+PFN Array Commit:          196909 (     787636 Kb)
+SmallNonPagedPtesCommit:     4342 (      17368 Kb)
+SlabAllocatorPages:          5632 (      22528 Kb)
+SkPagesInUnchargedSlabs:    48075 (     192300 Kb)
+CrossPartitionCommit:           0 (          0 Kb)
+System PageTables:          16692 (      66768 Kb)
+ProcessLockedFilePages:       389 (       1556 Kb)
+Pagefile Hash Pages:          143 (        572 Kb)
+Sum System Commit:        1707327 (    6829308 Kb)
+Total Private:            6869202 (   27476808 Kb)
+Misc/Transient Commit:        825 (       3300 Kb)
+Committed pages:          8577354 (   34309416 Kb)
+Commit limit:            33429456 (  133717824 Kb)
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

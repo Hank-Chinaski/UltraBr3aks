@@ -1,0 +1,7 @@
+!analyze -v
+.bugcheck
+!blackboxntfs
+!blackboxpnp
+!process 0 1 NBA2K27.exe
+!vm 1
+q

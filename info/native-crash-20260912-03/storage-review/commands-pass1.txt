@@ -1,0 +1,8 @@
+.load storagekd
+!storagekd.storhelp
+!storagekd.storport
+!storagekd.storadapter
+!blackboxntfs
+!blackboxpnp
+!devnode 0 1
+q

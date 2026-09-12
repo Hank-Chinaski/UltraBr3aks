@@ -1,0 +1,9 @@
+.load storagekd
+!storagekd.storloglist ffff958587f7c050 L 0n1000
+!irp ffff9585c4a2a010 1
+!irp ffff9585afc1fde0 1
+dt stornvme!*EXTENSION*
+dt stornvme!*NAMESPACE*
+x stornvme!*BuildIo*
+!storagekd.storhelp stornamespace
+q

@@ -1,0 +1,181 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\storage-review\pass2.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> .load storagekd
+19: kd> !storagekd.storunit
+STORPORT Units:
+==================
+Product                 SCSI ID  Object            Extension         Pnd Out Ct  State
+--------------------------------------------------------------------------------------
+NVMe       SPCC M.2 P   0  0  0  ffff95858b3b3050  ffff95858b3b31a0    0   0  0  Working
+NVMe       Samsung SS   0  0  0  ffff958589996050  ffff9585899961a0    0   0  0  Working
+NVMe       Samsung SS   0  0  0  ffff958587fb9050  ffff958587fb91a0    0   1  0  Working
+NVMe       Samsung SS   0  0  0  ffff958586d87050  ffff958586d871a0    0   0  0  Working
+
+19: kd> !storagekd.storclass
+Storage Class Devices
+
+Usage Legend: B = Boot, P = Paging, D = Dump, H = Hiber, R = Removable
+
+FDO                      # Device ID                        Usage   UP   DN  FL
+-------------------------------------------------------------------------------
+ffff95858d2dc050 [1,2]   1 Samsung SSD 990 PRO 2TB          BP       ?    ?  16
+ffff95858d2de050 [1,2]   2 Samsung SSD 990 PRO 2TB            D      ?    ?   3
+ffff95858d2e0050 [1,2]   3 SPCC M.2 PCIe SSD                         ?    ?   3
+ffff95858d2da050 [1,2]   0 NVMe       Samsung SSD 960                ?    ?   0
+
+Usage: !storclass <class device> <level [0-2]>
+       !storclass 0 <level [1-2]> to display summary with upper-level and down-level IRP counts
+
+Optical devices, such as DVD drives, can be listed with !wdfkd.wdfdriverinfo cdrom, and further explored 
+using the "!wdfkd.wdfdevice <device_handle>" and "!wdfkd.wdfdevicequeues <device_handle>" commands.
+
+19: kd> !storagekd.storpagingdevice
+
+Paging Device Dump Data (PGDV)
+  Version:    1
+  Size:       138 bytes
+  EntryCount: 1
+  EntrySize:  118 bytes
+
+  [0] Paging Device
+      Type:             SCSI/SAS/SATA(Legacy)
+      Miniport:         stornvme
+      Model:            Samsung SSD 990 PRO 2TB
+      Firmware:         8B2QJXD7
+      PagingPathCount:  4
+      BootDevice:       Yes
+
+19: kd> !storagekd.storwheaerror
+Stor WHEA Error Info: 
+==================
+VendorId         : Unknown                                 
+ProductId        : Unknown                                 
+DeviceGuid       : {00000000-0000-0000-0000-000000000000}  
+Error Code       : Unknown
+WHEA Error Flags : NONE
+Bus Type         : Unknown
+Miniport Name    : 
+Raw Fault Code   : 0
+19: kd> !storagekd.storhelp storloglist
+
+Name:        !storagekd.storloglist
+
+Description: Displays internal log entries.
+
+Usage:       !storloglist ADAPTER-EXTENSION [<starting_entry>[ <ending_entry>]] [L <count>]
+
+Arguments:   Assumes 0x unless 0n specified
+	ADAPTER-EXTENSION - pointer to a valid device object or an adapter extension
+	                    for a given unit.
+	<starting_entry> - Beginning entry in range to display. If not specified,
+	                   the last <count> entries will be displayed.
+	<ending_entry>   - Ending entry in range to display. If not specified,
+	                   <count> entries will be display beginning at <starting_entry>
+.	<count>          - Count of entries to be displayed. If not specified, a value
+	                   of 50 will be used.
+19: kd> !storagekd.storhelp storadapter
+
+Name: 
+	!storagekd.storadapter
+
+Usage: 
+	!adapter [ADAPTER-OBJECT]
+
+Arguments: 
+	ADAPTER-OBJECT - pointer to a device object or an adapter extension
+	for a given unit.  If no ADAPTER-OBJECT is specified, all STOR adapters
+	used in the system are listed.
+19: kd> !object \GLOBAL??\C:
+Object: ffffbf05a69a4580  Type: (ffff958582723e90) SymbolicLink
+    ObjectHeader: ffffbf05a69a4550 (new version)
+    HandleCount: 0  PointerCount: 1
+    Directory Object: ffffbf05a62a16e0  Name: C:
+    Flags: 0x000020 ( Local )
+    Target String is '\Device\HarddiskVolume3'
+    Drive Letter Index is 3 (C:)
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

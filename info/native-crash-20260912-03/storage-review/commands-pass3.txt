@@ -1,0 +1,10 @@
+.load storagekd
+!storagekd.storclass ffff95858d2dc050 2
+!storagekd.storunit ffff958587fb9050
+!storagekd.storadapter ffff958587f7c050
+!storagekd.storloglist ffff958587f7c050 L 0n100
+!storagekd.storadapter ffff958587f83050
+!storagekd.storloglist ffff958587f83050 L 0n100
+!storagekd.storadapter ffff958587f8f050
+!storagekd.storloglist ffff958587f8f050 L 0n100
+q

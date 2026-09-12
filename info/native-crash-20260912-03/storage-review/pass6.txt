@@ -1,0 +1,666 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912-03\storage-review\pass6.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-03.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`dbc00000 PsLoadedModuleList = 0xfffff804`dcaf5410
+Debug session time: Sat Sep 12 10:26:17.507 2026 (UTC - 7:00)
+System Uptime: 0 days 5:13:20.350
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+.........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+19: kd> x stornvme!*Remove*
+fffff804`6f1221a8 stornvme!NVMeIceRemoveExclusionRanges (NVMeIceRemoveExclusionRanges)
+fffff804`6f109850 stornvme!NVMeControllerRemove (NVMeControllerRemove)
+19: kd> x stornvme!*Stop*
+fffff804`6f0feab0 stornvme!ScsiStartStopUnitRequest (ScsiStartStopUnitRequest)
+fffff804`6f10a34c stornvme!NVMeControllerStop (NVMeControllerStop)
+19: kd> x stornvme!*Reset*
+fffff804`6f113760 stornvme!IoResetCompletion (IoResetCompletion)
+fffff804`6f10bbd0 stornvme!NvmSubsystemReset (NvmSubsystemReset)
+fffff804`6f10eff0 stornvme!NVMeFirmwareActivateCompletionAfterReset (NVMeFirmwareActivateCompletionAfterReset)
+fffff804`6f114e30 stornvme!NVMeControllerPanicResetActionWorkItem (NVMeControllerPanicResetActionWorkItem)
+fffff804`6f1058cc stornvme!ControllerReset (ControllerReset)
+fffff804`6f100620 stornvme!NVMeControllerAsyncReset (NVMeControllerAsyncReset)
+fffff804`6f10a844 stornvme!NVMeHardwareReset (NVMeHardwareReset)
+fffff804`6f1082d0 stornvme!NVMeControllerAsyncResetWorker (NVMeControllerAsyncResetWorker)
+fffff804`6f103ff0 stornvme!NVMeHwResetBus (NVMeHwResetBus)
+fffff804`6f111dd0 stornvme!NVMeWriteBufferFirmwareActivateCompletionAfterReset (NVMeWriteBufferFirmwareActivateCompletionAfterReset)
+fffff804`6f10e474 stornvme!IsFirmwareActivateWithoutResetEnabled (IsFirmwareActivateWithoutResetEnabled)
+fffff804`6f109d30 stornvme!NVMeControllerReset (NVMeControllerReset)
+19: kd> x stornvme!*Ready*
+19: kd> x stornvme!*Power*
+fffff804`6f10b04c stornvme!NVMePowerInitialize (NVMePowerInitialize)
+fffff804`6f102560 stornvme!NVMePowerSetPerfState (NVMePowerSetPerfState)
+fffff804`6f11ae08 stornvme!NVMeSetNonOperationalPowerStatePermissiveMode (NVMeSetNonOperationalPowerStatePermissiveMode)
+fffff804`6f0fefc0 stornvme!NVMePowerStateGetMaxPower (NVMePowerStateGetMaxPower)
+fffff804`6f0fbb60 stornvme!NVMeGetPowerState (NVMeGetPowerState)
+fffff804`6f0f6c30 stornvme!NVMeSetPowerState (NVMeSetPowerState)
+fffff804`6f101c60 stornvme!NVMePowerCleanUp (NVMePowerCleanUp)
+fffff804`6f115e50 stornvme!NVMeGetAutoPowerStateTransitionCompletion (NVMeGetAutoPowerStateTransitionCompletion)
+fffff804`6f115cf4 stornvme!NVMeGetAutoPowerStateTransition (NVMeGetAutoPowerStateTransition)
+fffff804`6f11a868 stornvme!NVMeSetAutoPowerStateTransition (NVMeSetAutoPowerStateTransition)
+fffff804`6f129338 stornvme!GUID_NVME_POWER_IDLE_TIMEOUT2 = <no type information>
+fffff804`6f129308 stornvme!GUID_NVME_POWER_IDLE_TIMEOUT1 = <no type information>
+fffff804`6f10af74 stornvme!NVMeMaxOperationalPower (NVMeMaxOperationalPower)
+fffff804`6f1025f0 stornvme!NVMeSystemPowerHint (NVMeSystemPowerHint)
+fffff804`6f11afa0 stornvme!NVMeSetNonOperationalPowerStatePermissiveModeCompletion (NVMeSetNonOperationalPowerStatePermissiveModeCompletion)
+fffff804`6f1095c0 stornvme!NVMeControllerPowerUp (NVMeControllerPowerUp)
+fffff804`6f10b758 stornvme!NVMePowerSetFState (NVMePowerSetFState)
+fffff804`6f129318 stornvme!GUID_NVME_POWER_STATE_TRANSITION_LATENCY_TOLERANCE1 = <no type information>
+fffff804`6f129348 stornvme!GUID_NVME_POWER_STATE_TRANSITION_LATENCY_TOLERANCE2 = <no type information>
+fffff804`6f10bb24 stornvme!NVMeValidatePowerStates (NVMeValidatePowerStates)
+fffff804`6f109400 stornvme!NVMeControllerPowerDown (NVMeControllerPowerDown)
+fffff804`6f0fb800 stornvme!NVMePowerSettingChangeNotification (NVMePowerSettingChangeNotification)
+fffff804`6f129328 stornvme!GUID_NVME_POWER_NOPPME = <no type information>
+19: kd> dd ffff958587f81028 L1
+ffff9585`87f81028  01000000
+19: kd> dd ffff958587f81ff0 L1
+ffff9585`87f81ff0  00000000
+19: kd> uf stornvme!NVMeHwAdapterControl
+Flow analysis was incomplete, some code may be missing
+stornvme!NVMeHwAdapterControl:
+fffff804`6f0fb340 48895c2410      mov     qword ptr [rsp+10h],rbx
+fffff804`6f0fb345 55              push    rbp
+fffff804`6f0fb346 56              push    rsi
+fffff804`6f0fb347 57              push    rdi
+fffff804`6f0fb348 4881ecd0000000  sub     rsp,0D0h
+fffff804`6f0fb34f 33ed            xor     ebp,ebp
+fffff804`6f0fb351 498bf8          mov     rdi,r8
+fffff804`6f0fb354 488bd9          mov     rbx,rcx
+fffff804`6f0fb357 8bf5            mov     esi,ebp
+fffff804`6f0fb359 4885c9          test    rcx,rcx
+fffff804`6f0fb35c 7410            je      stornvme!NVMeHwAdapterControl+0x2e (fffff804`6f0fb36e)  Branch
+
+stornvme!NVMeHwAdapterControl+0x1e:
+fffff804`6f0fb35e f781e00f000000100000 test dword ptr [rcx+0FE0h],1000h
+fffff804`6f0fb368 0f85e4000000    jne     stornvme!NVMeHwAdapterControl+0x112 (fffff804`6f0fb452)  Branch
+
+stornvme!NVMeHwAdapterControl+0x2e:
+fffff804`6f0fb36e 83fa08          cmp     edx,8
+fffff804`6f0fb371 0f85df000000    jne     stornvme!NVMeHwAdapterControl+0x116 (fffff804`6f0fb456)  Branch
+
+stornvme!NVMeHwAdapterControl+0x37:
+fffff804`6f0fb377 8b8140060000    mov     eax,dword ptr [rcx+640h]
+fffff804`6f0fb37d 410fb64814      movzx   ecx,byte ptr [r8+14h]
+fffff804`6f0fb382 c1e102          shl     ecx,2
+fffff804`6f0fb385 33c8            xor     ecx,eax
+fffff804`6f0fb387 83e104          and     ecx,4
+fffff804`6f0fb38a 33c8            xor     ecx,eax
+fffff804`6f0fb38c 898b40060000    mov     dword ptr [rbx+640h],ecx
+fffff804`6f0fb392 41387014        cmp     byte ptr [r8+14h],sil
+fffff804`6f0fb396 0f84e2000000    je      stornvme!NVMeHwAdapterControl+0x13e (fffff804`6f0fb47e)  Branch
+
+stornvme!NVMeHwAdapterControl+0x5c:
+fffff804`6f0fb39c f6c120          test    cl,20h
+fffff804`6f0fb39f 743a            je      stornvme!NVMeHwAdapterControl+0x9b (fffff804`6f0fb3db)  Branch
+
+stornvme!NVMeHwAdapterControl+0x61:
+fffff804`6f0fb3a1 4c8b8368060000  mov     r8,qword ptr [rbx+668h]
+fffff804`6f0fb3a8 4c8d0d81f00000  lea     r9,[stornvme!NVMeFStateIdleTimerCallback (fffff804`6f10a430)]
+fffff804`6f0fb3af 83e1df          and     ecx,0FFFFFFDFh
+fffff804`6f0fb3b2 48896c2430      mov     qword ptr [rsp+30h],rbp
+fffff804`6f0fb3b7 898b40060000    mov     dword ptr [rbx+640h],ecx
+fffff804`6f0fb3bd 488bd3          mov     rdx,rbx
+fffff804`6f0fb3c0 b921000000      mov     ecx,21h
+fffff804`6f0fb3c5 48896c2428      mov     qword ptr [rsp+28h],rbp
+fffff804`6f0fb3ca 48895c2420      mov     qword ptr [rsp+20h],rbx
+fffff804`6f0fb3cf 4c8b15c2bc0300  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f0fb3d6 e8f53dd5ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+
+stornvme!NVMeHwAdapterControl+0x9b:
+fffff804`6f0fb3db 4533c9          xor     r9d,r9d
+fffff804`6f0fb3de 48896c2420      mov     qword ptr [rsp+20h],rbp
+fffff804`6f0fb3e3 4533c0          xor     r8d,r8d
+fffff804`6f0fb3e6 488bd3          mov     rdx,rbx
+fffff804`6f0fb3e9 418d4933        lea     ecx,[r9+33h]
+fffff804`6f0fb3ed 4c8b15a4bc0300  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f0fb3f4 e8d73dd5ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+fffff804`6f0fb3f9 f00fbaab7006000000 lock bts dword ptr [rbx+670h],0
+fffff804`6f0fb402 7224            jb      stornvme!NVMeHwAdapterControl+0xe8 (fffff804`6f0fb428)  Branch
+
+stornvme!NVMeHwAdapterControl+0xc4:
+fffff804`6f0fb404 8b8340060000    mov     eax,dword ptr [rbx+640h]
+fffff804`6f0fb40a a802            test    al,2
+fffff804`6f0fb40c 7413            je      stornvme!NVMeHwAdapterControl+0xe1 (fffff804`6f0fb421)  Branch
+
+stornvme!NVMeHwAdapterControl+0xce:
+fffff804`6f0fb40e 0fb68348060000  movzx   eax,byte ptr [rbx+648h]
+fffff804`6f0fb415 388347060000    cmp     byte ptr [rbx+647h],al
+fffff804`6f0fb41b 0f85ea020000    jne     stornvme!NVMeHwAdapterControl+0x3cb (fffff804`6f0fb70b)  Branch
+
+stornvme!NVMeHwAdapterControl+0xe1:
+fffff804`6f0fb421 83a370060000fe  and     dword ptr [rbx+670h],0FFFFFFFEh
+
+stornvme!NVMeHwAdapterControl+0xe8:
+fffff804`6f0fb428 f00fbab3a40e000004 lock btr dword ptr [rbx+0EA4h],4
+fffff804`6f0fb431 0f92c0          setb    al
+fffff804`6f0fb434 3c01            cmp     al,1
+fffff804`6f0fb436 0f8406030000    je      stornvme!NVMeHwAdapterControl+0x402 (fffff804`6f0fb742)  Branch
+
+stornvme!NVMeHwAdapterControl+0xfc:
+fffff804`6f0fb43c 8bc6            mov     eax,esi
+
+stornvme!NVMeHwAdapterControl+0xfe:
+fffff804`6f0fb43e 488b9c24f8000000 mov     rbx,qword ptr [rsp+0F8h]
+fffff804`6f0fb446 4881c4d0000000  add     rsp,0D0h
+fffff804`6f0fb44d 5f              pop     rdi
+fffff804`6f0fb44e 5e              pop     rsi
+fffff804`6f0fb44f 5d              pop     rbp
+fffff804`6f0fb450 c3              ret
+
+stornvme!NVMeHwAdapterControl+0x112:
+fffff804`6f0fb452 33c0            xor     eax,eax
+fffff804`6f0fb454 ebe8            jmp     stornvme!NVMeHwAdapterControl+0xfe (fffff804`6f0fb43e)  Branch
+
+stornvme!NVMeHwAdapterControl+0x116:
+fffff804`6f0fb456 83fa02          cmp     edx,2
+fffff804`6f0fb459 74e1            je      stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+
+stornvme!NVMeHwAdapterControl+0x11b:
+fffff804`6f0fb45b 83fa1b          cmp     edx,1Bh
+fffff804`6f0fb45e 0f8726010000    ja      stornvme!NVMeHwAdapterControl+0x24a (fffff804`6f0fb58a)  Branch
+
+stornvme!NVMeHwAdapterControl+0x124:
+fffff804`6f0fb464 4863c2          movsxd  rax,edx
+fffff804`6f0fb467 488d15924bffff  lea     rdx,[stornvme!NVMeCopyFirmwareRevision <PERF> (stornvme+0x0) (fffff804`6f0f0000)]
+fffff804`6f0fb46e 8b8c82e0e70300  mov     ecx,dword ptr [rdx+rax*4+3E7E0h]
+fffff804`6f0fb475 4803ca          add     rcx,rdx
+fffff804`6f0fb478 ffe1            jmp     rcx
+
+stornvme!NVMeHwAdapterControl+0x13e:
+fffff804`6f0fb47e 0fb68b49060000  movzx   ecx,byte ptr [rbx+649h]
+fffff804`6f0fb485 80f901          cmp     cl,1
+fffff804`6f0fb488 76b2            jbe     stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+
+stornvme!NVMeHwAdapterControl+0x14a:
+fffff804`6f0fb48a 83bb4c06000001  cmp     dword ptr [rbx+64Ch],1
+fffff804`6f0fb491 8b9350060000    mov     edx,dword ptr [rbx+650h]
+fffff804`6f0fb497 743d            je      stornvme!NVMeHwAdapterControl+0x196 (fffff804`6f0fb4d6)  Branch
+
+stornvme!NVMeHwAdapterControl+0x159:
+fffff804`6f0fb499 8b4364          mov     eax,dword ptr [rbx+64h]
+fffff804`6f0fb49c 83f8ff          cmp     eax,0FFFFFFFFh
+fffff804`6f0fb49f 7410            je      stornvme!NVMeHwAdapterControl+0x171 (fffff804`6f0fb4b1)  Branch
+
+stornvme!NVMeHwAdapterControl+0x161:
+fffff804`6f0fb4a1 488bcb          mov     rcx,rbx
+fffff804`6f0fb4a4 898350060000    mov     dword ptr [rbx+650h],eax
+fffff804`6f0fb4aa e8b1020000      call    stornvme!NVMeSetFStateIdleTimer (fffff804`6f0fb760)
+fffff804`6f0fb4af eb8b            jmp     stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+
+stornvme!NVMeHwAdapterControl+0x171:
+fffff804`6f0fb4b1 0fb6834a060000  movzx   eax,byte ptr [rbx+64Ah]
+fffff804`6f0fb4b8 84c0            test    al,al
+fffff804`6f0fb4ba 7508            jne     stornvme!NVMeHwAdapterControl+0x184 (fffff804`6f0fb4c4)  Branch
+
+stornvme!NVMeHwAdapterControl+0x17c:
+fffff804`6f0fb4bc 8b8358060000    mov     eax,dword ptr [rbx+658h]
+fffff804`6f0fb4c2 ebdd            jmp     stornvme!NVMeHwAdapterControl+0x161 (fffff804`6f0fb4a1)  Branch
+
+stornvme!NVMeHwAdapterControl+0x184:
+fffff804`6f0fb4c4 ffc9            dec     ecx
+fffff804`6f0fb4c6 3bc1            cmp     eax,ecx
+fffff804`6f0fb4c8 7df2            jge     stornvme!NVMeHwAdapterControl+0x17c (fffff804`6f0fb4bc)  Branch
+
+stornvme!NVMeHwAdapterControl+0x18a:
+fffff804`6f0fb4ca 8b8360060000    mov     eax,dword ptr [rbx+660h]
+fffff804`6f0fb4d0 3bd0            cmp     edx,eax
+fffff804`6f0fb4d2 77e8            ja      stornvme!NVMeHwAdapterControl+0x17c (fffff804`6f0fb4bc)  Branch
+
+stornvme!NVMeHwAdapterControl+0x194:
+fffff804`6f0fb4d4 ebcb            jmp     stornvme!NVMeHwAdapterControl+0x161 (fffff804`6f0fb4a1)  Branch
+
+stornvme!NVMeHwAdapterControl+0x196:
+fffff804`6f0fb4d6 8b4368          mov     eax,dword ptr [rbx+68h]
+fffff804`6f0fb4d9 83f8ff          cmp     eax,0FFFFFFFFh
+fffff804`6f0fb4dc 75c3            jne     stornvme!NVMeHwAdapterControl+0x161 (fffff804`6f0fb4a1)  Branch
+
+stornvme!NVMeHwAdapterControl+0x19e:
+fffff804`6f0fb4de 8b8354060000    mov     eax,dword ptr [rbx+654h]
+fffff804`6f0fb4e4 488bcb          mov     rcx,rbx
+fffff804`6f0fb4e7 898350060000    mov     dword ptr [rbx+650h],eax
+fffff804`6f0fb4ed e86e020000      call    stornvme!NVMeSetFStateIdleTimer (fffff804`6f0fb760)
+fffff804`6f0fb4f2 e945ffffff      jmp     stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+
+stornvme!NVMeHwAdapterControl+0x24a:
+fffff804`6f0fb58a be01000000      mov     esi,1
+fffff804`6f0fb58f e9a8feffff      jmp     stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+
+stornvme!NVMeHwAdapterControl+0x3cb:
+fffff804`6f0fb70b 4889442438      mov     qword ptr [rsp+38h],rax
+fffff804`6f0fb710 4533c9          xor     r9d,r9d
+fffff804`6f0fb713 89442430        mov     dword ptr [rsp+30h],eax
+fffff804`6f0fb717 4533c0          xor     r8d,r8d
+fffff804`6f0fb71a 896c2428        mov     dword ptr [rsp+28h],ebp
+fffff804`6f0fb71e 488bd3          mov     rdx,rbx
+fffff804`6f0fb721 896c2420        mov     dword ptr [rsp+20h],ebp
+fffff804`6f0fb725 418d4942        lea     ecx,[r9+42h]
+fffff804`6f0fb729 4c8b1568b90300  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f0fb730 e89b3ad5ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+fffff804`6f0fb735 85c0            test    eax,eax
+fffff804`6f0fb737 0f84ebfcffff    je      stornvme!NVMeHwAdapterControl+0xe8 (fffff804`6f0fb428)  Branch
+
+stornvme!NVMeHwAdapterControl+0x3fd:
+fffff804`6f0fb73d e9dffcffff      jmp     stornvme!NVMeHwAdapterControl+0xe1 (fffff804`6f0fb421)  Branch
+
+stornvme!NVMeHwAdapterControl+0x402:
+fffff804`6f0fb742 b201            mov     dl,1
+fffff804`6f0fb744 488bcb          mov     rcx,rbx
+fffff804`6f0fb747 e800f90100      call    stornvme!NVMeSyncHostTime_Feature_TimestampSyncMemoryAlloc (fffff804`6f11b04c)
+fffff804`6f0fb74c e9ebfcffff      jmp     stornvme!NVMeHwAdapterControl+0xfc (fffff804`6f0fb43c)  Branch
+19: kd> uf stornvme!NVMeControllerReset
+stornvme!NVMeControllerReset:
+fffff804`6f109d30 48895c2410      mov     qword ptr [rsp+10h],rbx
+fffff804`6f109d35 4889742418      mov     qword ptr [rsp+18h],rsi
+fffff804`6f109d3a 55              push    rbp
+fffff804`6f109d3b 57              push    rdi
+fffff804`6f109d3c 4154            push    r12
+fffff804`6f109d3e 4156            push    r14
+fffff804`6f109d40 4157            push    r15
+fffff804`6f109d42 488d6c24c9      lea     rbp,[rsp-37h]
+fffff804`6f109d47 4881ec00010000  sub     rsp,100h
+fffff804`6f109d4e 488b05ab920200  mov     rax,qword ptr [stornvme!_security_cookie (fffff804`6f133000)]
+fffff804`6f109d55 4833c4          xor     rax,rsp
+fffff804`6f109d58 48894527        mov     qword ptr [rbp+27h],rax
+fffff804`6f109d5c 0f57c0          xorps   xmm0,xmm0
+fffff804`6f109d5f 4532ff          xor     r15b,r15b
+fffff804`6f109d62 4533f6          xor     r14d,r14d
+fffff804`6f109d65 448ae2          mov     r12b,dl
+fffff804`6f109d68 0f1145a7        movups  xmmword ptr [rbp-59h],xmm0
+fffff804`6f109d6c f00fbaa9a40e000000 lock bts dword ptr [rcx+0EA4h],0
+fffff804`6f109d75 488bd9          mov     rbx,rcx
+fffff804`6f109d78 7307            jae     stornvme!NVMeControllerReset+0x51 (fffff804`6f109d81)  Branch
+
+stornvme!NVMeControllerReset+0x4a:
+fffff804`6f109d7a b001            mov     al,1
+fffff804`6f109d7c e922030000      jmp     stornvme!NVMeControllerReset+0x373 (fffff804`6f10a0a3)  Branch
+
+stornvme!NVMeControllerReset+0x51:
+fffff804`6f109d81 0fba691813      bts     dword ptr [rcx+18h],13h
+fffff804`6f109d86 ba78000000      mov     edx,78h
+fffff804`6f109d8b 4c8b15eed20200  mov     r10,qword ptr [stornvme!_imp_StorPortPause (fffff804`6f137080)]
+fffff804`6f109d92 e869d4d9ff      call    storport!StorPortPause (fffff804`6eea7200)
+fffff804`6f109d97 f00fba6b1804    lock bts dword ptr [rbx+18h],4
+fffff804`6f109d9d 448b839c000000  mov     r8d,dword ptr [rbx+9Ch]
+fffff804`6f109da4 be51000000      mov     esi,51h
+fffff804`6f109da9 4585c0          test    r8d,r8d
+fffff804`6f109dac 7411            je      stornvme!NVMeControllerReset+0x8f (fffff804`6f109dbf)  Branch
+
+stornvme!NVMeControllerReset+0x7e:
+fffff804`6f109dae 488bd3          mov     rdx,rbx
+fffff804`6f109db1 8bce            mov     ecx,esi
+fffff804`6f109db3 4c8b15ded20200  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f109dba e81154d4ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+
+stornvme!NVMeControllerReset+0x8f:
+fffff804`6f109dbf 816318fefdffff  and     dword ptr [rbx+18h],0FFFFFDFEh
+fffff804`6f109dc6 488bcb          mov     rcx,rbx
+fffff804`6f109dc9 e852d9ffff      call    stornvme!NVMeCancelAllCompletionQueueDpc (fffff804`6f107720)
+fffff804`6f109dce 448b839c000000  mov     r8d,dword ptr [rbx+9Ch]
+fffff804`6f109dd5 4585c0          test    r8d,r8d
+fffff804`6f109dd8 7411            je      stornvme!NVMeControllerReset+0xbb (fffff804`6f109deb)  Branch
+
+stornvme!NVMeControllerReset+0xaa:
+fffff804`6f109dda 488bd3          mov     rdx,rbx
+fffff804`6f109ddd 8bce            mov     ecx,esi
+fffff804`6f109ddf 4c8b15b2d20200  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f109de6 e8e553d4ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+
+stornvme!NVMeControllerReset+0xbb:
+fffff804`6f109deb b20e            mov     dl,0Eh
+fffff804`6f109ded 488bcb          mov     rcx,rbx
+fffff804`6f109df0 e85be5ffff      call    stornvme!NVMeControllerCompleteAllIORequests (fffff804`6f108350)
+fffff804`6f109df5 488bcb          mov     rcx,rbx
+fffff804`6f109df8 e8d37fffff      call    stornvme!NVMeIsDeviceGone (fffff804`6f101dd0)
+fffff804`6f109dfd 84c0            test    al,al
+fffff804`6f109dff 7408            je      stornvme!NVMeControllerReset+0xd9 (fffff804`6f109e09)  Branch
+
+stornvme!NVMeControllerReset+0xd1:
+fffff804`6f109e01 4032ff          xor     dil,dil
+fffff804`6f109e04 e91c010000      jmp     stornvme!NVMeControllerReset+0x1f5 (fffff804`6f109f25)  Branch
+
+stornvme!NVMeControllerReset+0xd9:
+fffff804`6f109e09 e8d244ffff      call    stornvme!IsNVMeControllerOnFatalError (fffff804`6f0fe2e0)
+fffff804`6f109e0e 4584e4          test    r12b,r12b
+fffff804`6f109e11 7430            je      stornvme!NVMeControllerReset+0x113 (fffff804`6f109e43)  Branch
+
+stornvme!NVMeControllerReset+0xe3:
+fffff804`6f109e13 480fbaa3c000000024 bt    qword ptr [rbx+0C0h],24h
+fffff804`6f109e1c 73e3            jae     stornvme!NVMeControllerReset+0xd1 (fffff804`6f109e01)  Branch
+
+stornvme!NVMeControllerReset+0xee:
+fffff804`6f109e1e 488bcb          mov     rcx,rbx
+fffff804`6f109e21 e8aa1d0000      call    stornvme!NvmSubsystemReset (fffff804`6f10bbd0)
+fffff804`6f109e26 84c0            test    al,al
+fffff804`6f109e28 74d7            je      stornvme!NVMeControllerReset+0xd1 (fffff804`6f109e01)  Branch
+
+stornvme!NVMeControllerReset+0xfa:
+fffff804`6f109e2a 8a8b900e0000    mov     cl,byte ptr [rbx+0E90h]
+fffff804`6f109e30 8ac1            mov     al,cl
+fffff804`6f109e32 2403            and     al,3
+fffff804`6f109e34 3c03            cmp     al,3
+fffff804`6f109e36 7523            jne     stornvme!NVMeControllerReset+0x12b (fffff804`6f109e5b)  Branch
+
+stornvme!NVMeControllerReset+0x108:
+fffff804`6f109e38 80c904          or      cl,4
+fffff804`6f109e3b 888b900e0000    mov     byte ptr [rbx+0E90h],cl
+fffff804`6f109e41 eb18            jmp     stornvme!NVMeControllerReset+0x12b (fffff804`6f109e5b)  Branch
+
+stornvme!NVMeControllerReset+0x113:
+fffff804`6f109e43 33d2            xor     edx,edx
+fffff804`6f109e45 488bcb          mov     rcx,rbx
+fffff804`6f109e48 e87fbaffff      call    stornvme!ControllerReset (fffff804`6f1058cc)
+fffff804`6f109e4d 448bf0          mov     r14d,eax
+fffff804`6f109e50 85c0            test    eax,eax
+fffff804`6f109e52 7517            jne     stornvme!NVMeControllerReset+0x13b (fffff804`6f109e6b)  Branch
+
+stornvme!NVMeControllerReset+0x124:
+fffff804`6f109e54 80a3900e0000fb  and     byte ptr [rbx+0E90h],0FBh
+
+stornvme!NVMeControllerReset+0x12b:
+fffff804`6f109e5b 488bcb          mov     rcx,rbx
+fffff804`6f109e5e e841b30000      call    stornvme!NVMeControllerReinitialize (fffff804`6f1151a4)
+fffff804`6f109e63 408af8          mov     dil,al
+fffff804`6f109e66 e9ba000000      jmp     stornvme!NVMeControllerReset+0x1f5 (fffff804`6f109f25)  Branch
+
+stornvme!NVMeControllerReset+0x13b:
+fffff804`6f109e6b 4032ff          xor     dil,dil
+fffff804`6f109e6e 44887d97        mov     byte ptr [rbp-69h],r15b
+fffff804`6f109e72 f7433840180000  test    dword ptr [rbx+38h],1840h
+fffff804`6f109e79 0f84a3000000    je      stornvme!NVMeControllerReset+0x1f2 (fffff804`6f109f22)  Branch
+
+stornvme!NVMeControllerReset+0x14f:
+fffff804`6f109e7f 4c8d4597        lea     r8,[rbp-69h]
+fffff804`6f109e83 488bd3          mov     rdx,rbx
+fffff804`6f109e86 b96d000000      mov     ecx,6Dh
+fffff804`6f109e8b 4c8b1506d20200  mov     r10,qword ptr [stornvme!_imp_StorPortExtendedFunction (fffff804`6f137098)]
+fffff804`6f109e92 e83953d4ff      call    storport!StorPortExtendedFunction (fffff804`6ee4f1d0)
+fffff804`6f109e97 85c0            test    eax,eax
+fffff804`6f109e99 0f8583000000    jne     stornvme!NVMeControllerReset+0x1f2 (fffff804`6f109f22)  Branch
+
+stornvme!NVMeControllerReset+0x16f:
+fffff804`6f109e9f 40387d97        cmp     byte ptr [rbp-69h],dil
+fffff804`6f109ea3 757d            jne     stornvme!NVMeControllerReset+0x1f2 (fffff804`6f109f22)  Branch
+
+stornvme!NVMeControllerReset+0x175:
+fffff804`6f109ea5 836318ef        and     dword ptr [rbx+18h],0FFFFFFEFh
+fffff804`6f109ea9 40b604          mov     sil,4
+fffff804`6f109eac 8b4338          mov     eax,dword ptr [rbx+38h]
+fffff804`6f109eaf a840            test    al,40h
+fffff804`6f109eb1 741a            je      stornvme!NVMeControllerReset+0x19d (fffff804`6f109ecd)  Branch
+
+stornvme!NVMeControllerReset+0x183:
+fffff804`6f109eb3 4008b3900e0000  or      byte ptr [rbx+0E90h],sil
+fffff804`6f109eba 33d2            xor     edx,edx
+fffff804`6f109ebc 488bcb          mov     rcx,rbx
+fffff804`6f109ebf e880090000      call    stornvme!NVMeHardwareReset (fffff804`6f10a844)
+fffff804`6f109ec4 85c0            test    eax,eax
+fffff804`6f109ec6 7505            jne     stornvme!NVMeControllerReset+0x19d (fffff804`6f109ecd)  Branch
+
+stornvme!NVMeControllerReset+0x198:
+fffff804`6f109ec8 40b701          mov     dil,1
+fffff804`6f109ecb eb58            jmp     stornvme!NVMeControllerReset+0x1f5 (fffff804`6f109f25)  Branch
+
+stornvme!NVMeControllerReset+0x19d:
+fffff804`6f109ecd f7433800080000  test    dword ptr [rbx+38h],800h
+fffff804`6f109ed4 7418            je      stornvme!NVMeControllerReset+0x1be (fffff804`6f109eee)  Branch
+
+stornvme!NVMeControllerReset+0x1a6:
+fffff804`6f109ed6 4008b3900e0000  or      byte ptr [rbx+0E90h],sil
+fffff804`6f109edd ba02000000      mov     edx,2
+fffff804`6f109ee2 488bcb          mov     rcx,rbx
+fffff804`6f109ee5 e85a090000      call    stornvme!NVMeHardwareReset (fffff804`6f10a844)
+fffff804`6f109eea 85c0            test    eax,eax
+fffff804`6f109eec 74da            je      stornvme!NVMeControllerReset+0x198 (fffff804`6f109ec8)  Branch
+
+stornvme!NVMeControllerReset+0x1be:
+fffff804`6f109eee f7433800100000  test    dword ptr [rbx+38h],1000h
+fffff804`6f109ef5 7418            je      stornvme!NVMeControllerReset+0x1df (fffff804`6f109f0f)  Branch
+
+stornvme!NVMeControllerReset+0x1c7:
+fffff804`6f109ef7 4008b3900e0000  or      byte ptr [rbx+0E90h],sil
+fffff804`6f109efe ba01000000      mov     edx,1
+fffff804`6f109f03 488bcb          mov     rcx,rbx
+fffff804`6f109f06 e839090000      call    stornvme!NVMeHardwareReset (fffff804`6f10a844)
+fffff804`6f109f0b 85c0            test    eax,eax
+fffff804`6f109f0d 74b9            je      stornvme!NVMeControllerReset+0x198 (fffff804`6f109ec8)  Branch
+
+stornvme!NVMeControllerReset+0x1df:
+fffff804`6f109f0f 8a83900e0000    mov     al,byte ptr [rbx+0E90h]
+fffff804`6f109f15 4084c6          test    sil,al
+fffff804`6f109f18 7408            je      stornvme!NVMeControllerReset+0x1f2 (fffff804`6f109f22)  Branch
+
+stornvme!NVMeControllerReset+0x1ea:
+fffff804`6f109f1a 24fb            and     al,0FBh
+fffff804`6f109f1c 8883900e0000    mov     byte ptr [rbx+0E90h],al
+
+stornvme!NVMeControllerReset+0x1f2:
+fffff804`6f109f22 41b701          mov     r15b,1
+
+stornvme!NVMeControllerReset+0x1f5:
+fffff804`6f109f25 33c9            xor     ecx,ecx
+fffff804`6f109f27 398be0000000    cmp     dword ptr [rbx+0E0h],ecx
+fffff804`6f109f2d 762a            jbe     stornvme!NVMeControllerReset+0x229 (fffff804`6f109f59)  Branch
+
+stornvme!NVMeControllerReset+0x1ff:
+fffff804`6f109f2f 488b84cb88060000 mov     rax,qword ptr [rbx+rcx*8+688h]
+fffff804`6f109f37 4885c0          test    rax,rax
+fffff804`6f109f3a 7413            je      stornvme!NVMeControllerReset+0x21f (fffff804`6f109f4f)  Branch
+
+stornvme!NVMeControllerReset+0x20c:
+fffff804`6f109f3c 4584e4          test    r12b,r12b
+fffff804`6f109f3f 7503            jne     stornvme!NVMeControllerReset+0x214 (fffff804`6f109f44)  Branch
+
+stornvme!NVMeControllerReset+0x211:
+fffff804`6f109f41 ff4028          inc     dword ptr [rax+28h]
+
+stornvme!NVMeControllerReset+0x214:
+fffff804`6f109f44 488b84cb88060000 mov     rax,qword ptr [rbx+rcx*8+688h]
+fffff804`6f109f4c ff402c          inc     dword ptr [rax+2Ch]
+
+stornvme!NVMeControllerReset+0x21f:
+fffff804`6f109f4f ffc1            inc     ecx
+fffff804`6f109f51 3b8be0000000    cmp     ecx,dword ptr [rbx+0E0h]
+fffff804`6f109f57 72d6            jb      stornvme!NVMeControllerReset+0x1ff (fffff804`6f109f2f)  Branch
+
+stornvme!NVMeControllerReset+0x229:
+fffff804`6f109f59 8b4318          mov     eax,dword ptr [rbx+18h]
+fffff804`6f109f5c a810            test    al,10h
+fffff804`6f109f5e 7406            je      stornvme!NVMeControllerReset+0x236 (fffff804`6f109f66)  Branch
+
+stornvme!NVMeControllerReset+0x230:
+fffff804`6f109f60 83e0ef          and     eax,0FFFFFFEFh
+fffff804`6f109f63 894318          mov     dword ptr [rbx+18h],eax
+
+stornvme!NVMeControllerReset+0x236:
+fffff804`6f109f66 8b83a40e0000    mov     eax,dword ptr [rbx+0EA4h]
+fffff804`6f109f6c 488bcb          mov     rcx,rbx
+fffff804`6f109f6f 83e0fe          and     eax,0FFFFFFFEh
+fffff804`6f109f72 8983a40e0000    mov     dword ptr [rbx+0EA4h],eax
+fffff804`6f109f78 4c8b1511d10200  mov     r10,qword ptr [stornvme!_imp_StorPortResume (fffff804`6f137090)]
+fffff804`6f109f7f e8bcd8d9ff      call    storport!StorPortResume (fffff804`6eea7840)
+fffff804`6f109f84 488bcb          mov     rcx,rbx
+fffff804`6f109f87 e8003f0100      call    stornvme!ResumeIrpCommands (fffff804`6f11de8c)
+fffff804`6f109f8c 488bcb          mov     rcx,rbx
+fffff804`6f109f8f 4084ff          test    dil,dil
+fffff804`6f109f92 0f85e5000000    jne     stornvme!NVMeControllerReset+0x34d (fffff804`6f10a07d)  Branch
+
+stornvme!NVMeControllerReset+0x268:
+fffff804`6f109f98 e8d356ffff      call    stornvme!NVMeControllerStartFailureEventLog (fffff804`6f0ff670)
+fffff804`6f109f9d 4584ff          test    r15b,r15b
+fffff804`6f109fa0 0f84f5000000    je      stornvme!NVMeControllerReset+0x36b (fffff804`6f10a09b)  Branch
+
+stornvme!NVMeControllerReset+0x276:
+fffff804`6f109fa6 41bf58000000    mov     r15d,58h
+fffff804`6f109fac 488d4dc7        lea     rcx,[rbp-39h]
+fffff804`6f109fb0 458bc7          mov     r8d,r15d
+fffff804`6f109fb3 33d2            xor     edx,edx
+fffff804`6f109fb5 e8868e0100      call    stornvme!_memset_spec_ermsb (fffff804`6f122e40)
+fffff804`6f109fba 8b431c          mov     eax,dword ptr [rbx+1Ch]
+fffff804`6f109fbd 83f819          cmp     eax,19h
+fffff804`6f109fc0 7509            jne     stornvme!NVMeControllerReset+0x29b (fffff804`6f109fcb)  Branch
+
+stornvme!NVMeControllerReset+0x292:
+fffff804`6f109fc2 488d35470c0200  lea     rsi,[stornvme!`string' (fffff804`6f12ac10)]
+fffff804`6f109fc9 eb35            jmp     stornvme!NVMeControllerReset+0x2d0 (fffff804`6f10a000)  Branch
+
+stornvme!NVMeControllerReset+0x29b:
+fffff804`6f109fcb 83f81c          cmp     eax,1Ch
+fffff804`6f109fce 7509            jne     stornvme!NVMeControllerReset+0x2a9 (fffff804`6f109fd9)  Branch
+
+stornvme!NVMeControllerReset+0x2a0:
+fffff804`6f109fd0 488d35610c0200  lea     rsi,[stornvme!`string' (fffff804`6f12ac38)]
+fffff804`6f109fd7 eb27            jmp     stornvme!NVMeControllerReset+0x2d0 (fffff804`6f10a000)  Branch
+
+stornvme!NVMeControllerReset+0x2a9:
+fffff804`6f109fd9 83f81d          cmp     eax,1Dh
+fffff804`6f109fdc 7509            jne     stornvme!NVMeControllerReset+0x2b7 (fffff804`6f109fe7)  Branch
+
+stornvme!NVMeControllerReset+0x2ae:
+fffff804`6f109fde 488d358b0c0200  lea     rsi,[stornvme!`string' (fffff804`6f12ac70)]
+fffff804`6f109fe5 eb19            jmp     stornvme!NVMeControllerReset+0x2d0 (fffff804`6f10a000)  Branch
+
+stornvme!NVMeControllerReset+0x2b7:
+fffff804`6f109fe7 4181fe090000c1  cmp     r14d,0C1000009h
+fffff804`6f109fee 488d35b30c0200  lea     rsi,[stornvme!`string' (fffff804`6f12aca8)]
+fffff804`6f109ff5 488d0504f90100  lea     rax,[stornvme!`string' (fffff804`6f129900)]
+fffff804`6f109ffc 480f45f0        cmovne  rsi,rax
+
+stornvme!NVMeControllerReset+0x2d0:
+fffff804`6f10a000 488d55c7        lea     rdx,[rbp-39h]
+fffff804`6f10a004 488bcb          mov     rcx,rbx
+fffff804`6f10a007 e87892ffff      call    stornvme!FillControllerRuntimeLog (fffff804`6f103284)
+fffff804`6f10a00c 4883659f00      and     qword ptr [rbp-61h],0
+fffff804`6f10a011 488d4d9b        lea     rcx,[rbp-65h]
+fffff804`6f10a015 8b4318          mov     eax,dword ptr [rbx+18h]
+fffff804`6f10a018 4533c9          xor     r9d,r9d
+fffff804`6f10a01b 48894c2450      mov     qword ptr [rsp+50h],rcx
+fffff804`6f10a020 4533c0          xor     r8d,r8d
+fffff804`6f10a023 89459f          mov     dword ptr [rbp-61h],eax
+fffff804`6f10a026 488d4d9f        lea     rcx,[rbp-61h]
+fffff804`6f10a02a 8b431c          mov     eax,dword ptr [rbx+1Ch]
+fffff804`6f10a02d 488bd3          mov     rdx,rbx
+fffff804`6f10a030 48894c2448      mov     qword ptr [rsp+48h],rcx
+fffff804`6f10a035 488d4dc7        lea     rcx,[rbp-39h]
+fffff804`6f10a039 c744244008000000 mov     dword ptr [rsp+40h],8
+fffff804`6f10a041 48894c2438      mov     qword ptr [rsp+38h],rcx
+fffff804`6f10a046 b90d100000      mov     ecx,100Dh
+fffff804`6f10a04b 8945a3          mov     dword ptr [rbp-5Dh],eax
+fffff804`6f10a04e 44897c2430      mov     dword ptr [rsp+30h],r15d
+fffff804`6f10a053 0fb7c0          movzx   eax,ax
+fffff804`6f10a056 4889742428      mov     qword ptr [rsp+28h],rsi
+fffff804`6f10a05b 89442420        mov     dword ptr [rsp+20h],eax
+fffff804`6f10a05f c7459b020000c1  mov     dword ptr [rbp-65h],0C1000002h
+fffff804`6f10a066 4c8b1543d00200  mov     r10,qword ptr [stornvme!_imp_StorPortNotification (fffff804`6f1370b0)]
+fffff804`6f10a06d e82e79d4ff      call    storport!StorPortNotification (fffff804`6ee519a0)
+fffff804`6f10a072 480fba6da70a    bts     qword ptr [rbp-59h],0Ah
+fffff804`6f10a078 488bcb          mov     rcx,rbx
+fffff804`6f10a07b eb06            jmp     stornvme!NVMeControllerReset+0x353 (fffff804`6f10a083)  Branch
+
+stornvme!NVMeControllerReset+0x34d:
+fffff804`6f10a07d 480fba6da709    bts     qword ptr [rbp-59h],9
+
+stornvme!NVMeControllerReset+0x353:
+fffff804`6f10a083 0f2845a7        movaps  xmm0,xmmword ptr [rbp-59h]
+fffff804`6f10a087 488d55b7        lea     rdx,[rbp-49h]
+fffff804`6f10a08b 4533c9          xor     r9d,r9d
+fffff804`6f10a08e 660f7f45b7      movdqa  xmmword ptr [rbp-49h],xmm0
+fffff804`6f10a093 4533c0          xor     r8d,r8d
+fffff804`6f10a096 e81d690100      call    stornvme!SendNVMeEventNotification (fffff804`6f1209b8)
+
+stornvme!NVMeControllerReset+0x36b:
+fffff804`6f10a09b 0fba731813      btr     dword ptr [rbx+18h],13h
+fffff804`6f10a0a0 408ac7          mov     al,dil
+
+stornvme!NVMeControllerReset+0x373:
+fffff804`6f10a0a3 488b4d27        mov     rcx,qword ptr [rbp+27h]
+fffff804`6f10a0a7 4833cc          xor     rcx,rsp
+fffff804`6f10a0aa e851860100      call    stornvme!_security_check_cookie (fffff804`6f122700)
+fffff804`6f10a0af 4c8d9c2400010000 lea     r11,[rsp+100h]
+fffff804`6f10a0b7 498b5b38        mov     rbx,qword ptr [r11+38h]
+fffff804`6f10a0bb 498b7340        mov     rsi,qword ptr [r11+40h]
+fffff804`6f10a0bf 498be3          mov     rsp,r11
+fffff804`6f10a0c2 415f            pop     r15
+fffff804`6f10a0c4 415e            pop     r14
+fffff804`6f10a0c6 415c            pop     r12
+fffff804`6f10a0c8 5f              pop     rdi
+fffff804`6f10a0c9 5d              pop     rbp
+fffff804`6f10a0ca c3              ret
+19: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

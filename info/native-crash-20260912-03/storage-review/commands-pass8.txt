@@ -1,0 +1,8 @@
+!storagekd.storadapter ffff958587f83050
+!storagekd.storadapter ffff958587f8f050
+dd ffff958587f81010 L0n16
+dq ffff958587f81e10 L0n40
+dq ffff958587f81610 L0n24
+uf stornvme!NVMeControllerInitPart3
+uf stornvme!ControllerReset
+q
