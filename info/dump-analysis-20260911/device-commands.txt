@@ -1,0 +1,6 @@
+dt nt!_VPB ffff880dd3237a00
+!devobj ffff880dd1fa38f0
+!devstack ffff880dd1fa38f0
+!object \GLOBAL??\C:
+!object \GLOBAL??\E:
+q

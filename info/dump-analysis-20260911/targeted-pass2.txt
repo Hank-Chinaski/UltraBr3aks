@@ -1,0 +1,301 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\targeted-pass2.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Post-Gen3-20260911.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`e5600000 PsLoadedModuleList = 0xfffff804`e64f5410
+Debug session time: Fri Sep 11 19:03:53.764 2026 (UTC - 7:00)
+System Uptime: 0 days 0:01:53.411
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+..........................
+Loading User Symbols
+PEB is paged out (Peb.Ldr = 00000009`71130018).  Type ".hh dbgerr001" for details
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+4: kd> .process /r /p ffff880de19a7080
+Implicit process is now ffff880d`e19a7080
+Loading User Symbols
+......................
+4: kd> .thread /p ffff880de2189080
+Implicit thread is now ffff880d`e2189080
+Implicit process is now ffff880d`e19a7080
+4: kd> lmv m winsrvext
+Browse full module list
+start             end                 module name
+00007ffc`d5dd0000 00007ffc`d5df7000   winsrvext   (deferred)             
+    Image path: C:\WINDOWS\SYSTEM32\winsrvext.dll
+    Image name: winsrvext.dll
+    Browse all global symbols  functions  data  Symbol Reload
+    Image was built with /Brepro flag.
+    Timestamp:        F4963184 (This is a reproducible build file hash, not a timestamp)
+    CheckSum:         000256A0
+    ImageSize:        00027000
+    Mapping Form:     Loaded
+    File version:     10.0.26100.9444
+    Product version:  10.0.26100.9444
+    File flags:       0 (Mask 3F)
+    File OS:          40004 NT Win32
+    File type:        2.0 Dll
+    File date:        00000000.00000000
+    Translations:     0409.04b0
+    Information from resource tables:
+        CompanyName:      Microsoft Corporation
+        ProductName:      Microsoft® Windows® Operating System
+        InternalName:     winsrvext
+        OriginalFilename: winsrvext.dll
+        ProductVersion:   10.0.26100.9444
+        FileVersion:      10.0.26100.9444 (WinBuild.160101.0800)
+        FileDescription:  Multi-User Windows Server Extension DLL
+        LegalCopyright:   © Microsoft Corporation. All rights reserved.
+4: kd> u 00007ffcd8dc4e10 L40
+ntdll!KiUserExceptionDispatch:
+00007ffc`d8dc4e10 fc              cld
+00007ffc`d8dc4e11 488b05c8220800  mov     rax,qword ptr [ntdll!Wow64PrepareForException (00007ffc`d8e470e0)]
+00007ffc`d8dc4e18 4885c0          test    rax,rax
+00007ffc`d8dc4e1b 740f            je      ntdll!KiUserExceptionDispatch+0x1c (00007ffc`d8dc4e2c)
+00007ffc`d8dc4e1d 488bcc          mov     rcx,rsp
+00007ffc`d8dc4e20 4881c1f0040000  add     rcx,4F0h
+00007ffc`d8dc4e27 488bd4          mov     rdx,rsp
+00007ffc`d8dc4e2a ffd0            call    rax
+00007ffc`d8dc4e2c 488bcc          mov     rcx,rsp
+00007ffc`d8dc4e2f 4881c1f0040000  add     rcx,4F0h
+00007ffc`d8dc4e36 488bd4          mov     rdx,rsp
+00007ffc`d8dc4e39 e8f268f6ff      call    ntdll!RtlDispatchException (00007ffc`d8d2b730)
+00007ffc`d8dc4e3e 84c0            test    al,al
+00007ffc`d8dc4e40 740c            je      ntdll!KiUserExceptionDispatch+0x3e (00007ffc`d8dc4e4e)
+00007ffc`d8dc4e42 488bcc          mov     rcx,rsp
+00007ffc`d8dc4e45 33d2            xor     edx,edx
+00007ffc`d8dc4e47 e8a40bf4ff      call    ntdll!RtlGuardRestoreContext (00007ffc`d8d059f0)
+00007ffc`d8dc4e4c eb15            jmp     ntdll!KiUserExceptionDispatch+0x53 (00007ffc`d8dc4e63)
+00007ffc`d8dc4e4e 488bcc          mov     rcx,rsp
+00007ffc`d8dc4e51 4881c1f0040000  add     rcx,4F0h
+00007ffc`d8dc4e58 488bd4          mov     rdx,rsp
+00007ffc`d8dc4e5b 4532c0          xor     r8b,r8b
+00007ffc`d8dc4e5e e8bdedffff      call    ntdll!NtRaiseException (00007ffc`d8dc3c20)
+00007ffc`d8dc4e63 8bc8            mov     ecx,eax
+00007ffc`d8dc4e65 e876deeaff      call    ntdll!RtlRaiseStatus (00007ffc`d8c72ce0)
+00007ffc`d8dc4e6a 90              nop
+00007ffc`d8dc4e6b c3              ret
+00007ffc`d8dc4e6c cc              int     3
+00007ffc`d8dc4e6d cc              int     3
+00007ffc`d8dc4e6e cc              int     3
+00007ffc`d8dc4e6f cc              int     3
+00007ffc`d8dc4e70 cc              int     3
+00007ffc`d8dc4e71 cc              int     3
+00007ffc`d8dc4e72 6666666666660f1f840000000000 nop word ptr [rax+rax]
+ntdll!KiRaiseUserExceptionDispatcher:
+00007ffc`d8dc4e80 4881ecc8000000  sub     rsp,0C8h
+00007ffc`d8dc4e87 898424c0000000  mov     dword ptr [rsp+0C0h],eax
+00007ffc`d8dc4e8e 658b0425c0020000 mov     eax,dword ptr gs:[2C0h]
+00007ffc`d8dc4e96 488d4c2420      lea     rcx,[rsp+20h]
+00007ffc`d8dc4e9b 8901            mov     dword ptr [rcx],eax
+00007ffc`d8dc4e9d 33c0            xor     eax,eax
+00007ffc`d8dc4e9f 894104          mov     dword ptr [rcx+4],eax
+00007ffc`d8dc4ea2 48894108        mov     qword ptr [rcx+8],rax
+00007ffc`d8dc4ea6 488b9424c8000000 mov     rdx,qword ptr [rsp+0C8h]
+00007ffc`d8dc4eae 48895110        mov     qword ptr [rcx+10h],rdx
+00007ffc`d8dc4eb2 894118          mov     dword ptr [rcx+18h],eax
+00007ffc`d8dc4eb5 e846a8eaff      call    ntdll!RtlRaiseException (00007ffc`d8c6f700)
+00007ffc`d8dc4eba 8b8424c0000000  mov     eax,dword ptr [rsp+0C0h]
+00007ffc`d8dc4ec1 4881c4c8000000  add     rsp,0C8h
+00007ffc`d8dc4ec8 c3              ret
+00007ffc`d8dc4ec9 cc              int     3
+00007ffc`d8dc4eca cc              int     3
+00007ffc`d8dc4ecb cc              int     3
+00007ffc`d8dc4ecc cc              int     3
+00007ffc`d8dc4ecd cc              int     3
+00007ffc`d8dc4ece cc              int     3
+00007ffc`d8dc4ecf cc              int     3
+00007ffc`d8dc4ed0 cc              int     3
+00007ffc`d8dc4ed1 cc              int     3
+00007ffc`d8dc4ed2 cc              int     3
+00007ffc`d8dc4ed3 cc              int     3
+00007ffc`d8dc4ed4 cc              int     3
+00007ffc`d8dc4ed5 cc              int     3
+00007ffc`d8dc4ed6 66660f1f840000000000 nop word ptr [rax+rax]
+ntdll!RtlEnclaveCallDispatch:
+00007ffc`d8dc4ee0 48894c2420      mov     qword ptr [rsp+20h],rcx
+4: kd> .exr 0000000971cc1f30
+ExceptionAddress: 00007ffcd8c7309d (ntdll!RtlLookupFunctionEntry+0x000000000000008d)
+   ExceptionCode: c0000006 (In-page I/O error)
+  ExceptionFlags: 00000000
+NumberParameters: 3
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 00007ffcd5df3840
+   Parameter[2]: 00000000c000000e
+Inpage operation failed at 00007ffcd5df3840, due to I/O error 00000000c000000e
+4: kd> !vad 00007ffcd5df3840 1
+
+VAD @ ffff880ddb89c610
+  Start VPN            7ffcd5dd0  End VPN        7ffcd5dfb  Control Area  ffff880dd61b75e0
+  FirstProtoPte ffffb283ab616e40  LastPte ffffb283ab616f70  Commit Charge                7 (0n7)
+  Extend                0
+
+      ImageMap ViewUnmap EXECUTE_WRITECOPY 
+
+ControlArea  @ ffff880dd61b75e0
+  Segment      ffffb283aa524710  Flink      ffff880de63f9160  Blink        ffff880ddb89c670
+  Section Ref                 0  Pfn Ref                  21  Mapped Views                2
+  User Ref                    2  WaitForDel                0  Flush Count                 0
+  File Object  ffff880de1ae8140  PartitionId                0  
+  Flags (a0) Image File 
+
+      \Windows\System32\winsrvext.dll
+
+Segment @ ffffb283aa524710
+  ControlArea       ffff880dd61b75e0  BasedAddress  00007ffcd5dd0000
+  Total Ptes                      27
+  Segment Size                 27000  Committed                    0
+  Image Commit                     6  Image Info    ffffb283aa524758
+  ProtoPtes         ffffb283ab616e40
+  Flags (7c270000) ProtectionMask 
+
+Reload command: .reload winsrvext.dll=00007ffc`d5dd0000,2c000
+
+4: kd> !pte 00007ffcd5df3840
+                                           VA 00007ffcd5df3840
+PXE at FFFF9DCEE773B7F8    PPE at FFFF9DCEE76FFF98    PDE at FFFF9DCEDFFF3570    PTE at FFFF9DBFFE6AEF98
+contains 0A00000108613867  contains 0A00000108616867  contains 0A00000120B35867  contains B283AB616F580400
+pfn 108613    ---DA--UWEV  pfn 108616    ---DA--UWEV  pfn 120b35    ---DA--UWEV  not valid
+                                                                                  Proto: FFFFB283AB616F58
+
+
+4: kd> s -d 0000000971cc1000 0000000971d00000 c0000006
+00000009`71cc1f30  c0000006 00000000 00000000 00000000  ................
+00000009`71cc2e70  c0000006 00000000 00000000 00000000  ................
+00000009`71cc4770  c0000006 00000000 00000000 00000000  ................
+00000009`71cc56b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cc65f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cc7530  c0000006 00000000 00000000 00000000  ................
+00000009`71cc8470  c0000006 00000000 00000000 00000000  ................
+00000009`71cc93b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cca2f0  c0000006 00000000 00000000 00000000  ................
+00000009`71ccb230  c0000006 00000000 00000000 00000000  ................
+00000009`71ccc170  c0000006 00000000 00000000 00000000  ................
+00000009`71ccd0b0  c0000006 00000000 00000000 00000000  ................
+00000009`71ccdff0  c0000006 00000000 00000000 00000000  ................
+00000009`71ccef30  c0000006 00000000 00000000 00000000  ................
+00000009`71ccfe70  c0000006 00000000 00000000 00000000  ................
+00000009`71cd0db0  c0000006 00000000 00000000 00000000  ................
+00000009`71cd1cf0  c0000006 00000000 00000000 00000000  ................
+00000009`71cd2c30  c0000006 00000000 00000000 00000000  ................
+00000009`71cd3b70  c0000006 00000000 00000000 00000000  ................
+00000009`71cd4ab0  c0000006 00000000 00000000 00000000  ................
+00000009`71cd59f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cd6930  c0000006 00000000 00000000 00000000  ................
+00000009`71cd7870  c0000006 00000000 00000000 00000000  ................
+00000009`71cd87b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cd96f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cda630  c0000006 00000000 00000000 00000000  ................
+00000009`71cdb570  c0000006 00000000 00000000 00000000  ................
+00000009`71cdc4b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cdd3f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cde330  c0000006 00000000 00000000 00000000  ................
+00000009`71cdf270  c0000006 00000000 00000000 00000000  ................
+00000009`71ce01b0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce10f0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce2030  c0000006 00000000 00000000 00000000  ................
+00000009`71ce2f70  c0000006 00000000 00000000 00000000  ................
+00000009`71ce3eb0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce4df0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce5d30  c0000006 00000000 00000000 00000000  ................
+00000009`71ce6c70  c0000006 00000000 00000000 00000000  ................
+00000009`71ce7bb0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce8af0  c0000006 00000000 00000000 00000000  ................
+00000009`71ce9a30  c0000006 00000000 00000000 00000000  ................
+00000009`71cea970  c0000006 00000000 00000000 00000000  ................
+00000009`71ceb8b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cec7f0  c0000006 00000000 00000000 00000000  ................
+00000009`71ced730  c0000006 00000000 00000000 00000000  ................
+00000009`71cee670  c0000006 00000000 00000000 00000000  ................
+00000009`71cef5b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf04f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf1430  c0000006 00000000 00000000 00000000  ................
+00000009`71cf2370  c0000006 00000000 00000000 00000000  ................
+00000009`71cf32b0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf41f0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf5130  c0000006 00000000 00000000 00000000  ................
+00000009`71cf6070  c0000006 00000000 00000000 00000000  ................
+00000009`71cf6fb0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf7ef0  c0000006 00000000 00000000 00000000  ................
+00000009`71cf8e30  c0000006 00000000 00000000 00000000  ................
+00000009`71cf9d70  c0000006 00000000 00000000 00000000  ................
+00000009`71cfacb0  c0000006 00000000 00000000 00000000  ................
+00000009`71cfbbf0  c0000006 00000000 00000000 00000000  ................
+00000009`71cfcb30  c0000006 00000000 00000000 00000000  ................
+00000009`71cfda70  c0000006 00000000 00000000 00000000  ................
+00000009`71cfe9b0  c0000006 00000000 00000000 00000000  ................
+4: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

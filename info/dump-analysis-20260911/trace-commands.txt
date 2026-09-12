@@ -1,0 +1,10 @@
+.process /r /p ffff880de19a7080
+.thread /p ffff880de2189080
+lmv m nt
+.exr 0000000971cfe9b0
+.cxr 0000000971cfe4c0
+kv 20
+!fileobj ffff880de1ae8140
+dt nt!_FILE_OBJECT ffff880de1ae8140
+!process 0 0
+q

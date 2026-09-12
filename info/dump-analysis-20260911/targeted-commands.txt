@@ -1,0 +1,9 @@
+.process /r /p ffff880de19a7080
+.thread /p ffff880de2189080
+lmv m winsrvext
+u 00007ffcd8dc4e10 L40
+.exr 0000000971cc1f30
+!vad 00007ffcd5df3840 1
+!pte 00007ffcd5df3840
+s -d 0000000971cc1000 0000000971d00000 c0000006
+q
