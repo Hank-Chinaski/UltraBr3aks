@@ -1,0 +1,5 @@
+.process /r /p ffff880dfa2de0c0
+dt nt!_EPROCESS ffff880dfa2de0c0 SeAuditProcessCreationInfo
+!vad 0 1
+lm
+q

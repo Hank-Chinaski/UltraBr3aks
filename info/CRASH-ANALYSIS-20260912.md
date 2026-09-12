@@ -163,3 +163,35 @@ This confirms a local NBA installation on D:; the process image's full path in t
 **Open hypothesis:** Differences in NBA's launch path, protection, mods or injected components, input/overlay activity, caching, and workload could account for the selectivity. None is established as causal. A file being present is not evidence it ran or was loaded. Limited executable inventory found `start_protected_game.exe` and `mod.exe` beside NBA; their role and use remain unverified. College Football's `EAAntiCheat.GameServiceLauncher.exe` reports product name EA Javelin Anticheat and version 1.0.13295687.0; presence alone does not establish runtime state. These observations justify comparison, not execution, removal, or blame.
 
 No new setting change, reproduction, or executable launch was performed for this update.
+
+## Follow-up: narrowing the next controlled test
+
+**Confirmed fact:** Playnite's recorded launches for all three games use the game's executable directly, without recorded command-line arguments and with its installation folder as working directory. The latest NBA launch record is September 11, 19:03:01.872. The desktop NBA shortcut also targets `D:\Games\NBA 2K27\NBA2K27.exe` without arguments. The earlier dump's NBA parent PID matches Playnite. Current global PreScript, PostScript and GameStartedScript values are empty; this does not exclude per-game scripts or extensions.
+
+**Confirmed fact:** Playnite records Tiny Terry's successful recent session as 1,243 seconds (20m43s), and College Football's as 3,374 seconds (56m14s). These recorded process-session durations complement the user's gameplay report and are not measurements of time under a particular hardware load.
+
+**Supported inference:** Simply switching from Playnite to the identical desktop shortcut is now a weaker first test: all three games use that launch mechanism, and a distinctive NBA launch action has not been demonstrated.
+
+**Confirmed fact:** The earlier missing NBA PEB loader data was worked around by inspecting the VAD tree rooted at `ffff880df719df00`. The dump's executable image path is `\Device\HarddiskVolume10\GAMES\NBA 2K27\NBA2K27.exe`. Image mappings include the game-local `\GAMES\NBA 2K27\version.dll` at `00007ffc8bf00000`, and the separate Windows `version.dll` at `00007ffcd3c00000`. Other mapped images include the game-local Steam client/API files, NVIDIA Streamline/DLSS libraries, D3D12 Agility components, Epic Online Services, and AMD/Intel upscaler libraries. Being mapped does not prove that a particular rendering feature was enabled or that its code caused the failure.
+
+**Confirmed fact:** The current installed game-local `version.dll` is 566,272 bytes, Authenticode status NotSigned, file version 1.0.0.3, CompanyName `ACME Corporation`, and a nonstandard FileDescription. This metadata does not identify its author reliably or establish that it is malicious. `mod.exe` and `steam_emu.ini` are also present; execution of `mod.exe` has not been demonstrated.
+
+Evidence: [NBA VAD tree](dump-analysis-20260911/nba-vad-tree.txt), [kernel module inventory](dump-analysis-20260911/nba-mappings.txt). The unsuccessful `!vad 0 1` attempt in the first log does not establish missing mappings; the later tree query succeeds. The loader-list limitation above is therefore partly resolved.
+
+**Confirmed fact:** The NBA VAD tree also names Direct3D and NVIDIA cache files under the user's Local AppData. These identify further per-game I/O comparison targets; no cache deletion or redirection was performed.
+
+**Open hypothesis:** A game-local modification or compatibility component might participate in the selective trigger. Actual mapping now makes this a better-founded comparison target than file presence alone, but it is not proof of causation. The game's installation/modification source has been requested so an optional component can be distinguished from one needed for launch. No DLL has been renamed or removed.
+
+The next test should change one identified optional component, or compare a known-unmodified build if these components are required by this installation. A failure to launch after removing a required component would be inconclusive. A successful short session would not establish a fix. Keep BIOS and unrelated software settings constant during any such comparison; the known risk of a reproduction is another system crash. Details of the actual reversible change must be specified after the component's role is established.
+
+## Installation provenance supplied by Bryan
+
+**Confirmed fact, user-reported:** Bryan identifies `https://fitgirl-repacks.site/nba-2k27/` as the NBA installation source. The page could not be retrieved through the web tool and targeted searches returned no results; its advertised build, bundled components and release notes have not been independently verified.
+
+**Open hypothesis:** The mapped game-local `version.dll` may be required by the supplied distribution rather than a separately added optional mod. Accordingly, renaming/removing it is not yet a justified isolation test. The distribution's provenance alone does not establish the cause of the C: read/write failures.
+
+**Confirmed fact, local comparison:** College Football also has a game-local `version.dll`, but it is a different file. NBA's is 566,272 bytes, SHA256 `C51A15663A7F2ACB93CB3C10F6CACD98828143369EE0AAC92F3F4367688D8392`; College Football's is 51,200 bytes, SHA256 `0CF97BE855D4A466924F7723C1205234AE4E10675A002EF85B60700FD768ECF5`. This identifies a difference, not fault attribution. College Football's runtime mapping was not captured in this comparison.
+
+NBA `steamclient64.dll` SHA256: `8D8338D378A5CC40F9A12C5C707237C58812AFEE6633D61BA15C5209AE3A0F41`. NBA `mod.exe` SHA256: `5F665347DFA96AD0859975657FDBB216739B785BBE3842AF080473A5774CFB36`. These are locally recorded identities, not matches to an independently verified package manifest.
+
+Remaining provenance question: whether Bryan added any updates, patches or mods after installing this package, or is running it exactly as supplied. No executable was launched and no game file was changed during these checks.

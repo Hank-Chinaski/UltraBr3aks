@@ -1,0 +1,1805 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\nba-vad-tree.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.000 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Post-Gen3-20260911.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`e5600000 PsLoadedModuleList = 0xfffff804`e64f5410
+Debug session time: Fri Sep 11 19:03:53.764 2026 (UTC - 7:00)
+System Uptime: 0 days 0:01:53.411
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+..........................
+Loading User Symbols
+PEB is paged out (Peb.Ldr = 00000009`71130018).  Type ".hh dbgerr001" for details
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+4: kd> .process /r /p ffff880dfa2de0c0
+Implicit process is now ffff880d`fa2de0c0
+Loading User Symbols
+PEB is paged out (Peb.Ldr = 00000014`6e209018).  Type ".hh dbgerr001" for details
+4: kd> !vad ffff880df719df00
+VAD             Level         Start             End              Commit
+ffff880df1d9e770  9           7ffe0           7ffe0               1 Private        READONLY           
+ffff880df1d9e130  8           7ffe9           7ffe9               1 Private        READONLY           
+ffff880df74f2540 10          300000         13fffff     34359738365 Private        NO_ACCESS          
+ffff880df1b38db0  9         1400000         140020f             262 Private        READWRITE          
+ffff880df1b38e50  7         1400210         140041f             262 Private        READWRITE          
+ffff880df1b39580  9         1400420         140062f             262 Private        READWRITE          
+ffff880df1b391c0  8         1400630         140083f             262 Private        READWRITE          
+ffff880df1b39710  9         1400840         1400a4f             262 Private        READWRITE          
+ffff880df1b39170  6         1400a50         1400c5f             262 Private        READWRITE          
+ffff880df1b3a700 10         1400c60         1400e6f             262 Private        READWRITE          
+ffff880df1b3a1b0  9         1400e70         140107f             262 Private        READWRITE          
+ffff880df1b3b010 10         1401080         140128f             262 Private        READWRITE          
+ffff880df1b3a250  8         1401290         140149f             262 Private        READWRITE          
+ffff880df1b3ade0 10         14014a0         14016af             262 Private        READWRITE          
+ffff880df1b3bdd0  9         14016b0         14018bf             262 Private        READWRITE          
+ffff880df1b3b790 10         14018c0         1401acf             262 Private        READWRITE          
+ffff880df1b3bb50  7         1401ad0         1401cdf             262 Private        READWRITE          
+ffff880df1b3c910 10         1401ce0         1401eef             262 Private        READWRITE          
+ffff880df1b3c6e0  9         1401ef0         14020ff             262 Private        READWRITE          
+ffff880df1b3ef30 10         1402100         140230f             262 Private        READWRITE          
+ffff880df1b3f070  8         1402310         140251f             262 Private        READWRITE          
+ffff880df1b3f3e0 10         1402520         140272f             262 Private        READWRITE          
+ffff880df1b401f0  9         1402730         140293f             262 Private        READWRITE          
+ffff880df1b43080 10         1402940         1402b4f             262 Private        READWRITE          
+ffff880df1b43030  5         1402b50         1402d5f             262 Private        READWRITE          
+ffff880df1b44020 10         1402d60         1402f6f             262 Private        READWRITE          
+ffff880df1b43300  9         1402f70         140317f             262 Private        READWRITE          
+ffff880df1b43670 10         1403180         140338f             262 Private        READWRITE          
+ffff880df1b437b0  8         1403390         140359f             262 Private        READWRITE          
+ffff880df1b43260 10         14035a0         14037af             262 Private        READWRITE          
+ffff880df1b43c10  9         14037b0         14039bf             262 Private        READWRITE          
+ffff880df1b43490 10         14039c0         1403bcf             262 Private        READWRITE          
+ffff880df1b46230  7         1403bd0         1403ddf             262 Private        READWRITE          
+ffff880df1b459c0 10         1403de0         1403fef             262 Private        READWRITE          
+ffff880df1b464b0  9         1403ff0         14041ff             262 Private        READWRITE          
+ffff880df1b46870 10         1404200         14043ff             262 Private        READWRITE          
+ffff880df1b45d80  8         1404400         14045ff             262 Private        READWRITE          
+ffff880df1b46820 10         1404600         14047ff             262 Private        READWRITE          
+ffff880df1b45830  9         1404800         14049ff             262 Private        READWRITE          
+ffff880df1b45c40 10         1404a00         1404bff             262 Private        READWRITE          
+ffff880df1b45920  6         1404c00         1404dff             262 Private        READWRITE          
+ffff880df1b47310 10         1404e00         1404fff             262 Private        READWRITE          
+ffff880df1b479a0  9         1405000         14051ff             262 Private        READWRITE          
+ffff880df1b48f30 10         1405200         14053ff             262 Private        READWRITE          
+ffff880df1b47d60  8         1405400         14055ff             262 Private        READWRITE          
+ffff880df1b489e0 10         1405600         14057ff             262 Private        READWRITE          
+ffff880df1b49cf0  9         1405800         14059ff             262 Private        READWRITE          
+ffff880df1b51a90 10         1405a00         1406eff             260 Private        READWRITE          
+ffff880df1b4d620  7         1406f00         14070ff             262 Private        READWRITE          
+ffff880df1b518b0 10         1407100         14085ff             260 Private        READWRITE          
+ffff880df6c0fd10  9         1408600         1409aff             260 Private        READWRITE          
+ffff880df6c0f450 10         1409b00         140afff             260 Private        READWRITE          
+ffff880df6c15da0  8         140b000         140c4ff             260 Private        READWRITE          
+ffff880df3e1ddc0 10         140c500         140d9ff             260 Private        READWRITE          
+ffff880df3e02250  9         140da00         140eeff             260 Private        READWRITE          
+ffff880df3e02c00 10         140ef00         14103ff             260 Private        READWRITE          
+ffff880df3e02700  4         1410400         14118ff             260 Private        READWRITE          
+ffff880df3e032e0  9         1411900         1412dff             260 Private        READWRITE          
+ffff880df3e027a0  8         1412e00         14142ff             260 Private        READWRITE          
+ffff880df3e02430  9         1414300         14157ff             260 Private        READWRITE          
+ffff880df3e02160  7         1415800         1416cff             260 Private        READWRITE          
+ffff880df3e022f0  9         1416d00         14181ff             260 Private        READWRITE          
+ffff880deba54960  8         1418200         14196ff             260 Private        READWRITE          
+ffff880deba52f20  9         1419700         141abff             260 Private        READWRITE          
+ffff880df71ad9a0  6         141ac00         141c0ff             260 Private        READWRITE          
+ffff880df71adf90  9         141c100         141d5ff             260 Private        READWRITE          
+ffff880df71ae300  8         141d600         141eaff             260 Private        READWRITE          
+ffff880df71af2f0  9         141eb00         141ffff             260 Private        READWRITE          
+ffff880df71b4340  7         1420000         14214ff             260 Private        READWRITE          
+ffff880df71996d0  9         1421500         14229ff             260 Private        READWRITE          
+ffff880df719b1b0  8         1422a00         1423eff             260 Private        READWRITE          
+ffff880df1d96480  9         1423f00         14253ff             260 Private        READWRITE          
+ffff880df1d9e630  5         1425400         14268ff             260 Private        READWRITE          
+ffff880df1d9fa30  9         1426900         1427dff             260 Private        READWRITE          
+ffff880df1d9fe40  8         1427e00         14292ff             260 Private        READWRITE          
+ffff880df1d9f1c0  9         1429300         142a7ff             260 Private        READWRITE          
+ffff880df1da3220  7         142a800         142bcff             260 Private        READWRITE          
+ffff880df1da5f70  9         142bd00         142d1ff             260 Private        READWRITE          
+ffff880df74dcfb0  8         142d200         142e6ff             260 Private        READWRITE          
+ffff880df74de590  6         142fc00         14310ff             260 Private        READWRITE          
+ffff880df74dea90  8         1431100         14325ff             260 Private        READWRITE          
+ffff880df74e0610  7         1432600         1433aff             260 Private        READWRITE          
+ffff880df74e9940  8         1433b00         1434fff             260 Private        READWRITE          
+ffff880df1b51c70  9         1435000         14364ff             260 Private        READWRITE          
+ffff880df74ef480  3         1436500         14379ff             260 Private        READWRITE          
+ffff880df1b37e10 10         1437a00         1438eff             260 Private        READWRITE          
+ffff880df74f0060  9         1438f00         143a3ff             260 Private        READWRITE          
+ffff880df74f0790 10         143a400         143b8ff             260 Private        READWRITE          
+ffff880deaa8a6d0  8         143b900         143cdff             260 Private        READWRITE          
+ffff880de2748b60 10         143ce00         143cfff             260 Private        READWRITE          
+ffff880de2753600  9         143d000         143e4ff             260 Private        READWRITE          
+ffff880de2753e70 10         143e500         143f9ff             260 Private        READWRITE          
+ffff880de2753ba0  7         143fa00         1440eff             260 Private        READWRITE          
+ffff880de2753830  9         1440f00         14423ff             260 Private        READWRITE          
+ffff880df74f1690  8         1442400         14438ff             260 Private        READWRITE          
+ffff880df74f0c90  9         1443900         1444dff             260 Private        READWRITE          
+ffff880df1b4b140 10         1444e00         14462ff             260 Private        READWRITE          
+ffff880de273f1f0  6         1446300         14477ff             260 Private        READWRITE          
+ffff880de273e7f0 10         1447800         1448cff             260 Private        READWRITE          
+ffff880df74f1960  9         1448d00         144a1ff             260 Private        READWRITE          
+ffff880def1882b0 10         144a200         144b6ff             260 Private        READWRITE          
+ffff880df74f5f10  8         144b700         144cbff             260 Private        READWRITE          
+ffff880df74f5c40 10         144cc00         144e0ff             260 Private        READWRITE          
+ffff880def189d90  9         144e100         144f5ff             260 Private        READWRITE          
+ffff880def188530 10         144f600         1450aff             260 Private        READWRITE          
+ffff880def197120  7         1450b00         1450d0f             262 Private        READWRITE          
+ffff880def19b180 10         1450d10         145220f             260 Private        READWRITE          
+ffff880dfab882b0  9         1452210         145370f             260 Private        READWRITE          
+ffff880dfab8c4f0 10         1453710         1454c0f             260 Private        READWRITE          
+ffff880dfab90410  8         1454c10         145610f             260 Private        READWRITE          
+ffff880dfab9abe0 10         1456110         145760f             260 Private        READWRITE          
+ffff880dfab85060  9         1457610         1458b0f             260 Private        READWRITE          
+ffff880dfab95eb0 10         1458b10         145a00f             260 Private        READWRITE          
+ffff880dfab98a70  5         145a010         145a20f             262 Private        READWRITE          
+ffff880dfab9a5f0 10         145a210         145b70f             260 Private        READWRITE          
+ffff880dfab9a370  9         145b710         145cc0f             260 Private        READWRITE          
+ffff880dfab99fb0 10         145cc10         145e10f             260 Private        READWRITE          
+ffff880dfab9cf80  8         145e110         145f60f             260 Private        READWRITE          
+ffff880dfd74c680 10         145f610         145f80f             262 Private        READWRITE          
+ffff880df7f18460  9         145f810         145fa0f             262 Private        READWRITE          
+ffff880df7f1a4e0 10         145fa10         145fc0f             262 Private        READWRITE          
+ffff880ded43a6d0  7         145fc10         145fe0f             262 Private        READWRITE          
+ffff880dfab9d160  9         145fe10         146000f             262 Private        READWRITE          
+ffff880dfab92a80  8         1460010         146020f             262 Private        READWRITE          
+ffff880dfab9e420  9         1460210         146170f             260 Private        READWRITE          
+ffff880dfab9da70  6         1461710         146190f             260 Private        READWRITE          
+ffff880dfab85600 10         1461910         1461b0f             262 Private        READWRITE          
+ffff880dfc258c90  9         1461b10         1461d0f             262 Private        READWRITE          
+ffff880dfc259500 10         1461d10         1461f0f             262 Private        READWRITE          
+ffff880dfab98e80  8         1461f10         146340f             260 Private        READWRITE          
+ffff880dfc251850  9         1463410         146490f             260 Private        READWRITE          
+ffff880dfc24dbb0  7         1464910         1465e0f             260 Private        READWRITE          
+ffff880dfc24d610 10         1465e10         146730f             260 Private        READWRITE          
+ffff880dfc24d4d0  9         1467310         146880f             260 Private        READWRITE          
+ffff880dfc24df20 10         1468810         1469d0f             260 Private        READWRITE          
+ffff880dfc24d700  8         1469d10         146b20f             260 Private        READWRITE          
+ffff880dff3d3120 10         146b210         146b40f             262 Private        READWRITE          
+ffff880e027d3560  9         146b410         146b60f             262 Private        READWRITE          
+ffff880e027d4640 10         146b610         146b80f             262 Private        READWRITE          
+ffff880df1da32c0  4         146e200         146e3ff             395 Private        READWRITE          
+ffff880df1d8f9f0  9         146e400         146f8ff             262 Private        READWRITE          
+ffff880df71aba60  8         146f900         1470dff             260 Private        READWRITE          
+ffff880df71abec0  7         1470e00         14722ff             260 Private        READWRITE          
+ffff880df71ab7e0  9         1472300         14737ff             260 Private        READWRITE          
+ffff880df1b42ef0  8         1473800         14741ff            2560 Private        READWRITE          
+ffff880df1b490c0  6         1474c00         14755ff            2560 Private        READWRITE          
+ffff880df1b49d90  8         1475600         14757ff             262 Private        READWRITE          
+ffff880df1b495c0  9         1475800         14759ff             262 Private        READWRITE          
+ffff880df1b49a70  7         1475a00         1475bff             262 Private        READWRITE          
+ffff880df1b49f70  9         1475c00         1475dff             262 Private        READWRITE          
+ffff880df1b494d0  8         1475e00         1475fff             262 Private        READWRITE          
+ffff880dea1bc730  9         1476000         14761ff             262 Private        READWRITE          
+ffff880dea1bf250  5         1476200         14763ff             262 Private        READWRITE          
+ffff880df1b4b780 10         1476400         14765ff             262 Private        READWRITE          
+ffff880df1b4c220  9         1476600         14767ff             262 Private        READWRITE          
+ffff880df1b4c3b0 10         1476800         14769ff             262 Private        READWRITE          
+ffff880df1b4ebb0  8         1476a00         1476bff             262 Private        READWRITE          
+ffff880df1b4fec0 10         1476c00         1476dff             262 Private        READWRITE          
+ffff880df1b4ff60  9         1476e00         14782ff             260 Private        READWRITE          
+ffff880df1b50550 10         1478300         14797ff             260 Private        READWRITE          
+ffff880df1b51ae0  7         1479800         147acff             260 Private        READWRITE          
+ffff880df1b527b0 10         147ad00         147aeff             262 Private        READWRITE          
+ffff880df1b52940  9         147af00         147b0ff             262 Private        READWRITE          
+ffff880df1b544c0 10         147b100         147b2ff             262 Private        READWRITE          
+ffff880df1b53fc0  8         147b300         147b4ff             262 Private        READWRITE          
+ffff880df1b54330 10         147b500         147b6ff             262 Private        READWRITE          
+ffff880df1b538e0  9         147b700         147b8ff             262 Private        READWRITE          
+ffff880df1b53c50 10         147b900         147baff             262 Private        READWRITE          
+ffff880df1b53930  6         147bb00         147bcff             262 Private        READWRITE          
+ffff880df1b54100  9         147bd00         147beff             262 Private        READWRITE          
+ffff880df1b536b0  8         147bf00         147c0ff             262 Private        READWRITE          
+ffff880df1b53e30  9         147c100         147c2ff             262 Private        READWRITE          
+ffff880df1b53e80  7         147c300         147c4ff             262 Private        READWRITE          
+ffff880df1b53de0  9         147c500         147c6ff             262 Private        READWRITE          
+ffff880df1b535c0  8         147c700         147c8ff             262 Private        READWRITE          
+ffff880df1b53160  9         147c900         147caff             262 Private        READWRITE          
+ffff880df1b54ab0  2         147cb00         147ccff             262 Private        READWRITE          
+ffff880df1b36290 11         147cd00         147cf0f             262 Private        READWRITE          
+ffff880df1b35e30 10         147cf10         147d11f             262 Private        READWRITE          
+ffff880df1b357f0 11         147d120         147d32f             262 Private        READWRITE          
+ffff880df1b36420  9         147d330         147d53f             262 Private        READWRITE          
+ffff880df1b37730 11         147d540         147d74f             262 Private        READWRITE          
+ffff880df1b37870 10         147d750         147d95f             262 Private        READWRITE          
+ffff880df1b36f10 11         147d960         147db6f             262 Private        READWRITE          
+ffff880df1b37140  8         147db70         147dd7f             262 Private        READWRITE          
+ffff880df1b37500 11         147dd80         147df8f             262 Private        READWRITE          
+ffff880df1b366f0 10         147df90         147e19f             262 Private        READWRITE          
+ffff880df1b37230 11         147e1a0         147e3af             262 Private        READWRITE          
+ffff880df1b387c0  9         147e3b0         147e5bf             262 Private        READWRITE          
+ffff880df1b38130 11         147e5c0         147e7cf             262 Private        READWRITE          
+ffff880df1b385e0 10         147e7d0         147e9df             262 Private        READWRITE          
+ffff880df1b38590 11         147e9e0         147ebef             262 Private        READWRITE          
+ffff880df1b37d20  7         147ebf0         147edff             262 Private        READWRITE          
+ffff880df1b38860 10         147ee00         147f00f             262 Private        READWRITE          
+ffff880df1b37a00  9         147f010         147f21f             262 Private        READWRITE          
+ffff880df1b37dc0 10         147f220         147f42f             262 Private        READWRITE          
+ffff880df1b38450  8         147f430         147f63f             262 Private        READWRITE          
+ffff880df1b398f0 11         147f640         147f84f             262 Private        READWRITE          
+ffff880df1b39080 10         147f850         147fa5f             262 Private        READWRITE          
+ffff880df1b39d50 11         147fa60         147fc6f             262 Private        READWRITE          
+ffff880df1b39b20  9         147fc70         147fe7f             262 Private        READWRITE          
+ffff880df1b45d30 11         1500000         1bfffff     34359738365 Private        NO_ACCESS          
+ffff880df1b497f0 10        1b380000        1b3807ff            2048 Private        READWRITE          
+ffff880df1b49a20  6        1b380800        1b38180f            4112 Private        READWRITE          
+ffff880df1b4a1f0 11        1b381810        1b381a1f             528 Private        READWRITE          
+ffff880df1b49ac0 10        1b381a20        1b381c1f             512 Private        READWRITE          
+ffff880df1b49c50  9        1b381c20        1b381e1f             512 Private        READWRITE          
+ffff880df1b498e0 11        1b381e20        1b38201f             512 Private        READWRITE          
+ffff880df1b49e80 10        1b382020        1b38221f             512 Private        READWRITE          
+ffff880df1b4a240  8        1b382220        1b38241f             512 Private        READWRITE          
+ffff880dea1b8040 11        1b382420        1b38261f             512 Private        READWRITE          
+ffff880dd30fe520 10        1b382620        1b38262f              16 Private        READWRITE          
+ffff880dd30feb10  9        1b382630        1b38282f             512 Private        READWRITE          
+ffff880df1b4b910 11        1b382830        1b38369f            3696 Private        READWRITE          
+ffff880de2746d60 10        1b3836a9        1b3836a9               0 Private Phys   READONLY          NOCACHE 
+ffff880df978d8e0 11        1b3836b0        1b3836b0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880de27483e0  7        1b3836c0        1b3836c0               1 Private        READWRITE          
+ffff880df5419440  9        1b3836d0        1b3836d7               0 Mapped         READWRITE          \Users\PIZZAOVEN\AppData\Local\D3DSCache\d71c9ab3259bfe08\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.dxcache-shm
+ffff880dec352600 10        1b3836e0        1b3836e0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df976e3a0  8        1b3836f0        1b3836f0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df9790720 10        1b383700        1b383700               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df391f200  9        1b383710        1b383710               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df160d460 11        1b383720        1b383720               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfab97b20 10        1b383730        1b38373f              16 Private        READWRITE          
+ffff880df3923120 11        1b383740        1b383745               0 Mapped         READONLY           Pagefile section, shared commit 0x6
+ffff880df1b4b870  5        1b383750        1b38394f             512 Private        READWRITE          
+ffff880df1b4b820 11        1b383950        1b383b4f             512 Private        READWRITE          
+ffff880df1b4b280 10        1b383b50        1b383d4f             512 Private        READWRITE          
+ffff880df1b4b7d0  9        1b383d50        1b38400f             704 Private        READWRITE          
+ffff880df1b4ab50 11        1b384010        1b38420f             512 Private        READWRITE          
+ffff880df1b4b0a0 10        1b384210        1b38440f             512 Private        READWRITE          
+ffff880df1b4ae70  8        1b384410        1b38481f            1040 Private        READWRITE          
+ffff880df1b4a600 11        1b384820        1b384bff             992 Private        READWRITE          
+ffff880df1b4baf0 10        1b384c00        1b384dff             512 Private        READWRITE          
+ffff880df1b4c900  9        1b384e00        1b384fff             512 Private        READWRITE          
+ffff880df1b4ca40 11        1b385000        1b3855cf            1488 Private        READWRITE          
+ffff880df1b4cc20 10        1b3855d0        1b3857cf             512 Private        READWRITE          
+ffff880df1b4d9e0  7        1b3857d0        1b3857d0               1 Private        READWRITE          
+ffff880df1b4d940 10        1b3857e0        1b3857e0               1 Private        READWRITE          
+ffff880df1b4fdd0  9        1b3857f0        1b3857ff              16 Private        READWRITE          
+ffff880df9768540 10        1b385800        1b385800               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df9769080  8        1b385810        1b385819               0 Mapped         READONLY           \Windows\System32\en-US\crypt32.dll.mui
+ffff880df5410d40 11        1b385820        1b385820               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df1b4de40 10        1b385830        1b38583f               2 Private        READWRITE          
+ffff880df1b4db70  9        1b385840        1b38604f            2064 Private        READWRITE          
+ffff880df1b4d080 10        1b386050        1b38614f             255 Private        READWRITE          
+ffff880df1b53520  6        1b386150        1b38634f             512 Private        READWRITE          
+ffff880df1b46460 10        1b386350        1b38654f             512 Private        READWRITE          
+ffff880df1b45dd0  9        1b386550        1b38674f             512 Private        READWRITE          
+ffff880df1b462d0 10        1b386750        1b38694f             512 Private        READWRITE          
+ffff880df5410160  8        1b386950        1b386950               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df977c5e0 10        1b386960        1b386960               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df9790ea0  9        1b386970        1b3869b7              72 Mapped         WRITECOPY          Pagefile section, shared commit 0x48
+ffff880df976e760 10        1b3869c0        1b3869c0               0 Mapped         READWRITE          Pagefile section, shared commit 0x1
+ffff880df97950e0  7        1b3869d0        1b3869d0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df9759680 10        1b3869e0        1b3869e0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df975ab20  9        1b3869f0        1b3869f0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df6c05b30 10        1b386a00        1b386a01               2 Private        READWRITE          
+ffff880df1b516d0  8        1b386a10        1b386a1f              15 Private        READWRITE          
+ffff880df1b52080 10        1b386a20        1b386b1f             255 Private        READWRITE          
+ffff880df6c04e60  9        1b386b20        1b386b29              10 Private        READWRITE          
+ffff880df976c1e0 10        1b386b30        1b386b32               0 Mapped         READWRITE          Pagefile section, shared commit 0x3
+ffff880df6c0ad60 11        1b386b40        1b386b41               2 Private        READWRITE          
+ffff880df1b3c780  4        1b386b50        1b386d4f             511 Private        READWRITE          
+ffff880df1b47810  9        1b386d50        1b38714f            1023 Private        READWRITE          
+ffff880df1b47ae0  8        1b387150        1b38794f            2047 Private        READWRITE          
+ffff880df1b46c30  9        1b387950        1b387b4f             512 Private        READWRITE          
+ffff880df1b47f40  7        1b387b50        1b387d4f             512 Private        READWRITE          
+ffff880df1b51090 10        1b387d50        1b38854f               4 Private        NO_ACCESS          
+ffff880df1b4df80  9        1b388550        1b38874f             512 Private        READWRITE          
+ffff880df1d917a0 10        1b388750        1b38884f               1 Private        READWRITE          
+ffff880df9788f20  8        1b388850        1b388852               0 Mapped         READONLY           \Windows\System32\oleaccrc.dll
+ffff880df74e97b0  9        1b388870        1b388870               1 Private        READWRITE          
+ffff880df9787ee0  6        1b388880        1b388880               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df74e98f0 10        1b388890        1b388890               1 Private        READWRITE          
+ffff880df97867c0  9        1b3888a0        1b3888a0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df5430140 10        1b3888b0        1b3888b0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df74ee260  8        1b3888cf        1b3888cf               0 Private Phys   READONLY           
+ffff880df9772220 10        1b3888d0        1b3888d0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5ee780  9        1b3888e0        1b3888e0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5f3960  7        1b3888f0        1b3888f0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df54086e0 10        1b388900        1b388900               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5b8400  9        1b388910        1b388910               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5f0120 10        1b388920        1b388920               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5f3e60  8        1b388930        1b388930               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5b8900 10        1b388940        1b388940               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df6c0d060  9        1b388950        1b388b4f             511 Private        READWRITE          
+ffff880df1b53980  5        1b388b50        1b388c4f              50 Private        READWRITE          
+ffff880df1b46a50  9        1b388c50        1b38c44f           14336 Private        READWRITE          
+ffff880df74e3770  8        1b38c450        1b38d41f            4047 Private        READWRITE          
+ffff880df74ee6c0  9        1b38d420        1b38d52b             257 Private        READWRITE          
+ffff880df74ee8f0  7        1b38d530        1b38d632             257 Private        READWRITE          
+ffff880df74ef070  8        1b38d640        1b38d74b             257 Private        READWRITE          
+ffff880df9772ae0  6        1b38d750        1b38d857               0 Mapped         READONLY           \Windows\System32\en-US\kernel32.dll.mui
+ffff880df975a120  9        1b38d860        1b38d8df               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880dfa5e57c0  8        1b38d8e0        1b38d8e0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5b89a0  7        1b38d8f0        1b38d8f0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880decb5ff00  8        1b38d900        1b38d900               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5c5060  3        1b38d910        1b38d910               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5c6320 10        1b38d920        1b38d920               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df74d7ec0  9        1b38d930        1b38db6f              24 Private        READWRITE          
+ffff880df393eb00 10        1b38db70        1b38db77               0 Mapped         READONLY           \Windows\System32\en-US\dinput8.dll.mui
+ffff880df3e20070  8        1b38db80        1b38db8f              16 Private        READWRITE          
+ffff880de9748af0  9        1b38db90        1b38db9f              16 Private        READWRITE          
+ffff880dfa5f29c0  7        1b38dba0        1b38dba0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880dfa5d9e20 10        1b38dbb0        1b38dbb0               0 Mapped         READONLY           \Windows\System32\en-US\MMDevAPI.dll.mui
+ffff880df3905620  9        1b38dbc0        1b38dbc6               0 Mapped         READONLY           \Windows\System32\winnlsres.dll
+ffff880df391da40 10        1b38dbd0        1b38dbd2               0 Mapped         READONLY           \Windows\System32\en-US\mswsock.dll.mui
+ffff880df74f3da0  8        1b38dbe0        1b38ddb8             470 Private        READWRITE          
+ffff880dfa5f2b00  9        1b38ddc0        1b38de3f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880dfa5b8680  6        1b38de40        1b38debf               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df3909900  9        1b38dec0        1b38ded0               0 Mapped         READONLY           \Windows\System32\en-US\winnlsres.dll.mui
+ffff880df5416f60  8        1b38def0        1b38def0               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df5425920  9        1b38df00        1b38df02               0 Mapped         READONLY           Pagefile section, shared commit 0x3
+ffff880dfc24b090  7        1b38df30        1b38df3f              16 Private        READWRITE          
+ffff880dfc256f80  9        1b38df40        1b38df4f              16 Private        READWRITE          
+ffff880dfa5b6880  8        1b38df50        1b38df50               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df9767820  9        1b38df70        1b38dfef               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df74e5a20  5        1b38dff0        1b38efbf            4047 Private        READWRITE          
+ffff880df74e30e0  9        1b38efc0        1b38f1ff              24 Private        READWRITE          
+ffff880df54261e0 10        1b38f200        1b38f27f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df74dc060  8        1b38f280        1b38f28f               2 Private        READWRITE          
+ffff880df74dae40  9        1b38f2e0        1b38f2ef               2 Private        READWRITE          
+ffff880dec354680  7        1b38f2f0        1b38f36f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880dfab8d7b0  9        1b38f370        1b38f56f             512 Private        READWRITE          
+ffff880dfab92940  8        1b38f570        1b38f97f            1040 Private        READWRITE          
+ffff880dfab92e90 10        1b38f980        1b38fd8f            1040 Private        READWRITE          
+ffff880dfab91e00  9        1b38fd90        1b39019f            1040 Private        READWRITE          
+ffff880de6a7f940  6        1b3901e0        1b3903ef             513 Private        READWRITE          
+ffff880df1602740  9        1b3903f0        1b39046f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df160f8a0 10        1b390470        1b3904ef               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df74d9d60  8        1b3904f0        1b3904ff               2 Private        READWRITE          
+ffff880df163d3e0  9        1b390500        1b39057f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df74d9b80  7        1b3905d0        1b3907b0             470 Private        READWRITE          
+ffff880df1633d40  9        1b3907c0        1b39083f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df74d8fa0  8        1b3908b0        1b39187f            4047 Private        READWRITE          
+ffff880df74e46c0 10        1b391880        1b3d187f           27968 Private        READWRITE          
+ffff880ded437340  9        1b3d1880        1b3d387f            8192 Private        READWRITE         WRITECOMBINE 
+ffff880de64b2280  4        1b3d3880        1b3d587f            7655 Private        READWRITE          
+ffff880deaa86030 10        1b3d5880        1b3d787f            8192 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880df1d9e590  9        1b3d7880        1b3d7a24             417 Private        READWRITE          
+ffff880df74dbb10  8        1b3d7a70        1b3d7a7f               2 Private        READWRITE          
+ffff880ded4406c0 10        1b3d7a80        1b3d7d14             659 Private        READWRITE          
+ffff880df1639a60  9        1b3d7d20        1b3d7d9f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df7f1f120  7        1b3d7df0        1b3d817c             894 Private        READWRITE          
+ffff880ded42a960 10        1b3d8180        1b3de17f               0 Private        NO_ACCESS          
+ffff880df74f2b30  9        1b3de180        1b3df14f            4047 Private        READWRITE          
+ffff880df5429d40 11        1b3df150        1b3df1cf               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880df3921d20 10        1b3df1d0        1b3df24f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880de3866c20  8        1b3df2b0        1b3df41b             359 Private        READWRITE          
+ffff880de3858670 10        1b3df420        1b3df7a2             898 Private        READWRITE          
+ffff880def187d60  9        1b3df7b0        1b3e077f            4047 Private        READWRITE          
+ffff880def1a2e30  6        1b3e0780        1b3e0b5f             992 Private        READWRITE          
+ffff880def1a3b00 10        1b3e0b60        1b3e2b62            8193 Private        READWRITE          
+ffff880def1a3dd0  9        1b3e2b70        1b3e49ff            7824 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880def1851a0  8        1b3e4a00        1b3e4c0f             528 Private        READWRITE          
+ffff880def184570 10        1b3e4c10        1b3e6c0f            7470 Private Rotate   READWRITE          
+ffff880dfab84b60  9        1b3e6c10        1b3e700f            1024 Private        READWRITE          
+ffff880dfab8ca40  7        1b3e7010        1b3e900f            8182 Private        READWRITE         WRITECOMBINE 
+ffff880dfab8b960 10        1b3e9010        1b3e940f            1024 Private        READWRITE          
+ffff880dfab8f6f0  9        1b3e9410        1b3e980f            1024 Private        READWRITE          
+ffff880dfab96ef0  8        1b3e9810        1b3e9c0f            1024 Private        READWRITE          
+ffff880dfab979e0 10        1b3e9c10        1b3ea00f            1024 Private        READWRITE          
+ffff880dfab98110  9        1b3ea010        1b3ea40f            1024 Private        READWRITE          
+ffff880dfaba1710  5        1b3ea410        1b3ea80f            1024 Private        READWRITE          
+ffff880dfaba1bc0 11        1b3ea810        1b3eac0f            1024 Private        READWRITE          
+ffff880dfaba1f30 10        1b3eac10        1b3eb00f            1024 Private        READWRITE          
+ffff880dfab90a50  9        1b3eb010        1b3eb40f            1024 Private        READWRITE          
+ffff880dfab91770 11        1b3eb410        1b3eb80f            1024 Private        READWRITE          
+ffff880dfab91680 10        1b3eb810        1b3ebc0f            1024 Private        READWRITE          
+ffff880dfaba2e80  8        1b3ebc10        1b3ec00f            1024 Private        READWRITE          
+ffff880dfaba2890 11        1b3ec010        1b3ec40f            1024 Private        READWRITE          
+ffff880dfaba2480 10        1b3ec410        1b3ec80f            1024 Private        READWRITE          
+ffff880dfab87680  9        1b3ec810        1b3ed81f            4112 Private        READWRITE          
+ffff880dfab88710 11        1b3ed820        1b3edc1f            1024 Private        READWRITE         WRITECOMBINE 
+ffff880dfab88260 10        1b3edc20        1b3ef41f            6144 Private        READWRITE         WRITECOMBINE 
+ffff880dfab887b0  7        1b3ef420        1b3f141f            8192 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880dfab88080 11        1b3f1420        1b3f242f            4112 Private        READWRITE          
+ffff880dfab89cf0 10        1b3f2430        1b3f3c2f            6144 Private        READWRITE         WRITECOMBINE 
+ffff880dfab893e0  9        1b3f3c30        1b3f4c3f            4112 Private        READWRITE          
+ffff880dfab8b7d0 11        1b3f4c40        1b3f643f            6144 Private        READWRITE         WRITECOMBINE 
+ffff880dfab8c630 10        1b3f6440        1b3f663f             512 Private        READWRITE          
+ffff880dfab8dc60  8        1b3f6640        1b3f863f            8192 Private        READWRITE         WRITECOMBINE 
+ffff880dfab8ec00 11        1b3f8640        1b3fc23f           15360 Private        READWRITE         WRITECOMBINE 
+ffff880dfab907d0 10        1b3fc240        1b3fd23f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab938e0  9        1b3fd240        1b3fd43f             512 Private        READWRITE          
+ffff880dfab93390 11        1b3fd440        1b3fd63f             512 Private        READWRITE          
+ffff880defc38980 10        1b3fd640        1b3fd641               0 Mapped         READWRITE          Pagefile section, shared commit 0x2
+ffff880defc39600 11        1b3fd650        1b3fd65f               0 Mapped         READWRITE          Pagefile section, shared commit 0x10
+ffff880de39b1560  6        1b3fd660        1b3fd689               0 Mapped         READONLY           Pagefile section, shared commit 0x2a
+ffff880decb57940  9        1b3fd690        1b3fd693               0 Mapped         READONLY           Pagefile section, shared commit 0x4
+ffff880df1d98f50 10        1b3fd6a0        1b3fd6a1               2 Private        READWRITE          
+ffff880defc305a0  8        1b3fd6b0        1b3fd6c0               0 Mapped         READONLY           \Windows\System32\C_1252.NLS
+ffff880defc30140  9        1b3fd6d0        1b3fd6e0               0 Mapped         READONLY           \Windows\System32\C_437.NLS
+ffff880defc2fe20  7        1b3fd6f0        1b3fd6f2               0 Mapped         READONLY           \Windows\System32\l_intl.nls
+ffff880defc32800 11        1b3fd700        1b3fd70d               0 Mapped         READONLY           Pagefile section, shared commit 0xe
+ffff880defc328a0 10        1b3fd710        1b3fd71d               0 Mapped         READONLY           Pagefile section, shared commit 0xe
+ffff880defc321c0 11        1b3fd720        1b3fd725               0 Mapped         READONLY           Pagefile section, shared commit 0x6
+ffff880df71a9170  9        1b3fd730        1b3fd82f             255 Private        READWRITE          
+ffff880defc351e0 11        1b3fd830        1b3fd83a               0 Mapped         READONLY           Pagefile section, shared commit 0xb
+ffff880df71a9d00 10        1b3fd840        1b3fd902              77 Private        READWRITE          
+ffff880defc3ec40 11        1b3fd910        1b3fd912               0 Mapped         READONLY           \Windows\System32\l_intl.nls
+ffff880defc3ee20  8        1b3fd920        1b3fd9f2               0 Mapped         READONLY           \Windows\System32\locale.nls
+ffff880defc3f280 10        1b3fda00        1b3fda10               0 Mapped         READONLY           \Windows\System32\C_1252.NLS
+ffff880defc3e6a0  9        1b3fda20        1b3fda30               0 Mapped         READONLY           \Windows\System32\C_437.NLS
+ffff880df977cae0 10        1b3fda40        1b3fdc3f               0 Mapped         READONLY           Pagefile section, shared commit 0x1d
+ffff880df977e020  1        1b3fdc40        1b3fdc47               0 Mapped         READONLY           Pagefile section, shared commit 0x1d
+ffff880df9792b60  9        1b3fdc50        1b3fdc50               0 Mapped         READWRITE          Pagefile section, shared commit 0x1
+ffff880df540f1c0  8        1b3fdc60        1b3fdc60               0 Mapped         READWRITE          Pagefile section, shared commit 0x1
+ffff880df1b43760  9        1b3fdc70        1b3fdc70               1 Private        READWRITE          
+ffff880df1b38bd0  7        1b3fdc80        1b3fdc8f               2 Private        READWRITE          
+ffff880df1b438a0  8        1b3fdc90        1b3fdc90               1 Private        READWRITE          
+ffff880df7f0a9a0  9        1b3fdca0        1b3fdca3               4 Private        READWRITE          
+ffff880de869d240  6        1b3fdcb0        1b3fdcbf              16 Private        READWRITE          
+ffff880df7f043c0 10        1b3fdcc0        1b3fdccf              16 Private        READWRITE          
+ffff880de6a85ca0  9        1b3fdcd0        1b3fdcdf              16 Private        READWRITE          
+ffff880dfab927b0  8        1b3fdce0        1b3fdcef              16 Private        READWRITE          
+ffff880df7196cf0  9        1b3fdcf0        1b3fdcff              15 Private        READWRITE          
+ffff880df541a3e0  7        1b3fdd00        1b3fdd7f               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880ded43a590  8        1b3fdd90        1b3fdd9f              16 Private        READWRITE          
+ffff880df71b4840  9        1b3fdda0        1b3fddaf               2 Private        READWRITE          
+ffff880df977d620  5        1b3fddb0        1b3fdf30               0 Mapped         READONLY           Pagefile section, shared commit 0x181
+ffff880df54308c0 10        1b3fdf40        1b3ff340               0 Mapped         READONLY           Pagefile section, shared commit 0x7b
+ffff880df7197ba0  9        1b3ff350        1b3ff412               2 Private        READWRITE          
+ffff880dff3d4110  8        1b3ff430        1b3ff43f              16 Private        READWRITE          
+ffff880dff3d31c0  9        1b3ff440        1b3ff44f              16 Private        READWRITE          
+ffff880dff3d32b0  7        1b3ff450        1b3ff45f              16 Private        READWRITE          
+ffff880dff3d3530  9        1b3ff460        1b3ff46f              16 Private        READWRITE          
+ffff880dff3d52e0  8        1b3ff470        1b3ff47f              16 Private        READWRITE          
+ffff880df7198cd0  6        1b3ff4d0        1b3ff4df               8 Private        READWRITE          
+ffff880df7199b80  9        1b3ff4e0        1b3ff5a2               2 Private        READWRITE          
+ffff880df9792c00  8        1b3ff5b0        1b3ff8ea               0 Mapped         READONLY           \Windows\Globalization\Sorting\SortDefault.nls
+ffff880df1b491b0  9        1b3ff8f0        1b3ffaef             512 Private        READWRITE          
+ffff880df1b49b10  7        1b3ffaf0        1b3ffcef             512 Private        READWRITE          
+ffff880df1b49390 10        1b3ffcf0        1b3ffeff             528 Private        READWRITE          
+ffff880df74e3db0  9        1b3fff00        1b43feff          212272 Private        READWRITE          
+ffff880dfa5bb240  8        1b43ff00        1b47feff               0 Mapped         READWRITE          \Users\PIZZAOVEN\AppData\Local\NVIDIA\DXCache\5a3fa9ddb7c209ac.nvph
+ffff880def19d980 10        1b47ff00        1b49feff          131072 Private        READWRITE         WRITECOMBINE 
+ffff880dfab91bd0  9        1b49ff00        1b4a0eff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab91a40  4        1b4a0f00        1b4a1eff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab91ae0  9        1b4a1f00        1b4a2eff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab917c0  8        1b4a2f00        1b4a3eff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab919f0  7        1b4a3f00        1b4a4eff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab922b0  9        1b4a4f00        1b4a7cef           11760 Private        READWRITE          
+ffff880dfab936b0  8        1b4a7cf0        1b4a80ff            1040 Private        READWRITE          
+ffff880dfab93de0  6        1b4a8100        1b4a850f            1040 Private        READWRITE          
+ffff880dfab93f20  8        1b4a8510        1b4a891f            1040 Private        READWRITE          
+ffff880dfab934d0  7        1b4a8920        1b4a8d2f            1040 Private        READWRITE          
+ffff880dfab93200  5        1b4a8d30        1b4a913f            1040 Private        READWRITE          
+ffff880dfab94330  9        1b4a9140        1b4a933f             512 Private        READWRITE          
+ffff880dfab93430  8        1b4a9340        1b4a953f             512 Private        READWRITE          
+ffff880dfab96f40  9        1b4a9540        1b4a9647             257 Private        READWRITE          
+ffff880df7f03f10  7        1b4a9650        1b4a965f              16 Private        READWRITE          
+ffff880de86b1d30  8        1b4a9660        1b4a966f              16 Private        READWRITE          
+ffff880de2744b50  6        1b4a9670        1b4a9690              33 Private        READWRITE          
+ffff880dfab8c1d0  8        1b4a96e0        1b4a96ef              16 Private        READWRITE          
+ffff880dfab98390  9        1b4a96f0        1b4a96ff              16 Private        READWRITE          
+ffff880df7f0d3d0  7        1b4a9700        1b4a970f              16 Private        READWRITE          
+ffff880df7f10260  8        1b4a9720        1b4a972f              16 Private        READWRITE          
+ffff880dfab94ce0  3        1b4a9740        1b4a993f             512 Private        READWRITE          
+ffff880dfab97850  9        1b4a9940        1b4a9b3f             512 Private        READWRITE          
+ffff880dfab97ee0  8        1b4a9b40        1b4a9d3f             512 Private        READWRITE          
+ffff880dfab993d0 10        1b4a9d40        1b4a9e79             307 Private        READWRITE          
+ffff880dfa5f44a0  9        1b4a9e80        1b4a9eff               0 Mapped         READWRITE          Pagefile section, shared commit 0x80
+ffff880dfab98340  7        1b4a9f40        1b4abf3f            8176 Private        READWRITE         WRITECOMBINE 
+ffff880dfab98570  9        1b4abf40        1b4ac13f             512 Private        READWRITE          
+ffff880dfab98430  8        1b4ac140        1b4ad10f            4047 Private        READWRITE          
+ffff880dfab988e0  6        1b4ad110        1b4ad30f             512 Private        READWRITE          
+ffff880dfab98840  9        1b4ad310        1b4ad44a             307 Private        READWRITE          
+ffff880dfab987f0  8        1b4ad450        1b4ad57c             290 Private        READWRITE          
+ffff880dfab9a2d0  7        1b4ad580        1b4ad77f             512 Private        READWRITE          
+ffff880dfab9a320  9        1b4ad780        1b4ae77f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab9ad70  8        1b4ae780        1b4ae98f             528 Private        READWRITE          
+ffff880dfab9b8b0  5        1b4ae990        1b4afb8f            4608 Private        READWRITE          
+ffff880dfab9bc70  8        1b4afb90        1b4b0b5f            4047 Private        READWRITE          
+ffff880df390db40  7        1b4b0b60        1b4b1b5f               0 Mapped         READWRITE          \Users\PIZZAOVEN\AppData\Local\NVIDIA\DXCache\de05a9ddb7c209ac.nvph
+ffff880df3920420  8        1b4b1b60        1b4b1c81               0 Mapped         READONLY           Pagefile section, shared commit 0x122
+ffff880dfab9de30  9        1b4b1c90        1b4b1e8f             512 Private        READWRITE          
+ffff880df7f06f30  6        1b4b1e90        1b4b231f            1168 Private        READWRITE          
+ffff880df7f118e0  9        1b4b2320        1b4b252f             528 Private        READWRITE          
+ffff880df7f11cf0  8        1b4b2530        1b4b273f             528 Private        READWRITE          
+ffff880df7f11fc0  9        1b4b2740        1b4b294f             528 Private        READWRITE          
+ffff880df7f11660  7        1b4b2950        1b4b2b5f             528 Private        READWRITE          
+ffff880df7f178d0  8        1b4b2b60        1b4b2d6f             528 Private        READWRITE          
+ffff880df7f21f60  4        1b4b2d70        1b4b2f7f             528 Private        READWRITE          
+ffff880df7f0eb90  8        1b4b2f80        1b4b318f             528 Private        READWRITE          
+ffff880df15c63d0  7        1b4b3190        1b4b339f             528 Private        READWRITE          
+ffff880df15c7050  8        1b4b33a0        1b4b35af             528 Private        READWRITE          
+ffff880df7f1a670  6        1b4b3690        1b4b3b2f            1184 Private        READWRITE          
+ffff880dfab9e010  9        1b4b3b30        1b4b5b2f            8192 Private        READWRITE         WRITECOMBINE 
+ffff880dfaba3a60  8        1b4b5b30        1b4b5d2f             512 Private        READWRITE          
+ffff880df7f21c90  9        1b4b5d30        1b4b5ee0             421 Private        READWRITE          
+ffff880df7f04f50  7        1b4b5ef0        1b4b60ef             512 Private        READWRITE          
+ffff880df7f05e00  9        1b4b60f0        1b4b62ef             512 Private        READWRITE          
+ffff880df7f06ad0  8        1b4b62f0        1b4b64ef             512 Private        READWRITE          
+ffff880df7f0c520  9        1b4b64f0        1b4b66ef             512 Private        READWRITE          
+ffff880df7f0fc70  5        1b4b66f0        1b4b68ef             512 Private        READWRITE          
+ffff880df15c73c0  8        1b4b6ab0        1b4b6cbf             528 Private        READWRITE          
+ffff880df15cb7e0  7        1b4b6cc0        1b4b6ecf             528 Private        READWRITE          
+ffff880df15cda40  9        1b4b6ed0        1b4b70df             528 Private        READWRITE          
+ffff880df15cd4a0  8        1b4b70e0        1b4b72ef             528 Private        READWRITE          
+ffff880df15d0b00  6        1b4b72f0        1b4b74ff             528 Private        READWRITE          
+ffff880df15d25e0  8        1b4b7500        1b4b770f             528 Private        READWRITE          
+ffff880df15d24a0  7        1b4b7710        1b4b791f             528 Private        READWRITE          
+ffff880df15d1aa0  2        1b4b7920        1b4b7b2f             528 Private        READWRITE          
+ffff880df15d2810  9        1b4b7b30        1b4b7d3f             528 Private        READWRITE          
+ffff880df15d1b40  8        1b4b7d40        1b4b896f            3120 Private        READWRITE          
+ffff880ded435040  7        1b4b8970        1b4b8b6f             512 Private        READWRITE          
+ffff880dfab8bf50  9        1b4b8b70        1b4b8d6f             512 Private        READWRITE          
+ffff880ded436b20  8        1b4b8d80        1b4b960f            2192 Private        READWRITE          
+ffff880ded436800  6        1b4b9610        1b4b980f             512 Private        READWRITE          
+ffff880ded436300  9        1b4b9810        1b4b9a0f             512 Private        READWRITE          
+ffff880ded436080  8        1b4b9a10        1b4ba42f            2592 Private        READWRITE          
+ffff880ded4394b0  7        1b4ba430        1b4ba62f             512 Private        READWRITE          
+ffff880ded439370  9        1b4ba630        1b4bab1f            1264 Private        READWRITE          
+ffff880ded43a5e0  8        1b4bab20        1b4bb12f            1552 Private        READWRITE          
+ffff880ded43f900  5        1b4bb130        1b4bb43f             784 Private        READWRITE          
+ffff880ded43ec30  9        1b4bb440        1b4bcf4f            6928 Private        READWRITE          
+ffff880ded441d40  8        1b4bcf50        1b4bde9f            3920 Private        READWRITE          
+ffff880ded42dde0  7        1b4bdea0        1b4be11f             640 Private        READWRITE          
+ffff880ded435360  9        1b4be120        1b4be32f             528 Private        READWRITE          
+ffff880ded437020  8        1b4be330        1b4c033f            8208 Private        READWRITE          
+ffff880ded440080  6        1b4c0340        1b4c234f            8208 Private        READWRITE          
+ffff880ded440030  9        1b4c2350        1b4c435f            8208 Private        READWRITE          
+ffff880ded42c530  8        1b4c4360        1b4c636f            8208 Private        READWRITE          
+ffff880ded4363f0  7        1b4c6370        1b4c687f            1296 Private        READWRITE          
+ffff880ded437b60  9        1b4c6880        1b4c6d8f            1296 Private        READWRITE          
+ffff880deaa81030  8        1b4c6d90        1b4c729f            1296 Private        READWRITE          
+ffff880dfab9dbb0  4        1b4c72a0        1b4ca8af           13840 Private        READWRITE          
+ffff880dfab9dc00 10        1b4ca8b0        1b4cdebf           13840 Private        READWRITE          
+ffff880dfab9db10  9        1b4cdec0        1b4cef4f            4240 Private        READWRITE          
+ffff880dfab9d4d0 10        1b4cef50        1b4cff5f            4112 Private        READWRITE          
+ffff880dfab86910  8        1b4cff60        1b4d0f5f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab93ac0  9        1b4d0f60        1b4d1f2f            4024 Private        READWRITE          
+ffff880dfab90a00  7        1b4d20d0        1b4d22cf             512 Private        READWRITE          
+ffff880dfab90be0  9        1b4d22d0        1b4d24cf             512 Private        READWRITE          
+ffff880dfab93020  8        1b4d24d0        1b4d26cf             512 Private        READWRITE          
+ffff880de86af1c0 10        1b4d26d0        1b4d57ff           12592 Private        READWRITE         WRITECOMBINE 
+ffff880ded436c60  9        1b4d5800        1b4d59ff             512 Private        READWRITE          
+ffff880df7f11c00 10        1b4d5a00        1b4d5bff             512 Private        READWRITE          
+ffff880de974c1a0  6        1b4d5c00        1b4d5dff             512 Private        READWRITE          
+ffff880dfc24eba0  9        1b4d5e00        1b4d5fff             512 Private        READWRITE          
+ffff880dfd74b0f0 10        1b4d6000        1b4d61ff             512 Private        READWRITE          
+ffff880dfc24da20  8        1b4d6200        1b4d640f             528 Private        READWRITE          
+ffff880dfc24d200  9        1b4d6410        1b4d660f             512 Private        READWRITE          
+ffff880dfc25cd90  7        1b4d6690        1b4d688f             512 Private        READWRITE          
+ffff880dfc250360  8        1b4d6890        1b4d6b3f             688 Private        READWRITE          
+ffff880dfc243fc0  9        1b4d6b40        1b4d6d3f             512 Private        READWRITE          
+ffff880dfaba2250  5        1b4d6e10        1b4d700f             512 Private        READWRITE          
+ffff880dfab8c130  9        1b4d7010        1b4d720f             512 Private        READWRITE          
+ffff880df7f09960  8        1b4d7210        1b4d740f             512 Private        READWRITE          
+ffff880dfc244010  7        1b4d7410        1b4d760f             512 Private        READWRITE          
+ffff880dfc248fc0  9        1b4d7610        1b4d7a0f            1024 Private        READWRITE          
+ffff880df7f16ac0  8        1b4d7a10        1b4d7c0f             512 Private        READWRITE          
+ffff880df7f0c390  6        1b4d7c10        1b4d7e0f             512 Private        READWRITE          
+ffff880dfc243390  9        1b4d7e10        1b4d800f             512 Private        READWRITE          
+ffff880df15e20d0  8        1b4d8010        1b4d820f             512 Private        READWRITE          
+ffff880dfc253290  9        1b4d8210        1b4d840f             512 Private        READWRITE          
+ffff880df1b44340  7        1b4d8410        1b4d860f             512 Private        READWRITE          
+ffff880dfc258ec0  9        1b4d8610        1b4d880f             512 Private        READWRITE          
+ffff880df7f0e8c0  8        1b4d8900        1b4d8aff             512 Private        READWRITE          
+ffff880df7f0c980  9        1b4d8b00        1b4d8cff             512 Private        READWRITE          
+ffff880dfab8d8f0  3        1b4d8e10        1b4d900f             512 Private        READWRITE          
+ffff880dfaba3510  9        1b4d9010        1b4d9f3f            3888 Private        READWRITE          
+ffff880dfaba2fc0  8        1b4d9f40        1b4da13f             512 Private        READWRITE          
+ffff880dfab91540  9        1b4da140        1b4da33f             512 Private        READWRITE          
+ffff880dfab91950  7        1b4da340        1b4da53f             512 Private        READWRITE          
+ffff880dfab90eb0  9        1b4da540        1b4da73f             512 Private        READWRITE          
+ffff880dfaba3420  8        1b4da740        1b4da93f             512 Private        READWRITE          
+ffff880dffee6e10  9        1b4da940        1b4de8fb           16316 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24fe10  6        1b4de900        1b4df8ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2492e0  8        1b4df900        1b4dfcff            1024 Private        READWRITE          
+ffff880dfc2487f0  7        1b4dfd00        1b4e00ff            1024 Private        READWRITE          
+ffff880df71a6560  8        1b4e0250        1b4e044f             512 Private        READWRITE          
+ffff880dfab86050  5        1b4e0490        1b4e208f            7168 Private        READWRITE          
+ffff880df7f111b0  8        1b4e2090        1b4e228f             512 Private        READWRITE          
+ffff880dfc256210  9        1b4e2290        1b4e24af             544 Private        READWRITE          
+ffff880df7f0d1a0  7        1b4e24e0        1b4e26df             512 Private        READWRITE          
+ffff880dfab8bb40  8        1b4e27e0        1b4e2f2f            1872 Private        READWRITE          
+ffff880dfab8dc10  6        1b4e2f30        1b4e464f            5920 Private        READWRITE          
+ffff880dfc249bf0  9        1b4e4650        1b4e484f             512 Private        READWRITE          
+ffff880dfc25a5e0  8        1b4e4850        1b4e4a4f             512 Private        READWRITE          
+ffff880dfc245f50  9        1b4e4a50        1b4e4c4f             512 Private        READWRITE          
+ffff880dfc251080  7        1b4e4c50        1b4e4e4f             512 Private        READWRITE          
+ffff880dfc243a20  8        1b4e4e50        1b4e504f             512 Private        READWRITE          
+ffff880df7f0f680  4        1b4e5090        1b4e528f             512 Private        READWRITE          
+ffff880df1d8cf70  8        1b4e5290        1b4e548f             512 Private        READWRITE          
+ffff880df7f0d0b0  7        1b4e5490        1b4e568f             512 Private        READWRITE          
+ffff880dfab98930  8        1b4e5690        1b4e588f             512 Private        READWRITE          
+ffff880df7f0f9a0  6        1b4e5890        1b4e5a8f             512 Private        READWRITE          
+ffff880df7f0ec80  7        1b4e5a90        1b4e5c8f             512 Private        READWRITE          
+ffff880dfc24feb0  5        1b4e5c90        1b4e5e8f             512 Private        READWRITE          
+ffff880dfc249dd0  9        1b4e5e90        1b4e608f             512 Private        READWRITE          
+ffff880dfc252f70  8        1b4e6090        1b4e628f             512 Private        READWRITE          
+ffff880dfc246860  7        1b4e6290        1b4e648f             512 Private        READWRITE          
+ffff880de9760ce0  8        1b4e6490        1b4e668f             512 Private        READWRITE          
+ffff880dfc24eec0  6        1b4e6690        1b4e688f             512 Private        READWRITE          
+ffff880dfc246a90  8        1b4e6890        1b4e6a8f             512 Private        READWRITE          
+ffff880ded440350  7        1b4e6a90        1b4e6c8f             512 Private        READWRITE          
+ffff880df71990e0  8        1b4e6c90        1b4e7c8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df719df00  0        1b4e7c90        1b4e8c8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded4399b0 10        1b4e8c90        1b4e9c8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43f310  9        1b4e9c90        1b4eac8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15e1e00 10        1b4eac90        1b4eae8f             512 Private        READWRITE          
+ffff880ded42a410  8        1b4eae90        1b4ebe8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc246950 10        1b4ebe90        1b4ec08f             512 Private        READWRITE          
+ffff880dfaba3240  9        1b4ec140        1b4f3c2f           31472 Private        READWRITE         WRITECOMBINE 
+ffff880dfc244740  7        1b4f3c30        1b4fae5f           29232 Private        READWRITE         WRITECOMBINE 
+ffff880dfc244560 10        1b4fae60        1b4fb05f             512 Private        READWRITE          
+ffff880dfc247490  9        1b4fb060        1b4fb25f             512 Private        READWRITE          
+ffff880dfc2495b0 10        1b4fb260        1b4fb45f             512 Private        READWRITE          
+ffff880dfc249560  8        1b4fb460        1b4fb65f             512 Private        READWRITE          
+ffff880dfc250c20  9        1b4fb730        1b4fc72f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc250090  6        1b4fc730        1b50472f           32768 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24d430  9        1b504730        1b50672f            8192 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880dfc24d840  8        1b506730        1b50852f            7680 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24d6b0  9        1b508530        1b50952f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24f460  7        1b509530        1b50a52f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24f320  9        1b50a530        1b50b52f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24eb50  8        1b50b530        1b50c52f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24ed80  9        1b50c530        1b50d52f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24e560  5        1b50d530        1b51152f           16384 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24e880  9        1b511530        1b51552f           16384 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24f550  8        1b515530        1b51952f           16384 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24f910  9        1b519530        1b51d52f           16384 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24ff00  7        1b51d530        1b51ed2f            6144 Private        READWRITE         WRITECOMBINE 
+ffff880dea1af6c0 10        1b51ed30        1b52052f            6144 Private        READWRITE          
+ffff880dfc2518a0  9        1b520530        1b5207bf             656 Private        READWRITE          
+ffff880dfc249ce0 10        1b5207c0        1b5209bf             512 Private        READWRITE          
+ffff880dfc24a5a0  8        1b5209c0        1b520bbf             512 Private        READWRITE          
+ffff880dfc2496a0  9        1b520bc0        1b520dbf             512 Private        READWRITE          
+ffff880dfc24a8c0 10        1b520dc0        1b520fbf             512 Private        READWRITE          
+ffff880dfc255f40  6        1b521030        1b52127f             592 Private        READWRITE          
+ffff880dfc2587e0 10        1b521280        1b521c8f            2576 Private        READWRITE          
+ffff880dfc2516c0  9        1b521c90        1b521e8f             512 Private        READWRITE          
+ffff880dfc246400 10        1b521e90        1b52210f             640 Private        READWRITE          
+ffff880dfc2460e0  8        1b522170        1b52236f             512 Private        READWRITE          
+ffff880dfc24b4a0  9        1b522370        1b52256f             512 Private        READWRITE          
+ffff880dfc2469a0  7        1b5226a0        1b52289f             512 Private        READWRITE          
+ffff880dfc246a40  9        1b5228a0        1b522a9f             512 Private        READWRITE          
+ffff880dfc246090  8        1b522aa0        1b52328f            2032 Private        READWRITE          
+ffff880dfc245f00  9        1b523290        1b5237cf            1344 Private        READWRITE          
+ffff880dfc24a640  4        1b5237d0        1b523f5f            1936 Private        READWRITE          
+ffff880dfc250e50 10        1b523f60        1b52415f             512 Private        READWRITE          
+ffff880dfc2514e0  9        1b524160        1b52435f             512 Private        READWRITE          
+ffff880dfc24b4f0 10        1b524360        1b52455f             512 Private        READWRITE          
+ffff880dfc24aaa0  8        1b524560        1b52475f             512 Private        READWRITE          
+ffff880dfc2521b0 10        1b524760        1b52496f             528 Private        READWRITE          
+ffff880dfc249920  9        1b524970        1b524b6f             512 Private        READWRITE          
+ffff880dfc255ef0 10        1b524c60        1b524e5f             512 Private        READWRITE          
+ffff880dfc25ac20  7        1b524f40        1b5253af            1136 Private        READWRITE          
+ffff880dfc249880 10        1b5253b0        1b5255af             512 Private        READWRITE          
+ffff880dfc249f60  9        1b5255b0        1b5257af             512 Private        READWRITE          
+ffff880dfc24a140  8        1b5257b0        1b5259af             512 Private        READWRITE          
+ffff880dfc24ac30  9        1b525b90        1b526b8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24b810 10        1b526b90        1b526d8f             512 Private        READWRITE          
+ffff880dfc24fc30  6        1b526d90        1b5271ff            1136 Private        READWRITE          
+ffff880dfc24b590 10        1b527200        1b52749f             672 Private        READWRITE          
+ffff880dfc24b900  9        1b5274a0        1b52773f             672 Private        READWRITE          
+ffff880dfc24bd10 10        1b527740        1b527b0f             976 Private        READWRITE          
+ffff880dfc24ed30  8        1b527c90        1b527f3f             688 Private        READWRITE          
+ffff880dfc24f0f0  9        1b527f40        1b5289cf            2704 Private        READWRITE          
+ffff880dfc259aa0 10        1b5289d0        1b528bcf             512 Private        READWRITE          
+ffff880dfc25bf30  7        1b528bd0        1b528dcf             512 Private        READWRITE          
+ffff880dfc25b4e0  9        1b528dd0        1b528fff             560 Private        READWRITE          
+ffff880dfc255ea0  8        1b529000        1b5291ff             512 Private        READWRITE          
+ffff880dfc257980  9        1b5292d0        1b5294cf             512 Private        READWRITE          
+ffff880dfc243750  5        1b5295d0        1b5297cf             512 Private        READWRITE          
+ffff880dfc243d40  9        1b5297d0        1b5299cf             512 Private        READWRITE          
+ffff880dfc243ed0 10        1b5299d0        1b529bcf             512 Private        READWRITE          
+ffff880dfc243930  8        1b529bd0        1b529dcf             512 Private        READWRITE          
+ffff880dfc251d50  9        1b529dd0        1b52a2ef            1312 Private        READWRITE          
+ffff880dfc257250 10        1b52a2f0        1b52a61f             816 Private        READWRITE          
+ffff880dfc246720  7        1b52a620        1b52b0ef            2768 Private        READWRITE          
+ffff880dfc2540f0 10        1b52b0f0        1b52b4ff            1040 Private        READWRITE          
+ffff880dfc2542d0  9        1b52b500        1b52b90f            1040 Private        READWRITE          
+ffff880dfc2580b0 10        1b52b910        1b52bc4f             832 Private        READWRITE          
+ffff880dfc2590a0  8        1b52bc50        1b52cb7f            3888 Private        READWRITE          
+ffff880dfc244240 11        1b52cb80        1b52cd7f             512 Private        READWRITE          
+ffff880dfc255db0 10        1b52cd80        1b52cf7f             512 Private        READWRITE          
+ffff880dfc244830 11        1b52d160        1b52d35f             512 Private        READWRITE          
+ffff880dfc257cf0  9        1b52d360        1b52e35f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25a4f0 10        1b52e360        1b52f35f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25a950  6        1b52f360        1b53035f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259d70 10        1b530360        1b53135f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25a860  9        1b531360        1b53235f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25a1d0 10        1b532360        1b53335f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259d20  8        1b533360        1b53435f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259a00 11        1b534360        1b53535f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259e60 10        1b535360        1b53555f             512 Private        READWRITE          
+ffff880dfc2550e0 11        1b535560        1b53575f             512 Private        READWRITE          
+ffff880ded430bd0  9        1b535800        1b5367ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc257fc0 11        1b536800        1b5369ff             512 Private        READWRITE          
+ffff880dfc257750 10        1b536a00        1b536bff             512 Private        READWRITE          
+ffff880dfc257390 11        1b536c00        1b536dff             512 Private        READWRITE          
+ffff880ded429fb0  7        1b536e10        1b537e0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab9c1c0 10        1b537e10        1b538e0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc252570  9        1b538e10        1b53900f             512 Private        READWRITE          
+ffff880dfc253ab0 10        1b539010        1b53920f             512 Private        READWRITE          
+ffff880dfab9f4b0  8        1b539210        1b53a20f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc254370 11        1b53a210        1b53a40f             512 Private        READWRITE          
+ffff880dfab85420 10        1b53a410        1b53b40f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab85100  9        1b53b410        1b53c40f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab85c40 11        1b53c410        1b53d40f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab91f40 10        1b53d410        1b53e40f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab924e0  3        1b53e410        1b53f40f            4080 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2599b0 10        1b53f410        1b54040f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259fa0 11        1b540410        1b54140f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab93f70  9        1b541410        1b54240f            4080 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259a50 10        1b542410        1b54340f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25ad60  8        1b543410        1b54440f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc254690 10        1b544410        1b54460f             512 Private        READWRITE          
+ffff880dfc25b580  9        1b544610        1b54560f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2578e0 10        1b545610        1b54580f             512 Private        READWRITE          
+ffff880dfc2583d0 11        1b545810        1b545a0f             512 Private        READWRITE          
+ffff880df7f14090  7        1b545bd0        1b545dcf             512 Private        READWRITE          
+ffff880dfc243430 10        1b545dd0        1b545fcf             512 Private        READWRITE          
+ffff880dfc244420  9        1b545fd0        1b5461cf             512 Private        READWRITE          
+ffff880dfc2439d0  8        1b5461d0        1b5463cf             512 Private        READWRITE          
+ffff880dfc2432a0 11        1b5463d0        1b5465cf             512 Private        READWRITE          
+ffff880dfc244100 10        1b5465d0        1b5467cf             512 Private        READWRITE          
+ffff880dfc243d90  9        1b5467d0        1b5469cf             512 Private        READWRITE          
+ffff880dfc244150 11        1b5469d0        1b546bcf             512 Private        READWRITE          
+ffff880df1d91ed0 10        1b546d30        1b546f2f             512 Private        READWRITE          
+ffff880df7f1a710 11        1b546f30        1b54712f             512 Private        READWRITE          
+ffff880ded441de0  6        1b547130        1b54732f             512 Private        READWRITE          
+ffff880df7f1e900 11        1b547330        1b54752f             512 Private        READWRITE          
+ffff880de9764f70 10        1b547530        1b54772f             512 Private        READWRITE          
+ffff880de9747790  9        1b547730        1b54792f             512 Private        READWRITE          
+ffff880dfc2449c0 11        1b547930        1b547b7f             592 Private        READWRITE          
+ffff880dfc255950 10        1b547d30        1b547f2f             512 Private        READWRITE          
+ffff880deaa80360  8        1b547f30        1b54812f             512 Private        READWRITE          
+ffff880dfc25bcb0 11        1b548130        1b54912f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25b850 10        1b549130        1b54a12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25bf80 11        1b54a130        1b54b12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25c110  9        1b54b130        1b54c12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25b1c0 10        1b54c130        1b54d12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25ced0  7        1b54d130        1b54e12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc262010 11        1b54e130        1b54f12f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2438e0 10        1b54f130        1b55012f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc244290 11        1b550130        1b55112f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc243660  9        1b551130        1b55212f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245230 10        1b552130        1b55312f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2446f0  8        1b553130        1b55412f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2525c0 11        1b554130        1b5548bf            1936 Private        READWRITE          
+ffff880dfc245410 10        1b5548c0        1b554b0f             592 Private        READWRITE          
+ffff880dfc2456e0 11        1b554b10        1b554d5f             592 Private        READWRITE          
+ffff880df1b433f0  9        1b554d80        1b5562df            5472 Private        READWRITE         WRITECOMBINE 
+ffff880df74f00b0 11        1b5562e0        1b55783f            5472 Private        READWRITE         WRITECOMBINE 
+ffff880dfc256f30 10        1b557840        1b557a3f             512 Private        READWRITE          
+ffff880dfc257070 11        1b557a40        1b557c3f             512 Private        READWRITE          
+ffff880df74ee170  5        1b557c40        1b55919f            5472 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2582e0 10        1b5591a0        1b55939f             512 Private        READWRITE          
+ffff880dfc245190  9        1b5593a0        1b5595ef             592 Private        READWRITE          
+ffff880dfc2571b0 10        1b5597a0        1b55999f             512 Private        READWRITE          
+ffff880dfc257a70  8        1b5599a0        1b559b9f             512 Private        READWRITE          
+ffff880dfc258bf0 11        1b559ba0        1b559d9f             512 Private        READWRITE          
+ffff880dfc25b6c0 10        1b559da0        1b559f9f             512 Private        READWRITE          
+ffff880dfc25c840 11        1b559fa0        1b55a19f             512 Private        READWRITE          
+ffff880df74e9da0  9        1b55a1a0        1b55b6ff            5472 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25d4c0 11        1b55b700        1b55b8ff             512 Private        READWRITE          
+ffff880dfc25d290 10        1b55b900        1b55baff             512 Private        READWRITE          
+ffff880dfc25dc90  7        1b55bb00        1b55bcff             512 Private        READWRITE          
+ffff880dfc2572f0 11        1b55bd00        1b55beff             512 Private        READWRITE          
+ffff880dfc25c930 10        1b55bf00        1b55c88f            2448 Private        READWRITE          
+ffff880dfc25e280  9        1b55c890        1b55ca8f             512 Private        READWRITE          
+ffff880dfc25e730 10        1b55ca90        1b55cc8f             512 Private        READWRITE          
+ffff880dfc25d6a0  8        1b55cc90        1b55ce8f             512 Private        READWRITE          
+ffff880dfc244880 11        1b55ce90        1b55de8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245870 10        1b55de90        1b55ee8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc246360 11        1b55ee90        1b55fe8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245a00  9        1b55fe90        1b560e8f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc257610 12        1b560e90        1b56108f             512 Private        READWRITE          
+ffff880dfc245910 11        1b561090        1b5612df             592 Private        READWRITE          
+ffff880dfc2441f0 10        1b5612e0        1b5614df             512 Private        READWRITE          
+ffff880de86a03f0 12        1b5614e0        1b5616df             512 Private        READWRITE          
+ffff880dfc2434d0 11        1b561890        1b561acf             576 Private        READWRITE          
+ffff880dfc249b00 12        1b561ad0        1b561d1f             592 Private        READWRITE          
+ffff880de2749380  6        1b561e00        1b561fff             512 Private        READWRITE          
+ffff880dfc25a130 10        1b562000        1b5621ff             512 Private        READWRITE          
+ffff880dfc25e3c0  9        1b562200        1b5623ff             512 Private        READWRITE          
+ffff880dfc245af0 10        1b562400        1b5633ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfd74bcd0 11        1b563400        1b56370f             784 Private        READWRITE          
+ffff880dfaba3330  8        1b563730        1b56392f             512 Private        READWRITE          
+ffff880dfc256760 10        1b563930        1b563b2f             512 Private        READWRITE          
+ffff880dfc25e640  9        1b563b30        1b563d2f             512 Private        READWRITE          
+ffff880dfc25ddd0 10        1b563d30        1b563f2f             512 Private        READWRITE          
+ffff880dfc25e5f0  7        1b563f30        1b56412f             512 Private        READWRITE          
+ffff880dfc25e870 11        1b564130        1b56432f             512 Private        READWRITE          
+ffff880dfc25e230 10        1b564330        1b56452f             512 Private        READWRITE          
+ffff880dfc25dd80  9        1b564530        1b56472f             512 Private        READWRITE          
+ffff880dfc25e8c0 11        1b564730        1b56492f             512 Private        READWRITE          
+ffff880def1a3a10 10        1b5649f0        1b564bef             512 Private        READWRITE          
+ffff880def1945b0 11        1b564bf0        1b564def             512 Private        READWRITE          
+ffff880dfc25d740  8        1b564df0        1b564fef             512 Private        READWRITE          
+ffff880dfc25e500 11        1b564ff0        1b5651ef             512 Private        READWRITE          
+ffff880dfc25dfb0 10        1b5651f0        1b5653ef             512 Private        READWRITE          
+ffff880dfc25d9c0 11        1b5653f0        1b5655ef             512 Private        READWRITE          
+ffff880dfc25d7e0  9        1b5655f0        1b5657ef             512 Private        READWRITE          
+ffff880dfc25d880 10        1b5657f0        1b5659ef             512 Private        READWRITE          
+ffff880dfc25dbf0 11        1b5659f0        1b565bef             512 Private        READWRITE          
+ffff880def184c00  4        1b565d30        1b565f2f             512 Private        READWRITE          
+ffff880def1a3740 10        1b565f30        1b56612f             512 Private        READWRITE          
+ffff880def1a3830  9        1b566130        1b56632f             512 Private        READWRITE          
+ffff880de6a8a250 10        1b566340        1b56653f             512 Private        READWRITE          
+ffff880dfc249650 11        1b566540        1b56753f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880def198610  8        1b567670        1b56786f             512 Private        READWRITE          
+ffff880df15e39d0 10        1b567870        1b567a6f             512 Private        READWRITE          
+ffff880de274dd40  9        1b567a70        1b567c6f             512 Private        READWRITE          
+ffff880dfc2436b0 11        1b567c70        1b567e6f             512 Private        READWRITE          
+ffff880dfc2435c0 10        1b567e70        1b56806f             512 Private        READWRITE          
+ffff880dfc244ec0 11        1b568070        1b56826f             512 Private        READWRITE          
+ffff880dfc244f10  7        1b568270        1b56846f             512 Private        READWRITE          
+ffff880dfc244b00  9        1b568470        1b56866f             512 Private        READWRITE          
+ffff880dfc245500  8        1b568670        1b56886f             512 Private        READWRITE          
+ffff880dfc2450f0 10        1b568870        1b568a6f             512 Private        READWRITE          
+ffff880dfc245690  9        1b568a70        1b568c6f             512 Private        READWRITE          
+ffff880dfc243980 10        1b568c70        1b568e6f             512 Private        READWRITE          
+ffff880de274cda0  6        1b568e70        1b56906f             512 Private        READWRITE          
+ffff880de274f190 10        1b569070        1b56926f             512 Private        READWRITE          
+ffff880de27536f0  9        1b569270        1b56946f             512 Private        READWRITE          
+ffff880de2738b20  8        1b569470        1b56966f             512 Private        READWRITE          
+ffff880de2738620 10        1b569670        1b56986f             512 Private        READWRITE          
+ffff880de273a6f0  9        1b569870        1b569a6f             512 Private        READWRITE          
+ffff880de273ac90  7        1b569a70        1b569c6f             512 Private        READWRITE          
+ffff880de273e480 10        1b569c70        1b569e6f             512 Private        READWRITE          
+ffff880df74da3f0  9        1b569e70        1b56a06f             512 Private        READWRITE          
+ffff880df15e41f0  8        1b56a070        1b56a26f             512 Private        READWRITE          
+ffff880de6f92e90 10        1b56a270        1b56a46f             512 Private        READWRITE          
+ffff880de6f92940  9        1b56a470        1b56a66f             512 Private        READWRITE          
+ffff880de6f92350  5        1b56a670        1b56a86f             512 Private        READWRITE          
+ffff880de6f951e0 11        1b56a870        1b56aa6f             512 Private        READWRITE          
+ffff880de6f981b0 10        1b56aa70        1b56ac6f             512 Private        READWRITE          
+ffff880de274e560  9        1b56ac70        1b56ae6f             512 Private        READWRITE          
+ffff880df7f19f90 11        1b56ae70        1b56b06f             512 Private        READWRITE          
+ffff880df537d260 10        1b56b070        1b56b26f             512 Private        READWRITE          
+ffff880df537f380  8        1b56b270        1b56b46f             512 Private        READWRITE          
+ffff880df5381310 11        1b56b470        1b56b66f             512 Private        READWRITE          
+ffff880df53825d0 10        1b56b670        1b56b86f             512 Private        READWRITE          
+ffff880df53710f0  9        1b56b870        1b56ba6f             512 Private        READWRITE          
+ffff880df53708d0 11        1b56ba70        1b56bc6f             512 Private        READWRITE          
+ffff880df5371960 10        1b56bc70        1b56be6f             512 Private        READWRITE          
+ffff880df5375fb0  7        1b56be70        1b56c06f             512 Private        READWRITE          
+ffff880df5378350 11        1b56c070        1b56c26f             512 Private        READWRITE          
+ffff880df5378a30 10        1b56c270        1b56c46f             512 Private        READWRITE          
+ffff880df5372c70  9        1b56c470        1b56c66f             512 Private        READWRITE          
+ffff880ded424830 11        1b56c670        1b56c86f             512 Private        READWRITE          
+ffff880de385dad0 10        1b56c870        1b56ca6f             512 Private        READWRITE          
+ffff880de385e0c0  8        1b56ca70        1b56cc6f             512 Private        READWRITE          
+ffff880de3865c80 11        1b56cc70        1b56ce6f             512 Private        READWRITE          
+ffff880de38560f0 10        1b56ce70        1b56d06f             512 Private        READWRITE          
+ffff880de273de40  9        1b56d070        1b56d26f             512 Private        READWRITE          
+ffff880de3868520 10        1b56d270        1b56d46f             512 Private        READWRITE          
+ffff880dfc244f60  6        1b56d470        1b56d66f             512 Private        READWRITE          
+ffff880dfc2458c0 11        1b56d670        1b56d86f             512 Private        READWRITE          
+ffff880dfc244060 10        1b56d880        1b56da7f             512 Private        READWRITE          
+ffff880dfc243bb0  9        1b56da80        1b56dc7f             512 Private        READWRITE          
+ffff880dfc244a60 10        1b56dc80        1b56de7f             512 Private        READWRITE          
+ffff880dfc244ab0  8        1b56de80        1b56e07f             512 Private        READWRITE          
+ffff880dfc244fb0 11        1b56e080        1b56e27f             512 Private        READWRITE          
+ffff880dfc244600 10        1b56e280        1b56e47f             512 Private        READWRITE          
+ffff880dfc244b50  9        1b56e480        1b56e67f             512 Private        READWRITE          
+ffff880dfc244650 11        1b56e680        1b56e87f             512 Private        READWRITE          
+ffff880dfc244ce0 10        1b56e880        1b56ea7f             512 Private        READWRITE          
+ffff880dfc2452d0 11        1b56ea80        1b56ec7f             512 Private        READWRITE          
+ffff880dfc244d30  7        1b56ec80        1b56ee7f             512 Private        READWRITE          
+ffff880dfc245370 11        1b56ee80        1b56f07f             512 Private        READWRITE          
+ffff880dfc245780 10        1b56f080        1b56f27f             512 Private        READWRITE          
+ffff880dfc245140  9        1b56f280        1b56f47f             512 Private        READWRITE          
+ffff880dfc246ae0 11        1b56f480        1b56f67f             512 Private        READWRITE          
+ffff880dfc245b90 10        1b56f680        1b56f87f             512 Private        READWRITE          
+ffff880dfc246130  8        1b56f880        1b56fa7f             512 Private        READWRITE          
+ffff880dfc2478a0 11        1b56fa80        1b56fc7f             512 Private        READWRITE          
+ffff880dfc245fa0 10        1b56fc80        1b56fe7f             512 Private        READWRITE          
+ffff880dfc246270  9        1b56fe80        1b57007f             512 Private        READWRITE          
+ffff880dfc2461d0 10        1b570080        1b57027f             512 Private        READWRITE          
+ffff880dfc2467c0  2        1b570280        1b57047f             512 Private        READWRITE          
+ffff880dfc2464f0 11        1b570480        1b57067f             512 Private        READWRITE          
+ffff880dfc2465e0 10        1b570680        1b57087f             512 Private        READWRITE          
+ffff880dfc2459b0  9        1b570880        1b570a7f             512 Private        READWRITE          
+ffff880dfc246c20 11        1b570a80        1b570c7f             512 Private        READWRITE          
+ffff880dfc246ef0 10        1b570c80        1b570e7f             512 Private        READWRITE          
+ffff880dfc247170  8        1b570e80        1b57107f             512 Private        READWRITE          
+ffff880dfc247cb0 11        1b571080        1b57127f             512 Private        READWRITE          
+ffff880dfc247620 10        1b571280        1b57147f             512 Private        READWRITE          
+ffff880dfc247030  9        1b571480        1b57168f             528 Private        READWRITE          
+ffff880dfc248070 11        1b571690        1b57188f             512 Private        READWRITE          
+ffff880dfc247a80 10        1b571890        1b571a8f             512 Private        READWRITE          
+ffff880dfc247670  7        1b571a90        1b571c8f             512 Private        READWRITE          
+ffff880dfc247b70 11        1b571c90        1b571e8f             512 Private        READWRITE          
+ffff880dfc2473f0 10        1b571e90        1b57208f             512 Private        READWRITE          
+ffff880dfc246db0  9        1b572090        1b57228f             512 Private        READWRITE          
+ffff880dfc2474e0 11        1b572290        1b57248f             512 Private        READWRITE          
+ffff880dfc246e50 10        1b572490        1b57268f             512 Private        READWRITE          
+ffff880dfc2475d0  8        1b572690        1b57288f             512 Private        READWRITE          
+ffff880dfc2479e0 11        1b572890        1b57385f            4028 Private        READWRITE          
+ffff880dfc247080 10        1b573860        1b573a5f             512 Private        READWRITE          
+ffff880dfc2471c0 11        1b573a60        1b573c5f             512 Private        READWRITE          
+ffff880dfc247f30  9        1b573c60        1b573e5f             512 Private        READWRITE          
+ffff880dfc2472b0 11        1b573e60        1b57405f             512 Private        READWRITE          
+ffff880dfc2473a0 10        1b574060        1b57425f             512 Private        READWRITE          
+ffff880dfc247bc0  6        1b574260        1b57445f             512 Private        READWRITE          
+ffff880dfc247c60 10        1b574460        1b57465f             512 Private        READWRITE          
+ffff880dfc247760  9        1b574660        1b57485f             512 Private        READWRITE          
+ffff880dfc25e370 10        1b574860        1b574a5f             512 Private        READWRITE          
+ffff880dfc25e050 11        1b574a60        1b574c5f             512 Private        READWRITE          
+ffff880dfc247850  8        1b574d10        1b574f0f             512 Private        READWRITE          
+ffff880dfc2480c0  9        1b574f10        1b575f0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2470d0 10        1b575f10        1b57610f             512 Private        READWRITE          
+ffff880dfc247f80  7        1b576110        1b57630f             512 Private        READWRITE          
+ffff880dfc248750 10        1b576310        1b57650f             512 Private        READWRITE          
+ffff880dfc248c00  9        1b576510        1b57670f             512 Private        READWRITE          
+ffff880dfc2481b0  8        1b576710        1b57690f             512 Private        READWRITE          
+ffff880dfc248200 10        1b576910        1b576b0f             512 Private        READWRITE          
+ffff880dfc248d40  9        1b576b10        1b576d0f             512 Private        READWRITE          
+ffff880dfc2491f0  5        1b576d10        1b576f0f             512 Private        READWRITE          
+ffff880dfc249150 11        1b576f10        1b57710f             512 Private        READWRITE          
+ffff880dfc248480 10        1b577110        1b57730f             512 Private        READWRITE          
+ffff880dfc249510  9        1b577310        1b57750f             512 Private        READWRITE          
+ffff880dfc249b50 11        1b577510        1b57770f             512 Private        READWRITE          
+ffff880dfc24a190 10        1b577710        1b57790f             512 Private        READWRITE          
+ffff880dfc249e20  8        1b577910        1b577b0f             512 Private        READWRITE          
+ffff880dfc2496f0 11        1b577b10        1b577d0f             512 Private        READWRITE          
+ffff880dfc24e290 10        1b577d10        1b577f0f             512 Private        READWRITE          
+ffff880dfc25e690 11        1b577f10        1b57810f             512 Private        READWRITE          
+ffff880dfc24be50  9        1b578110        1b57830f             512 Private        READWRITE          
+ffff880dfc251c10 11        1b578310        1b57930f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25e0f0 10        1b579310        1b57950f             512 Private        READWRITE          
+ffff880dfc25d5b0 11        1b579510        1b57970f             512 Private        READWRITE          
+ffff880dfc24db60  7        1b579710        1b57a6df            4029 Private        READWRITE          
+ffff880dfc25e0a0 11        1b57a6e0        1b57a8df             512 Private        READWRITE          
+ffff880dfc25d920 10        1b57a8e0        1b57aadf             512 Private        READWRITE          
+ffff880dfc25df60  9        1b57aae0        1b57acdf             512 Private        READWRITE          
+ffff880dfc25dd30 11        1b57ace0        1b57aedf             512 Private        READWRITE          
+ffff880dfc25dc40 10        1b57aee0        1b57b0df             512 Private        READWRITE          
+ffff880dfc25d600  8        1b57b0e0        1b57b2df             512 Private        READWRITE          
+ffff880dfc25e2d0 10        1b57b2e0        1b57b4df             512 Private        READWRITE          
+ffff880dfc25dab0 11        1b57b4e0        1b57b6df             512 Private        READWRITE          
+ffff880dfc251440  9        1b57b6f0        1b57c6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2517b0 10        1b57c6f0        1b57d6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc251350  6        1b57d6f0        1b57e6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc252250 11        1b57e6f0        1b57f6bf            4042 Private        READWRITE          
+ffff880dfc249740 10        1b57f6c0        1b5806bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d2900 11        1b5806c0        1b5808bf             512 Private        READWRITE          
+ffff880dfc25dec0  9        1b580930        1b580b2f             512 Private        READWRITE          
+ffff880dfc25de70 11        1b580b30        1b580d2f             512 Private        READWRITE          
+ffff880dfc25d6f0 10        1b580d30        1b580f2f             512 Private        READWRITE          
+ffff880dfc25d650  8        1b580f30        1b58112f             512 Private        READWRITE          
+ffff880dfc25f680 11        1b581130        1b58132f             512 Private        READWRITE          
+ffff880dfc25eb90 10        1b581330        1b58152f             512 Private        READWRITE          
+ffff880dfc25f360  9        1b581530        1b58172f             512 Private        READWRITE          
+ffff880dfc25fa90 11        1b581730        1b58192f             512 Private        READWRITE          
+ffff880dfc25ec80 10        1b581930        1b581b2f             512 Private        READWRITE          
+ffff880dfc25fa40  7        1b581b30        1b581d2f             512 Private        READWRITE          
+ffff880dfc25f5e0 11        1b581d30        1b581f2f             512 Private        READWRITE          
+ffff880dfc25edc0 10        1b581f30        1b58212f             512 Private        READWRITE          
+ffff880dfc25f860  9        1b582130        1b58232f             512 Private        READWRITE          
+ffff880dfc25eb40 11        1b582330        1b58252f             512 Private        READWRITE          
+ffff880dfc25f770 10        1b582530        1b58272f             512 Private        READWRITE          
+ffff880dfc25f310  8        1b582730        1b58292f             512 Private        READWRITE          
+ffff880dfc25f040 11        1b582930        1b582b2f             512 Private        READWRITE          
+ffff880dfc25eeb0 10        1b582b30        1b582d2f             512 Private        READWRITE          
+ffff880dfc25f400  9        1b582d30        1b582f2f             512 Private        READWRITE          
+ffff880dfc25fcc0 11        1b582f30        1b58312f             512 Private        READWRITE          
+ffff880dfc25ebe0 10        1b583130        1b58332f             512 Private        READWRITE          
+ffff880dfc25fc70  4        1b583330        1b58352f             512 Private        READWRITE          
+ffff880dfc25f810 11        1b583530        1b58372f             512 Private        READWRITE          
+ffff880dfc25f950 10        1b583730        1b58392f             512 Private        READWRITE          
+ffff880dfc25ed20  9        1b583930        1b583b2f             512 Private        READWRITE          
+ffff880dfc25fbd0 11        1b583b30        1b583d2f             512 Private        READWRITE          
+ffff880dfc25eaa0 10        1b583d30        1b583f2f             512 Private        READWRITE          
+ffff880dfc25f220  8        1b583f30        1b58412f             512 Private        READWRITE          
+ffff880dfc25f7c0 11        1b584130        1b58432f             512 Private        READWRITE          
+ffff880dfc25f590 10        1b584330        1b58452f             512 Private        READWRITE          
+ffff880dfc25f6d0  9        1b584530        1b58472f             512 Private        READWRITE          
+ffff880dfc25ee10 11        1b584730        1b58492f             512 Private        READWRITE          
+ffff880dfc25f3b0 10        1b584930        1b584b2f             512 Private        READWRITE          
+ffff880dfc25fae0  7        1b584b30        1b584d2f             512 Private        READWRITE          
+ffff880dfc25eaf0 11        1b584d30        1b584f2f             512 Private        READWRITE          
+ffff880dfc25fd10 10        1b584f30        1b58512f             512 Private        READWRITE          
+ffff880dfc25ef00  9        1b585130        1b58532f             512 Private        READWRITE          
+ffff880dfc25f180 11        1b585330        1b58552f             512 Private        READWRITE          
+ffff880dfc25fb80 10        1b585530        1b58572f             512 Private        READWRITE          
+ffff880dfc25f1d0  8        1b585730        1b58592f             512 Private        READWRITE          
+ffff880dfc25f540 11        1b585930        1b585b2f             512 Private        READWRITE          
+ffff880dfc25f0e0 10        1b585b30        1b585d2f             512 Private        READWRITE          
+ffff880dfc25f090  9        1b585d30        1b585f2f             512 Private        READWRITE          
+ffff880dfc25f9a0 11        1b585f30        1b58612f             512 Private        READWRITE          
+ffff880dfc25f450 10        1b586130        1b58632f             512 Private        READWRITE          
+ffff880dfc25e960  6        1b586330        1b58652f             512 Private        READWRITE          
+ffff880dfc25f270 11        1b586530        1b58672f             512 Private        READWRITE          
+ffff880dfc25f630 10        1b586730        1b58692f             512 Private        READWRITE          
+ffff880dfc25efa0  9        1b586930        1b586b2f             512 Private        READWRITE          
+ffff880dfc25f9f0 11        1b586b30        1b586d2f             512 Private        READWRITE          
+ffff880dfc25e9b0 10        1b586d30        1b586f2f             512 Private        READWRITE          
+ffff880dfc25ecd0  8        1b586f30        1b58712f             512 Private        READWRITE          
+ffff880dfc25f4f0 11        1b587130        1b58732f             512 Private        READWRITE          
+ffff880dfc25f4a0 10        1b587330        1b58752f             512 Private        READWRITE          
+ffff880dfc25ef50  9        1b587530        1b58772f             512 Private        READWRITE          
+ffff880dfc25f900 11        1b587730        1b58792f             512 Private        READWRITE          
+ffff880dfc25ea50 10        1b587930        1b587b2f             512 Private        READWRITE          
+ffff880dfc25ed70  7        1b587b30        1b587d2f             512 Private        READWRITE          
+ffff880dfc25f720 11        1b587d30        1b587f2f             512 Private        READWRITE          
+ffff880dfc25ee60 10        1b587f30        1b58812f             512 Private        READWRITE          
+ffff880dfc25fb30  9        1b588130        1b58832f             512 Private        READWRITE          
+ffff880dfc2603f0 11        1b588330        1b58852f             512 Private        READWRITE          
+ffff880dfc2608a0 10        1b588530        1b58872f             512 Private        READWRITE          
+ffff880dfc260580  8        1b588730        1b58892f             512 Private        READWRITE          
+ffff880dfc25ff90 11        1b588930        1b588b2f             512 Private        READWRITE          
+ffff880dfc260490 10        1b588b30        1b588d2f             512 Private        READWRITE          
+ffff880dfc260c60  9        1b588d30        1b588f2f             512 Private        READWRITE          
+ffff880dfc260da0 11        1b588f30        1b58912f             512 Private        READWRITE          
+ffff880dfc2601c0 10        1b589130        1b58932f             512 Private        READWRITE          
+ffff880dfc25fea0  5        1b589330        1b58952f             512 Private        READWRITE          
+ffff880dfc25fe00 11        1b589530        1b58972f             512 Private        READWRITE          
+ffff880dfc260850 10        1b589730        1b58992f             512 Private        READWRITE          
+ffff880dfc25f8b0  9        1b589930        1b589b2f             512 Private        READWRITE          
+ffff880dfc260b70 11        1b589b30        1b589d2f             512 Private        READWRITE          
+ffff880dfc260760 10        1b589d30        1b589f2f             512 Private        READWRITE          
+ffff880dfc25fdb0  8        1b589f30        1b58a12f             512 Private        READWRITE          
+ffff880dfc260f30 11        1b58a130        1b58a32f             512 Private        READWRITE          
+ffff880dfc260d50 10        1b58a330        1b58a52f             512 Private        READWRITE          
+ffff880dfc2603a0  9        1b58a530        1b58a72f             512 Private        READWRITE          
+ffff880dfc260800 11        1b58a730        1b58a92f             512 Private        READWRITE          
+ffff880dfc260120 10        1b58a930        1b58ab2f             512 Private        READWRITE          
+ffff880dfc260c10  7        1b58ab30        1b58ad2f             512 Private        READWRITE          
+ffff880dfc2607b0 11        1b58ad30        1b58af2f             512 Private        READWRITE          
+ffff880dfc260440 10        1b58af30        1b58b12f             512 Private        READWRITE          
+ffff880dfc260030  9        1b58b130        1b58b32f             512 Private        READWRITE          
+ffff880dfc25fd60 11        1b58b330        1b58b52f             512 Private        READWRITE          
+ffff880dfc2605d0 10        1b58b530        1b58b72f             512 Private        READWRITE          
+ffff880dfc260530  8        1b58b730        1b58b92f             512 Private        READWRITE          
+ffff880dfc260300 11        1b58b930        1b58bb2f             512 Private        READWRITE          
+ffff880dfc261020 10        1b58bb30        1b58bd2f             512 Private        READWRITE          
+ffff880dfc2608f0  9        1b58bd30        1b58bf2f             512 Private        READWRITE          
+ffff880dfc260940 11        1b58bf30        1b58c12f             512 Private        READWRITE          
+ffff880dfc260df0 10        1b58c130        1b58c32f             512 Private        READWRITE          
+ffff880dfc260260  6        1b58c330        1b58c52f             512 Private        READWRITE          
+ffff880dfc260e90 11        1b58c530        1b58c72f             512 Private        READWRITE          
+ffff880dfc261110 10        1b58c730        1b58c92f             512 Private        READWRITE          
+ffff880dfc260080  9        1b58c930        1b58cb2f             512 Private        READWRITE          
+ffff880dfc2604e0 11        1b58cb30        1b58cd2f             512 Private        READWRITE          
+ffff880dfc260620 10        1b58cd30        1b58cf2f             512 Private        READWRITE          
+ffff880dfc260a80  8        1b58cf30        1b58d12f             512 Private        READWRITE          
+ffff880dfc260350 11        1b58d130        1b58d32f             512 Private        READWRITE          
+ffff880dfc260e40 10        1b58d330        1b58d52f             512 Private        READWRITE          
+ffff880dfc25ff40  9        1b58d530        1b58d72f             512 Private        READWRITE          
+ffff880dfc260ad0 11        1b58d730        1b58d92f             512 Private        READWRITE          
+ffff880dfc260670 10        1b58d930        1b58db2f             512 Private        READWRITE          
+ffff880dfc260cb0  7        1b58db30        1b58dd2f             512 Private        READWRITE          
+ffff880dfc2600d0 11        1b58dd30        1b58df2f             512 Private        READWRITE          
+ffff880dfc2602b0 10        1b58df30        1b58e12f             512 Private        READWRITE          
+ffff880dfc260710  9        1b58e130        1b58e32f             512 Private        READWRITE          
+ffff880dfc260ee0 11        1b58e330        1b58e52f             512 Private        READWRITE          
+ffff880dfc260990 10        1b58e530        1b58e72f             512 Private        READWRITE          
+ffff880dfc260210  8        1b58e730        1b58e92f             512 Private        READWRITE          
+ffff880dfc260bc0 11        1b58e930        1b58eb2f             512 Private        READWRITE          
+ffff880dfc25fef0 10        1b58eb30        1b58ed2f             512 Private        READWRITE          
+ffff880dfc260b20  9        1b58ed30        1b58ef2f             512 Private        READWRITE          
+ffff880dfc25fe50 11        1b58ef30        1b58f12f             512 Private        READWRITE          
+ffff880dfc260a30 10        1b58f130        1b58f32f             512 Private        READWRITE          
+ffff880dfc261930  3        1b58f330        1b58f52f             512 Private        READWRITE          
+ffff880dfc262420 11        1b58f530        1b58f72f             512 Private        READWRITE          
+ffff880dfc2621f0 10        1b58f730        1b58f92f             512 Private        READWRITE          
+ffff880dfc2614d0  9        1b58f930        1b58fb2f             512 Private        READWRITE          
+ffff880dfc261d40 11        1b58fb30        1b58fd2f             512 Private        READWRITE          
+ffff880dfc261b10 10        1b58fd30        1b58ff2f             512 Private        READWRITE          
+ffff880dfc261570  8        1b58ff30        1b59012f             512 Private        READWRITE          
+ffff880dfc261e30 11        1b590130        1b59032f             512 Private        READWRITE          
+ffff880dfc261160 10        1b590330        1b59052f             512 Private        READWRITE          
+ffff880dfc261480  9        1b590530        1b59072f             512 Private        READWRITE          
+ffff880dfc2618e0 11        1b590730        1b59092f             512 Private        READWRITE          
+ffff880dfc262510 10        1b590930        1b590b2f             512 Private        READWRITE          
+ffff880dfc261a20  7        1b590b30        1b590d2f             512 Private        READWRITE          
+ffff880dfc261b60 11        1b590d30        1b590f2f             512 Private        READWRITE          
+ffff880dfc261ca0 10        1b590f30        1b59112f             512 Private        READWRITE          
+ffff880dfc261ed0  9        1b591130        1b59132f             512 Private        READWRITE          
+ffff880dfc261840 11        1b591330        1b59152f             512 Private        READWRITE          
+ffff880dfc2612a0 10        1b591530        1b59172f             512 Private        READWRITE          
+ffff880dfc261200  8        1b591730        1b59192f             512 Private        READWRITE          
+ffff880dfc261340 11        1b591930        1b591b2f             512 Private        READWRITE          
+ffff880dfc261cf0 10        1b591b30        1b591d2f             512 Private        READWRITE          
+ffff880dfc261c00  9        1b591d30        1b591f2f             512 Private        READWRITE          
+ffff880dfc261980 11        1b591f30        1b59212f             512 Private        READWRITE          
+ffff880dfc261390 10        1b592130        1b59232f             512 Private        READWRITE          
+ffff880dfc2621a0  6        1b592330        1b59252f             512 Private        READWRITE          
+ffff880dfc2613e0 11        1b592530        1b59272f             512 Private        READWRITE          
+ffff880dfc261660 10        1b592730        1b59292f             512 Private        READWRITE          
+ffff880dfc261250  9        1b592930        1b592b2f             512 Private        READWRITE          
+ffff880dfc2615c0 11        1b592b30        1b592d2f             512 Private        READWRITE          
+ffff880dfc262060 10        1b592d30        1b592f2f             512 Private        READWRITE          
+ffff880dfc261610  8        1b592f30        1b59312f             512 Private        READWRITE          
+ffff880dfc261f70 11        1b593130        1b59332f             512 Private        READWRITE          
+ffff880dfc2619d0 10        1b593330        1b59352f             512 Private        READWRITE          
+ffff880dfc261700  9        1b593530        1b59372f             512 Private        READWRITE          
+ffff880dfc261f20 11        1b593730        1b59392f             512 Private        READWRITE          
+ffff880dfc262290 10        1b593930        1b593b2f             512 Private        READWRITE          
+ffff880dfc2623d0  7        1b593b30        1b593d2f             512 Private        READWRITE          
+ffff880dfc261bb0 11        1b593d30        1b593f2f             512 Private        READWRITE          
+ffff880dfc261520 10        1b593f30        1b59412f             512 Private        READWRITE          
+ffff880dfc261750  9        1b594130        1b59432f             512 Private        READWRITE          
+ffff880dfc261e80 11        1b594330        1b59452f             512 Private        READWRITE          
+ffff880dfc262150 10        1b594530        1b59472f             512 Private        READWRITE          
+ffff880dfc261890  8        1b594730        1b59492f             512 Private        READWRITE          
+ffff880dfc2611b0 11        1b594930        1b594b2f             512 Private        READWRITE          
+ffff880dfc261fc0 10        1b594b30        1b594d2f             512 Private        READWRITE          
+ffff880dfc261d90  9        1b594d30        1b594f2f             512 Private        READWRITE          
+ffff880dfc261a70 11        1b594f30        1b59512f             512 Private        READWRITE          
+ffff880dfc261de0 10        1b595130        1b59532f             512 Private        READWRITE          
+ffff880dfc261ac0  5        1b595330        1b59552f             512 Private        READWRITE          
+ffff880dfc2617a0 11        1b595530        1b59572f             512 Private        READWRITE          
+ffff880dfc262240 10        1b595730        1b59592f             512 Private        READWRITE          
+ffff880dfc261430  9        1b595930        1b595b2f             512 Private        READWRITE          
+ffff880dfc262100 11        1b595b30        1b595d2f             512 Private        READWRITE          
+ffff880dfc262470 10        1b595d30        1b595f2f             512 Private        READWRITE          
+ffff880dfc2617f0  8        1b595f30        1b59612f             512 Private        READWRITE          
+ffff880dfc262380 11        1b596130        1b59632f             512 Private        READWRITE          
+ffff880dfc262330 10        1b596330        1b59652f             512 Private        READWRITE          
+ffff880dfc2620b0  9        1b596530        1b59672f             512 Private        READWRITE          
+ffff880df6c05ae0 11        1b596730        1b59692f             512 Private        READWRITE          
+ffff880df5377450 10        1b596930        1b596b2f             512 Private        READWRITE          
+ffff880df74daf30  7        1b596b30        1b596d2f             512 Private        READWRITE          
+ffff880df74dacb0 11        1b596d30        1b596f2f             512 Private        READWRITE          
+ffff880df74dc4c0 10        1b596f30        1b59712f             512 Private        READWRITE          
+ffff880df74e34a0  9        1b597130        1b59732f             512 Private        READWRITE          
+ffff880df74e7960 11        1b597330        1b59752f             512 Private        READWRITE          
+ffff880df74e9ee0 10        1b597530        1b59772f             512 Private        READWRITE          
+ffff880df74e9f80  8        1b597730        1b59792f             512 Private        READWRITE          
+ffff880df74e9080 11        1b597930        1b597b2f             512 Private        READWRITE          
+ffff880df74ea3e0 10        1b597b30        1b597d2f             512 Private        READWRITE          
+ffff880df74ec3c0  9        1b597d30        1b597f2f             512 Private        READWRITE          
+ffff880df74ee030 11        1b597f30        1b59812f             512 Private        READWRITE          
+ffff880df74eead0 10        1b598130        1b59832f             512 Private        READWRITE          
+ffff880df74ee1c0  6        1b598330        1b59852f             512 Private        READWRITE          
+ffff880df74ef7a0 11        1b598530        1b59872f             512 Private        READWRITE          
+ffff880df74f11e0 10        1b598730        1b59892f             512 Private        READWRITE          
+ffff880df74f1460  9        1b598930        1b598b2f             512 Private        READWRITE          
+ffff880df74f2360 11        1b598b30        1b598d2f             512 Private        READWRITE          
+ffff880df74f2ae0 10        1b598d30        1b598f2f             512 Private        READWRITE          
+ffff880df74d8a50  8        1b598f30        1b59912f             512 Private        READWRITE          
+ffff880df74e9760 11        1b599130        1b59932f             512 Private        READWRITE          
+ffff880df74f0d30 10        1b599330        1b59952f             512 Private        READWRITE          
+ffff880df74f0100  9        1b599530        1b59972f             512 Private        READWRITE          
+ffff880ded426db0 11        1b599730        1b59992f             512 Private        READWRITE          
+ffff880deaa82610 10        1b599930        1b599b2f             512 Private        READWRITE          
+ffff880df3e03920  7        1b599b30        1b599d2f             512 Private        READWRITE          
+ffff880de974bc00 11        1b599d30        1b599f2f             512 Private        READWRITE          
+ffff880de974c7e0 10        1b599f30        1b59a12f             512 Private        READWRITE          
+ffff880de974cf60  9        1b59a130        1b59a32f             512 Private        READWRITE          
+ffff880de974d640 11        1b59a330        1b59a52f             512 Private        READWRITE          
+ffff880de9758c20 10        1b59a530        1b59a72f             512 Private        READWRITE          
+ffff880de975a160  8        1b59a730        1b59a92f             512 Private        READWRITE          
+ffff880de975b6f0 11        1b59a930        1b59ab2f             512 Private        READWRITE          
+ffff880de9760240 10        1b59ab30        1b59ad2f             512 Private        READWRITE          
+ffff880de974cbf0  9        1b59ad30        1b59af2f             512 Private        READWRITE          
+ffff880dfc2622e0 11        1b59af30        1b59b12f             512 Private        READWRITE          
+ffff880dfc2624c0 10        1b59b130        1b59b32f             512 Private        READWRITE          
+ffff880dfc2616b0  4        1b59b330        1b59b52f             512 Private        READWRITE          
+ffff880dfc262920 11        1b59b530        1b59b72f             512 Private        READWRITE          
+ffff880dfc262ab0 10        1b59b730        1b59b92f             512 Private        READWRITE          
+ffff880dfc262b50  9        1b59b930        1b59bb2f             512 Private        READWRITE          
+ffff880dfc262b00 11        1b59bb30        1b59bd2f             512 Private        READWRITE          
+ffff880dfc262560 10        1b59bd30        1b59bf2f             512 Private        READWRITE          
+ffff880dfc262970  8        1b59bf30        1b59c12f             512 Private        READWRITE          
+ffff880dfc262fb0 11        1b59c130        1b59c32f             512 Private        READWRITE          
+ffff880dfc262830 10        1b59c330        1b59c52f             512 Private        READWRITE          
+ffff880dfc262ce0  9        1b59c530        1b59c72f             512 Private        READWRITE          
+ffff880dfc262f10 11        1b59c730        1b59c92f             512 Private        READWRITE          
+ffff880dfc262880 10        1b59c930        1b59cb2f             512 Private        READWRITE          
+ffff880dfc262d80  7        1b59cb30        1b59cd2f             512 Private        READWRITE          
+ffff880dfc262600 11        1b59cd30        1b59cf2f             512 Private        READWRITE          
+ffff880dfc262f60 10        1b59cf30        1b59d12f             512 Private        READWRITE          
+ffff880dfc2627e0  9        1b59d130        1b59d32f             512 Private        READWRITE          
+ffff880dfc2625b0 11        1b59d330        1b59d52f             512 Private        READWRITE          
+ffff880dfc262c40 10        1b59d530        1b59d72f             512 Private        READWRITE          
+ffff880dfc2457d0 11        1b59d730        1b59d92f             512 Private        READWRITE          
+ffff880dfc243a70  8        1b59d970        1b59db6f             512 Private        READWRITE          
+ffff880dfc248610 11        1b59db70        1b59dd6f             512 Private        READWRITE          
+ffff880dfc249600 10        1b59dd70        1b59df6f             512 Private        READWRITE          
+ffff880dfc24a6e0  9        1b59df70        1b59ef6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24a4b0 11        1b59ef70        1b59ff6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc249970 10        1b59ff70        1b5a0f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc252700  6        1b5a0f70        1b5a1f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc253560 11        1b5a1f70        1b5a2f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc255590 10        1b5a2f70        1b5a3f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc257520  9        1b5a3f70        1b5a4f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2581f0 11        1b5a4f70        1b5a5f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc258b50 10        1b5a5f70        1b5a6f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259410  8        1b5a6f70        1b5a7f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc259780 11        1b5a7f70        1b5a8f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24a9b0 10        1b5a8f70        1b5a9f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24bcc0  9        1b5a9f70        1b5aaf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24bae0 11        1b5aaf70        1b5abf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24aa50 10        1b5abf70        1b5acf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24be00  7        1b5acf70        1b5adf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24d8e0 11        1b5adf70        1b5aef6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24f140 10        1b5aef70        1b5aff6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2510d0  9        1b5aff70        1b5b0f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc250ef0 11        1b5b0f70        1b5b1f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc253240 10        1b5b1f70        1b5b2f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24b400  8        1b5b2f70        1b5b3f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24af50 11        1b5b3f70        1b5b4f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24bdb0 10        1b5b4f70        1b5b5f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24d2a0  9        1b5b5f70        1b5b6f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24fa50 11        1b5b6f70        1b5b7f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc250b30 10        1b5b7f70        1b5b8f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc251bc0  5        1b5b8f70        1b5b9f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc250ea0 10        1b5b9f70        1b5baf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc251f80  9        1b5baf70        1b5bbf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc256a80  8        1b5bbf70        1b5bcf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc244790 10        1b5bcf70        1b5bdf6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2450a0  9        1b5bdf70        1b5bef6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc246630  7        1b5bef70        1b5bff6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2464a0 10        1b5bff70        1b5c0f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24ae60  9        1b5c0f70        1b5c1f6f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2566c0  8        1b5c1f70        1b5c216f             512 Private        READWRITE          
+ffff880df74e7c30 10        1b5c2170        1b5c236f             512 Private        READWRITE          
+ffff880dfc256df0  9        1b5c2370        1b5c256f             512 Private        READWRITE          
+ffff880e027d6df0 11        1b5c2570        1b5c276f             512 Private        READWRITE          
+ffff880dfc24f5f0 10        1b5c2770        1b5c296f             512 Private        READWRITE          
+ffff880dfc256b20  6        1b5c2bb0        1b5c3baf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc257ed0 10        1b5c3bb0        1b5c4baf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2572a0 11        1b5c4bb0        1b5c5baf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc258420  9        1b5c5bb0        1b5c6baf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25b210 11        1b5c6bb0        1b5c7baf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24faf0 10        1b5c7bb0        1b5c7daf             512 Private        READWRITE          
+ffff880dfc251f30  8        1b5c7db0        1b5c7faf             512 Private        READWRITE          
+ffff880de86b27d0 10        1b5c7fb0        1b5c81af             512 Private        READWRITE          
+ffff880de6a8a6b0  9        1b5c81b0        1b5c83af             512 Private        READWRITE          
+ffff880deaa820c0 10        1b5c83b0        1b5c85af             512 Private        READWRITE          
+ffff880dfd74cb80 11        1b5c85b0        1b5c89af              55 Private        READWRITE          
+ffff880df74e4d00  7        1b5c89b0        1b5c8baf             512 Private        READWRITE          
+ffff880de274c5d0 10        1b5c8bb0        1b5c8daf             512 Private        READWRITE          
+ffff880de6a8a750  9        1b5c8db0        1b5c8faf             512 Private        READWRITE          
+ffff880dfc2518f0 11        1b5c8fb0        1b5c9faf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2534c0 10        1b5c9fb0        1b5cafaf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de8699690  8        1b5cafb0        1b5cb1af             512 Private        READWRITE          
+ffff880e027d7070 11        1b5cb1b0        1b5cb3df             560 Private        READWRITE          
+ffff880dffefeb00 10        1b5cb5b0        1b5cb7af             512 Private        READWRITE          
+ffff880dfc2629c0 11        1b5cb7b0        1b5cb9af             512 Private        READWRITE          
+ffff880dfc2548c0  9        1b5cbdc0        1b5cbfbf             512 Private        READWRITE          
+ffff880dfc255630 10        1b5cbfc0        1b5cc1bf             512 Private        READWRITE          
+ffff880dfc256580  1        1b5cc1c0        1b5cc3bf             512 Private        READWRITE          
+ffff880dfc25a040 10        1b5cc3c0        1b5cd3bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25bb70  9        1b5cd3c0        1b5ce3bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25c4d0  8        1b5ce3c0        1b5cf3bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25da10 10        1b5cf3c0        1b5d03bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc262ba0  9        1b5d03c0        1b5d13bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc248250  7        1b5d13c0        1b5d160f             592 Private        READWRITE          
+ffff880dfc249ba0 10        1b5d1610        1b5d185f             592 Private        READWRITE          
+ffff880dfc24c440  9        1b5d1860        1b5d1aaf             592 Private        READWRITE          
+ffff880dfc24c5d0  8        1b5d1ab0        1b5d1cff             592 Private        READWRITE          
+ffff880dfc24e380 10        1b5d1d00        1b5d1f4f             592 Private        READWRITE          
+ffff880dfc258330  9        1b5d1f50        1b5d219f             592 Private        READWRITE          
+ffff880dfc258100 10        1b5d23e0        1b5d262f             592 Private        READWRITE          
+ffff880dfc257de0 11        1b5d2630        1b5d287f             592 Private        READWRITE          
+ffff880dfc257d40  6        1b5d2950        1b5d2b9f             592 Private        READWRITE          
+ffff880dfc2528e0 10        1b5d2d60        1b5d2faf             592 Private        READWRITE          
+ffff880dfc2547d0  9        1b5d31b0        1b5d33af             512 Private        READWRITE          
+ffff880dfc256300 10        1b5d33b0        1b5d35ff             592 Private        READWRITE          
+ffff880dfc256d50  8        1b5d3600        1b5d384f             592 Private        READWRITE          
+ffff880dfc257ca0  9        1b5d3850        1b5d3a9f             592 Private        READWRITE          
+ffff880dfc257a20 10        1b5d3aa0        1b5d3cef             592 Private        READWRITE          
+ffff880dfc25acc0  7        1b5d3ea0        1b5d40ef             592 Private        READWRITE          
+ffff880dfc247350 11        1b5d40f0        1b5d433f             592 Private        READWRITE          
+ffff880dfc252c00 10        1b5d4340        1b5d458f             592 Private        READWRITE          
+ffff880dfc25af40 11        1b5d4590        1b5d47df             592 Private        READWRITE          
+ffff880dfc25c160  9        1b5d4910        1b5d4b5f             592 Private        READWRITE          
+ffff880dfc25db50 10        1b5d4b60        1b5d4daf             592 Private        READWRITE          
+ffff880dfc2433e0  8        1b5d4db0        1b5d4fff             592 Private        READWRITE          
+ffff880de6fa66c0 11        1b5d5000        1b5d51ff             512 Private        READWRITE          
+ffff880ded439c30 10        1b5d5200        1b5d53ff             512 Private        READWRITE          
+ffff880dfc251530  9        1b5d5610        1b5d585f             592 Private        READWRITE          
+ffff880de6a7d6e0 11        1b5d5860        1b5d5a5f             512 Private        READWRITE          
+ffff880df74e7d70 10        1b5d5a60        1b5d5c5f             512 Private        READWRITE          
+ffff880dfc25a0e0  5        1b5d5c60        1b5d6c5f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded439d20 11        1b5d6c60        1b5d6e5f             512 Private        READWRITE          
+ffff880dfc25b490 10        1b5d6e60        1b5d7e5f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc25b530  9        1b5d7e60        1b5d8e5f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc262a60 10        1b5d8e60        1b5d90af             592 Private        READWRITE          
+ffff880dfc2444c0  8        1b5d90b0        1b5da0af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc243cf0 11        1b5da0b0        1b5db0af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc2453c0 10        1b5db0b0        1b5dc0af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245d20  9        1b5dc0b0        1b5dd0af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245d70 11        1b5dd0b0        1b5de0af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc249c90 10        1b5de0b0        1b5de2ff             592 Private        READWRITE          
+ffff880dfc24b270  7        1b5de300        1b5df2ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24ee70 11        1b5df300        1b5e02ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc250130 10        1b5e0300        1b5e12ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc251260  9        1b5e1300        1b5e22ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc256c60 11        1b5e2300        1b5e32ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc257890 10        1b5e3300        1b5e42ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df5377400  8        1b5e4300        1b5e52ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df5384dd0 11        1b5e5300        1b5e62ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df5370380 10        1b5e6300        1b5e72ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74efc00  9        1b5e7300        1b5e82ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74f0010 10        1b5e8510        1b5e950f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74ef200  6        1b5e9510        1b5ea50f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74efca0 10        1b5ea510        1b5eb50f            4048 Private        READWRITE         WRITECOMBINE 
+ffff880df74efac0  9        1b5eb510        1b5ec50f            2736 Private        READWRITE         WRITECOMBINE 
+ffff880df74f0330  8        1b5ec710        1b5ed70f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d2e50  9        1b5ed710        1b5edfaf            2208 Private        READWRITE          
+ffff880e027d3b50 10        1b5edfb0        1b5ee5df            1584 Private        READWRITE          
+ffff880df74efd40  7        1b5ee710        1b5ef70f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74f0240 11        1b5ef710        1b5f070f            4086 Private        READWRITE         WRITECOMBINE 
+ffff880df74f1230 10        1b5f0710        1b5f170f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74f0d80  9        1b5f1710        1b5f270f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de8699d20 10        1b5f3710        1b5f390f             512 Private        READWRITE          
+ffff880de975d4f0  8        1b5f3910        1b5f3b0f             512 Private        READWRITE          
+ffff880df74e3950 11        1b5f3b10        1b5f3d0f             512 Private        READWRITE          
+ffff880df74da3a0 10        1b5f3d10        1b5f3f0f             512 Private        READWRITE          
+ffff880ded43a180  9        1b5f4110        1b5f430f             512 Private        READWRITE          
+ffff880dfab93ca0 11        1b5f4310        1b5f450f             512 Private        READWRITE          
+ffff880df3e0b1c0 10        1b5f4910        1b5f4b0f             512 Private        READWRITE          
+ffff880de974c3d0  4        1b5f4d10        1b5f4f0f             512 Private        READWRITE          
+ffff880ded434e60 10        1b5f4f10        1b5f510f             512 Private        READWRITE          
+ffff880df3e0d100  9        1b5f5110        1b5f530f             512 Private        READWRITE          
+ffff880de974bfc0  8        1b5f7310        1b5f750f             512 Private        READWRITE          
+ffff880dea1b0250 10        1b5f7510        1b5f770f             512 Private        READWRITE          
+ffff880dfab9cf30 11        1b5f7710        1b5f790f             512 Private        READWRITE          
+ffff880df3e05590  9        1b5f7910        1b5f7b0f             512 Private        READWRITE          
+ffff880df3e0b580 11        1b5f7b10        1b5f8b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6fa9a00 10        1b5f8f10        1b5f910f             512 Private        READWRITE          
+ffff880de97548f0  7        1b5f9110        1b5fa10f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de975c0f0 10        1b5fa110        1b5fb10f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de975dc70  9        1b5fb110        1b5fc10f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e36d0 10        1b5fc110        1b5fc30f             512 Private        READWRITE          
+ffff880de975f840  8        1b5fc350        1b5fd34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de9761c30 11        1b5fd350        1b5fe34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de97483c0 10        1b5fe350        1b5ff34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974a9e0  9        1b5ff350        1b60034f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974b340 11        1b600350        1b60134f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974d870 10        1b601350        1b60234f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974da00  6        1b602350        1b60334f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de975b600 11        1b603350        1b60434f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de97479c0 10        1b604350        1b60534f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974bf70  9        1b605350        1b60634f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de974c100 11        1b606350        1b60734f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de97525a0 10        1b607350        1b60834f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de9763e90  8        1b608350        1b60934f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6f95c80 11        1b609350        1b60a34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6fa1760 10        1b60a350        1b60b34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6fa5630  9        1b60b350        1b60c34f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6f95fa0 11        1b60c350        1b60c54f             512 Private        READWRITE          
+ffff880deaa8d010 10        1b60c550        1b60c74f             512 Private        READWRITE          
+ffff880de6fa5950 12        1b60c760        1b60d75f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880e027d6170 11        1b60d760        1b60ddaf            1616 Private        READWRITE          
+ffff880e027d39c0 12        1b60dfd0        1b60e5ff            1584 Private        READWRITE          
+ffff880df3e08b00  7        1b60e760        1b60f75f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab94d30 10        1b60f760        1b60f95f             512 Private        READWRITE          
+ffff880dfc25a540  9        1b60f990        1b60fb8f             512 Private        READWRITE          
+ffff880df74e50c0 10        1b60fb90        1b60fd8f             512 Private        READWRITE          
+ffff880df74d8500  8        1b60ffa0        1b610f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e5980 10        1b610fa0        1b611f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74ec960  9        1b611fa0        1b612f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74eedf0 11        1b612fa0        1b613f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e84f0 10        1b613fa0        1b614f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded437570  5        1b614fa0        1b615f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43a8b0  9        1b615fa0        1b616f9f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab85150  8        1b6171b0        1b6173af             512 Private        READWRITE          
+ffff880de975e7b0  9        1b6173b0        1b6175af             512 Private        READWRITE          
+ffff880ded43bda0  7        1b6175b0        1b6185af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43d380 10        1b6185b0        1b6195af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43d6f0  9        1b6195b0        1b61a5af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43ab30  8        1b61a5b0        1b61b5af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df3e0adb0 10        1b61b5b0        1b61c5af            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74f1550  9        1b61c7c0        1b61c9bf             512 Private        READWRITE          
+ffff880df74e3310 10        1b61c9c0        1b61cbbf             512 Private        READWRITE          
+ffff880de974a850  6        1b61cbd0        1b61cdcf             512 Private        READWRITE          
+ffff880de86b1ce0 10        1b61cdd0        1b61cfcf             512 Private        READWRITE          
+ffff880df15ddd50 11        1b61cfd0        1b61d1cf             512 Private        READWRITE          
+ffff880deba5f040  9        1b61d1d0        1b61d3cf             512 Private        READWRITE          
+ffff880de974a2b0 10        1b61d3d0        1b61d5cf             512 Private        READWRITE          
+ffff880de6fa5d10  8        1b61d970        1b61db6f             512 Private        READWRITE          
+ffff880dfc2498d0 10        1b61de00        1b61edff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dea1af760  9        1b61fe00        1b620dff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24d570  7        1b620e00        1b621dff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de975be20  9        1b622000        1b6221ff             512 Private        READWRITE          
+ffff880df1b52c60 10        1b622200        1b6223ff             512 Private        READWRITE          
+ffff880de869c890  8        1b622400        1b6225ff             512 Private        READWRITE          
+ffff880dfaba2ac0 10        1b622600        1b6227ff             512 Private        READWRITE          
+ffff880de869abd0  9        1b622800        1b6229ff             512 Private        READWRITE          
+ffff880df74e4530 10        1b622a00        1b622bff             512 Private        READWRITE          
+ffff880df15d4b60  3        1b622fc0        1b623fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15d8990 10        1b623fc0        1b624fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15dc130  9        1b624fc0        1b625fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15def20 11        1b625fc0        1b626fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15e22b0 10        1b626fc0        1b627fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15e2a30  8        1b627fc0        1b628fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15c7a50 11        1b628fc0        1b629fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15d81c0 10        1b629fc0        1b62afbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de64b4da0  9        1b62afc0        1b62bfbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74efde0 11        1b62bfc0        1b62cfbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dea1b0750 10        1b62cfc0        1b62dfbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df15ce3a0  7        1b62dfc0        1b62efbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f2440 11        1b62efc0        1b62ffbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f2990 10        1b62ffc0        1b630fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f31b0  9        1b630fc0        1b631fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f2210 11        1b631fc0        1b632fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f3980 10        1b632fc0        1b633fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f3520  8        1b633fc0        1b634fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f40b0 11        1b634fc0        1b635fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d8440 10        1b635fc0        1b636fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d83a0  9        1b636fc0        1b63851f            5472 Private        READWRITE         WRITECOMBINE 
+ffff880e027d2f70 11        1b638520        1b638cdf            1984 Private        READWRITE          
+ffff880df6c051d0 10        1b638fc0        1b639fbf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d97a0 11        1b63af80        1b63bf7f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de8699e60  6        1b63c7d0        1b63c9cf             512 Private        READWRITE          
+ffff880de86b0d90 10        1b63c9d0        1b63cbcf             512 Private        READWRITE          
+ffff880de86b58e0  9        1b63cbd0        1b63cdcf             512 Private        READWRITE          
+ffff880de869cbb0 11        1b63cdd0        1b63cfcf             512 Private        READWRITE          
+ffff880de869f770 10        1b63cfd0        1b63efcf            8160 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880de86aa1c0  8        1b63fdd0        1b640dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86b6d30 10        1b640dd0        1b641dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880decb6c0c0  9        1b641dd0        1b661dcf               0 Mapped         READWRITE          \Users\PIZZAOVEN\AppData\Local\NVIDIA\DXCache\0002a9ddb7c209ac.nvph
+ffff880de86a5670 11        1b661dd0        1b662dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a5e40 10        1b662dd0        1b663dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a6340  7        1b663dd0        1b664dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a6fc0 11        1b664dd0        1b665dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a62a0 10        1b665dd0        1b666dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a7880  9        1b666dd0        1b667dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a9090 11        1b667dd0        1b668dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a9e00 10        1b668dd0        1b669dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86ad960  8        1b669dd0        1b66adcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc252070 11        1b66add0        1b66bdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc251620 10        1b66bdd0        1b66cdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc258650  9        1b66cdd0        1b66ddcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869b760 11        1b66ddd0        1b66edcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869cd90 10        1b66edd0        1b66fdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869d790  5        1b66fdd0        1b670dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869de20 11        1b670dd0        1b671dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869eeb0 10        1b671dd0        1b672dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a2240  9        1b672dd0        1b673dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a5030 11        1b673dd0        1b674dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a8a00 10        1b674dd0        1b675dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86afbc0  8        1b675dd0        1b676dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86b5f70 11        1b676dd0        1b677dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de8697520 10        1b677dd0        1b678dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869aa90  9        1b678dd0        1b679dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869e730 11        1b679dd0        1b67adcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86a5df0 10        1b67add0        1b67bdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86b0d40  7        1b67bdd0        1b67cdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86b1740 11        1b67cdd0        1b67ddcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de869a310 10        1b67ddd0        1b67edcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de64b3ea0  9        1b67edd0        1b67fdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f46a0 11        1b67fdd0        1b680dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de975ab10 10        1b680dd0        1b681dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74eb920  8        1b681dd0        1b682dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74ef390 11        1b682dd0        1b683dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74d9f40 10        1b683dd0        1b684dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43a900  9        1b684dd0        1b685dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc243b60 11        1b685dd0        1b686dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dea1afdf0 10        1b686dd0        1b687dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a8a5c0  6        1b687dd0        1b688dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a8c550 11        1b688dd0        1b689dcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a8b5b0 10        1b689dd0        1b68adcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a8cc30  9        1b68add0        1b68bdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a78e60 11        1b68bdd0        1b68cdcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a7a350 10        1b68cdd0        1b68ddcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a87cd0  8        1b68ddd0        1b68edcf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24c3a0 11        1b68f1e0        1b68f3df             512 Private        READWRITE          
+ffff880dfc24a1e0 10        1b68f3e0        1b68f5df             512 Private        READWRITE          
+ffff880df15c5ca0  9        1b68f5e0        1b68f7df             512 Private        READWRITE          
+ffff880de6a87370 10        1b68f9f0        1b68fbef             512 Private        READWRITE          
+ffff880df7199770  7        1b68ff20        1b690f1f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3da380 10        1b690f20        1b694edf           16320 Private        READWRITE         WRITECOMBINE 
+ffff880df7f1acb0  9        1b694f20        1b69511f             512 Private        READWRITE          
+ffff880df1b4c270  8        1b695120        1b69611f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b4f330 10        1b696120        1b69631f             512 Private        READWRITE          
+ffff880df1b45650  9        1b696320        1b69651f             512 Private        READWRITE          
+ffff880df1b51950 10        1b696520        1b69671f             512 Private        READWRITE          
+ffff880dfc262d30  4        1b698720        1b69971f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de2739070 10        1b699720        1b69a6ef            2821 Private        READWRITE          
+ffff880de6a89e90  9        1b69a6f0        1b69b6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc245aa0  8        1b69b6f0        1b69c6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86ada00 10        1b69c6f0        1b69d6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de86b6c40  9        1b69d6f0        1b69e6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6a7ab20  7        1b69e6f0        1b69f6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df71b5100 10        1b69f6f0        1b6a06ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df71a4850  9        1b6a06f0        1b6a16ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df71aa5c0  8        1b6a16f0        1b6a26ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df71abc90 10        1b6a26f0        1b6a36ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b4bf00  9        1b6a36f0        1b6a46ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b3e990  6        1b6a46f0        1b6a56ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b417d0 10        1b6a56f0        1b6a66ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b47860  9        1b6a66f0        1b6a76ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b49840  8        1b6a76f0        1b6a86ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880de6fa2e30 10        1b6a86f0        1b6a96ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f5550  9        1b6a96f0        1b6aa6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880deaa792e0  7        1b6aa6f0        1b6ab6ef            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f19ea0 11        1b6ab6f0        1b6ab8ef             512 Private        READWRITE          
+ffff880df7f1c060 10        1b6ab8f0        1b6abaef             512 Private        READWRITE          
+ffff880df7f1c0b0  9        1b6abcf0        1b6abeef             512 Private        READWRITE          
+ffff880df7f1d820 10        1b6abef0        1b6ac0ef             512 Private        READWRITE          
+ffff880dfc24b130  8        1b6ac100        1b6ad0ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc24dfc0 10        1b6ad100        1b6ae0ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfc256260  9        1b6ae100        1b6af0ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df1b511d0 11        1b6af100        1b6b00ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ded43bee0 10        1b6b0100        1b6b10ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880deaa78cf0  5        1b6b1100        1b6b20ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dd36f5320 10        1b6b2100        1b6b30ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880ddbd8bc40  9        1b6b3100        1b6b40ff            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f1d050  8        1b6b48b0        1b6b4aaf             512 Private        READWRITE          
+ffff880df74e44e0  9        1b6b4b10        1b6b5b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e47b0 10        1b6b5b10        1b6b6b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e45d0  7        1b6b6b10        1b6b7b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74f0290 10        1b6b7b10        1b6b8b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df74e2960  9        1b6b8b10        1b6b9b0f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f1d5f0 11        1b6b9b10        1b6b9d0f             512 Private        READWRITE          
+ffff880df7f03920 10        1b6b9d10        1b6b9f0f             512 Private        READWRITE          
+ffff880df7f09050 11        1b6b9f10        1b6ba10f             512 Private        READWRITE          
+ffff880dfab9cc60  8        1b6ba2c0        1b6bb2bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab9d750 10        1b6bb2c0        1b6bc2bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab91db0  9        1b6bc2c0        1b6bd2bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab92260  6        1b6bd2c0        1b6be2bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab92210 12        1b6be2c0        1b6bf2bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab9b400 11        1b6bf2c0        1b6c02bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab9f140 10        1b6c02c0        1b6c12bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab87770 12        1b6c12c0        1b6c22bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dfab93b10 11        1b6c22c0        1b6c32bf            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f07200 12        1b6c32c0        1b6c34bf             512 Private        READWRITE          
+ffff880dfab972b0  9        1b6c3550        1b6c454f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f1c970 11        1b6c4550        1b6c554f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f098c0 10        1b6c8550        1b6c874f             512 Private        READWRITE          
+ffff880df7f09320  8        1b6c8750        1b6c974f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880df7f0c250 10        1b6ca750        1b6ca94f             512 Private        READWRITE          
+ffff880df7f0cb60  9        1b6cab50        1b6cad4f             512 Private        READWRITE          
+ffff880df7f10300 11        1b6cad50        1b6caf4f             512 Private        READWRITE          
+ffff880df7f0f5e0 10        1b6caf50        1b6cb14f             512 Private        READWRITE          
+ffff880df7f0f4f0 11        1b6cb350        1b6cb54f             512 Private        READWRITE          
+ffff880dff3da0b0  7        1b70b550        1b70f50f           16320 Private        READWRITE         WRITECOMBINE 
+ffff880dff3db730 11        1b70f510        1b710a6f            5472 Private        READWRITE         WRITECOMBINE 
+ffff880dff3dae70 10        1b710a70        1b712a1f            8112 Private        READWRITE         WRITECOMBINE 
+ffff880dff3ddb70 11        1b712a20        1b71809f           22144 Private        READWRITE         WRITECOMBINE 
+ffff880dff3dfd80  9        1b7180a0        1b71909f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3e0be0 10        1b7190a0        1b71a09f            4096 Private        READWRITE         WRITECOMBINE 
+ffff880dff3e1ae0  8        1b71b0a0        1b71d09f            4448 Private Rotate   READWRITE         WRITECOMBINE 
+ffff880dff3d0650 10        1b721860        1b722dbf            1296 Private        READWRITE         WRITECOMBINE 
+ffff880dff3d2b80 11        1b724390        1b7258ef             256 Private        READWRITE         WRITECOMBINE 
+ffff880df9789060  9       7ff4d40d0       7ff4d4250               0 Mapped         READONLY           \Windows\apppatch\DirectXApps.sdb
+ffff880defc402c0 10       7ff4d4260       7ff4d435f               0 Mapped         READONLY           Pagefile section, shared commit 0x5
+ffff880df71a8540  2       7ff4d4360       7ff5d437f               0 Private        READWRITE          
+ffff880df71a8d10  9       7ff5d4380       7ff5d6380               1 Private        READWRITE          
+ffff880df16380c0  8       7ff5d6390       7ff5d6390               0 Mapped         READONLY           Pagefile section, shared commit 0x1
+ffff880df162f7e0  7       7ff721930       7ff757392          183246 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\NBA2K27.exe
+ffff880df5427040 10       7ffc25040       7ffc2638d             215 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\epic_online_service\eossdk-win64-shipping.dll
+ffff880dfa5b64c0  9       7ffc26460       7ffc26500               2 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\oodle\oo2core_9_win64.dll
+ffff880df3926e60 10       7ffc265a0       7ffc291d3             380 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvrtum64.dll
+ffff880df9772860  8       7ffc291e0       7ffc2a03a              17 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvobjectloader64.dll
+ffff880df978f820  9       7ffc2a040       7ffc2a113               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvdiagclt64.dll
+ffff880df978c260  6       7ffc2a120       7ffc2a1ce               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvdxgdmal64.dll
+ffff880df9786c20  8       7ffc2a1d0       7ffc2ad16              54 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvcuda64.dll
+ffff880df9789a60  7       7ffc2bbb0       7ffc2bc93               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\D3DSCache.dll
+ffff880dfa5c6c80  9       7ffc2c2c0       7ffc2de2e              94 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\amd_fidelityfx_upscaler_dx12.dll
+ffff880df5408aa0  8       7ffc2de30       7ffc2def3               3 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\amd_fidelityfx_radiancecache_dx12.dll
+ffff880dfa5bee40  9       7ffc2df00       7ffc3053b              38 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\amd_fidelityfx_framegeneration_dx12.dll
+ffff880dfa5b9940  5       7ffc30540       7ffc31265              67 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\amd_fidelityfx_denoiser_dx12.dll
+ffff880decb5bb80  8       7ffc31270       7ffc3285c              14 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\libxess_fg.dll
+ffff880dfa5f33c0  7       7ffc32860       7ffc3729a              19 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\libxess.dll
+ffff880dfa5f2f60  9       7ffc372a0       7ffc372fd               4 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.reflex.dll
+ffff880dfa5ede20  8       7ffc37300       7ffc37419             188 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.nis.dll
+ffff880dfa5f5c60  9       7ffc37420       7ffc41261            4220 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\nvngx_dlssnr.dll
+ffff880dfa5d3a20  6       7ffc41270       7ffc419a4             196 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\nvngx_dlssg.dll
+ffff880df978eb00  8       7ffc419b0       7ffc45204           11936 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\nvngx_dlss.dll
+ffff880df977ef20  9       7ffc45210       7ffc45382              28 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\_nvngx.dll
+ffff880df976df40  7       7ffc45390       7ffc4546d              26 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.common.dll
+ffff880df977a380  8       7ffc45470       7ffc45934              36 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\dx12agility\d3d12sdklayers.dll
+ffff880df9777680  4       7ffc464d0       7ffc469a8              56 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\dx12agility\d3d12core.dll
+ffff880df97876c0  9       7ffc4e1a0       7ffc4e241               7 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.interposer.dll
+ffff880df542fc40  8       7ffc6af10       7ffc6af2f               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\XInput1_4.dll
+ffff880dfa5f5580  9       7ffc6cee0       7ffc6cf49               6 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\libxell.dll
+ffff880df9796620  7       7ffc6cf50       7ffc6cfe8               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\XAudio2_9.dll
+ffff880df9791580  8       7ffc6cff0       7ffc6d0c2               5 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\xaudio2_9redist.dll
+ffff880df9792340  6       7ffc6d1b0       7ffc6d48f             736 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\steamclient64.dll
+ffff880df976f700  9       7ffc6d490       7ffc6dbb6             937 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvppex.dll
+ffff880dfa5f1d40  8       7ffc75ac0       7ffc75b17               4 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.pcl.dll
+ffff880df5430280  9       7ffc79090       7ffc790f8               6 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\streamline\sl.dlss.dll
+ffff880df976e620  7       7ffc80710       7ffc8075f              15 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dinput8.dll
+ffff880df97913a0  8       7ffc80940       7ffc8098f               4 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\steam\steam_api64.dll
+ffff880dfa5ef9a0  9       7ffc89380       7ffc894ec              20 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\nvspcap64.dll
+ffff880df977dee0  5       7ffc8bf00       7ffc8bf8f               5 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\version.dll
+ffff880df978be00  9       7ffc904e0       7ffc9054a               5 Mapped  Exe    EXECUTE_WRITECOPY  \Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryBridge64.dll
+ffff880df977ede0  8       7ffc99840       7ffc99869               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DXGIDebug.dll
+ffff880dfa5c5e20  9       7ffc99970       7ffc9998a               3 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\oodle\oo2texrt_9_win64.dll
+ffff880df977ec00  7       7ffca0da0       7ffca0dc7               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\D3D12.dll
+ffff880df540c1a0  8       7ffca6e30       7ffca6e5b               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\nlansp_c.dll
+ffff880df540a9e0  6       7ffca7170       7ffca7187               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\winrnr.dll
+ffff880df978e560  8       7ffcaa7a0       7ffcaa7bc               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\NapiNSP.dll
+ffff880df978d200  7       7ffcaaa10       7ffcaaca7               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wininet.dll
+ffff880df977b6e0  8       7ffcaadb0       7ffcaadbb               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\vcruntime140_1.dll
+ffff880df97781c0  3       7ffcaadc0       7ffcaae5c               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\msvcp140.dll
+ffff880dfa5b8a40 10       7ffcaefb0       7ffcaefb7               2 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\amd_fidelityfx_loader_dx12.dll
+ffff880df5411100  9       7ffcaf190       7ffcaf19d               2 Mapped  Exe    EXECUTE_WRITECOPY  \GAMES\NBA 2K27\data\winpixeventruntime.dll
+ffff880df9788840  8       7ffcaf880       7ffcaf9c6               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\TextInputFramework.dll
+ffff880df976eda0 10       7ffcaf9e0       7ffcafbc7               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\InputHost.dll
+ffff880df9778300  9       7ffcb04e0       7ffcb050b               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\vcruntime140.dll
+ffff880df976f520 11       7ffcb09d0       7ffcb0e7a              13 Mapped  Exe    EXECUTE_WRITECOPY  \Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryAPI64.dll
+ffff880df391eee0 10       7ffcb0e80       7ffcb0f5a               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\webio.dll
+ffff880df977a880 11       7ffcb1190       7ffcb1249               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.8328_none_87eede957a2ccddd\comctl32.dll
+ffff880df9789100  7       7ffcb14a0       7ffcb1519               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\oleacc.dll
+ffff880dea2310e0 10       7ffcb4330       7ffcb437c              12 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ncryptsslp.dll
+ffff880df9784600  9       7ffcb4c20       7ffcb4cc3               7 Mapped  Exe    EXECUTE_WRITECOPY  \ProgramData\Microsoft\Windows Defender\Platform\4.18.26080.3-0\MpOAV.dll
+ffff880df977dc60  8       7ffcb4cd0       7ffcb4cf1               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\amsi.dll
+ffff880dfa5e3f60 10       7ffcb86e0       7ffcb8a43              11 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\Display.NvContainer\NvMessageBus.dll
+ffff880df9761100  9       7ffcb9820       7ffcb99db               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\AudioSes.dll
+ffff880df978c940  6       7ffcba070       7ffcba601             105 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvapi64_impl.dll
+ffff880df978e060  9       7ffcba650       7ffcba6d8               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\nvapi64.dll
+ffff880dfa5f0d00 10       7ffcbc990       7ffcc1f95            6390 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvwgf2umx.dll
+ffff880df977bb40  8       7ffcc2240       7ffcc2259               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wbem\wbemsvc.dll
+ffff880df977ce00  9       7ffcc22f0       7ffcc23e9               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wbem\fastprox.dll
+ffff880df5413c20 10       7ffcc2b20       7ffcc2b6a               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\deviceaccess.dll
+ffff880df97927a0  7       7ffcc2d40       7ffcc2d7a               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\winmm.dll
+ffff880dfa5ea220  9       7ffcc2da0       7ffcc2efa              18 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\NvMemMapStoragex.dll
+ffff880df9778d00  8       7ffcc2f00       7ffcc2f16               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wbem\wbemprox.dll
+ffff880df97788a0  5       7ffcc47d0       7ffcc484e              11 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wbemcomn.dll
+ffff880dfa5dc620  9       7ffcc4a20       7ffccb3c6             856 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvgpucomp64.dll
+ffff880df97961c0  8       7ffccb3d0       7ffccb479               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\MMDevAPI.dll
+ffff880df39201a0  9       7ffccb580       7ffccb60a               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\FWPUCLNT.DLL
+ffff880df540e400  7       7ffccb830       7ffccb84a               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wshbth.dll
+ffff880df975f760  8       7ffccbdd0       7ffccbdf1               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dhcpcsvc6.dll
+ffff880df9760b60  9       7ffccbef0       7ffccbf19               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dhcpcsvc.dll
+ffff880df977cf40  6       7ffccc500       7ffccc62e               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\winhttp.dll
+ffff880df54295c0 10       7ffccc7a0       7ffccc91e              12 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\drvstore.dll
+ffff880df54293e0  9       7ffccc960       7ffccc99f               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\cryptnet.dll
+ffff880df977c220 10       7ffccc9f0       7ffcccc44               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\twinapi.appcore.dll
+ffff880df9786a40  8       7ffccd640       7ffccd923               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\CoreUIComponents.dll
+ffff880df541a8e0  9       7ffccdc00       7ffccdc0f               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\avrt.dll
+ffff880df97963a0 10       7ffcce500       7ffcce5a5               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\taskschd.dll
+ffff880df9784f60  7       7ffccea30       7ffccea92               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\directxdatabasehelper.dll
+ffff880df9784920  9       7ffccf450       7ffccf462               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\winnsi.dll
+ffff880df9787260  8       7ffccfa10       7ffccfb7e               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\WinTypes.dll
+ffff880df5429660 10       7ffcd0450       7ffcd046e               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\Microsoft.Internal.WarpPal.dll
+ffff880df3922900  9       7ffcd11d0       7ffcd13f9              13 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dcomp.dll
+ffff880df976fe80 10       7ffcd1850       7ffcd197f               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\CoreMessaging.dll
+ffff880defc06c00  4       7ffcd1c80       7ffcd1d23               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\apphelp.dll
+ffff880df975d500  9       7ffcd1db0       7ffcd1e5c               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\uxtheme.dll
+ffff880df9782a80 10       7ffcd1e90       7ffcd1ed8               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DXCore.dll
+ffff880df977e8e0  8       7ffcd1ee0       7ffcd201f               9 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dxgi.dll
+ffff880df978faa0  9       7ffcd2040       7ffcd2073               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dwmapi.dll
+ffff880df97621e0 10       7ffcd21d0       7ffcd21e8               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ResourcePolicyClient.dll
+ffff880df9791120  7       7ffcd28a0       7ffcd3152              17 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\windows.storage.dll
+ffff880df977b140 10       7ffcd3160       7ffcd3173               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\hid.dll
+ffff880df977a7e0  9       7ffcd34f0       7ffcd3527               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\IPHLPAPI.DLL
+ffff880df540aa80  8       7ffcd3590       7ffcd36ec               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dnsapi.dll
+ffff880df540ac60 10       7ffcd3920       7ffcd39ea               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\schannel.dll
+ffff880df976a2a0  9       7ffcd3a50       7ffcd3a8d               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\rsaenh.dll
+ffff880df9780960 10       7ffcd3c00       7ffcd3c0f               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\version.dll
+ffff880dfa5dd200 11       7ffcd3c10       7ffcd3c21               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\secur32.dll
+ffff880df976ac00  6       7ffcd3d80       7ffcd3dcd               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\sspicli.dll
+ffff880df540a580 10       7ffcd3e60       7ffcd3e71               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dsparse.dll
+ffff880df540a3a0  9       7ffcd4060       7ffcd40d0               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\mswsock.dll
+ffff880df977a240  8       7ffcd40e0       7ffcd4109               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\gpapi.dll
+ffff880df9782120 10       7ffcd4110       7ffcd4148               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\userenv.dll
+ffff880df9769300  9       7ffcd42c0       7ffcd42d0               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\cryptbase.dll
+ffff880df978d480 10       7ffcd4380       7ffcd43ee               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wldp.dll
+ffff880df978d0c0  7       7ffcd4540       7ffcd4557               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\msasn1.dll
+ffff880df9779b60 10       7ffcd4610       7ffcd462f               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\kernel.appcore.dll
+ffff880df391e940  9       7ffcd4630       7ffcd463f               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\rasadhlp.dll
+ffff880dfa5bb4c0 10       7ffcd4680       7ffcd474d               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_436833bbb0f00476\nvldumdx.dll
+ffff880df975ac60  8       7ffcd47d0       7ffcd4817               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\xmllite.dll
+ffff880df977e160  9       7ffcd4f10       7ffcd4f53               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ntasn1.dll
+ffff880df977a420  5       7ffcd4f60       7ffcd4f94               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ncrypt.dll
+ffff880df977eb60 10       7ffcd5340       7ffcd5359               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\umpdc.dll
+ffff880df9787760  9       7ffcd5580       7ffcd55bf               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dbgcore.dll
+ffff880df5433340 11       7ffcd5650       7ffcd568a               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ntmarta.dll
+ffff880df977ea20 10       7ffcd5690       7ffcd56f2               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\powrprof.dll
+ffff880df978f280  8       7ffcd5700       7ffcd5950              41 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dbghelp.dll
+ffff880df97684a0 10       7ffcd5a80       7ffcd5a9f               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\cryptsp.dll
+ffff880df976a660  9       7ffcd5aa0       7ffcd5ad3               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\devobj.dll
+ffff880df978cbc0 10       7ffcd5ae0       7ffcd5b36               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\cfgmgr32.dll
+ffff880df391e120 11       7ffcd5b60       7ffcd5b6e               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\dpapi.dll
+ffff880df977b460  7       7ffcd5d50       7ffcd5d7e               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\bcrypt.dll
+ffff880df977d1c0 11       7ffcd5d80       7ffcd5dad               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\profapi.dll
+ffff880df1b38680 10       7ffcd5e50       7ffcd5e50               1 Private        EXECUTE_READWRITE  
+ffff880df978e100  9       7ffcd5e60       7ffcd5ee6               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\wintrust.dll
+ffff880defc3a820 10       7ffcd5ef0       7ffcd62f6              14 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\KernelBase.dll
+ffff880df977b8c0  8       7ffcd6300       7ffcd63a7              15 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\msvcp_win.dll
+ffff880df975d280 10       7ffcd6470       7ffcd6520               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\bcryptprimitives.dll
+ffff880df9778ee0  9       7ffcd6530       7ffcd665d               9 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\gdi32full.dll
+ffff880df977b0a0 10       7ffcd6660       7ffcd67e2              11 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\crypt32.dll
+ffff880defc090e0  6       7ffcd67f0       7ffcd6940               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ucrtbase.dll
+ffff880df97792a0 11       7ffcd6950       7ffcd697b               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\win32u.dll
+ffff880df9791bc0 10       7ffcd6980       7ffcd6a7f              10 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\SHCore.dll
+ffff880df540b660 11       7ffcd6a80       7ffcd6a8e               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\nsi.dll
+ffff880df9790e00  9       7ffcd6a90       7ffcd6a9c               2 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\psapi.dll
+ffff880df977c4a0 10       7ffcd6ab0       7ffcd724c              19 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\shell32.dll
+ffff880defc413a0 11       7ffcd73b0       7ffcd74cc               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\rpcrt4.dll
+ffff880defc36220  8       7ffcd74d0       7ffcd76a3               8 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\user32.dll
+ffff880df5425100 11       7ffcd7730       7ffcd788f               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\msctf.dll
+ffff880df977a560 10       7ffcd7890       7ffcd7950              11 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\advapi32.dll
+ffff880df977b280  9       7ffcd7960       7ffcd7a3d               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\oleaut32.dll
+ffff880df71a5070 11       7ffcd7a40       7ffcd7a40               1 Private        EXECUTE_READWRITE  
+ffff880defc3b180 10       7ffcd7b40       7ffcd7ec9              10 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\combase.dll
+ffff880df97757e0 11       7ffcd7ed0       7ffcd7ef4               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\imagehlp.dll
+ffff880defc39060  7       7ffcd80e0       7ffcd81af               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\kernel32.dll
+ffff880df9778760 10       7ffcd8240       7ffcd826f               4 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\gdi32.dll
+ffff880df977c720  9       7ffcd8270       7ffcd831d               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\msvcrt.dll
+ffff880df977e340 10       7ffcd8340       7ffcd8375               3 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\imm32.dll
+ffff880df977a2e0  8       7ffcd8380       7ffcd842d               7 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\sechost.dll
+ffff880df977ad80 11       7ffcd8430       7ffcd88bb              11 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\setupapi.dll
+ffff880df97918a0 10       7ffcd88c0       7ffcd892a               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\shlwapi.dll
+ffff880df9758460 11       7ffcd8930       7ffcd89e2               9 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\clbcatq.dll
+ffff880df977aa60  9       7ffcd89f0       7ffcd8a74               5 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ws2_32.dll
+ffff880df977c900 10       7ffcd8a80       7ffcd8c1e               6 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ole32.dll
+ffff880df1613f40 11       7ffcd8c60       7ffcd8ecb              19 Mapped  Exe    EXECUTE_WRITECOPY  \Windows\System32\ntdll.dll
+
+Total VADs: 1705, average level: 10, maximum depth: 12
+Total private commit: 0x10002d6e58 pages (274889816416 KB)
+Total shared commit:  0x496 pages (4696 KB)
+4: kd> dt nt!_OBJECT_NAME_INFORMATION poi(ffff880dfa2de0c0+350)
+   +0x000 Name             : _UNICODE_STRING "\Device\HarddiskVolume10\GAMES\NBA 2K27\NBA2K27.exe"
+4: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

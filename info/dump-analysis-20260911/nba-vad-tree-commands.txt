@@ -1,0 +1,4 @@
+.process /r /p ffff880dfa2de0c0
+!vad ffff880df719df00
+dt nt!_OBJECT_NAME_INFORMATION poi(ffff880dfa2de0c0+350)
+q
