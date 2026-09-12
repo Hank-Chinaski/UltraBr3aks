@@ -195,3 +195,51 @@ The next test should change one identified optional component, or compare a know
 NBA `steamclient64.dll` SHA256: `8D8338D378A5CC40F9A12C5C707237C58812AFEE6633D61BA15C5209AE3A0F41`. NBA `mod.exe` SHA256: `5F665347DFA96AD0859975657FDBB216739B785BBE3842AF080473A5774CFB36`. These are locally recorded identities, not matches to an independently verified package manifest.
 
 Remaining provenance question: whether Bryan added any updates, patches or mods after installing this package, or is running it exactly as supplied. No executable was launched and no game file was changed during these checks.
+
+## September 12: package verification completed; native-rendering test prepared
+
+**Confirmed fact, user-reported:** Bryan states that no updates, patches or mods were added; the installation is exactly as the installer supplied it. This resolves the preceding provenance question about later user additions.
+
+**Confirmed fact:** The supplied checksum list was found at `D:\GAMES\NBA 2K27\_Redist\fitgirl.md5`. PowerShell's `Get-FileHash` verified all **177 valid MD5 entries**, covering **110,103,485,295 bytes (102.5 GiB)**, in 295 seconds. All 177 matched, including `NBA2K27.exe`, `version.dll`, `mod.exe`, `steamclient64.dll`, rendering libraries and the listed game-data archives. There were zero missing files, read errors, mismatches or detected file changes during the individual reads. The manifest SHA256 before/after was identical: `250590DA91C18AE75286901DD99F8663C9A142E5B428692D20B80C5FC1C0E0B1`.
+
+Line 62 is not an MD5 entry and was retained as unverified instead of interpreted as a path. No bundled verification executable was run. This is consistency with the supplied list, not independent authentication of the package, proof of correct game code, or a storage hardware certification.
+
+Results: `C:\Users\PIZZAOVEN\Documents\CrashDiagnostics\NBA-FileVerification\20260912-021644-474\summary.json` and `file-results.csv`. Read-only verifier: [Verify-NBA-Package.ps1](Verify-NBA-Package.ps1). Its initial strict parse stopped at the malformed line before any game-file changes; the successful run explicitly reported the skipped line.
+
+**Supported inference:** Ordinary installation/extraction discrepancies among the 177 covered files are now disfavored. There is no checksum basis for reinstalling or individually replacing these files.
+
+**Confirmed fact:** Existing `C:\Users\PIZZAOVEN\AppData\Local\2K Sports\NBA 2K27\VideoSettings.cfg` (last written during the September 11 incident at 19:03:12) recorded:
+
+- `RESOLUTION_SCALING_TECHNIQUE=2` and `SCALING_QUALITY=3`: NVIDIA DLSS Performance, per the same folder's `VideoSettingsHelp.txt`.
+- `FRAME_GENERATION_ENABLED=false`.
+- `CONTROLLER_USE_GAMEINPUT=false`.
+- `LATENCY_REDUCTION_METHOD=2`: NVIDIA Reflex Low Latency, without Boost, per the help text.
+- Resolution 2560x1440, `VSYNC=0`, `ALLOW_GPU_UPLOAD_HEAPS=false`.
+
+The NBA VAD tree separately confirms mapped DLSS/Streamline images. A mapped image alone does not prove which feature was active; the saved configuration supplies the relevant setting evidence here. Frame generation and GameInput were already configured off, so proposing to disable either would not establish a new comparison.
+
+### Single controlled change now prepared
+
+**Open hypothesis:** NBA's enabled DLSS/upscaling path participates in triggering the recurring failure. No prior comparison with this setting disabled is documented.
+
+At **2026-09-12 02:23:39 PDT**, with `NBA2K27.exe` confirmed closed, changed only `RESOLUTION_SCALING_TECHNIQUE` from **2 (DLSS)** to **0 (Native)**. All other configuration values were compared and preserved. The written file was read back and verified. The game was not launched. No test outcome is available yet.
+
+Exact original configuration and help text are preserved under:
+
+`C:\Users\PIZZAOVEN\Documents\CrashDiagnostics\NBA-DLSS-Test\20260912-022339-080\`
+
+Files: `VideoSettings.before.cfg`, `VideoSettingsHelp.txt`, `test-state.json`.
+
+**Predictions:** If enabled DLSS participates, the usual gameplay/menu-idle scenario may become stable. A single successful session is provisional and changes in rendering workload prevent attribution to a particular DLL. If the same system crash recurs with Native confirmed active, enabled DLSS is not required for that recurrence; it does not clear all NVIDIA components or the graphics stack.
+
+**Risk and rollback:** Native rendering can increase GPU workload and reduce FPS, and another system crash remains possible. Restore `VideoSettings.before.cfg` with the game closed to reverse this one test. [Restore-NBA-DLSS.ps1](Restore-NBA-DLSS.ps1) restores that exact backup and verifies its SHA256; it has been prepared, not executed. It restores the entire pre-test configuration, so use it before making unrelated game-setting changes.
+
+**Next observation:** Bryan can launch NBA by the usual method and try a session including gameplay and menu idle, aiming for about 45-60 minutes if convenient. Record the elapsed time and whether a system crash or only a game exit occurs. Stop at the first recurrence; preserve the next dump before another reproduction. No BIOS, driver, cache or other setting changes should be combined with this comparison.
+
+## Native-rendering test result
+
+The test subsequently crashed after about 10-15 minutes; the saved Native setting was verified. Bryan preserved a readable full copy as `C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-0x154.dmp`, now analyzed directly. Its internal crash time is **September 12 at 04:23:52.223 PDT**, with `0x154`, an original `c0000006` exception and lower status `c000000e` while `nt!RtlDecompressBufferLz4+0xb0` read source memory in the MemCompression context. The owning thread belongs to svchost.exe. This independently confirms a failed in-page operation in the latest incident.
+
+During the session P: repeatedly disconnected/reconnected. Partition/Diagnostic records correlate its partition identity with a SanDisk Extreme 55AE 4 TB device. Its final zero-capacity transition at **04:18:52.164** precedes the internal bugcheck time by **5 minutes and 0.059 seconds**, corroborating Bryan's reported interval after unplugging. The dump lists C: pagefile/swapfile and no P: paging file. Missing page-table data prevents precise mapping of the failed memory-store source page to a paging slot and request/device stack. This timeline does not establish whether P: initiated a persistent disruption, shares an underlying cause, or was incidental.
+
+See [the complete new dump analysis, limits and preserved event evidence](native-crash-20260912/FINDINGS.md). Disabling DLSS is falsified as a sufficient fix; no improvement in stability or new root cause is established. The proposed next single comparison keeps P: absent from a fresh Windows session while retaining Native rendering and the other current settings. No further game or system setting was changed during this dump analysis.

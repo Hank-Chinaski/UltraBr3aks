@@ -1,0 +1,6 @@
+!analyze -v
+.bugcheck
+dq fffffc8bec01dd70 L2
+!blackboxntfs
+!blackboxpnp
+q

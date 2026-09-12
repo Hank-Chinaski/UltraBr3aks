@@ -1,0 +1,263 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\native-crash-20260912\analysis-pass2.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Native-20260912-0x154.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff802`c7000000 PsLoadedModuleList = 0xfffff802`c7ef5410
+Debug session time: Sat Sep 12 04:23:52.223 2026 (UTC - 7:00)
+System Uptime: 0 days 9:17:40.829
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+...........................
+Loading User Symbols
+PEB address is NULL !
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+17: kd> !thread ffffe70fa7e27080 1f
+Setting context for owner process....process /p /r ffffe70f541ef040
+                                     THREAD ffffe70fa7e27080  Cid 8470.8578  Teb: 000000b155b80000 Win32Thread: 0000000000000000 RUNNING on processor 17
+Not impersonating
+Owning Process            ffffe70f7fbc50c0       Image:         svchost.exe
+Attached Process          ffffe70f541ef040       Image:         MemCompression
+Wait Start TickCount      2141493        Ticks: 0
+Context Switch Count      68             IdealProcessor: 19             
+UserTime                  00:00:00.000
+KernelTime                00:00:00.000
+Win32 Start Address 0x00007ffc1eafa2e0
+Stack Init fffffc8bec01fbb0 Current fffffc8bec01f360
+Base fffffc8bec020000 Limit fffffc8bec019000 Call 0000000000000000
+Priority 10  BasePriority 8  Decay Boost 1  Unusual Boost 10  IoPriority 2  PagePriority 5
+Child-SP          RetAddr               Call Site
+fffffc8b`ec01dcb8 fffff802`c760ad96     nt!KeBugCheckEx
+fffffc8b`ec01dcc0 fffff802`c76cfb92     nt!SMKM_STORE<SM_TRAITS>::SmStUnhandledExceptionFilter+0x7e
+fffffc8b`ec01dd10 fffff802`c74fcf7c     nt!`SMKM_STORE<SM_TRAITS>::SmStDirectReadIssue'::`1'::filt$0+0x22
+fffffc8b`ec01dd40 fffff802`c76b7ccf     nt!_C_specific_handler+0x9c
+fffffc8b`ec01ddb0 fffff802`c72b4e67     nt!RtlpExecuteHandlerForException+0xf
+fffffc8b`ec01dde0 fffff802`c73eb132     nt!RtlDispatchException+0x347
+fffffc8b`ec01e550 fffff802`c76c2845     nt!KiDispatchException+0x372
+fffffc8b`ec01ec30 fffff802`c76bd982     nt!KiExceptionDispatch+0x145
+fffffc8b`ec01ee10 fffff802`c73b1ba0     nt!KiPageFault+0x442 (TrapFrame @ fffffc8b`ec01ee10)
+fffffc8b`ec01efa0 fffff802`c73b19d5     nt!RtlDecompressBufferLz4+0xb0
+fffffc8b`ec01eff0 fffff802`c723416a     nt!SmStoreDecompressBuffer+0x99
+fffffc8b`ec01f0f0 fffff802`c7233fa3     nt!ST_STORE<SM_TRAITS>::StDmSinglePageCopy+0x156
+fffffc8b`ec01f180 fffff802`c74308cd     nt!ST_STORE<SM_TRAITS>::StDmSinglePageTransfer+0x83
+fffffc8b`ec01f1c0 fffff802`c74300aa     nt!ST_STORE<SM_TRAITS>::StDmpSinglePageRetrieve+0x60d
+fffffc8b`ec01f270 fffff802`c73d50bf     nt!ST_STORE<SM_TRAITS>::StDmPageRetrieve+0x13a
+fffffc8b`ec01f330 fffff802`c73d4fbb     nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadIssue+0x7b
+fffffc8b`ec01f3b0 fffff802`c72bad87     nt!SMKM_STORE<SM_TRAITS>::SmStDirectReadCallout+0x2b
+fffffc8b`ec01f3e0 fffff802`c72bae4d     nt!KeExpandKernelStackAndCalloutInternal+0xb7
+fffffc8b`ec01f450 fffff802`c73d376f     nt!KeExpandKernelStackAndCalloutEx+0x1d
+fffffc8b`ec01f490 fffff802`c7233cb8     nt!SMKM_STORE<SM_TRAITS>::SmStDirectRead+0xcf
+fffffc8b`ec01f560 fffff802`c7233a75     nt!SMKM_STORE<SM_TRAITS>::SmStWorkItemQueue+0x1b4
+fffffc8b`ec01f5b0 fffff802`c72336f4     nt!SmWorkItemQueue+0x9
+fffffc8b`ec01f5e0 fffff802`c73cda93     nt!SMKM_STORE_MGR<SM_TRAITS>::SmIoCtxQueueWork+0x1e4
+fffffc8b`ec01f6a0 fffff802`c73cd952     nt!SMKM_STORE_MGR<SM_TRAITS>::SmPageRead+0x133
+fffffc8b`ec01f720 fffff802`c73709be     nt!SmPageRead+0x22
+fffffc8b`ec01f760 fffff802`c736f905     nt!MiIssueHardFaultIo+0x92
+fffffc8b`ec01f7b0 fffff802`c7296014     nt!MiIssueHardFault+0x251
+fffffc8b`ec01f8b0 fffff802`c76bd8cb     nt!MmAccessFault+0x474
+fffffc8b`ec01fa20 00007ffc`14b9b7be     nt!KiPageFault+0x38b (TrapFrame @ fffffc8b`ec01fa20)
+000000b1`55cff4c0 00000000`00000000     0x00007ffc`14b9b7be
+
+.process /p /r 0
+17: kd> !vm 1
+Virtual Store Paging File
+  Current:  30670848 Kb  Free Space:  21659496 Kb
+  Minimum:   1048576 Kb  Maximum:     31457280 Kb
+Page File: \??\C:\pagefile.sys
+  Current:  66858912 Kb  Free Space:  66719072 Kb
+  Minimum:  66858912 Kb  Maximum:    201326592 Kb
+Page File: \??\C:\swapfile.sys
+  Current:     16384 Kb  Free Space:     16376 Kb
+  Minimum:     16384 Kb  Maximum:    100288368 Kb
+
+Physical Memory:         16714728 (   66858912 Kb)
+Available Pages:          9463848 (   37855392 Kb)
+ResAvail Pages:          15389065 (   61556260 Kb)
+Locked IO Pages:                0 (          0 Kb)
+Free System PTEs:         2091247 (    8364988 Kb)
+Modified Pages:             40145 (     160580 Kb)
+Modified PF Pages:          39612 (     158448 Kb)
+Modified No Write Pages:        1 (          4 Kb)
+NonPagedPool Usage:          6420 (      25680 Kb)
+NonPagedPoolNx Usage:      323957 (    1295828 Kb)
+NonPagedPool Max:      4294967296 (17179869184 Kb)
+PagedPool Usage:           422631 (    1690524 Kb)
+PagedPool Maximum:     4294967296 (17179869184 Kb)
+Processor Commit:            5923 (      23692 Kb)
+Shared Commit:             566978 (    2267912 Kb)
+Kernel Stacks:              56454 (     225816 Kb)
+Pages For MDLs:            156132 (     624528 Kb)
+ContigMem Pages:            46673 (     186692 Kb)
+Partition Pages:                0 (          0 Kb)
+Pages For AWE:                  0 (          0 Kb)
+NonPagedPool Commit:       401565 (    1606260 Kb)
+PagedPool Commit:          422641 (    1690564 Kb)
+Driver Commit:              53303 (     213212 Kb)
+Boot Commit:                 3798 (      15192 Kb)
+PFN Array Commit:          196909 (     787636 Kb)
+SmallNonPagedPtesCommit:     4339 (      17356 Kb)
+SlabAllocatorPages:          5632 (      22528 Kb)
+SkPagesInUnchargedSlabs:    48076 (     192304 Kb)
+CrossPartitionCommit:           0 (          0 Kb)
+System PageTables:          17731 (      70924 Kb)
+ProcessLockedFilePages:       387 (       1548 Kb)
+Pagefile Hash Pages:           67 (        268 Kb)
+Sum System Commit:        1980976 (    7923904 Kb)
+Total Private:            9446765 (   37787060 Kb)
+Misc/Transient Commit:       1187 (       4748 Kb)
+Committed pages:         11428928 (   45715712 Kb)
+Commit limit:            33429456 (  133717824 Kb)
+17: kd> !pte 000001719f5902c0
+                                           VA 000001719f5902c0
+PXE at FFFFF97CBE5F2010    PPE at FFFFF97CBE402E30    PDE at FFFFF97C805C67D0    PTE at FFFFF900B8CFAC80
+Page e06148 not present in the dump file. Type ".hh dbgerr004" for details
+Unable to get PXE FFFFF97CBE402E30
+17: kd> !vad 000001719f5902c0 1
+
+VAD @ ffffe70f76604a00
+  Start VPN             1719f590  End VPN         1719f5af  Control Area  0000000000000000
+  FirstProtoPte 0000000000000000  LastPte 0000000000000000  Commit Charge        7fffffffe (0n34359738366)
+  Extend                0
+
+      ViewUnmap NoChange MemCommit PrivateMemory READONLY          
+
+17: kd> dt nt!_MMPAGING_FILE
+   +0x000 Size             : Uint4B
+   +0x004 MaximumSize      : Uint4B
+   +0x008 MinimumSize      : Uint4B
+   +0x00c FreeSpace        : Uint4B
+   +0x010 PeakUsage        : Uint4B
+   +0x014 FreeReservationSpace : Uint4B
+   +0x018 File             : Ptr64 _FILE_OBJECT
+   +0x020 Entry            : Ptr64 Ptr64 _MMMOD_WRITER_MDL_ENTRY
+   +0x028 NumberOfModWriterEntries : Uint4B
+   +0x030 PfnsToFree       : _SLIST_HEADER
+   +0x040 PageFileName     : _UNICODE_STRING
+   +0x050 Bitmaps          : Ptr64 _MI_PAGING_FILE_SPACE_BITMAPS
+   +0x058 AllocationBitmapHint : Uint4B
+   +0x05c LargestAllocationCluster : Uint4B
+   +0x060 RefreshAllocationCluster : Uint4B
+   +0x064 LastRefreshAllocationCluster : Uint4B
+   +0x068 ReservedClusterSizeAggregate : Uint4B
+   +0x068 ToBeEvictedHint  : Uint4B
+   +0x06c MaximumRunLengthInBitmaps : Uint4B
+   +0x070 BitmapsCacheLengthTree : _RTL_RB_TREE
+   +0x080 BitmapsCacheLocationTree : _RTL_RB_TREE
+   +0x090 BitmapsCacheFreeList : _LIST_ENTRY
+   +0x0a0 BitmapsCacheEntries : Ptr64 _MI_PAGEFILE_BITMAPS_CACHE_ENTRY
+   +0x0a8 ToBeEvictedCount : Uint4B
+   +0x0a8 HybridPriority   : Uint4B
+   +0x0ac PageFileNumber   : Pos 0, 4 Bits
+   +0x0ac WsSwapPagefile   : Pos 4, 1 Bit
+   +0x0ac NoReservations   : Pos 5, 1 Bit
+   +0x0ac VirtualStorePagefile : Pos 6, 1 Bit
+   +0x0ac SwapSupported    : Pos 7, 1 Bit
+   +0x0ac NodeInserted     : Pos 8, 1 Bit
+   +0x0ac StackNotified    : Pos 9, 1 Bit
+   +0x0ac BackedBySCM      : Pos 10, 1 Bit
+   +0x0ac SpecialPurposeMemory : Pos 11, 1 Bit
+   +0x0ac Spare0           : Pos 12, 3 Bits
+   +0x0ae AdriftMdls       : Pos 0, 1 Bit
+   +0x0ae Spare1           : Pos 1, 7 Bits
+   +0x0af IgnoreReservations : Pos 0, 1 Bit
+   +0x0af Spare2           : Pos 1, 7 Bits
+   +0x0b0 PageHashPages    : Uint4B
+   +0x0b4 PageHashPagesPeak : Uint4B
+   +0x0b8 PageHash         : Ptr64 _MI_PAGE_HASH
+   +0x0c0 FileHandle       : Ptr64 Void
+   +0x0c8 SpinLock         : Int4B
+   +0x0d0 FlowThroughReadRoot : _RTL_AVL_TREE
+   +0x0d8 Partition        : Ptr64 _MI_PARTITION
+   +0x0e0 FileObjectNode   : _RTL_BALANCED_NODE
+   +0x0e0 ExtentsTree      : _RTL_RB_TREE
+17: kd> dx nt!MmPagingFile
+Error: Unable to bind name 'MmPagingFile'
+17: kd> !process 0 0 MemCompression
+PROCESS ffffe70f541ef040
+    SessionId: none  Cid: 12ec    Peb: 00000000  ParentCid: 0004
+    DirBase: 1b6d3e000  ObjectTable: ffffc003c7b247c0  HandleCount:   0.
+    Image: MemCompression
+
+17: kd> .exr fffffc8bec01ed68
+ExceptionAddress: fffff802c73b1ba0 (nt!RtlDecompressBufferLz4+0x00000000000000b0)
+   ExceptionCode: c0000006 (In-page I/O error)
+  ExceptionFlags: 00000000
+NumberParameters: 3
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 000001719f5902c0
+   Parameter[2]: 00000000c000000e
+Inpage operation failed at 000001719f5902c0, due to I/O error 00000000c000000e
+17: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

@@ -1,0 +1,7 @@
+.process /p ffffe70f541ef040
+!pte 000001719f5902c0
+!vad 000001719f5902c0 1
+dx nt!MiSystemPartition
+dt nt!_MI_PARTITION_PAGEFILE_INFORMATION
+x nt!*PagingFile*
+q

@@ -1,0 +1,79 @@
+﻿[
+    {
+        "Time":  "2026-09-12T04:16:49.6650996-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "0",
+        "Partitions":  "0",
+        "UserRemovalPolicy":  "false",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  false
+    },
+    {
+        "Time":  "2026-09-12T04:16:51.7811768-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "4000753467904",
+        "Partitions":  "2",
+        "UserRemovalPolicy":  "true",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  true
+    },
+    {
+        "Time":  "2026-09-12T04:18:25.6169211-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "0",
+        "Partitions":  "0",
+        "UserRemovalPolicy":  "false",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  false
+    },
+    {
+        "Time":  "2026-09-12T04:18:26.6781646-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "4000753467904",
+        "Partitions":  "2",
+        "UserRemovalPolicy":  "true",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  true
+    },
+    {
+        "Time":  "2026-09-12T04:18:40.6237140-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "0",
+        "Partitions":  "0",
+        "UserRemovalPolicy":  "false",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  false
+    },
+    {
+        "Time":  "2026-09-12T04:18:41.6822436-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "4000753467904",
+        "Partitions":  "2",
+        "UserRemovalPolicy":  "true",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  true
+    },
+    {
+        "Time":  "2026-09-12T04:18:52.1636713-07:00",
+        "Model":  "Extreme 55AE",
+        "Serial":  "2343GD400848",
+        "Capacity":  "0",
+        "Partitions":  "0",
+        "UserRemovalPolicy":  "true",
+        "DiskId":  "{7fa19611-d4eb-a3df-a322-096c19a0df9f}",
+        "ParentId":  "USB\\VID_0781\u0026PID_55AE\\MSFT30323334334744343030383438",
+        "PPartitionGuidFound":  false
+    }
+]

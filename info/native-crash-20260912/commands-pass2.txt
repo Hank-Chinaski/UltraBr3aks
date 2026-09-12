@@ -1,0 +1,9 @@
+!thread ffffe70fa7e27080 1f
+!vm 1
+!pte 000001719f5902c0
+!vad 000001719f5902c0 1
+dt nt!_MMPAGING_FILE
+dx nt!MmPagingFile
+!process 0 0 MemCompression
+.exr fffffc8bec01ed68
+q
