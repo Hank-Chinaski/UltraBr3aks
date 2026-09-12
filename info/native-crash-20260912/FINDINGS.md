@@ -75,7 +75,7 @@ The already-enabled Partition/Diagnostic log contained the records above, preser
 
 The readable full copy has now been preserved and analyzed. It establishes the actual crash time and original exception; the failed page's missing translation data limits a complete device trace, as detailed below.
 
-After dump review, the proposed next comparison is this specific SanDisk absent from the start of a fresh Windows session. This differs from unplugging it midway through a run. The current reboot and absent-device enumeration already provide that starting state if P: has remained disconnected. Keep Native rendering and every other test setting constant. Play the usual NBA scenario, including menu idle, for 45-60 minutes if it remains stable; stop at the first recurrence. A recurrence would show that P:'s presence during that fresh session is unnecessary; stability would remain provisional. The known risk is another system crash with unsaved work lost, and temporary loss of access to P:'s files. Rollback is reconnecting the same device after the comparison with the game closed. This test has been proposed, not run by the assistant.
+The earlier proposal was a comparison with this specific SanDisk absent from the start of a fresh Windows session. It was not run by the assistant. Bryan subsequently challenged prioritizing the five-minute USB-event association over the precise game action when the freeze occurred. The next investigation priority is now the second-quarter transition/inbound comparison below. The P: timeline is retained as an unresolved observation and does not establish a leading causal explanation.
 
 ## Full dump analysis after Bryan made the copy
 
@@ -115,3 +115,17 @@ The decompression routine could not read its source memory. This is an in-page I
 **Falsified as a sufficient fix:** Native rendering did not stop the system-level in-page failures. The longer single session does not establish an improvement in stability.
 
 Analysis logs: [initial exception and crash time](analysis-pass1.txt), [thread ownership and paging inventory](analysis-pass2.txt), [explicit MemCompression-context check](analysis-pass3.txt), and [direct translation check](analysis-pass5.txt). Pass 4 used a frame-number form that this debugger interpreted as a directory address; that failed probe is superseded by the full directory-base check in pass 5. All debugger work was offline against the copy. No Windows, driver, BIOS, pagefile or game setting was changed in this follow-up.
+
+## Revised priority: the first inbound of the second quarter
+
+**Confirmed fact, user-reported:** Bryan specifies that the freeze occurred immediately as he passed the ball inbounds after the first-quarter recap, before the second-quarter game clock began advancing. This precise observed game action should be preserved separately from the total 10-15 minutes elapsed and the P: timeline.
+
+**Open hypothesis:** The return from the recap to live play, or the first inbound action, triggers activity involved in the failure. This is the next reproduction target. The kernel dump does not identify the corresponding NBA game state or prove that the button press initiated the failed I/O. Earlier menu/idle failures mean this particular transition is not established as necessary for all incidents.
+
+**Evidence check:** A read-only listing of the local NBA settings directory found the existing video configuration/help and PSO cache files. A filename search for `.log`, `.dmp`, `*crash*` and `.txt` under the NBA installation returned license texts and no gameplay diagnostic log. This limited search does not exclude logs elsewhere or files with other formats. No game was launched and no cache, configuration, executable or device was changed.
+
+**Proposed single comparison:** If the current mode permits it, replay the same mode and matchup with only the quarter length shortened to the shortest supported setting. Record the original quarter length first. Keep Native rendering and the other current conditions unchanged. Observe the first inbound after the first-quarter recap; stop at the first crash. If quarter length is fixed in that mode, repeat the same sequence unchanged to establish whether the action is reproducible, without substituting another mode.
+
+**Predictions and limits:** A freeze at the same action substantially earlier in real elapsed time would strengthen an association with the game transition/action. Passing that point weakens its repeatability in the shortened-quarter condition; a later crash would help distinguish transition from elapsed-time explanations. Neither outcome alone identifies the faulty component, and shortening quarters can also affect accumulated game activity. Existing evidence records this precise freeze point once, so its repeatability is not already answered.
+
+**Risk and rollback:** Another system crash can lose unsaved work; save open work before testing. Restore the original quarter length afterward. This replaces the broad 45-60-minute P:-absence test as the immediate proposal. The proposed comparison has not been executed by the assistant.
