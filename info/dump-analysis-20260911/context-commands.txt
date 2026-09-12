@@ -1,0 +1,9 @@
+!devnode ffff880dce979b20 1
+.process /r /p ffff880de19a7080
+u winsrvext!GetHardErrorText L35
+dps 0000000971cfebf0 L80
+.process /r /p ffff880dfa2de0c0
+!process ffff880dfa2de0c0 1
+lm u
+lmv m NBA2K27
+q

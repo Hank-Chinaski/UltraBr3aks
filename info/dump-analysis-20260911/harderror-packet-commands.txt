@@ -1,0 +1,7 @@
+.process /r /p ffff880dc76db040
+.thread ffff880dc772f400
+.frame /r a
+dq ffff880e01c939d0 L8
+dt nt!_UNICODE_STRING ffff880e01c939e8
+du poi(ffff880e01c939f0) L100
+q

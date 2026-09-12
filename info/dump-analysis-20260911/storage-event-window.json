@@ -1,0 +1,170 @@
+﻿[
+    {
+        "TimeCreated":  "\/Date(1789178790945)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume \\\\?\\Volume{53ebea8c-a069-4a67-b3e0-ad94e7e433ee} (\\Device\\HarddiskVolume15) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178781555)\/",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Id":  219,
+        "LevelDisplayName":  "Warning",
+        "Message":  "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: ROOT\\SYSTEM\\0003\r\nStatus: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178781489)\/",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Id":  219,
+        "LevelDisplayName":  "Warning",
+        "Message":  "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: PCI\\VEN_8086\u0026DEV_1137\u0026SUBSYS_104387F6\u0026REV_00\\ABD971388BB7D00000\r\nStatus: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178781378)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume \\\\?\\Volume{23a368f8-3b5e-4728-8164-f6ca2df151a7} (\\Device\\HarddiskVolume4) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178781354)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume F: (\\Device\\HarddiskVolume11) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178781164)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume \\\\?\\Volume{94997d7e-31c7-413e-a6a2-05bc1324ac99} (\\Device\\HarddiskVolume8) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178777471)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume D: (\\Device\\HarddiskVolume10) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178776942)\/",
+        "ProviderName":  "volmgr",
+        "Id":  162,
+        "LevelDisplayName":  "Error",
+        "Message":  "Dump file generation succeded."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178776913)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume E: (\\Device\\HarddiskVolume7) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178776726)\/",
+        "ProviderName":  "volmgr",
+        "Id":  161,
+        "LevelDisplayName":  "Error",
+        "Message":  "Dump file creation failed due to error during dump creation. BugCheckProgress was: 0x00020004"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178776471)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume C: (\\Device\\HarddiskVolume3) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178774408)\/",
+        "ProviderName":  "secnvme",
+        "Id":  11,
+        "LevelDisplayName":  "Information",
+        "Message":  "Physical Device 0x144d Samsung SSD 960 PRO 2TB is on-line"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178535869)\/",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Id":  219,
+        "LevelDisplayName":  "Warning",
+        "Message":  "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: HID\\VID_17A0\u0026PID_0310\u0026MI_03\u0026Col02\\8\u0026382250cf\u00260\u00260001\r\nStatus: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178529968)\/",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Id":  219,
+        "LevelDisplayName":  "Warning",
+        "Message":  "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: ROOT\\SYSTEM\\0003\r\nStatus: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178529884)\/",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Id":  219,
+        "LevelDisplayName":  "Warning",
+        "Message":  "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: PCI\\VEN_8086\u0026DEV_1137\u0026SUBSYS_104387F6\u0026REV_00\\ABD971388BB7D00000\r\nStatus: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178529708)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume \\\\?\\Volume{23a368f8-3b5e-4728-8164-f6ca2df151a7} (\\Device\\HarddiskVolume4) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178529684)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume F: (\\Device\\HarddiskVolume11) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178529502)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume \\\\?\\Volume{94997d7e-31c7-413e-a6a2-05bc1324ac99} (\\Device\\HarddiskVolume8) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178525516)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume D: (\\Device\\HarddiskVolume10) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178525015)\/",
+        "ProviderName":  "volmgr",
+        "Id":  161,
+        "LevelDisplayName":  "Error",
+        "Message":  "Dump file creation failed due to error during dump creation. BugCheckProgress was: 000000000100000000000000A10004C00000000004001AC000000000000000000000000000000000"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178524977)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume E: (\\Device\\HarddiskVolume7) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178524843)\/",
+        "ProviderName":  "volmgr",
+        "Id":  161,
+        "LevelDisplayName":  "Error",
+        "Message":  "Dump file creation failed due to error during dump creation. BugCheckProgress was: 0x00000052"
+    },
+    {
+        "TimeCreated":  "\/Date(1789178524599)\/",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Id":  98,
+        "LevelDisplayName":  "Information",
+        "Message":  "Volume C: (\\Device\\HarddiskVolume3) is healthy.  No action is needed."
+    },
+    {
+        "TimeCreated":  "\/Date(1789178523395)\/",
+        "ProviderName":  "secnvme",
+        "Id":  11,
+        "LevelDisplayName":  "Information",
+        "Message":  "Physical Device 0x144d Samsung SSD 960 PRO 2TB is on-line"
+    }
+]

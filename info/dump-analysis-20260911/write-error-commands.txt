@@ -1,0 +1,10 @@
+.process /r /p ffff880dc76db040
+.thread ffff880dc772f400
+kn
+.frame /r d
+u nt!IopHardErrorThread L60
+dps ffff9f8464470950 L20
+dt nt!_IO_WORKITEM ffff880e01c939e8
+!fileobj ffff880dfc99b600
+dt nt!_FILE_OBJECT ffff880dfc99b600
+q

@@ -3,7 +3,7 @@
 Response                         Time (ms)     Location
 OK                                             C:\ProgramData\dbg\sym
 Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
-Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\device-trace.txt'
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\additional-writes.txt'
 
 ************* Preparing the environment for Debugger Extensions Gallery repositories **************
    ExtensionRepository : Implicit
@@ -21,7 +21,7 @@ Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\device-trace.txt'
 
 ************* Waiting for Debugger Extensions Gallery to Initialize **************
 
->>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.000 seconds
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
    ----> Repository : UserExtensions, Enabled: true, Packages count: 0
    ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
 
@@ -71,51 +71,58 @@ PEB is paged out (Peb.Ldr = 00000009`71130018).  Type ".hh dbgerr001" for detail
 Loading unloaded module list
 ..................................................
 For analysis of this file, run !analyze -v
-4: kd> dt nt!_VPB ffff880dd3237a00
-   +0x000 Type             : 0n10
-   +0x002 Size             : 0n96
-   +0x004 Flags            : 1
-   +0x006 VolumeLabelLength : 0xc
-   +0x008 DeviceObject     : 0xffff880d`d337d030 _DEVICE_OBJECT
-   +0x010 RealDevice       : 0xffff880d`d1fa38f0 _DEVICE_OBJECT
-   +0x018 SerialNumber     : 0xeef90d57
-   +0x01c ReferenceCount   : 0xf2eb
-   +0x020 VolumeLabel      : [32]  "CooCoo"
-4: kd> !devobj ffff880dd1fa38f0
-Device object (ffff880dd1fa38f0) is for:
- HarddiskVolume3 \Driver\volmgr DriverObject ffff880dcbd32e00
-Current Irp 00000000 RefCount 62189 Type 00000007 Flags 00001150
-Vpb 0xffff880dd3237a00 SecurityDescriptor ffffb283aa8791a0 DevExt ffff880dd1fa3a40 DevObjExt ffff880dd1fa3c18 Dope ffff880dd0bfe710 DevNode ffff880dce979b20 
-ExtensionFlags (0x00000800)  DOE_DEFAULT_SD_PRESENT
-Characteristics (0x00020000)  FILE_DEVICE_ALLOW_APPCONTAINER_TRAVERSAL
-AttachedDevice (Upper) ffff880dd333c030 \Driver\fvevol
-Device queue is not busy.
-4: kd> !devstack ffff880dd1fa38f0
-  !DevObj           !DrvObj            !DevExt           ObjectName
-  ffff880dd333f030  \Driver\volsnap    ffff880dd333f180  
-  ffff880dd1f1edd0  \Driver\volume     ffff880dd1f1ef20  
-  ffff880dd333b600  \Driver\iorate     ffff880dd333b750  
-  ffff880dd333c030  \Driver\fvevol     ffff880dd333c180  
-> ffff880dd1fa38f0  \Driver\volmgr     ffff880dd1fa3a40  HarddiskVolume3
-!DevNode ffff880dce979b20 :
-  DeviceInst is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#0000000007500000"
-  ServiceName is "volume"
-4: kd> !object \GLOBAL??\C:
-Object: ffffb283aa9a1860  Type: (ffff880dc76e7880) SymbolicLink
-    ObjectHeader: ffffb283aa9a1830 (new version)
-    HandleCount: 0  PointerCount: 1
-    Directory Object: ffffb283aa2a16e0  Name: C:
-    Flags: 0x000020 ( Local )
-    Target String is '\Device\HarddiskVolume3'
-    Drive Letter Index is 3 (C:)
-4: kd> !object \GLOBAL??\E:
-Object: ffffb283aa9a3cf0  Type: (ffff880dc76e7880) SymbolicLink
-    ObjectHeader: ffffb283aa9a3cc0 (new version)
-    HandleCount: 0  PointerCount: 1
-    Directory Object: ffffb283aa2a16e0  Name: E:
-    Flags: 0x000020 ( Local )
-    Target String is '\Device\HarddiskVolume7'
-    Drive Letter Index is 5 (E:)
+4: kd> .process /r /p ffff880dc76db040
+Implicit process is now ffff880d`c76db040
+Loading User Symbols
+
+4: kd> !fileobj ffff880dfc9757c0
+
+\Users\PIZZAOVEN\AppData\Local\Microsoft\PowerToys\AdvancedPaste\ModuleInterface\Logs\v0.97.2\log_2026-09-11.log
+
+Device Object: 0xffff880dd1fa38f0   \Driver\volmgr
+Vpb: 0xffff880dd3237a00
+Event signalled
+Access: Write SharedRead SharedWrite 
+
+Flags:  0x43042
+	Synchronous IO
+	Cache Supported
+	Modified
+	Size Changed
+	Handle Created
+
+FsContext: 0xffffb283e8166710	FsContext2: 0xffffb283e8166990
+Private Cache Map: 0xffff880de899cda0
+CurrentByteOffset: 43f
+Cache Data:
+  Section Object Pointers: ffff880deb8624b8
+  Shared Cache Map: ffff880de899cc20         File Offset: 43f in VACB number 0
+  Vacb: ffff880dec846198
+  Your data is at: ffffc28baf4c043f
+4: kd> !fileobj ffff880dfc9988b0
+
+\Users\PIZZAOVEN\AppData\Local\Microsoft\PowerToys\NewPlus\NewPlus.ShellExtension\Logs\v0.97.2\log_2026-09-11.log
+
+Device Object: 0xffff880dd1fa38f0   \Driver\volmgr
+Vpb: 0xffff880dd3237a00
+Event signalled
+Access: Write SharedRead SharedWrite 
+
+Flags:  0x43042
+	Synchronous IO
+	Cache Supported
+	Modified
+	Size Changed
+	Handle Created
+
+FsContext: 0xffffb283c5a99710	FsContext2: 0xffffb283c5a99990
+Private Cache Map: 0xffff880de3c519b0
+CurrentByteOffset: 25e
+Cache Data:
+  Section Object Pointers: ffff880dec7589f8
+  Shared Cache Map: ffff880de3c51830         File Offset: 25e in VACB number 0
+  Vacb: ffff880df165bd38
+  Your data is at: ffffc28a86cc025e
 4: kd> q
 quit:
 NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'

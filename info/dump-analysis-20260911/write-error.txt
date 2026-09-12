@@ -1,0 +1,314 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\write-error.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.000 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\PIZZAOVEN\Desktop\Mem\Post-Gen3-20260911.dmp]
+Kernel Bitmap Dump File: Kernel address space is available, User address space may not be available.
+
+Primary dump contents written successfully
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\ProgramData\dbg\sym
+Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: C:\ProgramData\dbg\sym;srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+Windows 10 Kernel Version 26100 MP (28 procs) Free x64
+Product: WinNt, suite: TerminalServer SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Kernel base = 0xfffff804`e5600000 PsLoadedModuleList = 0xfffff804`e64f5410
+Debug session time: Fri Sep 11 19:03:53.764 2026 (UTC - 7:00)
+System Uptime: 0 days 0:01:53.411
+Loading Kernel Symbols
+...............................................................
+................................................................
+................................................................
+................................................................
+..........................
+Loading User Symbols
+PEB is paged out (Peb.Ldr = 00000009`71130018).  Type ".hh dbgerr001" for details
+Loading unloaded module list
+..................................................
+For analysis of this file, run !analyze -v
+4: kd> .process /r /p ffff880dc76db040
+Implicit process is now ffff880d`c76db040
+Loading User Symbols
+
+4: kd> .thread ffff880dc772f400
+Implicit thread is now ffff880d`c772f400
+4: kd> kn
+  *** Stack trace for last set context - .thread/.cxr resets it
+ # Child-SP          RetAddr               Call Site
+00 ffff9f84`6446fe70 fffff804`e58cc438     nt!KiSwapContext+0x76
+01 ffff9f84`6446ffb0 fffff804`e5817a05     nt!KiSwapThread+0x248
+02 ffff9f84`64470020 fffff804`e58186f6     nt!KiCommitThreadWait+0x225
+03 ffff9f84`644700c0 fffff804`e58bc4be     nt!KeWaitForSingleObject+0x846
+04 ffff9f84`644701b0 fffff804`e5f5f6c8     nt!AlpcpSignalAndWait+0x25e
+05 ffff9f84`64470250 fffff804`e5f5f29b     nt!AlpcpReceiveSynchronousReply+0x58
+06 ffff9f84`644702b0 fffff804`e5f5f11a     nt!AlpcpProcessSynchronousRequest+0x14f
+07 ffff9f84`644703c0 fffff804`e613cea4     nt!LpcSendWaitReceivePort+0x4a
+08 ffff9f84`64470420 fffff804`e606872a     nt!ExpRaiseHardError+0xd44a0
+09 ffff9f84`644707a0 fffff804`e5d1af7a     nt!ExRaiseHardError+0x2da
+0a ffff9f84`64470950 fffff804`e590fcdb     nt!IopHardErrorThread+0x7a
+0b ffff9f84`64470990 fffff804`e5a944ca     nt!ExpWorkerThread+0x3db
+0c ffff9f84`64470b30 fffff804`e5caf7f4     nt!PspSystemThreadStartup+0x5a
+0d ffff9f84`64470b80 00000000`00000000     nt!KiStartSystemThread+0x34
+4: kd> .frame /r d
+0d ffff9f84`64470b80 00000000`00000000     nt!KiStartSystemThread+0x34
+rax=0000000000000000 rbx=ffffd500e51c0180 rcx=0000000000000000
+rdx=0000000000000000 rsi=ffff880dc772f400 rdi=ffff880dc7920280
+rip=fffff804e5caf7f4 rsp=ffff9f8464470b80 rbp=0000000000000080
+ r8=0000000000000000  r9=0000000000000000 r10=0000000000000000
+r11=0000000000000000 r12=0000000000000000 r13=0000000000000000
+r14=ffff880dc76db040 r15=ffffd500e51d0000
+iopl=0         nv up di pl nz na po nc
+cs=0000  ss=0000  ds=0000  es=0000  fs=0000  gs=0000             efl=00000000
+nt!KiStartSystemThread+0x34:
+fffff804`e5caf7f4 48c7c10e000000  mov     rcx,0Eh
+4: kd> u nt!IopHardErrorThread L60
+nt!IopHardErrorThread:
+fffff804`e5d1af00 48895c2408      mov     qword ptr [rsp+8],rbx
+fffff804`e5d1af05 57              push    rdi
+fffff804`e5d1af06 4883ec30        sub     rsp,30h
+fffff804`e5d1af0a 8364244800      and     dword ptr [rsp+48h],0
+fffff804`e5d1af0f 488364242000    and     qword ptr [rsp+20h],0
+fffff804`e5d1af15 488d0dfc1e8700  lea     rcx,[nt!IopHardError+0x38 (fffff804`e658ce18)]
+fffff804`e5d1af1c 4533c9          xor     r9d,r9d
+fffff804`e5d1af1f 4533c0          xor     r8d,r8d
+fffff804`e5d1af22 33d2            xor     edx,edx
+fffff804`e5d1af24 e887cfafff      call    nt!KeWaitForSingleObject (fffff804`e5817eb0)
+fffff804`e5d1af29 e8f2bbddff      call    nt!IopRemoveHardErrorPacket (fffff804`e5af6b20)
+fffff804`e5d1af2e 33d2            xor     edx,edx
+fffff804`e5d1af30 488bd8          mov     rbx,rax
+fffff804`e5d1af33 488d4818        lea     rcx,[rax+18h]
+fffff804`e5d1af37 488b4020        mov     rax,qword ptr [rax+20h]
+fffff804`e5d1af3b 4885c0          test    rax,rax
+fffff804`e5d1af3e 48894c2450      mov     qword ptr [rsp+50h],rcx
+fffff804`e5d1af43 0f95c2          setne   dl
+fffff804`e5d1af46 803d43d6740000  cmp     byte ptr [nt!ExReadyForErrors (fffff804`e6468590)],0
+fffff804`e5d1af4d 742b            je      nt!IopHardErrorThread+0x7a (fffff804`e5d1af7a)
+fffff804`e5d1af4f 8b4b10          mov     ecx,dword ptr [rbx+10h]
+fffff804`e5d1af52 48f7d8          neg     rax
+fffff804`e5d1af55 488d442450      lea     rax,[rsp+50h]
+fffff804`e5d1af5a 448bc2          mov     r8d,edx
+fffff804`e5d1af5d 4d1bc9          sbb     r9,r9
+fffff804`e5d1af60 4c23c8          and     r9,rax
+fffff804`e5d1af63 488d442448      lea     rax,[rsp+48h]
+fffff804`e5d1af68 4889442428      mov     qword ptr [rsp+28h],rax
+fffff804`e5d1af6d c744242007000000 mov     dword ptr [rsp+20h],7
+fffff804`e5d1af75 e8d6d43400      call    nt!ExRaiseHardError (fffff804`e6068450)
+fffff804`e5d1af7a e8f1b9e7ff      call    nt!IopCheckHardErrorEmpty (fffff804`e5b96970)
+fffff804`e5d1af7f 488b4b20        mov     rcx,qword ptr [rbx+20h]
+fffff804`e5d1af83 408af8          mov     dil,al
+fffff804`e5d1af86 4885c9          test    rcx,rcx
+fffff804`e5d1af89 7407            je      nt!IopHardErrorThread+0x92 (fffff804`e5d1af92)
+fffff804`e5d1af8b 33d2            xor     edx,edx
+fffff804`e5d1af8d e8de584600      call    nt!ExFreePoolWithTag (fffff804`e6180870)
+fffff804`e5d1af92 33d2            xor     edx,edx
+fffff804`e5d1af94 488bcb          mov     rcx,rbx
+fffff804`e5d1af97 e8d4584600      call    nt!ExFreePoolWithTag (fffff804`e6180870)
+fffff804`e5d1af9c 4084ff          test    dil,dil
+fffff804`e5d1af9f 0f856affffff    jne     nt!IopHardErrorThread+0xf (fffff804`e5d1af0f)
+fffff804`e5d1afa5 488b5c2440      mov     rbx,qword ptr [rsp+40h]
+fffff804`e5d1afaa 4883c430        add     rsp,30h
+fffff804`e5d1afae 5f              pop     rdi
+fffff804`e5d1afaf c3              ret
+fffff804`e5d1afb0 cc              int     3
+fffff804`e5d1afb1 cc              int     3
+fffff804`e5d1afb2 cc              int     3
+fffff804`e5d1afb3 cc              int     3
+fffff804`e5d1afb4 cc              int     3
+fffff804`e5d1afb5 cc              int     3
+fffff804`e5d1afb6 cc              int     3
+fffff804`e5d1afb7 cc              int     3
+nt!IopInitializeBootLogging:
+fffff804`e5d1afb8 48895c2408      mov     qword ptr [rsp+8],rbx
+fffff804`e5d1afbd 4889742410      mov     qword ptr [rsp+10h],rsi
+fffff804`e5d1afc2 55              push    rbp
+fffff804`e5d1afc3 57              push    rdi
+fffff804`e5d1afc4 4156            push    r14
+fffff804`e5d1afc6 488bec          mov     rbp,rsp
+fffff804`e5d1afc9 4883ec40        sub     rsp,40h
+fffff804`e5d1afcd 4533f6          xor     r14d,r14d
+fffff804`e5d1afd0 488bfa          mov     rdi,rdx
+fffff804`e5d1afd3 4c39354ed08b00  cmp     qword ptr [nt!SeTokenObjectType+0x8 (fffff804`e65d8028)],r14
+fffff804`e5d1afda 488bd9          mov     rbx,rcx
+fffff804`e5d1afdd 4c897530        mov     qword ptr [rbp+30h],r14
+fffff804`e5d1afe1 448975f4        mov     dword ptr [rbp-0Ch],r14d
+fffff804`e5d1afe5 0f857f010000    jne     nt!IopInitializeBootLogging+0x1b2 (fffff804`e5d1b16a)
+fffff804`e5d1afeb bab0000000      mov     edx,0B0h
+fffff804`e5d1aff0 41b8496f2020    mov     r8d,20206F49h
+fffff804`e5d1aff6 8d4a90          lea     ecx,[rdx-70h]
+fffff804`e5d1aff9 e8f2504600      call    nt!ExAllocatePool2 (fffff804`e61800f0)
+fffff804`e5d1affe 48890523d08b00  mov     qword ptr [nt!SeTokenObjectType+0x8 (fffff804`e65d8028)],rax
+fffff804`e5d1b005 4885c0          test    rax,rax
+fffff804`e5d1b008 0f845c010000    je      nt!IopInitializeBootLogging+0x1b2 (fffff804`e5d1b16a)
+fffff804`e5d1b00e 488d4840        lea     rcx,[rax+40h]
+fffff804`e5d1b012 e8d94ad1ff      call    nt!ExInitializeResourceLite (fffff804`e5a2faf0)
+fffff804`e5d1b017 488b0d0ad08b00  mov     rcx,qword ptr [nt!SeTokenObjectType+0x8 (fffff804`e65d8028)]
+fffff804`e5d1b01e b201            mov     dl,1
+fffff804`e5d1b020 4883c140        add     rcx,40h
+fffff804`e5d1b024 e8f735b0ff      call    nt!ExAcquireResourceExclusiveLite (fffff804`e581e620)
+fffff804`e5d1b029 488b7310        mov     rsi,qword ptr [rbx+10h]
+fffff804`e5d1b02d 488d4530        lea     rax,[rbp+30h]
+fffff804`e5d1b031 41b9b5000000    mov     r9d,0B5h
+fffff804`e5d1b037 4889442420      mov     qword ptr [rsp+20h],rax
+fffff804`e5d1b03c 4533c0          xor     r8d,r8d
+fffff804`e5d1b03f 418d560b        lea     edx,[r14+0Bh]
+fffff804`e5d1b043 488b4e30        mov     rcx,qword ptr [rsi+30h]
+fffff804`e5d1b047 e894482300      call    nt!RtlFindMessage (fffff804`e5f4f8e0)
+fffff804`e5d1b04c 4883cbff        or      rbx,0FFFFFFFFFFFFFFFFh
+fffff804`e5d1b050 85c0            test    eax,eax
+fffff804`e5d1b052 785e            js      nt!IopInitializeBootLogging+0xfa (fffff804`e5d1b0b2)
+fffff804`e5d1b054 488b4d30        mov     rcx,qword ptr [rbp+30h]
+fffff804`e5d1b058 488bc3          mov     rax,rbx
+fffff804`e5d1b05b 4883c104        add     rcx,4
+fffff804`e5d1b05f 48894df8        mov     qword ptr [rbp-8],rcx
+4: kd> dps ffff9f8464470950 L20
+ffff9f84`64470950  fffff804`e658ce18 nt!IopHardError+0x38
+ffff9f84`64470958  00000000`00000000
+ffff9f84`64470960  00000000`00000000
+ffff9f84`64470968  00000000`00000000
+ffff9f84`64470970  00000000`00000007
+ffff9f84`64470978  ffff9f84`64470998
+ffff9f84`64470980  fffff804`e5d1af00 nt!IopHardErrorThread
+ffff9f84`64470988  fffff804`e590fcdb nt!ExpWorkerThread+0x3db
+ffff9f84`64470990  ffff880d`c772f400
+ffff9f84`64470998  fffff804`00000000
+ffff9f84`644709a0  ffff880e`01c939e8
+ffff9f84`644709a8  ffff880d`c772f400
+ffff9f84`644709b0  00000002`00000048
+ffff9f84`644709b8  00000000`00000004
+ffff9f84`644709c0  00000000`00000000
+ffff9f84`644709c8  ffff880d`c76d9230
+ffff9f84`644709d0  00000000`00000000
+ffff9f84`644709d8  00000000`00000000
+ffff9f84`644709e0  00000000`00200001
+ffff9f84`644709e8  00000000`0fffffff
+ffff9f84`644709f0  00000000`00000000
+ffff9f84`644709f8  00000000`00000000
+ffff9f84`64470a00  00000000`00000000
+ffff9f84`64470a08  00000000`00000000
+ffff9f84`64470a10  00000000`00000000
+ffff9f84`64470a18  00000000`00000000
+ffff9f84`64470a20  00000000`00000000
+ffff9f84`64470a28  00000000`00000000
+ffff9f84`64470a30  00000000`00000000
+ffff9f84`64470a38  00000000`00000000
+ffff9f84`64470a40  00000000`00000000
+ffff9f84`64470a48  00000000`00000000
+4: kd> dt nt!_IO_WORKITEM ffff880e01c939e8
+   +0x000 WorkItem         : _WORK_QUEUE_ITEM
+   +0x020 Routine          : (null) 
+   +0x028 IoObject         : (null) 
+   +0x030 Context          : 0x00000000`00000003 Void
+   +0x038 WorkOnBehalfThread : (null) 
+   +0x040 Type             : 0
+   +0x044 ActivityId       : _GUID {00000000-0000-0000-0000-000000000000}
+4: kd> !fileobj ffff880dfc99b600
+
+\$ConvertToNonresident
+
+Device Object: 0xffff880dd1fa38f0   \Driver\volmgr
+Vpb: 0xffff880dd3237a00
+Access: Read Write SharedRead SharedWrite SharedDelete 
+
+Flags:  0x40100
+	Stream File
+	Handle Created
+
+FsContext: 0xffffb283d5b0b180	FsContext2: 0x00000000
+Private Cache Map: 0xffff880dee91bda0
+CurrentByteOffset: 0
+Cache Data:
+  Section Object Pointers: ffff880df78bf538
+  Shared Cache Map: ffff880dee91bc20         File Offset: 0 in VACB number 0
+  Vacb: ffff880df16593d0
+  Your data is at: ffffc28b43300000
+4: kd> dt nt!_FILE_OBJECT ffff880dfc99b600
+   +0x000 Type             : 0n5
+   +0x002 Size             : 0n216
+   +0x008 DeviceObject     : 0xffff880d`d1fa38f0 _DEVICE_OBJECT
+   +0x010 Vpb              : 0xffff880d`d3237a00 _VPB
+   +0x018 FsContext        : 0xffffb283`d5b0b180 Void
+   +0x020 FsContext2       : (null) 
+   +0x028 SectionObjectPointer : 0xffff880d`f78bf538 _SECTION_OBJECT_POINTERS
+   +0x030 PrivateCacheMap  : 0xffff880d`ee91bda0 Void
+   +0x038 FinalStatus      : 0n0
+   +0x040 RelatedFileObject : (null) 
+   +0x048 LockOperation    : 0 ''
+   +0x049 DeletePending    : 0 ''
+   +0x04a ReadAccess       : 0x1 ''
+   +0x04b WriteAccess      : 0x1 ''
+   +0x04c DeleteAccess     : 0 ''
+   +0x04d SharedRead       : 0x1 ''
+   +0x04e SharedWrite      : 0x1 ''
+   +0x04f SharedDelete     : 0x1 ''
+   +0x050 Flags            : 0x40100
+   +0x058 FileName         : _UNICODE_STRING "\$ConvertToNonresident"
+   +0x068 CurrentByteOffset : _LARGE_INTEGER 0x0
+   +0x070 Waiters          : 0
+   +0x074 Busy             : 0
+   +0x078 LastLock         : (null) 
+   +0x080 Lock             : _KEVENT
+   +0x098 Event            : _KEVENT
+   +0x0b0 CompletionContext : (null) 
+   +0x0b8 IrpListLock      : 0
+   +0x0c0 IrpList          : _LIST_ENTRY [ 0xffff880d`fc99b6c0 - 0xffff880d`fc99b6c0 ]
+   +0x0d0 FileObjectExtension : (null) 
+4: kd> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Kernel.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Usb4Kd.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

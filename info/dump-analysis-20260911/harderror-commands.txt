@@ -1,0 +1,5 @@
+.process /r /p ffff880de19a7080
+dps 0000000971cff5c8 L30
+dq 0000010cf81ab600 L20
+dt nt!_HARDERROR_MSG
+q

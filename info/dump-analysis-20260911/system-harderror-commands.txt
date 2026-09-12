@@ -1,0 +1,5 @@
+.process /r /p ffff880dc76db040
+dt nt!_UNICODE_STRING 000001ee9a4e0000
+dq 000001ee9a4e0000 L10
+!process ffff880dc76db040 7
+q

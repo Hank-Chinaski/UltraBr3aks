@@ -1,0 +1,10 @@
+.process /r /p ffff880de19a7080
+!error c0000222
+dt nt!_PORT_MESSAGE 0000010cf81ab618
+dt nt!_UNICODE_STRING 000001ee9a4e0000
+dq 000001ee9a4e0000 L10
+du 000001ee9a4e0000 L100
+u winsrvext!GetHardErrorText L40
+!process 4 0
+!thread 254
+q

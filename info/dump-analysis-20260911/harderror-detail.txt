@@ -3,7 +3,7 @@
 Response                         Time (ms)     Location
 OK                                             C:\ProgramData\dbg\sym
 Deferred                                       srv*C:\UltraBr3aks\info\dump-analysis-20260911\symbols*https://msdl.microsoft.com/download/symbols
-Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\device-trace.txt'
+Opened log file 'C:\UltraBr3aks\info\dump-analysis-20260911\harderror-detail.txt'
 
 ************* Preparing the environment for Debugger Extensions Gallery repositories **************
    ExtensionRepository : Implicit
@@ -71,51 +71,106 @@ PEB is paged out (Peb.Ldr = 00000009`71130018).  Type ".hh dbgerr001" for detail
 Loading unloaded module list
 ..................................................
 For analysis of this file, run !analyze -v
-4: kd> dt nt!_VPB ffff880dd3237a00
-   +0x000 Type             : 0n10
-   +0x002 Size             : 0n96
-   +0x004 Flags            : 1
-   +0x006 VolumeLabelLength : 0xc
-   +0x008 DeviceObject     : 0xffff880d`d337d030 _DEVICE_OBJECT
-   +0x010 RealDevice       : 0xffff880d`d1fa38f0 _DEVICE_OBJECT
-   +0x018 SerialNumber     : 0xeef90d57
-   +0x01c ReferenceCount   : 0xf2eb
-   +0x020 VolumeLabel      : [32]  "CooCoo"
-4: kd> !devobj ffff880dd1fa38f0
-Device object (ffff880dd1fa38f0) is for:
- HarddiskVolume3 \Driver\volmgr DriverObject ffff880dcbd32e00
-Current Irp 00000000 RefCount 62189 Type 00000007 Flags 00001150
-Vpb 0xffff880dd3237a00 SecurityDescriptor ffffb283aa8791a0 DevExt ffff880dd1fa3a40 DevObjExt ffff880dd1fa3c18 Dope ffff880dd0bfe710 DevNode ffff880dce979b20 
-ExtensionFlags (0x00000800)  DOE_DEFAULT_SD_PRESENT
-Characteristics (0x00020000)  FILE_DEVICE_ALLOW_APPCONTAINER_TRAVERSAL
-AttachedDevice (Upper) ffff880dd333c030 \Driver\fvevol
-Device queue is not busy.
-4: kd> !devstack ffff880dd1fa38f0
-  !DevObj           !DrvObj            !DevExt           ObjectName
-  ffff880dd333f030  \Driver\volsnap    ffff880dd333f180  
-  ffff880dd1f1edd0  \Driver\volume     ffff880dd1f1ef20  
-  ffff880dd333b600  \Driver\iorate     ffff880dd333b750  
-  ffff880dd333c030  \Driver\fvevol     ffff880dd333c180  
-> ffff880dd1fa38f0  \Driver\volmgr     ffff880dd1fa3a40  HarddiskVolume3
-!DevNode ffff880dce979b20 :
-  DeviceInst is "STORAGE\Volume\{791f227a-fb8d-11ee-9f3a-806e6f6e6963}#0000000007500000"
-  ServiceName is "volume"
-4: kd> !object \GLOBAL??\C:
-Object: ffffb283aa9a1860  Type: (ffff880dc76e7880) SymbolicLink
-    ObjectHeader: ffffb283aa9a1830 (new version)
-    HandleCount: 0  PointerCount: 1
-    Directory Object: ffffb283aa2a16e0  Name: C:
-    Flags: 0x000020 ( Local )
-    Target String is '\Device\HarddiskVolume3'
-    Drive Letter Index is 3 (C:)
-4: kd> !object \GLOBAL??\E:
-Object: ffffb283aa9a3cf0  Type: (ffff880dc76e7880) SymbolicLink
-    ObjectHeader: ffffb283aa9a3cc0 (new version)
-    HandleCount: 0  PointerCount: 1
-    Directory Object: ffffb283aa2a16e0  Name: E:
-    Flags: 0x000020 ( Local )
-    Target String is '\Device\HarddiskVolume7'
-    Drive Letter Index is 5 (E:)
+4: kd> .process /r /p ffff880de19a7080
+Implicit process is now ffff880d`e19a7080
+Loading User Symbols
+......................
+4: kd> !error c0000222
+Error code: (NTSTATUS) 0xc0000222 (3221226018) - {Delayed Write Failed}  Windows was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
+4: kd> dt nt!_PORT_MESSAGE 0000010cf81ab618
+   +0x000 u1               : <unnamed-tag>
+   +0x004 u2               : <unnamed-tag>
+   +0x008 ClientId         : _CLIENT_ID
+   +0x008 DoNotUseThisField : 1.9762625833649861767e-323 
+   +0x018 MessageId        : 0x2ad4
+   +0x020 ClientViewSize   : 0x65c3e
+   +0x020 CallbackId       : 0x65c3e
+4: kd> dt nt!_UNICODE_STRING 000001ee9a4e0000
+    +0x000 Length           : ??
+   +0x002 MaximumLength    : ??
+   +0x008 Buffer           : ???? 
+Memory read error 000001ee9a4e0008
+4: kd> dq 000001ee9a4e0000 L10
+000001ee`9a4e0000  ????????`???????? ????????`????????
+000001ee`9a4e0010  ????????`???????? ????????`????????
+000001ee`9a4e0020  ????????`???????? ????????`????????
+000001ee`9a4e0030  ????????`???????? ????????`????????
+000001ee`9a4e0040  ????????`???????? ????????`????????
+000001ee`9a4e0050  ????????`???????? ????????`????????
+000001ee`9a4e0060  ????????`???????? ????????`????????
+000001ee`9a4e0070  ????????`???????? ????????`????????
+4: kd> du 000001ee9a4e0000 L100
+000001ee`9a4e0000  "????????????????????????????????"
+000001ee`9a4e0040  "????????????????????????????????"
+000001ee`9a4e0080  "????????????????????????????????"
+000001ee`9a4e00c0  "????????????????????????????????"
+000001ee`9a4e0100  "????????????????????????????????"
+000001ee`9a4e0140  "????????????????????????????????"
+000001ee`9a4e0180  "????????????????????????????????"
+000001ee`9a4e01c0  "????????????????????????????????"
+4: kd> u winsrvext!GetHardErrorText L40
+winsrvext!GetHardErrorText:
+00007ffc`d5ddbf44 488bc4          mov     rax,rsp
+00007ffc`d5ddbf47 48895810        mov     qword ptr [rax+10h],rbx
+00007ffc`d5ddbf4b 48897018        mov     qword ptr [rax+18h],rsi
+00007ffc`d5ddbf4f 48897820        mov     qword ptr [rax+20h],rdi
+00007ffc`d5ddbf53 55              push    rbp
+00007ffc`d5ddbf54 4154            push    r12
+00007ffc`d5ddbf56 4155            push    r13
+00007ffc`d5ddbf58 4156            push    r14
+00007ffc`d5ddbf5a 4157            push    r15
+00007ffc`d5ddbf5c 488da828f7ffff  lea     rbp,[rax-8D8h]
+00007ffc`d5ddbf63 4881ecb0090000  sub     rsp,9B0h
+00007ffc`d5ddbf6a 488b05ff210100  mov     rax,qword ptr [winsrvext!_security_cookie (00007ffc`d5dee170)]
+00007ffc`d5ddbf71 4833c4          xor     rax,rsp
+00007ffc`d5ddbf74 488985a0080000  mov     qword ptr [rbp+8A0h],rax
+00007ffc`d5ddbf7b 33f6            xor     esi,esi
+00007ffc`d5ddbf7d 48894de8        mov     qword ptr [rbp-18h],rcx
+00007ffc`d5ddbf81 0f57c0          xorps   xmm0,xmm0
+00007ffc`d5ddbf84 89742458        mov     dword ptr [rsp+58h],esi
+00007ffc`d5ddbf88 0f57c9          xorps   xmm1,xmm1
+00007ffc`d5ddbf8b 897584          mov     dword ptr [rbp-7Ch],esi
+00007ffc`d5ddbf8e 33c0            xor     eax,eax
+00007ffc`d5ddbf90 488975c0        mov     qword ptr [rbp-40h],rsi
+00007ffc`d5ddbf94 488bd9          mov     rbx,rcx
+00007ffc`d5ddbf97 48897590        mov     qword ptr [rbp-70h],rsi
+00007ffc`d5ddbf9b 488d8d90000000  lea     rcx,[rbp+90h]
+00007ffc`d5ddbfa2 488975c8        mov     qword ptr [rbp-38h],rsi
+00007ffc`d5ddbfa6 33d2            xor     edx,edx
+00007ffc`d5ddbfa8 8974245c        mov     dword ptr [rsp+5Ch],esi
+00007ffc`d5ddbfac 41b802080000    mov     r8d,802h
+00007ffc`d5ddbfb2 89742440        mov     dword ptr [rsp+40h],esi
+00007ffc`d5ddbfb6 0f114598        movups  xmmword ptr [rbp-68h],xmm0
+00007ffc`d5ddbfba 448bfe          mov     r15d,esi
+00007ffc`d5ddbfbd 48894520        mov     qword ptr [rbp+20h],rax
+00007ffc`d5ddbfc1 0f1145f0        movups  xmmword ptr [rbp-10h],xmm0
+00007ffc`d5ddbfc5 894528          mov     dword ptr [rbp+28h],eax
+00007ffc`d5ddbfc8 0f114c2470      movups  xmmword ptr [rsp+70h],xmm1
+00007ffc`d5ddbfcd 0f1145a8        movups  xmmword ptr [rbp-58h],xmm0
+00007ffc`d5ddbfd1 0f114dd0        movups  xmmword ptr [rbp-30h],xmm1
+00007ffc`d5ddbfd5 0f114500        movups  xmmword ptr [rbp],xmm0
+00007ffc`d5ddbfd9 0f114510        movups  xmmword ptr [rbp+10h],xmm0
+00007ffc`d5ddbfdd e89f800000      call    winsrvext!memset (00007ffc`d5de4081)
+00007ffc`d5ddbfe2 33c0            xor     eax,eax
+00007ffc`d5ddbfe4 89742444        mov     dword ptr [rsp+44h],esi
+00007ffc`d5ddbfe8 0f57c0          xorps   xmm0,xmm0
+00007ffc`d5ddbfeb 894568          mov     dword ptr [rbp+68h],eax
+00007ffc`d5ddbfee 0f57c9          xorps   xmm1,xmm1
+00007ffc`d5ddbff1 898580000000    mov     dword ptr [rbp+80h],eax
+00007ffc`d5ddbff7 33d2            xor     edx,edx
+00007ffc`d5ddbff9 897588          mov     dword ptr [rbp-78h],esi
+00007ffc`d5ddbffc 488d4dd0        lea     rcx,[rbp-30h]
+00007ffc`d5ddc000 ??              ???
+                                      ^ Memory access error in 'u winsrvext!GetHardErrorText l40'
+4: kd> !process 4 0
+Searching for Process with Cid == 4
+PROCESS ffff880dc76db040
+    SessionId: none  Cid: 0004    Peb: 00000000  ParentCid: 0000
+    DirBase: 001ae000  ObjectTable: ffffb283aa2c3600  HandleCount: 17952.
+    Image: System
+
+4: kd> !thread 254
+00000254: Unable to get thread contents
 4: kd> q
 quit:
 NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
